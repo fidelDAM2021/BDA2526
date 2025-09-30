@@ -1,0 +1,1043 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../documents/">
+      
+      
+        <link rel="next" href="../u02/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Introducció a Big Data - Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../styles/taules.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduccio-a-big-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-header__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../img/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introducció a Big Data
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-nav__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../img/logo.svg" alt="logo">
+
+    </a>
+    Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inici
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Presentació
+    
+      <br>
+      <small>Mòdul Big Data Aplicat</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    1. Introducció al Big Data
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    1. Introducció al Big Data
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Què és Big Data?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-que-es-important-el-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Per què és important el Big Data?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Per què és important el Big Data?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemples-de-sectors-o-situacions-on-es-aconsellable-utilitzar-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples de sectors o situacions on és aconsellable utilitzar Big Data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceptes-relacionats-amb-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conceptes relacionats amb Big Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conceptes relacionats amb Big Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#escalabilitat-horitzontal-vs-vertical" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escalabilitat horitzontal vs vertical
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#divide-i-venceras-mapreduce" class="md-nav__link">
+    <span class="md-ellipsis">
+      Divide i vencerás (MapReduce)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-vs-nosql" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQL vs NoSQL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SQL vs NoSQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#models-nosql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Models NoSQL
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-computing-on-premise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloud Computing (on premise)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipus-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipus de dades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipus de dades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dades-estructurades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dades estructurades
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dades-semiestructurades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dades semiestructurades
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dades-no-estructurades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dades no estructurades
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilitzacio-de-les-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilització de les dades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Utilització de les dades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hipotesis-de-causalitat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hipòtesis de causalitat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analisi-predictiu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anàlisi predictiu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analisi-descriptiu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anàlisi descriptiu
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipus-de-processament" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipus de processament
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipus de processament">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#batch-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Batch processing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stream-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stream processing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2. Repàs Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Què és Big Data?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-que-es-important-el-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Per què és important el Big Data?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Per què és important el Big Data?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemples-de-sectors-o-situacions-on-es-aconsellable-utilitzar-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples de sectors o situacions on és aconsellable utilitzar Big Data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceptes-relacionats-amb-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conceptes relacionats amb Big Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conceptes relacionats amb Big Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#escalabilitat-horitzontal-vs-vertical" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escalabilitat horitzontal vs vertical
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#divide-i-venceras-mapreduce" class="md-nav__link">
+    <span class="md-ellipsis">
+      Divide i vencerás (MapReduce)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-vs-nosql" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQL vs NoSQL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SQL vs NoSQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#models-nosql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Models NoSQL
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-computing-on-premise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloud Computing (on premise)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipus-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipus de dades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipus de dades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dades-estructurades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dades estructurades
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dades-semiestructurades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dades semiestructurades
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dades-no-estructurades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dades no estructurades
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilitzacio-de-les-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilització de les dades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Utilització de les dades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hipotesis-de-causalitat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hipòtesis de causalitat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analisi-predictiu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anàlisi predictiu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analisi-descriptiu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anàlisi descriptiu
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipus-de-processament" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipus de processament
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipus de processament">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#batch-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Batch processing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stream-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stream processing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="introduccio-a-big-data">Introducció a Big Data</h1>
+<h2 id="que-es-big-data">Què és Big Data?</h2>
+<p>Big Data és un terme que fa referència a la gestió i anàlisi de volums de dades que, pel seu tamany, complexitat o velocitat d'entrada, no poden ser tractats de manera convencional amb eines tradicionals. Aquestes dades poden ser de diferents tipus, com ara text, imatges, àudio, vídeo, etc. </p>
+<p>El terme <strong>Big Data</strong> s'associa normalment a les anomenades "tres V" (que de vegades són 4):</p>
+<ul>
+<li>
+<p><strong>Volum</strong>: Fa referència a la quantitat de dades que es generen i emmagatzemen. A més quantitat, més necessitem de sistemes diferents als tradicionals.</p>
+</li>
+<li>
+<p><strong>Velocitat</strong>: Fa referència a la rapidesa amb què es generen i es processen les dades. Amb el creixement de l'anomenat IOT (Internet de les Coses) les dades arriben quasi de manera instantània i s'han de llegir i tractar de manera igualment ràpida.</p>
+</li>
+<li>
+<p><strong>Varietat</strong>: Fa referència a la diversitat de formats en què es poden presentar les dades. La informació pot arribar des de fonts molt diferents i amb formats diversos: text no estructurat, imatges, àudio, correus electrònics, etc.</p>
+</li>
+<li>
+<p><strong>Veracitat</strong>: Fa referència a la qualitat de les dades. Les dades poden ser incorrectes, incompletes o no actualitzades. Això pot ser un problema a l'hora de prendre decisions basades en aquestes dades.</p>
+</li>
+</ul>
+<h2 id="per-que-es-important-el-big-data">Per què és important el Big Data?</h2>
+<p>El Big Data és important perquè permet a les empreses i organitzacions millorar la seva presa de decisions, ja que permet analitzar grans quantitats de dades i extreure'n coneixement. Això pot ser útil per a moltes coses, com ara:</p>
+<ul>
+<li><strong>Millorar la presa de decisions</strong>: Les empreses poden utilitzar les dades per prendre decisions més informades i basades en evidències.</li>
+<li><strong>Millorar la relació amb els clients</strong>: Les empreses poden utilitzar les dades per entendre millor les necessitats dels clients i oferir-los productes i serveis més personalitzats.</li>
+<li><strong>Millorar l'eficiència operativa</strong>: Les empreses poden utilitzar les dades per identificar àrees on poden millorar l'eficiència i reduir els costos.</li>
+<li><strong>Identificar oportunitats de negoci</strong>: Les empreses poden utilitzar les dades per identificar noves oportunitats de negoci i millorar la seva competitivitat.</li>
+</ul>
+<h3 id="exemples-de-sectors-o-situacions-on-es-aconsellable-utilitzar-big-data">Exemples de sectors o situacions on és aconsellable utilitzar Big Data</h3>
+<p>El Big Data és útil en molts sectors i situacions diferents. Algunes de les àrees on el Big Data pot ser especialment útil són:</p>
+<ul>
+<li><strong>Salut</strong>: El Big Data pot ser utilitzat per millorar el diagnòstic i el tractament de malalties, així com per predir epidèmies i identificar tendències de salut.</li>
+<li><strong>Finances</strong>: El Big Data pot ser utilitzat per predir tendències del mercat, identificar oportunitats d'inversió i detectar frau.</li>
+<li><strong>Xarxes socials</strong>: El Big Data pot ser utilitzat per analitzar el comportament dels usuaris en les xarxes socials i millorar la segmentació dels clients, identificar oportunitats de negoci, millorar la relació amb els clients o possibles clients, etc.</li>
+<li><strong>Transport</strong>: El Big Data pot ser utilitzat per millorar la planificació del transport, predir la congestió del trànsit, optimitzar les rutes de transport, etc.</li>
+<li><strong>IoT</strong>: El Big Data pot ser utilitzat per analitzar les dades generades per dispositius connectats a Internet i millorar la seva eficiència i seguretat, aprofitant al màxim la informació rebuda.</li>
+</ul>
+<p>Això són només alguns exemples, però el Big Data pot ser útil en molts altres sectors i situacions.</p>
+<h2 id="conceptes-relacionats-amb-big-data">Conceptes relacionats amb Big Data</h2>
+<p>Alguns conceptes relacionats amb els sistemes de Big Data són:</p>
+<ul>
+<li><strong>Escalabilitat (horitzontal vs vertical)</strong></li>
+<li><strong>Divideix i venceràs (MapReduce)</strong></li>
+<li><strong>SQL vs NoSQL</strong></li>
+<li><strong>Cloud Computing (on premise)</strong></li>
+</ul>
+<h3 id="escalabilitat-horitzontal-vs-vertical">Escalabilitat horitzontal vs vertical</h3>
+<ul>
+<li>
+<p><strong>Escalabilitat vertical</strong>: Consisteix en augmentar la capacitat d'un sistema afegint més recursos a un únic node. Això pot ser útil per a sistemes que no poden ser dividits en parts més petites, però té un límit en la quantitat de recursos que es poden afegir a un únic node. </p>
+</li>
+<li>
+<p><strong>Escalabilitat horitzontal</strong>: Consisteix en augmentar la capacitat d'un sistema afegint més nodes al sistema. Això permet augmentar la capacitat del sistema de manera més flexible i escalable, ja que es poden afegir més nodes a mesura que es necessiti.</p>
+</li>
+</ul>
+<p>En un sistema que escala verticalment, s'han d'ampliar els components del sistema (CPU, memòria, disc dur, etc.) per augmentar la capacitat del sistema. Esta solució és cara i té límits. En canvi, en un sistema que escala horitzontalment, podem simplement afegir o treure nodes al sistema per augmentar o disminuir la seua capacitat. L'escalabilitat vertical és més econòmica i no té límits mentre puguem continuar afegint nodes. </p>
+<p><img alt="Imatge 01" src="img/imatge01_01.png" /></p>
+<p>En general, els sistemes de Big Data utilitzen l'escalabilitat horitzontal per aconseguir la capacitat necessària per processar grans quantitats de dades.</p>
+<h3 id="divide-i-venceras-mapreduce">Divide i vencerás (MapReduce)</h3>
+<p><strong>MapReduce</strong> és un model de programació i un sistema de processament distribuït dissenyat per processar grans quantitats de dades de manera eficient. El model de programació MapReduce consisteix en dues fases:</p>
+<ul>
+<li><strong>Map</strong>: En aquesta fase, les dades són dividides en parts més petites i processades de manera paral·lela i distribuïda en diferents nodes del sistema.</li>
+<li><strong>Reduce</strong>: En aquesta fase, els resultats de la fase Map són combinats i processats per obtenir el resultat final.</li>
+</ul>
+<p>El model de programació MapReduce és molt eficient per processar grans quantitats de dades de manera distribuïda i escalable. Aquest model és utilitzat en molts sistemes de Big Data, com ara Hadoop i Spark. A més permet redistribuir les dades entre les unitats de treball en cas de fallada d'un node.</p>
+<p><img alt="Imatge 02" src="img/imatge01_02.png" /></p>
+<h3 id="sql-vs-nosql">SQL vs NoSQL</h3>
+<ul>
+<li><strong>SQL</strong>: SQL (Structured Query Language) és un llenguatge de programació utilitzat per gestionar bases de dades relacionals. SQL és un llenguatge molt potent i flexible que permet realitzar consultes complexes i eficients sobre les dades. En general s'utilitza la categoria "bases de dades SQL" per fer referència a les bases de dades relacionals.</li>
+</ul>
+<p>Exemples de bases de dades SQL: 
+    - MySQL / MariaDB
+    - PostgreSQL
+    - Oracle
+    - SQL Server</p>
+<p>Avantatges de les bases de dades SQL:
+    - Estructura de dades clara i definida
+    - Permeten relacions entre les dades
+    - Suport per a transaccions ACID (Atomicitat, Consistència, Aïllament, Durabilitat)
+    - Suport per a consultes SQL
+    - Asseguren la integritat i consistència de les dades</p>
+<ul>
+<li><strong>NoSQL</strong>: NoSQL és un terme genèric que fa referència a bases de dades no relacionals. Les bases de dades NoSQL són dissenyades per gestionar grans quantitats de dades de manera eficient i escalable. S'utilitzen sovint en sistemes de Big Data per emmagatzemar i processar grans quantitats de dades. A diferència de les bases de dades SQL o relacionals, en les bases de dades NoSQL s'ofereixen diferents models de dades i no cal un esquema predefinit per establir com s'estructuran i relaciona la informació.</li>
+</ul>
+<p>Exemples de bases de dades NoSQL:
+    - MongoDB
+    - Cassandra
+    - HBase
+    - Redis
+    - Elasticsearch
+    - CouchDB
+    - Neo4j</p>
+<p>Avantatges de les bases de dades NoSQL:
+    - Escalabilitat horitzontal
+    - Flexibilitat en l'emmagatzematge de dades
+    - Rendiment i velocitat
+    - Suport per a dades no estructurades
+    - Suport per a sistemes distribuïts</p>
+<p>Hem de tenir en compte que en les bases de dades NoSQL les dades no tenen una estructura fixa i definida, i és més complicat establir relacions entre les dades. Això pot ser un avantatge o un inconvenient segons les necessitats del projecte.</p>
+<p><strong>Teorema CAP</strong> </p>
+<p>El teorema CAP és un principi fonamental en el disseny de sistemes distribuïts que estableix que és impossible garantir simultàniament Consistència, Disponibilitat i Tolerància a particions en un sistema distribuït. Això significa que en un sistema distribuït només es poden garantir dos dels tres aspectes abans esmentats.</p>
+<p>https://www.ibm.com/es-es/topics/cap-theorem</p>
+<p><img alt="Imatge 03" src="img/imatge01_03.png" /></p>
+<p><strong>BBDD CP (Consistency and Partition Tolerance)</strong></p>
+<p>Ofereixen consistència i tolerància a la partició sacrificant la disponibilitat. Això significa que en cas de partició de la xarxa, el sistema es manté consistent, però pot ser que no estiga disponible per a totes les peticions perquè els nodes no consistents no estaran disponibles fins que se solucione el problema. Un exemple seria MongoDB.</p>
+<p><strong>BBDD AP (Availability and Partition Tolerance)</strong></p>
+<p>Ofereixen disponibilitat i tolerància a la partició sacrificant la consistència. Això significa que en cas de partició de la xarxa, el sistema es manté disponible per a totes les peticions, però pot ser que no estiga consistent fins que se solucione el problema perquè uns nodes poden tornar versions més antigues de les dades. Un exemple seria Cassandra.</p>
+<p><strong>BBDD CA (Consistency and Availability)</strong></p>
+<p>Ofereixen consistència i disponibilitat en tots els nodes. Ara bé, no funcionarà bé si hi ha una partició entre 2 o més nodes del sistema, de manera que la tolerància a la partició no està garantida. Un exemple seria una base de dades relacional.</p>
+<p>https://www.genbeta.com/desarrollo/nosql-clasificacion-de-las-bases-de-datos-segun-el-teorema-cap</p>
+<h4 id="models-nosql">Models NoSQL</h4>
+<p>Dins de les tecnologies NoSQL hi ha diferents tipus de models:</p>
+<ul>
+<li><strong>Document</strong>: Aquest model emmagatzema les dades en documents en un format similar a un JSON o XML. Cada document pot tenir diferents camps i valors, i no cal un esquema predefinit per definir com s'estructuren les dades. Exemples: MongoDB, CouchDB.</li>
+<li><strong>Clau-valor</strong>: Aquest model emmagatzema les dades en parelles clau-valor, on cada clau està associada a un valor. Aquest model és molt eficient per recuperar dades per clau. Exemples: Redis, DynamoDB.</li>
+<li><strong>Columnar</strong>: Aquest model emmagatzema les dades en columnes en lloc de files, el que permet recuperar dades de manera eficient. Aquest model és útil per a bases de dades analítiques. Exemples: Cassandra, HBase.</li>
+<li><strong>Graf</strong>: Aquest model emmagatzema les dades com a nodes i relacions entre els nodes. Aquest model és útil per a bases de dades que necessiten representar relacions complexes entre les dades. Exemples: Neo4j, ArangoDB.</li>
+</ul>
+<p>Els tres darrers models que hem enumerat, el <strong>Clau-valor</strong>, el <strong>Columnar</strong> i el <strong>Graf</strong>, són <strong>models d'agregació</strong>.</p>
+<p><strong>Models d'agregació</strong></p>
+<p>Els models d'agregació se basen en la noció d'agregació: una col·lecció d'objectes/entitats relacionats que volem tractar com una única entitat a efectes de accés, manipulació, control de la consistència i concurrència, i distribució de les dades. En les bases de dades relacionals podem fer JOIN per recuperar informació de les diferents taules on està la informació que hem repartit entre elles. En les bases de dades NoSQL, com no tenim relacions, hem de fer servir models d'agregació per aconseguir el mateix efecte. </p>
+<p><strong>Tècniques d'agregació més comuns</strong></p>
+<ul>
+<li><strong>Embedding</strong>: En aquest model, les dades relacionades s'emmagatzemen juntes en un únic document. Això permet recuperar les dades relacionades amb una sola consulta. Aquest model és útil per dades que es consulten juntes amb freqüència.</li>
+<li><strong>Referencing</strong>: En aquest model, les dades relacionades s'emmagatzemen en documents separats i s'estableixen relacions entre els documents mitjançant referències. Això permet gestionar les dades relacionades de manera independent i mantenir la consistència de les dades. Aquest model és útil per dades que es consulten de manera independent.</li>
+</ul>
+<p>El model <strong>Clau-valor</strong> també se considera un model d'agregació. La clau s'extreu del domini de l'aplicació (un nom d'usuari, una adreça de correu electrònic, un NIF...), mentre que el valor associat en general pot agafar qualsevol format i la seua interpretació serà responsabilitat de l'aplicació. </p>
+<p><img alt="Imatge 04" src="img/imatge01_04.png" /></p>
+<p><strong>Model d'agregació documental</strong> </p>
+<p>És com una extensió del model <strong>Clau-valor</strong>. Els documents tenen una estructura interna (document) que en general estarà formada per combinacions d'estructures <strong>Clau-valor</strong>. Una estructura així facilita l'accés a les dades des de les aplicacions, però és menys flexible que el model <strong>Clau-valor</strong> pur ja que les dades estan més estructurades. A més, les consultes són més complexes.</p>
+<p>Exemples d'este model són <strong>CouchDB</strong> o <strong>Elastic</strong>.</p>
+<p>Veiem per exemple un carro de la compra utilitzant un model documental:</p>
+<p><img alt="Imatge 05" src="img/imatge01_05.png" /></p>
+<p><strong>Model d'agregació per columnes</strong></p>
+<p>Apareix agafant com a precursor el <strong>model BigTable de Google</strong>. El model té forma de matriu, però no a l'estil d'una base de dades relacional. Ací les files són agregacions dades accessibles mitjançant una clau, i les columnes representen atributs de l'agregació que se representen amb una tripleta nom-valor-timestamp. D'alguna manera és com girar 90 graus a l'esquerra un model documental. </p>
+<p><img alt="Imatge 06" src="img/imatge01_06.png" /></p>
+<p><strong>Avantatges dels models d'agregació</strong></p>
+<ul>
+<li><strong>Eficiència</strong>: Permeten recuperar les dades relacionades amb una sola consulta, el que millora el rendiment de l'aplicació.</li>
+<li><strong>Escalabilitat</strong>: Permeten escalar les dades relacionades de manera independent i distribuïda.</li>
+</ul>
+<p><strong>Problema dels models d'agregació</strong></p>
+<p>El principal problema és que poden haver objectes repartits entre diferents agregats. Hem de prendre mesures per garantir la consistència de les dades en aquests casos.</p>
+<h3 id="cloud-computing-on-premise">Cloud Computing (on premise)</h3>
+<p>El <strong>Cloud Computing</strong> és un model de distribució de recursos informàtics que permet l'accés a serveis i recursos a través d'Internet. Aquest model ofereix una gran flexibilitat i escalabilitat, ja que els recursos es poden ajustar segons les necessitats de l'usuari.</p>
+<p>En el context del Big Data, el Cloud Computing juga un paper important. Les empreses i organitzacions que treballen amb grans volums de dades poden utilitzar el Cloud Computing per emmagatzemar, processar i analitzar aquestes dades de manera eficient i escalable. En el cas de Cloud de tercers, el proveïdor de serveis Cloud es fa càrrec de la infraestructura i els recursos necessaris per processar les dades, la qual cosa permet a les empreses centrar-se en l'anàlisi de les dades i la presa de decisions. El cost inicial no és molt alt i l'obsolescència i la escalabilitat són responsabilitat del proveïdor.</p>
+<p>El Cloud Computing utilitza normalment un núvol de tercers. Tot i això, una opció popular en el Cloud Computing és el model "on premise". Aquest model permet a les empreses tenir els seus propis servidors físics i infraestructura de Cloud Computing dins de les seves pròpies instal·lacions. Això ofereix un major control i seguretat sobre les dades, ja que no es depèn de tercers per gestionar-les. L'escalabilitat pot ser vertical (afegir més recursos a un únic node) o també horitzontal (comprar més servidors). El cost inicial és més alt que en el model de núvol públic, encara que a llarg termini pot ser més econòmic en certs casos perquè no se paga per ús una vegada feta la inversió inicial.</p>
+<p>Utilitzar el Cloud Computing "on premise" en el context del Big Data permet a les empreses tenir un accés ràpid i eficient a les seves dades, així com una gran capacitat de processament i emmagatzematge. A més, aquest model permet una millor integració amb altres sistemes i aplicacions empresarials. El model ofereix flexibilitat, escalabilitat i control sobre les dades.</p>
+<h2 id="tipus-de-dades">Tipus de dades</h2>
+<p>Quan treballem amb tecnologies Big Data podem fer ús de dades que arriben des de diferents fonts i en diferents formats. En general, podem classificar les dades d'entrada en dues categories principals: <strong>estructurades</strong>, <strong>semiestructurades</strong> i <strong>no estructurades</strong>.</p>
+<h3 id="dades-estructurades">Dades estructurades</h3>
+<p>Les dades estructurades són dades de les quals coneixem el format. No necessàriament han de ser bases de dades relacionals, podem ser no relacionals amb un format definit i fixe, fulls de càlcul, documents XML o JSON, etc.</p>
+<h3 id="dades-semiestructurades">Dades semiestructurades</h3>
+<p>Les dades semiestructurades són dades que tenen certa estructura i format, però eixe format pot variar d'un element a un altre. Un exemple d'aquest tipus de dades són els documents XML o JSON, on cada element pot tenir diferents camps i valors.</p>
+<h3 id="dades-no-estructurades">Dades no estructurades</h3>
+<p>Les dades no estructurades són dades de les quals no coneixem el format. Poden ser imatges, àudio, vídeo, text sense format fixe, etc.</p>
+<h2 id="utilitzacio-de-les-dades">Utilització de les dades</h2>
+<h3 id="hipotesis-de-causalitat">Hipòtesis de causalitat</h3>
+<p>Les hipòtesis de causalitat són afirmacions que estableixen una relació de causa-efecte entre dos o més variables. Aquestes hipòtesis són importants per entendre com les dades estan relacionades i com podem utilitzar-les per prendre decisions.</p>
+<p>Les hipòtesis de causalitat s'utilitzen en estadística. Se validen o se rebutjen en funció de les anàlisis fetes a diferents mostres de dades, i dels resultats que s'hagen obtés. </p>
+<h3 id="analisi-predictiu">Anàlisi predictiu</h3>
+<p>L'anàlisi predictiu és una tècnica que utilitza dades històriques per predir resultats futurs. Aquesta tècnica s'utilitza en molts àmbits, com ara el màrqueting, la salut, les finances, etc. L'anàlisi predictiu es basa en algoritmes d'aprenentatge automàtic i intel·ligència artificial per predir resultats futurs a partir de dades històriques.</p>
+<p>En Intel·ligència Artificial en general no se formulen hipòtesis, sino que se busquen correlacions, tendències o patrons. </p>
+<h3 id="analisi-descriptiu">Anàlisi descriptiu</h3>
+<p>L'anàlisi descriptiu és una tècnica que utilitza dades per descriure i resumir les característiques d'una població o mostra. Aquesta tècnica s'utilitza per entendre millor les dades i identificar tendències, patrons i relacions entre les dades.</p>
+<h2 id="tipus-de-processament">Tipus de processament</h2>
+<p>Per processar les dades tenim dos formes principals de fer-ho: <strong>batch processing</strong> i <strong>stream processing</strong>.</p>
+<h3 id="batch-processing">Batch processing</h3>
+<p>El <strong>batch processing</strong> és un mètode de processament en què les dades són processades en blocs o lots. Aquest mètode és útil per processar grans quantitats de dades de manera eficient i escalable. Els processos de batch processing són normalment planificats i executats en intervals regulars, com ara cada dia o cada setmana, en forma de tasques programades.</p>
+<p>Algunes característiques principals del <strong>batch processing</strong>:</p>
+<ul>
+<li>No requereix interacció amb els usuaris</li>
+<li>És ideal per a tasques repetitives i previsibles</li>
+<li>És útil per processar grans quantitats de dades</li>
+<li>Pot ser més eficient que el processament en temps real per a tasques que no requereixen una resposta immediata</li>
+<li>S'executa regularment (cada x temps, una vegada al dia, etc.)</li>
+</ul>
+<p>Un exemple de <strong>batch processing</strong> podria ser l'enviament de correus electrònics automàtics a tots els clients que han realitzat una compra en una botiga en línia cada dia a les 12:00, una felicitació d'aniversari a tots els clients que compleixen anys cada dia a les 9:00, etc.</p>
+<h3 id="stream-processing">Stream processing</h3>
+<p>El <strong>stream processing</strong> és un mètode de processament en què les dades són processades a mesura que arriben. Aquest mètode és útil per processar dades en temps real i respondre ràpidament a canvis en les dades. Els processos de stream processing són normalment continuats i en temps real, i poden ser utilitzats per a tasques com ara la detecció d'anomalies, la monitorització de sistemes, la generació de recomanacions, etc.</p>
+<p>Característiques principals:</p>
+<ul>
+<li>Les dades són processades a mesura que arriben</li>
+<li>Les dades s'estan processant continuament</li>
+<li>És útil per a tasques que requereixen una resposta immediata</li>
+</ul>
+<p>Un exemple de <strong>stream processing</strong> podria ser la detecció d'anomalies en temps real en un sistema de control de trànsit, la generació de recomanacions en temps real en una botiga en línia, la recepció i anàlisi d'informació que arriba via MQTT, etc.</p>
+<blockquote>
+<p>MQTT és un protocol de missatgeria que s'utilitza per a la comunicació entre dispositius IoT. Aquest protocol permet enviar i rebre missatges en temps real i és molt eficient per a la comunicació entre dispositius connectats a Internet. Més informació a <a href="https://mqtt.org/">https://mqtt.org/</a>.</p>
+</blockquote>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
