@@ -1,0 +1,25 @@
+site_name: "Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26"
+
+theme:
+  name: material
+  logo: img/logo.svg
+  palette:
+  primary: 'deep purple'
+
+markdown_extensions:
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+plugins:
+  - search
+
+extra_css:
+  - styles/taules.css
+
+nav:
+  - "Inici": "index.md"
+  - "Presentació": "documents/index.md"
+  - "1. Introducció al Big Data": "u01/index.md"
+  - "2. Repàs Docker": "u02/index.md"
+
