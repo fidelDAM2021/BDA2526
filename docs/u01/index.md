@@ -169,7 +169,7 @@ Ofereixen disponibilitat i tolerància a la partició sacrificant la consistènc
 
 Ofereixen consistència i disponibilitat en tots els nodes. Ara bé, no funcionarà bé si hi ha una partició entre 2 o més nodes del sistema, de manera que la tolerància a la partició no està garantida. Un exemple seria una base de dades relacional.
 
-https://www.genbeta.com/desarrollo/nosql-clasificacion-de-las-bases-de-datos-segun-el-teorema-cap
+[https://www.genbeta.com/desarrollo/nosql-clasificacion-de-las-bases-de-datos-segun-el-teorema-cap](https://www.genbeta.com/desarrollo/nosql-clasificacion-de-las-bases-de-datos-segun-el-teorema-cap)
 
 #### Models NoSQL
 
