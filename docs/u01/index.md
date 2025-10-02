@@ -97,7 +97,7 @@ En un sistema que escala verticalment, s'han d'ampliar els components del sistem
 
 En general, els sistemes de Big Data utilitzen l'escalabilitat horitzontal per aconseguir la capacitat necessària per processar grans quantitats de dades.
 
-### Divide i vencerás (MapReduce)
+### Divideix i vencerás (MapReduce)
 
 **MapReduce** és un model de programació i un sistema de processament distribuït dissenyat per processar grans quantitats de dades de manera eficient. El model de programació MapReduce consisteix en dues fases:
 
@@ -113,12 +113,14 @@ El model de programació MapReduce és molt eficient per processar grans quantit
 - **SQL**: SQL (Structured Query Language) és un llenguatge de programació utilitzat per gestionar bases de dades relacionals. SQL és un llenguatge molt potent i flexible que permet realitzar consultes complexes i eficients sobre les dades. En general s'utilitza la categoria "bases de dades SQL" per fer referència a les bases de dades relacionals.
 
 Exemples de bases de dades SQL: 
+
     - MySQL / MariaDB
     - PostgreSQL
     - Oracle
     - SQL Server
 
 Avantatges de les bases de dades SQL:
+
     - Estructura de dades clara i definida
     - Permeten relacions entre les dades
     - Suport per a transaccions ACID (Atomicitat, Consistència, Aïllament, Durabilitat)
@@ -128,6 +130,7 @@ Avantatges de les bases de dades SQL:
 - **NoSQL**: NoSQL és un terme genèric que fa referència a bases de dades no relacionals. Les bases de dades NoSQL són dissenyades per gestionar grans quantitats de dades de manera eficient i escalable. S'utilitzen sovint en sistemes de Big Data per emmagatzemar i processar grans quantitats de dades. A diferència de les bases de dades SQL o relacionals, en les bases de dades NoSQL s'ofereixen diferents models de dades i no cal un esquema predefinit per establir com s'estructuran i relaciona la informació.
 
 Exemples de bases de dades NoSQL:
+
     - MongoDB
     - Cassandra
     - HBase
@@ -137,6 +140,7 @@ Exemples de bases de dades NoSQL:
     - Neo4j
 
 Avantatges de les bases de dades NoSQL:
+
     - Escalabilitat horitzontal
     - Flexibilitat en l'emmagatzematge de dades
     - Rendiment i velocitat
@@ -187,7 +191,7 @@ Els models d'agregació se basen en la noció d'agregació: una col·lecció d'o
 - **Embedding**: En aquest model, les dades relacionades s'emmagatzemen juntes en un únic document. Això permet recuperar les dades relacionades amb una sola consulta. Aquest model és útil per dades que es consulten juntes amb freqüència.
 - **Referencing**: En aquest model, les dades relacionades s'emmagatzemen en documents separats i s'estableixen relacions entre els documents mitjançant referències. Això permet gestionar les dades relacionades de manera independent i mantenir la consistència de les dades. Aquest model és útil per dades que es consulten de manera independent.
 
-El model **Clau-valor** també se considera un model d'agregació. La clau s'extreu del domini de l'aplicació (un nom d'usuari, una adreça de correu electrònic, un NIF...), mentre que el valor associat en general pot agafar qualsevol format i la seua interpretació serà responsabilitat de l'aplicació. 
+El model **Clau-valor** també se considera un model d'agregació. La clau s'extreu del domini de l'aplicació (un nom d'usuari, una adreça de correu electrònic, un NIF...), mentre que el valor associat en general pot agafar qualsevol format (pot ser un bloc de dades, una col·lecció, un objecte...) i la seua interpretació serà responsabilitat de l'aplicació.
 
 ![Imatge 04](img/imatge01_04.png)
 
@@ -203,10 +207,11 @@ Veiem per exemple un carro de la compra utilitzant un model documental:
 
 **Model d'agregació per columnes**
 
-Apareix agafant com a precursor el **model BigTable de Google**. El model té forma de matriu, però no a l'estil d'una base de dades relacional. Ací les files són agregacions dades accessibles mitjançant una clau, i les columnes representen atributs de l'agregació que se representen amb una tripleta nom-valor-timestamp. D'alguna manera és com girar 90 graus a l'esquerra un model documental. 
+Apareix agafant com a precursor el **model BigTable de Google**. El model té forma de matriu, però no a l'estil d'una base de dades relacional. Ací les files són agregacions de dades accessibles mitjançant una clau, i les columnes representen atributs de l'agregació en format tripleta nom-valor-timestamp. D'alguna manera és com girar 90 graus a l'esquerra un model documental. 
 
 ![Imatge 06](img/imatge01_06.png)
 
+És un model eficient en sistemes distribuïts, ja que permet distribuir les dades per columnes i no per files. Això permet escalar les dades de manera independent i distribuïda. Un exemple d'este model és **Cassandra**.
 
 **Avantatges dels models d'agregació**
 
@@ -251,7 +256,9 @@ Les dades no estructurades són dades de les quals no coneixem el format. Poden 
 
 Les hipòtesis de causalitat són afirmacions que estableixen una relació de causa-efecte entre dos o més variables. Aquestes hipòtesis són importants per entendre com les dades estan relacionades i com podem utilitzar-les per prendre decisions.
 
-Les hipòtesis de causalitat s'utilitzen en estadística. Se validen o se rebutjen en funció de les anàlisis fetes a diferents mostres de dades, i dels resultats que s'hagen obtés. 
+Les hipòtesis de causalitat s'utilitzen en estadística. Se validen o se rebutjen en funció de les anàlisis fetes a diferents mostres de dades, i dels resultats que s'hagen obtés.
+
+Un exemple: 
 
 ### Anàlisi predictiu
 
