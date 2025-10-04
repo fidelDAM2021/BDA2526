@@ -54,6 +54,8 @@ El terme **Big Data** s'associa normalment a les anomenades "tres V" (que de veg
   
 - **Veracitat**: Fa referència a la qualitat de les dades. Les dades poden ser incorrectes, incompletes o no actualitzades. Això pot ser un problema a l'hora de prendre decisions basades en aquestes dades.
 
+![Les quatre V del Big Data](img/imatge01_00.png)
+
 ## Per què és important el Big Data?
 
 El Big Data és important perquè permet a les empreses i organitzacions millorar la seva presa de decisions, ja que permet analitzar grans quantitats de dades i extreure'n coneixement. Això pot ser útil per a moltes coses, com ara:
