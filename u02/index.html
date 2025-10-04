@@ -18,7 +18,7 @@
     
     
       
-        <title>Repàs Docker - Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26</title>
+        <title>Elements i arquitectura Big Data - Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#repas-docker" class="md-skip">
+        <a href="#elements-i-arquitectura-duna-plataforma-big-data" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Repàs Docker
+              Elements i arquitectura Big Data
             
           </span>
         </div>
@@ -270,17 +270,220 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    2. Elements i arquitectura Big Data
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    2. Repàs Docker
+    2. Elements i arquitectura Big Data
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#plataformes-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plataformes Big Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitectura-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquitectura Big Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-premise-vs-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      On-premise vs Cloud
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capes-duna-arquitectura-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capes d'una arquitectura Big Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Capes d&#39;una arquitectura Big Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capa-dadquisicio-i-interconnexio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capa d'adquisició i interconnexió
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-coneixement-i-emmagatzematge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capa de coneixement i emmagatzematge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-dinteroperabilitat-i-integracio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capa d'interoperabilitat i integració
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-serveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capa de serveis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-suport" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capa de suport
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flux-i-qualitat-de-les-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flux i qualitat de les dades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flux i qualitat de les dades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fases-del-flux-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fases del flux de dades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fases del flux de dades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ingesta-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ingesta de dades
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normalitzacio-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normalització de dades
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distribucio-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distribució de dades
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emmagatzematge-i-analisi-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emmagatzematge i anàlisi de dades
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#presentacio-i-exposicio-de-les-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Presentació i exposició de les dades
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qualitat-de-les-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Qualitat de les dades
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -306,6 +509,185 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#plataformes-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plataformes Big Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitectura-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquitectura Big Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-premise-vs-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      On-premise vs Cloud
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capes-duna-arquitectura-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capes d'una arquitectura Big Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Capes d&#39;una arquitectura Big Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capa-dadquisicio-i-interconnexio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capa d'adquisició i interconnexió
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-coneixement-i-emmagatzematge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capa de coneixement i emmagatzematge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-dinteroperabilitat-i-integracio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capa d'interoperabilitat i integració
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-serveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capa de serveis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-suport" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capa de suport
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flux-i-qualitat-de-les-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flux i qualitat de les dades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flux i qualitat de les dades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fases-del-flux-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fases del flux de dades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fases del flux de dades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ingesta-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ingesta de dades
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normalitzacio-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normalització de dades
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distribucio-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distribució de dades
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emmagatzematge-i-analisi-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emmagatzematge i anàlisi de dades
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#presentacio-i-exposicio-de-les-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Presentació i exposició de les dades
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qualitat-de-les-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Qualitat de les dades
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -320,8 +702,153 @@
 
 
 
-<h1 id="repas-docker">Repàs Docker</h1>
-<p>Repàs Docker (en construcció)</p>
+<h1 id="elements-i-arquitectura-duna-plataforma-big-data">Elements i arquitectura d'una plataforma Big Data</h1>
+<h2 id="plataformes-big-data">Plataformes Big Data</h2>
+<p>Una <strong>Plataforma Big Data</strong> és un sistema capaç de gestionar i processar grans volums de dades. Algunes característiques importants (encara que no imprescindibles) d'una plataforma Big Data són:</p>
+<ul>
+<li>Computació en temps real</li>
+<li>Escalabilitat (Cloud Computing, processament distribuït)</li>
+<li>Utilització de solucions de Intel·ligència Artificial per fer simulacions i predicció de resultats</li>
+<li>Suport de múltiples fonts i tipus de dades (estructurades, semiestructurades i no estructurades)</li>
+<li>En general, basada en tecnologies de codi obert i en certs estàndards</li>
+</ul>
+<p><strong>Hadoop</strong> està considerada com la primera plataforma Big Data generalista. Va ser creada per Yahoo! i està basada en el paper de Google sobre el sistema de fitxers distribuït <strong>GFS</strong> i el sistema de processament de dades <strong>MapReduce</strong>.</p>
+<p><a href="https://hadoop.apache.org/">Més informació sobre Hadoop</a></p>
+<h2 id="arquitectura-big-data">Arquitectura Big Data</h2>
+<p>Un model informacional tradicional en una organització es basa en una arquitectura de quatre capes:</p>
+<ul>
+<li><strong>Sistemes operacionals</strong>: una pàgina web, un ERP, un CRM, etc. Qualsevol font de dades de l'organització.</li>
+<li><strong>ETL</strong>: procés d'extracció, transformació, neteja i càrrega de dades.</li>
+<li><strong>Sistemes informacionals</strong>: datawarehouses, datamarts, etc. Bases de dades en general.</li>
+<li><strong>Eines d'anàlisi i visualització</strong>: eines de BI, dashboards, informes, etc.</li>
+</ul>
+<p>Les arquitectures Big Data venen a solucionar alguns dels problemes dels sistemes tradicionals, com ara:</p>
+<ul>
+<li>La dificultat per a gestionar grans volums de dades.</li>
+<li>La dificultat per a gestionar dades no estructurades.</li>
+<li>La dificultat per a gestionar dades en temps real.</li>
+<li>La dificultat per a integrar dades de múltiples fonts.</li>
+</ul>
+<p>Una arquitectura <strong>Big Data</strong>, com veurem a continuació, està formada per diferents capes que permeten gestionar i processar grans volums de dades. El concepte de <strong>Data Warehouse</strong> evoluciona cap al concepte de <strong>Data Lake</strong>, on es poden emmagatzemar dades en el seu format original (estiguen estructurades o no), sense necessitat de transformar-les prèviament. Això permet una major flexibilitat i agilitat en el processament de les dades. El processament o la transformació de les dades se pot fer en el moment que es necessiten, i no abans.</p>
+<p>Eixa transformació de l'emmagatzematge de les dades, juntament amb les diferents tècniques i eines de processament de dades específiques per a Big Data, permeten una gestió més eficient, àgil i escalable.</p>
+<h2 id="on-premise-vs-cloud">On-premise vs Cloud</h2>
+<p>Les plataformes Big Data es poden implementar de dues maneres principals:</p>
+<ul>
+<li><strong>On-premise</strong>: La plataforma es desplega en els servidors de l'organització. Aquesta opció permet un major control sobre les dades i la seguretat, però requereix una inversió inicial més gran i un manteniment continu.</li>
+<li><strong>Cloud</strong>: La plataforma es desplega en servidors al núvol. Aquesta opció permet una major escalabilitat i flexibilitat, ja que es poden afegir o eliminar recursos segons les necessitats. A més, no requereix una inversió inicial tan gran, ja que es paga per ús.</li>
+<li><strong>Híbrida</strong>: Una combinació de les dues opcions anteriors. Algunes dades es poden emmagatzemar i processar en els servidors de l'organització, mentre que altres dades es poden emmagatzemar i processar en el núvol. Aquesta opció permet un major control sobre les dades més sensibles, mentre que es pot aprofitar la flexibilitat i escalabilitat del núvol per a altres dades.</li>
+</ul>
+<p>Segur que heu escoltat conceptes com:</p>
+<ul>
+<li><strong>IaaS (Infrastructure as a Service)</strong>: Proveïment d'infraestructura informàtica (servidors, emmagatzematge, xarxes, etc.) com un servei. L'organització gestiona el sistema operatiu, les aplicacions i les dades.</li>
+<li><strong>PaaS (Platform as a Service)</strong>: Proveïment d'una plataforma informàtica (sistemes operatius, bases de dades, entorns de desenvolupament, etc.) com un servei. L'organització només gestiona les aplicacions i les dades.</li>
+<li><strong>SaaS (Software as a Service)</strong>: Proveïment d'aplicacions informàtiques (CRM, ERP, etc.) com un servei. L'organització només gestiona les dades.</li>
+</ul>
+<p><img alt="Serveis en el núvol" src="img/imatge02_00.png" /></p>
+<h2 id="capes-duna-arquitectura-big-data">Capes d'una arquitectura Big Data</h2>
+<p>Una arquitectura Big Data està formada per diferents capes que permeten gestionar i processar grans volums de dades. Algunes de les capes més importants d'una arquitectura Big Data són:</p>
+<ul>
+<li><strong>Capa d'adquisició i interconnexió</strong>: Capa encarregada de recollir les dades des de les seves fonts d'origen.</li>
+<li><strong>Capa de coneixement i emmagatzematge</strong>: Capa encarregada de guardar les dades i generar analítiques a partir d'elles.</li>
+<li><strong>Capa de interoperabilitat i integració</strong>: Capa encarregada de connectar els diferents components de la plataforma Big Data.</li>
+<li><strong>Capa de serveis</strong>: Capa encarregada d'oferir serveis a través d'una API, generalment.</li>
+<li><strong>Capa de suport</strong>: Capa encarregada de donar suport als diferents components de la plataforma Big Data, gestionant aspectes com ara la seguretat, la monitorització, etc.</li>
+</ul>
+<p>Un esquema visual d'una arquitectura Big Data es pot veure a la figura següent:</p>
+<p><img alt="Capes d'una arquitectura Big Data" src="img/imatge02_02.png" /></p>
+<h3 id="capa-dadquisicio-i-interconnexio">Capa d'adquisició i interconnexió</h3>
+<p>La <strong>capa d'adquisició i interconnexió</strong> és la capa encarregada de recollir les dades des de les seves fonts d'origen utilitzant protocols de comunicació comuns. En aquesta capa també se fa la transformació de les dades, si és necessari, per a que quan entren a la plataforma ho facen amb el format establert. Aquesta capa pot incloure diferents components, com ara:</p>
+<ul>
+<li><strong>Connectors</strong>: Components encarregats de connectar amb les diferents fonts de dades.</li>
+<li><strong>Transformadors</strong>: Components encarregats de transformar les dades a un format comú.</li>
+<li><strong>Validadors</strong>: Components encarregats de validar les dades abans de ser processades.</li>
+</ul>
+<h3 id="capa-de-coneixement-i-emmagatzematge">Capa de coneixement i emmagatzematge</h3>
+<p>La <strong>capa de coneixement i emmagatzematge</strong> és la capa encarregada de guardar les dades en diferents sistemes gestors d'informació, i també, si cal, de generar analítiques a partir d'elles utilitzant tècniques d'IA, regles, alertes, etc.</p>
+<h3 id="capa-dinteroperabilitat-i-integracio">Capa d'interoperabilitat i integració</h3>
+<p>La <strong>capa d'interoperabilitat i integració</strong> és la capa encarregada de connectar els diferents components de la plataforma Big Data, oferint interfícies o connectors que permeten l'accés a les dades de la plataforma. Així, podem construir serveis intel·ligents, connectar uns sistemes amb altres, o bé preparar les dades per exposar-les a l'exterior. </p>
+<h3 id="capa-de-serveis">Capa de serveis</h3>
+<p>La <strong>capa de serveis</strong> ofereix diferents serveis a través d'una API, com ara serveis d'anàlisi de dades, serveis de predicció, serveis de recomanació, etc. Aquests serveis poden ser consumits per altres sistemes o per l'usuari final. Se poden fer ús de components com ara:</p>
+<ul>
+<li><strong>APIs</strong>: Interfícies de programació d'aplicacions que permeten l'accés als serveis de la plataforma.</li>
+<li><strong>Dashboards</strong>: Interfícies gràfiques que permeten visualitzar les dades i els resultats obtinguts.</li>
+<li><strong>GIS</strong>: Sistemes d'informació geogràfica que permeten visualitzar les dades en un mapa.</li>
+<li><strong>Alarmes</strong>: Serveis que permeten enviar alarmes en funció de regles definides.</li>
+<li><strong>Recomanadors</strong>: Serveis que permeten fer recomanacions en funció de les dades disponibles.</li>
+</ul>
+<h3 id="capa-de-suport">Capa de suport</h3>
+<p>La <strong>capa de suport</strong> és la capa encarregada de donar suport als diferents components de la plataforma Big Data, gestionant aspectes com ara la seguretat, la monitorització, la gestió de l'escalabilitat, etc. Es tracta d'una capa transversal a tota la plataforma, la qual permet gestionar i administrar. Per exemple, pot incloure funcionalitats com ara: </p>
+<ul>
+<li><strong>Seguretat</strong>: Gestió de l'accés a les dades i als serveis de la plataforma. Pot incloure la comprovació i autorització de les diferents fonts de dades i usuaris.</li>
+<li><strong>Monitorització i auditoria</strong>: Control de l'estat dels diferents components de la plataforma. L'auditoria permet registrar les accions realitzades pels usuaris i els sistemes.</li>
+<li><strong>Gestió de l'escalabilitat</strong>: Gestió de la capacitat de processament i emmagatzematge de la plataforma. Per exemple, pot incloure la gestió de la càrrega de treball i la distribució de les dades.</li>
+<li><strong>Gestió de l'administració</strong>: Gestió dels usuaris, dels permisos, dels logs, etc. </li>
+</ul>
+<p>Ara que ja hem vist les diferents capes i les seues funcions, podem mostrar un esquema més detallat d'una plataforma Big Data:</p>
+<p><img alt="Capes d'una arquitectura Big Data" src="img/imatge02_03.png" /></p>
+<p>Les diferents capes:</p>
+<p><strong>Capa d'adquisició</strong></p>
+<p><img alt="Capa d'adquisició" src="img/imatge02_04.png" /></p>
+<p><strong>Capa de coneixement i emmagatzematge</strong></p>
+<p><img alt="Capa de coneixement i emmagatzematge" src="img/imatge02_05.png" /></p>
+<p><strong>Capa d'interoperabilitat i integració</strong></p>
+<p><img alt="Capa d'interoperabilitat i integració" src="img/imatge02_06.png" /></p>
+<p><strong>Capa de serveis</strong></p>
+<p><img alt="Capa de serveis" src="img/imatge02_07.png" /></p>
+<p><strong>Capa de suport</strong></p>
+<p><img alt="Capa de suport" src="img/imatge02_08.png" /></p>
+<h2 id="flux-i-qualitat-de-les-dades">Flux i qualitat de les dades</h2>
+<p>El flux de dades en el context de Big Data es refereix al moviment de dades des del seu origen fins al seu destí. Les dades, i el seu processament, és la part més important d'un sistema Big Data. La qualitat de les dades és imprescindible per a obtenir resultats fiables, correctes i útils.</p>
+<h3 id="fases-del-flux-de-dades">Fases del flux de dades</h3>
+<ol>
+<li>
+<p><strong>Ingestió de dades</strong>: Procés d'adquisició de dades des de les seves fonts d'origen. Aquestes dades poden ser estructurades, semiestructurades o no estructurades.</p>
+</li>
+<li>
+<p><strong>Normalització de dades</strong>: Procés de transformació de les dades per a que siguin compatibles amb el sistema de gestió de dades. Dins del procés de normalització podem també trobar la neteja de dades. La neteja consisteix en la identificació i correcció d'errors en les dades. La normalització de dades també pot incloure la transformació de les dades a un format comú.</p>
+</li>
+<li>
+<p><strong>Distribució de dades</strong>: Procés de distribució de les dades en els diferents nodes del sistema de processament.</p>
+</li>
+<li>
+<p><strong>Emmagatzenament i anàlisi de les dades</strong>: Procés de guardar les dades en un sistema de fitxers distribuït i processar-les per a obtenir resultats.</p>
+</li>
+<li>
+<p><strong>Presentació i exposició de les dades</strong>: Procés de visualització i exposició de les dades per a que siguin comprensibles pels usuaris i/o accessibles per altres sistemes.</p>
+</li>
+</ol>
+<p>Un esquema resumit de les diferents fases del flux de dades es pot veure a la figura següent:</p>
+<p><img alt="Fases del flux de dades" src="img/imatge02_01.jpg" /></p>
+<h4 id="ingesta-de-dades">Ingesta de dades</h4>
+<p>La <strong>ingesta de dades</strong> és el procés d'adquisició de dades des de les seves fonts d'origen. Les dades poden ser, com hem vist, estructurades, semiestructurades o no estructurades. Les dades poden provenir de diferents fonts, com ara:</p>
+<ul>
+<li>Bases de dades relacionals</li>
+<li>Fitxers de text</li>
+<li>Fitxers de logs</li>
+<li>Sensors</li>
+<li>Xarxes socials</li>
+<li>etc.</li>
+</ul>
+<p>La <strong>ingesta de dades</strong> ha de complir amb els protocols de seguretat i privacitat establerts en les diferents fonts de dades. S'han de seguir els protocols de comunicación definits en cada cas. La ingesta de dades pot ser en temps real o en batch, com s'ha comentat abans.</p>
+<h4 id="normalitzacio-de-dades">Normalització de dades</h4>
+<p>Les dades recollides s'han de normalitzar per a que siguin compatibles amb el sistema de gestió de dades. La normalització de dades pot incloure la neteja de dades, la transformació de dades a un format comú i la identificació de dades duplicades.</p>
+<p>Hi ha estàndars, com ara <strong>NGSI</strong>, que defineixen com s'han de normalitzar les dades per a que siguin compatibles amb els sistemes de gestió de dades. <strong>NGSI</strong> és un protocol que utilitzen les APis dels components <strong>FIWARE</strong> per a normalitzar les dades. <strong>FIWARE</strong> és una plataforma d'arquitectura oberta que permet la creació de solucions <strong><em>IoT</em></strong> i <strong><em>Smart City</em></strong>.</p>
+<h4 id="distribucio-de-dades">Distribució de dades</h4>
+<p>Les dades normalitzades s'han de distribuir en els diferents nodes del sistema de processament. La distribució de dades es pot fer de forma centralitzada o distribuïda. En sistemes distribuïts, com ara <strong>Hadoop</strong>, les dades es distribueixen en els diferents nodes del sistema de processament.</p>
+<h4 id="emmagatzematge-i-analisi-de-dades">Emmagatzematge i anàlisi de dades</h4>
+<p>Les dades, una vegada normalitzades, s'emmagatzemen en el repositori de la plataforma corresponent. Diferents sistemes analítics poden processar les dades per a obtenir resultats. Els resultats poden ser guardats en el repositori o exposats a través d'una API. En el processament se poden buscar anomalies en funció de regles definides, alarmes, tendències, etc. Aplicant models de IA es poden fer prediccions, recomanacions, o generar nou coneiximent.</p>
+<h4 id="presentacio-i-exposicio-de-les-dades">Presentació i exposició de les dades</h4>
+<p>Els resultats obtinguts en el procés d'anàlisi de dades es poden visualitzar i exposar a través d'una interfície gràfica. Les dades també es poden exposar a través d'una API per a que altres sistemes puguin accedir-hi. La presentació i exposició de les dades ha de ser el més intuïtiva possible, clara i comprensible per a l'usuari final. L'objectiu éś facilitar la presa de decisions basada en les dades i la gestió dels diferents serveis que s'ofereixen a partir de les dades resultants de l'anàlisi.</p>
+<h3 id="qualitat-de-les-dades">Qualitat de les dades</h3>
+<p>La qualitat de les dades es pot mesurar en funció de diferents aspectes:</p>
+<ul>
+<li><strong>Precisió</strong>: Les dades són correctes i exactes?</li>
+<li><strong>Integritat</strong>: Les dades són coherents i consistents?</li>
+<li><strong>Consistència</strong>: Les dades són uniformes i homogènies?</li>
+<li><strong>Actualitat</strong>: Les dades són actuals i vigents?</li>
+<li><strong>Completitud</strong>: Les dades són completes i no hi ha valors en blanc?</li>
+<li><strong>Usabilitat</strong>: Les dades són fàcils d'entendre i utilitzar?</li>
+</ul>
 
 
 
