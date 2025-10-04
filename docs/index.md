@@ -4,4 +4,4 @@
 
 * [0. Presentació](documents/index.md)
 * [1. Introducció a Big Data](u01/index.md)
-* [2. Repàs Docker](u02/index.md)
+* [2. Elements i arquitectura Big Data](u02/index.md)
