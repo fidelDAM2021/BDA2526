@@ -1,6 +1,6 @@
 ---
 # Informació general del document
-title: Annex: Docker Compose
+title: Repàs Docker Compose
 subtitle: 
 authors: 
     - Departament d'informàtica
@@ -21,7 +21,7 @@ toc-own-page: true
 toc-title: Continguts
 
 # Capçaleres i peus
-header-left: Unitat 03.2 - Docker Compose
+header-left: Unitat 03.2 - Repàs Docker Compose
 header-right: Curs 2025-2026
 footer-left: IES Jaume II El Just
 footer-right: \thepage/\pageref{LastPage}
