@@ -1,0 +1,1012 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../u02/">
+      
+      
+        <link rel="next" href="annex/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Repàs Docker - Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../styles/taules.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#repas-docker" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-header__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../img/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Repàs Docker
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-nav__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../img/logo.svg" alt="logo">
+
+    </a>
+    Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inici
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Presentació
+    
+      <br>
+      <small>Mòdul Big Data Aplicat</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1. Introducció al Big Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2. Elements i arquitectura Big Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    3.1 Repàs Docker
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.1 Repàs Docker
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contenidors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contenidors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contenidors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#avantatges-de-lus-de-contenidors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avantatges de l'ús de contenidors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#imatges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Imatges
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Imatges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imatges-i-contenidors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Imatges i contenidors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installacio-de-docker-en-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instal·lació de Docker en Linux
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instal·lació de Docker en Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-i-serveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker i serveis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comandes-basiques-de-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandes bàsiques de Docker
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dockerfile
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volums" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volums
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="annex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.2 Docker Compose
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contenidors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contenidors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contenidors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#avantatges-de-lus-de-contenidors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avantatges de l'ús de contenidors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#imatges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Imatges
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Imatges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imatges-i-contenidors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Imatges i contenidors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installacio-de-docker-en-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instal·lació de Docker en Linux
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instal·lació de Docker en Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-i-serveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker i serveis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comandes-basiques-de-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandes bàsiques de Docker
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dockerfile
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volums" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volums
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="repas-docker">Repàs Docker</h1>
+<p>En aquesta unitat farem un repàs de la tecnologia de contenidors, les imatges i el funcionament bàsic de Docker. Aquesta unitat és un repàs dels coneixements que ja hauríem d'haver adquirit en cursos anteriors, per la qual cosa no entrarem en massa detall. Si voleu aprofundir més en el tema, podeu consultar la documentació oficial de Docker a <a href="https://docs.docker.com/get-started/">https://docs.docker.com/get-started</a>.</p>
+<p>Treballarem amb Docker en un entorn Linux, encara que també està disponible per a Windows i MacOS. Si treballeu en un altre Sistema Operatiu que no siga Linux podeu utilitzar Docker Desktop, que és una aplicació que permet utilitzar Docker en Windows i MacOS. Podeu descarregar-la des de <a href="https://www.docker.com/products/docker-desktop">https://www.docker.com/products/docker-desktop</a>.</p>
+<h2 id="contenidors">Contenidors</h2>
+<p>Un <strong>contenidor</strong> és una unitat d'execució lleugera que inclou tot el necessari per a executar una aplicació. Amb els contenidors podem empaquetar i distribuir aplicacions juntament amb les seves dependències. Els contenidors són una eina molt útil per a desplegar aplicacions de forma ràpida i eficient.Això ens permetrà tenir un entorn de desenvolupament idèntic a l'entorn de producció.</p>
+<p>Podríem dir que el contenidor és també una tecnologia de virtualització. A diferència d’una màquina virtual, el contenidor utilitza el sistema base de la màquina anfitriona i actua com un entorn privat que comparteix recursos amb el sistema anfitrió sense necessitat de virtualitzar tot el hardware.</p>
+<h3 id="avantatges-de-lus-de-contenidors">Avantatges de l'ús de contenidors</h3>
+<ul>
+<li>
+<p>La flexibilitat. Els contenidors són lleugers i portables, i poden ser executats en qualsevol lloc. Fins i tot les aplicacions més complexes poden incloure's als contenidors. </p>
+</li>
+<li>
+<p>La consistència. Els contenidors asseguren que les aplicacions funcionen de la mateixa manera en qualsevol entorn.</p>
+</li>
+<li>
+<p>La eficiència. Els contenidors permeten als desenvolupadors empaquetar i distribuir aplicacions juntament amb les seves dependències.</p>
+</li>
+<li>
+<p>La portabilitat. Els contenidors poden ser desplegats i executats en qualsevol lloc, ja siga en un entorn local, en el núvol o en un centre de dades.</p>
+</li>
+<li>
+<p>La seguretat. Els contenidors ofereixen un entorn segur per a executar aplicacions.</p>
+</li>
+<li>
+<p>L'escalabilitat. Els contenidors permeten escalar aplicacions de forma ràpida i eficient.</p>
+</li>
+<li>
+<p>La poca càrrega que suposen per al sistema, al compartir el mateix kernel que el sistema anfitrió.</p>
+</li>
+<li>
+<p>La possibilitat d'actualitzar "en calent". És a dir, sense haver de parar el servei.</p>
+</li>
+</ul>
+<h2 id="imatges">Imatges</h2>
+<p>Una <strong>imatge</strong> és un paquet que conté tot el necessari per a executar una aplicació, incloent l'entorn d'execució, el codi, les llibreries, les dependències, les dades i la configuració (variables d'entorn, fitxers, etc.) Les imatges són immutables, és a dir, no es poden modificar. Per a modificar una imatge, cal crear una nova imatge a partir de l’original.</p>
+<h3 id="imatges-i-contenidors">Imatges i contenidors</h3>
+<p>Un contenidor és una instància d'una <strong>imatge</strong>. Si una imatge conté tot el necessari per a executar una aplicació, el contenidor seria com una instància d'eixa aplicació en execució. Una imatge és un arxiu de només lectura que conté un conjunt de capes que són utilitzades per a crear un sistema de fitxers. Més endavant veurem com crear imatges, com utilitzar imatges ja creades, i sobretot com utilitzar-les per a crear contenidors.</p>
+<h2 id="docker">Docker</h2>
+<p><strong>Docker</strong> és una plataforma de codi obert que permet automatitzar el desplegament d'aplicacions dins de contenidors. Docker permet als desenvolupadors empaquetar, enviar i executar aplicacions com contenidors. Això permet, com hem comentat abans, simular un entorn de producció sense haver de modificar ni configurar el nostre sistema operatiu anfitrió.</p>
+<p><img alt="Logo de Docker" src="img/Docker_logo.png" /></p>
+<p>Bàsicament, el que aconsegueix Docker és oferir contenidors d'aplicacions que aprofiten les capacitats de virtualització del sistema amfitrió per poder executar processos i serveis de forma aïllada. Es tracta d'un concepte paregut al de màquina virtual, però que no requerix d'un sistema operatiu. En Linux, per exemple, Docker fa ús de les característiques d'aïllament de recursos (CPU, memòria, xarxa...) del nucli del sistema, tals com els <strong><em>cgroups</em></strong> i els <strong><em>namespaces</em></strong>, de manera que podem tindre diversos contenidors compartint el mateix kernel de Linux, però cadascun amb restriccions d'accés a determinats recursos. Així, contenidors independents s'executen dins una mateixa instància de Linux, evitant la sobrecàrrega d'iniciar i mantenir màquines virtuals (on cada màquina conté tot el necessari per a fer anar un sistema operatiu complet).</p>
+<h2 id="installacio-de-docker-en-linux">Instal·lació de Docker en Linux</h2>
+<p>Per a instal·lar Docker en una distribució Linux, cal seguir els següents passos:</p>
+<ol>
+<li>Actualitzar la llista de paquets disponible el sistema:</li>
+</ol>
+<pre><code class="language-bash">sudo apt-get update 
+</code></pre>
+<ol>
+<li>Instal·lar els paquets necessaris per a que el sistema puga descarregar paquets a través de HTTPS:</li>
+</ol>
+<pre><code class="language-bash">sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+</code></pre>
+<ol>
+<li>Afegir la clau GPG oficial de Docker:</li>
+</ol>
+<pre><code class="language-bash">sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+</code></pre>
+<ol>
+<li>Afegir el repositori de Docker a la llista de repositoris del sistema:</li>
+</ol>
+<pre><code class="language-bash">echo &quot;deb [signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable&quot; | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+</code></pre>
+<ol>
+<li>Actualitzar la llista de paquets disponible el sistema:</li>
+</ol>
+<pre><code class="language-bash">sudo apt-get update
+</code></pre>
+<ol>
+<li>Instal·lar la versió comunitària de Docker:</li>
+</ol>
+<pre><code class="language-bash">sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+</code></pre>
+<ol>
+<li>Comprovar que Docker s'ha instal·lat correctament:</li>
+</ol>
+<pre><code class="language-bash">sudo docker --version
+sudo docker run hello-world
+</code></pre>
+<p>En teoria ens hauria d'aparèixer un missatge com el següent:</p>
+<pre><code class="language-bash">$ sudo docker run hello-world
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+d1725b59e92d: Pull complete 
+Digest: sha256:0add3ace90ecb4adbf7777e9aacf18357296e799f81cabc9fde470971e499788
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the &quot;hello-world&quot; image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+</code></pre>
+<p>Com veiem, l'execució de docker s'ha realitzat com a sudo. Si volem utilitzar docker per a altres usuaris, només haurem de crear un grup docker (o comprovar si ja existeix) i afegir ahi els usuaris que el puguen utilitzar.</p>
+<p>Per altra banda, veiem com utilitzar docker per tal de llançar una imatge: <code>docker run</code>. En aquest cas, una imatge de prova anomenada <em>hello-world</em>.</p>
+<p>Com veiem, ens indica que no troba la imatge 'hello-world:latest' en local, pel que la descarrega de la llibrería (pull). Una vegada descarregada ja ens mostra el missatge que comença amb "<em>Hello from Docker</em>", corresponent a aquesta imatge.</p>
+<p>Si tornem a llançar l'ordre, comprovarem com ja no realitza la descàrrega sinò que executa directament la imatge Hello World.</p>
+<blockquote>
+<p>Si no voleu fer sudo cada vegada, podeu afegir-vos al grup docker fent <code>sudo usermod -aG docker $USER</code>. Si treballeu amb els ordinadors del centre, ja esteu afegits al grup.</p>
+</blockquote>
+<h3 id="docker-i-serveis">Docker i serveis</h3>
+<p>El dimoni (daemon) de Docker és el servei que gestiona la creació, execució i distribució de contenidors. L'ordre <code>docker</code> que hem vist anteriorment, és el client de docker, que permet a l'usuari interactuar amb el sistema, encara que també hi ha altres aplicacions clints.</p>
+<p>Si volem que el servei de Docker s'inicie en arrancar el sistema (systemd), farem:</p>
+<pre><code class="language-bash">sudo systemctl enable docker
+</code></pre>
+<p>I si volem llevar-lo de l'inici:</p>
+<pre><code class="language-bash">sudo systemctl disable docker
+</code></pre>
+<p>Podem trobar més informació sobre tot el que podem fer després d'haver instal·lat Docker en: https://docs.docker.com/install/linux/linux-postinstall/#configure-docker-to-start-on-boot, així com documentació per a la configuració del servei de Docker per a que escolte determinats ports mitjançant el fitxer /etc/docker/daemon.json: https://docs.docker.com/install/linux/linux-postinstall/#configure-where-the-docker-daemon-listens-for-connections</p>
+<h2 id="comandes-basiques-de-docker">Comandes bàsiques de Docker</h2>
+<p>A continuació, veurem algunes de les comandes bàsiques de Docker:</p>
+<ul>
+<li><code>docker run</code>: Llança un contenidor a partir d'una imatge, tal com acabem de veure.</li>
+<li><code>docker create</code>: Crea un contenidor a partir d'una imatge, però no l'executa.</li>
+<li><code>docker ps</code>: Mostra els contenidors en execució.</li>
+<li><code>docker ps -a</code>: Mostra tots els contenidors, tant els que estan en execució com els que no.</li>
+<li><code>docker images</code>: Mostra les imatges disponibles en el sistema.</li>
+<li><code>docker pull</code>: Descarrega una imatge de Docker Hub sense crear cap contenidor</li>
+<li><code>docker push</code>: Puja una imatge a Docker Hub.</li>
+<li><code>docker rmi</code>: Elimina una imatge.</li>
+<li><code>docker rm</code>: Elimina un contenidor.</li>
+<li><code>docker start</code>: Inicia un contenidor. Si el contenidor ja existeix, farem <code>docker start</code>, no <code>docker run</code> cada vegada</li>
+<li><code>docker stop</code>: Para un contenidor.</li>
+<li><code>docker restart</code>: Reinicia un contenidor.</li>
+<li><code>docker exec</code>: Executa una comanda en un contenidor en execució.</li>
+<li><code>docker logs</code>: Mostra els logs d'un contenidor.</li>
+<li><code>docker inspect</code>: Mostra informació detallada d'un contenidor o imatge.</li>
+<li><code>docker cp</code>: Copia fitxers entre el sistema local i un contenidor.</li>
+<li><code>docker commit</code>: Crea una nova imatge a partir d'un contenidor en execució.</li>
+<li><code>docker build</code>: Construeix una imatge a partir d'un fitxer Dockerfile.</li>
+<li><code>docker-network</code>: Permet posar contenidors en xarxa.</li>
+<li><code>docker-attach</code>: Permet connectar-se a un contenidor en execució i veure en el nostre terminal el que es mostra en el terminal del contenidor.</li>
+</ul>
+<p>Exemple: anem a vore com descarregar i llançar una imatge per a Docker de <strong><em>Busybox</em></strong>. <strong><em>Busybox</em></strong> no és més que una utilitat que combina moltes eines estàndards d'Unix i ordres de Linux en un sol fitxer.</p>
+<pre><code class="language-bash"># docker pull busybox
+Using default tag: latest
+latest: Pulling from library/busybox
+8c5a7da1afbc: Pull complete 
+Digest: sha256:cb63aa0641a885f54de20f61d152187419e8f6b159ed11a251a09d115fdff9bd
+Status: Downloaded newer image for busybox:latest
+</code></pre>
+<p>Amb açò hem descarregat la imatge de busybox pe a Docker des del Docker Hub (https://hub.docker.com/explore/). </p>
+<p>Si volem comprovar que l'hem descarregat, podem executar <code>docker images</code>, que ens mostra les imatges que tenim baixades:</p>
+<pre><code class="language-bash"># docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+hello-world         latest              4ab4c602aa5e        3 weeks ago         1.84kB
+busybox             latest              e1ddd7948a1c        2 months ago        1.16MB
+</code></pre>
+<p>Ara anem a executar el contenidor amb <code>docker run</code>:</p>
+<pre><code class="language-bash"># docker run busybox
+</code></pre>
+<p>Dos coses que podem veure: com que a tenim descarregada la imatge, no la torna a descarregar. Amb la imatge de busybox al sistema, Docker la busca, la carrega en un contenidor i executa al busybox les ordres que li passem. </p>
+<p>Segona cosa: com que en aquest cas no li hem passat cap ordre, aparentment, no farà res.</p>
+<p>Ara anem a executar una instrucció <strong><em>dins del contenidor</em></strong>:</p>
+<pre><code class="language-bash"># docker run busybox echo &quot;Hola món!&quot;
+Hola món!
+</code></pre>
+<p>O també:</p>
+<pre><code class="language-bash"># docker run busybox ls
+bin
+dev
+etc
+home
+proc
+root
+sys
+tmp
+usr
+var
+</code></pre>
+<p>O fins i tot veure l'arxiu d'usuaris:</p>
+<pre><code class="language-bash"># docker run busybox cat /etc/passwd
+root:x:0:0:root:/root:/bin/sh
+daemon:x:1:1:daemon:/usr/sbin:/bin/false
+bin:x:2:2:bin:/bin:/bin/false
+sys:x:3:3:sys:/dev:/bin/false
+sync:x:4:100:sync:/bin:/bin/sync
+mail:x:8:8:mail:/var/spool/mail:/bin/false
+www-data:x:33:33:www-data:/var/www:/bin/false
+operator:x:37:37:Operator:/var:/bin/false
+nobody:x:65534:65534:nobody:/home:/bin/false
+</code></pre>
+<p>Per veure els contenidors que tenim en execució, podem utilitzar <code>docker ps</code>:</p>
+<pre><code class="language-bash"># docker ps
+CONTAINER ID    IMAGE       COMMAND       CREATED          STATUS           PORTS   NAMES
+d4018e11cc64    busybox     &quot;sleep 10&quot;    5 seconds ago    Up 4 seconds             elegant_keldysh
+</code></pre>
+<p>Si executem l'ordre <code>sh</code> dins del contenidor, podem interactuar amb ell:</p>
+<pre><code class="language-bash"># docker exec -it d4018e11cc64 sh
+/ # ls
+bin   dev   etc   home  proc  root  sys   tmp   usr   var
+/ # exit
+</code></pre>
+<blockquote>
+<p>amb <code>docker run -it imatge</code> el contenidor se crea a partir de la imatge, se queda en funcionament i no se tanca</p>
+<p>amb <code>docker run -it -rm imatge</code> el contenidor se crea, se queda en funcionament i quan el tanquem, se borra</p>
+</blockquote>
+<p>Amb l'opció -a de docker ps podem obtindre tots els contenidors que s'han creat en la sessió actual:</p>
+<pre><code class="language-bash"># docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                        
+5dde99182cec        busybox             &quot;sh&quot;                2 minutes ago       Exited (0) 2 minutes ago                           festive_ride
+d4018e11cc64        busybox             &quot;sleep 10&quot;          16 minutes ago      Exited (0) 16 minutes ago                          elegant_keldysh
+2a2b08d458c5        busybox             &quot;ps aux&quot;            20 minutes ago      Exited (0) 19 minutes ago                          
+b17136bc9389        busybox             &quot;cat /etc/passwd&quot;   22 minutes ago      Exited (0) 22 minutes ago                          gifted_archimedes
+a475a7587143        busybox             &quot;ls&quot;                23 minutes ago      Exited (0) 23 minutes ago                          jovial_leavitt
+1febe609a9a9        busybox             &quot;echo hola&quot;         23 minutes ago      Exited (0) 23 minutes ago                          compassionate_spence
+dc64b0307514        busybox             &quot;sh&quot;                25 minutes ago      Exited (0) 24 minutes ago                          clever_lalande
+2a4808f37627        hello-world         &quot;/hello&quot;            About an hour ago   Exited (0) About an hour ago                       nostalgic_stallman
+31545996cff7        hello-world         &quot;/hello&quot;            About an hour ago   Exited (0) About an hour ago 
+</code></pre>
+<p>Per a eliminar un contenidor, farem servir <code>docker rm</code>:</p>
+<pre><code class="language-bash"># docker rm 5dde99182cec
+5dde99182cec
+</code></pre>
+<p>I per a eliminar una imatge, farem servir <code>docker rmi</code>:</p>
+<pre><code class="language-bash"># docker rmi busybox
+Untagged: busybox:latest
+Untagged: busybox@sha256:cb63aa0641a885f54de20f61d152187419e8f6b159ed11a251a09d115fdff9bd
+Deleted: sha256:e1ddd7948a1c1e0b0c6b4f3b3d1f0e3f3b3b1f1b4a7d1b3b1b3b1b3b1b3b1b3b1
+Deleted: sha256:8c5a7da1afbc
+</code></pre>
+<h2 id="dockerfile">Dockerfile</h2>
+<p>Hem vist com descarregar imatges i crear contenidors a partir d'elles. I si volem crear les nostres pròpies imatges, o ampliar imatges que ja existeixen? Per a açò, farem servir un fitxer anomenat <strong><em>Dockerfile</em></strong> i la instrucció <code>docker build</code>.</p>
+<p>Un <strong><em>Dockerfile</em></strong> és un fitxer de text que conté una sèrie d'instruccions que Docker ha d'executar per a crear una imatge. Aquestes instruccions són molt senzilles i permeten crear imatges personalitzades a partir d'imatges existents.</p>
+<p>Avantatges de crear imatges a partir d'un <strong><em>Dockerfile</em></strong>:</p>
+<ul>
+<li>
+<p>Podrem reproduir la imatge fàcilment ja que al <strong><em>Dockerfile</em></strong> tenim totes i cadascuna de les ordres necessàries per a la construcció de la imatge. </p>
+</li>
+<li>
+<p>Podrem configurar el procés que s'executarà per defecte als contenidors creats a partir de la nova imatge. Si volem canviar la imatge de base, això és extremadament senzill amb un Dockerfile.</p>
+</li>
+</ul>
+<p>Les principals instruccions que podem trobar en un <strong><em>Dockerfile</em></strong> són:</p>
+<ul>
+<li><code>FROM</code>: Indica la imatge de base a partir de la qual es crearà la nova imatge.</li>
+<li><code>RUN</code>: Executa una instrucció en el sistema de fitxers de la imatge.</li>
+<li><code>COPY</code>: Copia fitxers des del sistema local a la imatge.</li>
+<li><code>ADD</code>: Similar a COPY, però permet copiar fitxers des d'una URL.</li>
+<li><code>CMD</code>: Especifica la comanda que s'executarà per defecte en els contenidors creats a partir de la imatge.</li>
+<li><code>ENTRYPOINT</code>: Especifica la comanda que s'executarà quan es llance el contenidor amb docker run</li>
+<li><code>EXPOSE</code>: Indica els ports que s'han d'exposar quan es llance el contenidor.</li>
+<li><code>VOLUME</code>: Indica els volums que s'han de crear quan es llance el contenidor.</li>
+<li><code>WORKDIR</code>: Indica el directori de treball per defecte.</li>
+<li><code>ENV</code>: Defineix variables d'entorn.</li>
+<li><code>ARG</code>: Defineix variables que es poden passar a la imatge en el moment de la construcció.</li>
+<li><code>LABEL</code>: Afegeix metadades a la imatge.</li>
+<li><code>USER</code>: Indica l'usuari que s'ha d'utilitzar per a executar les ordres.</li>
+</ul>
+<p>Per exemple, anem a veure com serie més o menys un Dockerfile per a crear una imatge de <strong><em>node-red</em></strong>:</p>
+<pre><code class="language-dockerfile">FROM nodered/node-red
+# Copy package.json to the WORKDIR so npm builds all
+# of your added nodes modules for Node-RED
+COPY package.json .
+RUN npm install --unsafe-perm --no-update-notifier --no-fund --only=production
+# Copy _your_ Node-RED project files into place
+# NOTE: This will only work if you DO NOT later mount /data as an external volume.
+#       If you need to use an external volume for persistence then
+#       copy your settings and flows files to that volume instead.
+COPY settings.js /data/settings.js
+COPY flows_cred.json /data/flows_cred.json
+COPY flows.json /data/flows.json
+# Expose the listening port of Node-RED
+EXPOSE 1880
+</code></pre>
+<p>Amb docker build, crearem la imatge a partir del Dockerfile:</p>
+<pre><code class="language-bash">docker build -t node-red .
+</code></pre>
+<p>I amb docker run, llançarem el contenidor:</p>
+<pre><code class="language-bash">docker run -d -p 1880:1880 --name mynodered node-red
+</code></pre>
+<p>Qué significa -d i -p? </p>
+<p>-d significa que el contenidor s'executarà en segon pla, és a dir, en background. 
+-p significa que el port 1880 del contenidor es mapejarà al port 1880 de la màquina host.</p>
+<p>Podem provar si funciona accedint desde la URL a http://localhost:1880.</p>
+<h2 id="volums">Volums</h2>
+<p>Si eliminem un contenidor o el tornem a crear amb la mateixa imatge, perdrem totes les dades que hàgim creat dins del contenidor. Per a evitar açò, farem servir <strong><em>volums</em></strong>.</p>
+<p>Un <strong><em>volum</em></strong> és un directori que es pot compartir entre contenidors i amb el sistema host. Els volums són una eina molt útil per a persistir dades i compartir-les entre contenidors. </p>
+<p>En Linux els volums se guarden a <code>/var/lib/docker/volumes</code>. Els volums se solen utilitzar en els casos següents:</p>
+<ul>
+<li>Per compartir dades entre contenidors. Simplement hauran de fer servir el mateix volum.</li>
+<li>Per a còpies de seguretat ja sigui perquè siguin usades posteriorment per altres contenidors o per moure aquests volums a altres hosts.</li>
+<li>Quan vull emmagatzemar les dades del meu contenidor en el sistema amfitrió o fins i tot en un proveïdor cloud.</li>
+</ul>
+<p>Per a gestionar volums tenim les següents comandes:</p>
+<ul>
+<li><code>docker volume create</code>: Crea un volum amb el nom que indiquem</li>
+<li><code>docker volume ls</code>: Llista els volums disponibles</li>
+<li><code>docker volume inspect</code>: Mostra informació detallada d'un volum</li>
+<li><code>docker volume rm</code>: Elimina un volum</li>
+<li><code>docker volume prune</code>: Elimina tots els volums no utilitzats</li>
+</ul>
+<p>Anem a veure un xicotet exemple de com fer servir volums creant un miniservidor Apache:</p>
+<ul>
+<li>Primer creem el volum</li>
+</ul>
+<pre><code class="language-bash">docker volume create miweb
+</code></pre>
+<p>Ara creem un contenidor amb un servidor apache, montant el volum:</p>
+<pre><code class="language-bash">$ docker run -d --name my-apache-app --mount type=volume,src=miweb,dst=/usr/local/apache2/htdocs -p 8080:80 httpd:2.4
+</code></pre>
+<p>Amb açò, hem creat un contenidor amb un servidor Apache que servirà el contingut del volum <code>miweb</code> en el port 8080 de la màquina host. El paràmetre <code>dst</code> indica el directori on es muntarà el volum dins del contenidor.</p>
+<p>Anem a crear un fitxer HTML dins del volum:</p>
+<pre><code class="language-bash">$ docker exec my-apache-app bash -c 'echo &quot;&lt;html&gt;&lt;head&gt;&lt;meta charset=\&quot;UTF-8\&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;Hola, món!&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot; &gt; /usr/local/apache2/htdocs/index.html'
+</code></pre>
+<p>Ara podem accedir a la nostra web a través de la URL http://localhost:8080 i veure què mostra.</p>
+<p><img alt="Pàgina web" src="img/image01.png" /></p>
+<p>Si ara eliminem el contenidor amb <code>docker rm -f my-apache-app</code>, el volum no es veurà afectat encara que ara <code>localhost:8080</code> mostrarà un error perquè no hi ha cap Apache en funcionament. </p>
+<p>Anem a crear un altre contenidor i muntar el mateix volum, encara que ara utilitzarem l'opció <code>-v</code>:</p>
+<pre><code class="language-bash">$ docker run -d --name my-apache-app -v miweb:/usr/local/apache2/htdocs -p 8080:80 httpd:2.4
+</code></pre>
+<p>Com podeu comprovar, sense tornar a crear l'arxiu <code>index.html</code>, la web ja està disponible a http://localhost:8080.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
