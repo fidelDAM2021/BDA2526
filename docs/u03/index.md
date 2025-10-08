@@ -451,7 +451,7 @@ $ docker exec my-apache-app bash -c 'echo "<html><head><meta charset=\"UTF-8\"><
 
 Ara podem accedir a la nostra web a través de la URL http://localhost:8080 i veure què mostra.
 
-![Pàgina web](images/image01.png)
+![Pàgina web](img/image01.png)
 
 Si ara eliminem el contenidor amb `docker rm -f my-apache-app`, el volum no es veurà afectat encara que ara `localhost:8080` mostrarà un error perquè no hi ha cap Apache en funcionament. 
 
