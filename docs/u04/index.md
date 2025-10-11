@@ -92,7 +92,7 @@ Per a instal·lar Node-RED en un contenidor Docker, tenim 2 opcions:
 docker run -it -p 1880:1880 -v node-red-data:/data --name nodeRED nodered/node-red
 ```
 
-- utilitzant docker-compose, crearem un arxiu `docker-compose.yml` amb el següent contingut:
+- utilitzant `docker-compose` (recomanable per a projectes una miqueta més complexos), crearem un arxiu `docker-compose.yml` amb el següent contingut:
    
 ```yaml
 services:
@@ -145,7 +145,8 @@ http://<IP_del_PC>:1881
 
 o també:
 
-```http://localhost:1881
+```
+http://localhost:1881
 ```
 
 i si no funciona amb localhost en Windows, recordeu que podeu provar:
