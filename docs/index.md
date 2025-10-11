@@ -7,4 +7,4 @@
 * [2. Elements i arquitectura Big Data](u02/index.md)
 * [3.1 Repàs Docker](u03/index.md)
 * [3.2 Docker Compose](u03/annex.md)
-* [4. Node-RED](u04/index.md)
+* [4.1 Introducció a Node-RED](u04/index.md)

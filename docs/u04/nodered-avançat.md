@@ -85,7 +85,7 @@ El node `template` permet crear missatges a partir de plantilles. Això ens perm
 
 Exemple: podem crear un node `template` amb el contingut `La temperatura actual és {{payload}}ºC`, i connectar-lo a un node `debug`. Quan li arribe un missatge amb un valor de temperatura, el node `template` substituirà `{{payload}}` pel valor de temperatura, i el node `debug` mostrarà el missatge `La temperatura actual és 25ºC`.
 
-![Ús de template](./images/u04-23.jpg)
+![Ús de template](img/u04-23.jpg)
 
 ### Delay
 
@@ -99,13 +99,13 @@ Els missatges entrants han de tindre en la propietat `paths` una clau que l'iden
 
 Podem fer un exemple utilitzant el node `delay` per fer que els missatges arriben en moments diferents, i nodes `change` per afegir la clau `paths` als missatges. En l'exemple següent un `inject` envia una senyal que passa directament a un `change` que crea un path, per un costat, i per un altre costat la mateixa senyal s'envia a un altre `change` que estableix un altre path amb altres valors, però passant prèviament per un `delay`. Així podem veure que fins que els dos paths especificats no arriben, el node `debug` no mostra res. 
 
-![Change del path 1](./images/u04-24-01.jpg)
+![Change del path 1](img/u04-24-01.jpg)
 
-![Change del path 2](./images/u04-24-02.jpg)
+![Change del path 2](img/u04-24-02.jpg)
 
-![Node wait-paths](./images/u04-24-03.jpg)
+![Node wait-paths](img/u04-24-03.jpg)
 
-![Flux complet](./images/u04-24-04.jpg)
+![Flux complet](img/u04-24-04.jpg)
 
 > L'exemple el teniu en el flux importat `Basic node & operations` i per tant podeu provar el seu funcionament.
 
@@ -128,9 +128,9 @@ Per exemple, en un node `data generator` podem escriure la següent plantilla co
 
 Això generarà un missatge amb un nom, una empresa, un correu electrònic, una edat, una ciutat i un país aleatoris. Podeu veure el contingut del node `data generator` i la seua eixida en les següents imatges. 
 
-![Node data generator](./images/u04-25-01.jpg)
+![Node data generator](img/u04-25-01.jpg)
 
-![Eixida del node data generator](./images/u04-25-02.jpg)
+![Eixida del node data generator](img/u04-25-02.jpg)
 
 ## Nodes analitzadors
 
@@ -160,9 +160,9 @@ Podeu fer proves redirigint un node `inject` a un node `csv` amb un valor com `1
 
 En l'exemple del `data generator` que hem vist abans, podem veure que se genera un objecte JavaScript que se mostra directament en un `debug`, i per altra banda filtrem l'objecte a través d'un node `json` abans de passar-lo a l'altre `debug`. Així, mostrem per una part l'objecte JavaScript original, i per altra part la conversió a json.
 
-![Les dues sortides](./images/u04-30.jpg)
+![Les dues sortides](img/u04-30.jpg)
 
-![Dades originals i convertides a JSON](./images/u04-31.jpg)
+![Dades originals i convertides a JSON](img/u04-31.jpg)
 
 > En este moment podeu intentar fer **l'exercici 1** que trobareu al final del document.
 
@@ -172,11 +172,11 @@ Quan vam veure com crear variables dins d'un missatge, comentàrem també que se
 
 Una forma típica de fer-ho és utilitzar un node `inject` per enviar un missatge amb valor `true`, i un altre que envie un missatge `false`. Els dos nodes `inject` envien el seu valor a un node `change` que el llegirà i serà el que canviarà el valor de la variable de flux. 
 
-![Establint una variable de flux](./images/u04-34.jpg)
+![Establint una variable de flux](img/u04-34.jpg)
 
 Després, en un altre flux de dades dins del mateix grup, podem utilitzar un node `switch` per preguntar si la variable de flux és `true` o `false`, i permetre que continue el flux o no. Podem fer que si la variable és `true` el flux continue per l'eixida 1 del `switch`, i que si és `false` no continue per cap eixida. 
 
-![Utilitzant la variable de flux](./images/u04-35.jpg)
+![Utilitzant la variable de flux](img/u04-35.jpg)
 
 > En este moment podeu intentar fer **l'exercici 2** que trobareu al final del document.
 
@@ -196,11 +196,11 @@ L'adreça és `http://api.open-notify.org/iss-now.json`.
 
 Així, el node `http request` quedaria així:
 
-![Node http request](./images/u04-26.jpg)
+![Node http request](img/u04-26.jpg)
 
 Podem passar el ***response*** a través d'un filtre JSON (converteix el JSON rebut a un objecte JavaScript) i el mostrem amb un node `debug`.
 
-![Resultat del node request](./images/u04-27.jpg)
+![Resultat del node request](img/u04-27.jpg)
 
 També podríem mostrar les dades en forma gràfica, però això ho veurem més endavant.
 
@@ -237,13 +237,13 @@ Finalment, connectem el node `template` a un node `http response` que serà el q
 
 El resultat se veuria així:
 
-![Node http in](./images/u04-28.jpg)
+![Node http in](img/u04-28.jpg)
 
 Fixeu-vos que, a diferència del node `inject`, no podem llançar manualment el node `http in`. Ho hem de fer des d'un navegador o un programa tipus Postman, curl o similar. Recordeu que li havíem donat el nom `test` al endpoint. Així, hem d'accedir a l'adreça `http://localhost:1881/test` des del navegador i veurem què ens torna el node `http response`.
 
 Hauríem de veure:
 
-![Resultat de la prova](./images/u04-29.jpg)
+![Resultat de la prova](img/u04-29.jpg)
 
 
 ## Nodes d'arxius
@@ -254,13 +254,13 @@ Anem a veure alguns nodes de la secció `almacenamiento` que poden ser útils pe
 
 El node `escribir archivo` permet escriure dades en un arxiu. Podem afegir informació al final de l'arxiu, o sobreescriure totalment el seu contingut. 
 
-![Node escribir archivo](./images/u04-32.jpg)
+![Node escribir archivo](img/u04-32.jpg)
 
 ### Leer archivo
 
 El node `leer archivo` permet llegir dades d'un arxiu. Se pot tornar tot el contingut de l'arxiu en una cadena, un missatge diferent per cada línia de l'arxiu, o bé un objecte (o un stream d'objectes) de tipus `Buffer`.
 
-![Node leer archivo](./images/u04-33.jpg)
+![Node leer archivo](img/u04-33.jpg)
 
 Pots intentar fer una prova generant un conjunt de dades aleatòries, guardant-les en un arxiu, i després llegint-lo i mostrant-lo en un node `debug`.
 

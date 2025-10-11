@@ -51,11 +51,11 @@ Un ***dashboard*** és una interfície gràfica que ens permet interactuar amb u
 
 Per a poder utilitzar els dashboards de Node-RED, primer cal instal·lar els nodes necessaris. Per a fer-ho, anem a la pestanya de configuració de Node-RED i seleccionem la opció de ***Administrar paleta*** o ***Manage palette***. A la finestra que ens apareix, busquem el paquet ***node-red-dashboard*** i el seleccionem per a instal·lar-lo.
 
-![Instal·lació dels nodes de Node-RED Dashboard](./images/u04-36.jpg)
+![Instal·lació dels nodes de Node-RED Dashboard](img/u04-36.jpg)
 
 Una vegada feu clic en el botó d'instal·lar, es descarregarà i instal·larà el paquet amb els nodes necessaris per a poder crear dashboards.A la part esquerra vos hauria d'aparèixer una nova secció de nodes anomenada ***dashboard***.
 
-![Nodes de Node-RED Dashboard](./images/u04-37.jpg)
+![Nodes de Node-RED Dashboard](img/u04-37.jpg)
 
 ## Creació d'un dashboard
 
@@ -73,7 +73,7 @@ Anem a fer un exemple senzill creant un node de tipus ***gauge*** per mostrar el
 
 4 - Hem de definir en quin ***tab*** i en quin ***grup*** volem que aparega el node ***gauge***. Anem a la secció de propietats i en el camp ***Group*** tenim un botó per editar i un altre per afegir un grup nou. Anem a crear un ***tab*** que s'anomene **Sensors** i dins un grup que s'anomene **Gràfics**. Les propietats del node quedarien tal com se veu en la següent imatge.
 
-![Propietats del node gauge](./images/u04-38.jpg)
+![Propietats del node gauge](img/u04-38.jpg)
 
 5 - Ara ja podem desplegar el flux. Ho fem i no se veu res. Això és perquè per a veure el ***dashboard*** hem d'anar a la URL [http://localhost:1881/ui].
 
@@ -81,7 +81,7 @@ Anem a fer un exemple senzill creant un node de tipus ***gauge*** per mostrar el
 
 6 - A la URL que hem posat, en el menú de l'esquerra seleccionem el tab **Sensors** i ens apareixerà el gràfic. Podem veure com en temps real ens va mostrant les temperatures que van entrant. 
 
-![Dashboard amb un gauge](./images/u04-39.jpg)
+![Dashboard amb un gauge](img/u04-39.jpg)
 
 ### Afegint més gràfics al dashboard
 
@@ -89,13 +89,13 @@ Si agafem el flux que hem creat, seleccionem tots els nodes i fem copiar-pegar, 
 
 El resultat si despleguem i tornem a mostrar el ***dashboard*** serà el següent.
 
-![Dashboard amb dos gauges](./images/u04-40.jpg)
+![Dashboard amb dos gauges](img/u04-40.jpg)
 
 Si provem a posar els dos nodes ***gauge*** en grups diferents, se mostrarien en columnes diferents dins del tab **Sensors**.
 
 Si els posàrem en dos tabs diferents, tindríem cada gauge en una pestanya diferent del ***dashboard***.
 
-![Dashboard amb dos tabs](./images/u04-41.jpg)
+![Dashboard amb dos tabs](img/u04-41.jpg)
 
 ## Més nodes de dashboard
 
