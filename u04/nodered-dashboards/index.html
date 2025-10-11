@@ -1,0 +1,536 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Dashboards en Node-RED - Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../styles/taules.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#node-red-dashboards" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-header__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../../img/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Dashboards en Node-RED
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-nav__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../../img/logo.svg" alt="logo">
+
+    </a>
+    Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inici
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Presentació
+    
+      <br>
+      <small>Mòdul Big Data Aplicat</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1. Introducció al Big Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2. Elements i arquitectura Big Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.1 Repàs Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u03/annex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.2 Docker Compose
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.1 Introducció a Node-RED
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducció
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installacio-dels-nodes-de-node-red-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instal·lació dels nodes de Node-RED Dashboard
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacio-dun-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creació d'un dashboard
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creació d&#39;un dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-amb-un-grafic-tipus-gauge-medidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple amb un gràfic tipus gauge (medidor)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#afegint-mes-grafics-al-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Afegint més gràfics al dashboard
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mes-nodes-de-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Més nodes de dashboard
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="node-red-dashboards">Node-RED Dashboards</h1>
+<p>En aquesta unitat veurem com crear interfícies gràfiques amb Node-RED. Això ens permetrà crear panells de control per a dispositius IoT, per a sistemes de monitoratge, per a sistemes de control, etc.</p>
+<h2 id="introduccio">Introducció</h2>
+<p>Un <strong><em>dashboard</em></strong> és una interfície gràfica que ens permet interactuar amb una aplicació o simplement mostrar elements gràfics. Aquesta interfície pot ser molt senzilla o més complexa. En el cas de Node-RED, els dashboards ens permeten crear interfícies gràfiques per a les nostres aplicacions per a interactuar amb elles de forma més visual, crear gràfics o veure estadístiques o dades en temps real.</p>
+<h2 id="installacio-dels-nodes-de-node-red-dashboard">Instal·lació dels nodes de Node-RED Dashboard</h2>
+<p>Per a poder utilitzar els dashboards de Node-RED, primer cal instal·lar els nodes necessaris. Per a fer-ho, anem a la pestanya de configuració de Node-RED i seleccionem la opció de <strong><em>Administrar paleta</em></strong> o <strong><em>Manage palette</em></strong>. A la finestra que ens apareix, busquem el paquet <strong><em>node-red-dashboard</em></strong> i el seleccionem per a instal·lar-lo.</p>
+<p><img alt="Instal·lació dels nodes de Node-RED Dashboard" src="../img/u04-36.jpg" /></p>
+<p>Una vegada feu clic en el botó d'instal·lar, es descarregarà i instal·larà el paquet amb els nodes necessaris per a poder crear dashboards.A la part esquerra vos hauria d'aparèixer una nova secció de nodes anomenada <strong><em>dashboard</em></strong>.</p>
+<p><img alt="Nodes de Node-RED Dashboard" src="../img/u04-37.jpg" /></p>
+<h2 id="creacio-dun-dashboard">Creació d'un dashboard</h2>
+<p>Per a crear un dashboard, hem de copiar al flux els nodes que volem que se mostren. Cada node pertany a un <strong><em>tab</em></strong> i a un <strong><em>grup</em></strong>. Els <strong><em>tabs</em></strong> són les pestanyes que apareixen a la part esquerra del dashboard i els <strong><em>grups</em></strong> serveixen per agrupar certs nodes d'una pestanya en un únic element visual.</p>
+<p>Anem a fer un exemple senzill creant un node de tipus <strong><em>gauge</em></strong> per mostrar els valors que van entrant al flux, per exemple amb un node <strong><em>random</em></strong>.</p>
+<h3 id="exemple-amb-un-grafic-tipus-gauge-medidor">Exemple amb un gràfic tipus gauge (medidor)</h3>
+<p>1 - Creem un node <strong><em>inject</em></strong> per posar en marxa el flux. Injectarà el <strong><em>timestamp</em></strong> cada segon.</p>
+<p>2 - Creen un node <strong><em>random</em></strong> per a generar un valor aleatori entre -30 i 50. En el nom posarem "Temperatura" per poder-lo diferenciar quan tinguem més nodes <strong><em>random</em></strong>. El connectarem amb el node <strong><em>inject</em></strong>.</p>
+<p>3 - Creem un node <strong><em>gauge</em></strong> per a mostrar el valor de la temperatura. El connectarem amb el node <strong><em>random</em></strong> i li posarem en el camp <strong><em>Label</em></strong> el text "Temperatura" i en el tipus seleccionarem <strong><em>Gauge</em></strong>.</p>
+<p>4 - Hem de definir en quin <strong><em>tab</em></strong> i en quin <strong><em>grup</em></strong> volem que aparega el node <strong><em>gauge</em></strong>. Anem a la secció de propietats i en el camp <strong><em>Group</em></strong> tenim un botó per editar i un altre per afegir un grup nou. Anem a crear un <strong><em>tab</em></strong> que s'anomene <strong>Sensors</strong> i dins un grup que s'anomene <strong>Gràfics</strong>. Les propietats del node quedarien tal com se veu en la següent imatge.</p>
+<p><img alt="Propietats del node gauge" src="../img/u04-38.jpg" /></p>
+<p>5 - Ara ja podem desplegar el flux. Ho fem i no se veu res. Això és perquè per a veure el <strong><em>dashboard</em></strong> hem d'anar a la URL [http://localhost:1881/ui].</p>
+<blockquote>
+<p>Recordeu canviar el vostre port si no és el 1881, així com la IP si no és localhost.</p>
+</blockquote>
+<p>6 - A la URL que hem posat, en el menú de l'esquerra seleccionem el tab <strong>Sensors</strong> i ens apareixerà el gràfic. Podem veure com en temps real ens va mostrant les temperatures que van entrant. </p>
+<p><img alt="Dashboard amb un gauge" src="../img/u04-39.jpg" /></p>
+<h3 id="afegint-mes-grafics-al-dashboard">Afegint més gràfics al dashboard</h3>
+<p>Si agafem el flux que hem creat, seleccionem tots els nodes i fem copiar-pegar, tindrem un altre flux exactament igual. Ara anem a modificar el node <strong><em>random</em></strong> per generar un valor entre 0 i 100 i li posarem el nom "Humedad". També modificarem el node <strong><em>gauge</em></strong> per posar-li el nom "Humedad" i dir-li que els valors estaran entre 0 i 100. El nou node <strong><em>gauge</em></strong> tindrà el mateix tab i el mateix grup que el primer. </p>
+<p>El resultat si despleguem i tornem a mostrar el <strong><em>dashboard</em></strong> serà el següent.</p>
+<p><img alt="Dashboard amb dos gauges" src="../img/u04-40.jpg" /></p>
+<p>Si provem a posar els dos nodes <strong><em>gauge</em></strong> en grups diferents, se mostrarien en columnes diferents dins del tab <strong>Sensors</strong>.</p>
+<p>Si els posàrem en dos tabs diferents, tindríem cada gauge en una pestanya diferent del <strong><em>dashboard</em></strong>.</p>
+<p><img alt="Dashboard amb dos tabs" src="../img/u04-41.jpg" /></p>
+<h2 id="mes-nodes-de-dashboard">Més nodes de dashboard</h2>
+<p>Per explorar més nodes de tipus <strong><em>dashboard</em></strong> podeu descarregar d'Aules els arxius JSON que trobareu a la carpeta <strong><em>Exemples dashboard</em></strong>. Una vegada carregats en la vostra instància de NodeRED, els examinarem i comentarem a classe.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,925 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Node-RED avançat - Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../styles/taules.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#node-red-avancat" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-header__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../../img/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Node-RED avançat
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-nav__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../../img/logo.svg" alt="logo">
+
+    </a>
+    Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inici
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Presentació
+    
+      <br>
+      <small>Mòdul Big Data Aplicat</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1. Introducció al Big Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2. Elements i arquitectura Big Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.1 Repàs Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u03/annex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.2 Docker Compose
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.1 Introducció a Node-RED
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#altres-nodes-comuns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Altres nodes comuns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Altres nodes comuns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#catch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Catch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-in-i-link-out" class="md-nav__link">
+    <span class="md-ellipsis">
+      Link in i Link out
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-call" class="md-nav__link">
+    <span class="md-ellipsis">
+      Link call
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#altres-nodes-de-funcio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Altres nodes de funció
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Altres nodes de funció">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Template
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delay" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wait-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wait-paths
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data generator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodes-analitzadors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodes analitzadors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nodes analitzadors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSV
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSON
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml" class="md-nav__link">
+    <span class="md-ellipsis">
+      XML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      YAML
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arrancar-i-parar-fluxos-amb-variables-de-flux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arrancar i parar fluxos amb variables de flux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodes-de-xarxa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodes de xarxa
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nodes de xarxa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP response
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP in
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodes-darxius" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodes d'arxius
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nodes d&#39;arxius">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#escribir-archivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escribir archivo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leer-archivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leer archivo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercicis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercicis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercicis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercici-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 01
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 02
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 03
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 04
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="node-red-avancat">Node-RED avançat</h1>
+<p>En esta part final de la unitat anem a veure algunes característiques més avançades de Node-RED.</p>
+<h2 id="altres-nodes-comuns">Altres nodes comuns</h2>
+<p>Anem a veure alguns nodes de la secció "Común" que no havíem tractat fins ara.</p>
+<h3 id="complete">Complete</h3>
+<p>El node <code>complete</code> permet marcar un missatge com a complet. Això pot ser útil per indicar que s'ha acabat de processar un missatge, o per indicar que s'ha arribat al final d'una seqüència de missatges.</p>
+<p>Com sabeu, ni ha nodes que no reaccionen a l'entrada de missatges fins que no reben un missatge <code>complete</code>. Això és útil per a processos que necessiten saber quan han acabat de rebre missatges. Ahí teniu una possible utilitat de <code>complete</code>. </p>
+<h3 id="catch">Catch</h3>
+<p>El node <code>catch</code> permet capturar errors que es produeixen en el flux (en la mateixa pestanya). Això pot ser útil per gestionar errors, o per enviar missatges d'error a un node <code>debug</code> o a un node <code>email</code>.</p>
+<h3 id="status">Status</h3>
+<p>El node <code>status</code> permet mostrar l'estat d'altres nodes que pertanyen al mateix flux (en la mateixa pestanya) en la interfície de Node-RED. També podem saber quin node ha informat del seu estat, i quin estat ha informat. Una possible utilitat és mostrar l'estat d'un sensor en la interfície de Node-RED.</p>
+<h3 id="comment">Comment</h3>
+<p>El node <code>comment</code> permet afegir comentaris al flux. No generen cap acció.</p>
+<h3 id="link-in-i-link-out">Link in i Link out</h3>
+<p>Els nodes <code>link in</code> i <code>link out</code> permeten connectar dos parts del flux que estan separades. Això pot ser útil per connectar dos parts del flux que estan lluny l'una de l'altra, o per connectar dos fluxos diferents (en diferents pestanyes).</p>
+<p>Si hi ha més d'un node <code>link in</code> amb el mateix nom, tots rebran el missatge. Això pot ser útil per connectar un node <code>link out</code> a més d'un node <code>link in</code>. Si volem separar els diferents fluxos, donarem diferents noms a cada parella <code>link in</code>-<code>link out</code>.</p>
+<h3 id="link-call">Link call</h3>
+<p>El node <code>link call</code> permet cridar un node <code>link in</code> des d'un altre node. Això pot ser útil per cridar una part del flux des d'una altra part del mateix flux, o des d'un altre flux.</p>
+<h2 id="altres-nodes-de-funcio">Altres nodes de funció</h2>
+<p>A més dels nodes de funció que ja hem vist, és útil conèixer els següents:</p>
+<h3 id="template">Template</h3>
+<p>El node <code>template</code> permet crear missatges a partir de plantilles. Això ens permet crear missatges amb un format concret, o a partir de variables. Amb el node <code>template</code> crearem una plantilla que després se completarà amb els valors que li arriben per <code>payload</code>. </p>
+<p>Exemple: podem crear un node <code>template</code> amb el contingut <code>La temperatura actual és {{payload}}ºC</code>, i connectar-lo a un node <code>debug</code>. Quan li arribe un missatge amb un valor de temperatura, el node <code>template</code> substituirà <code>{{payload}}</code> pel valor de temperatura, i el node <code>debug</code> mostrarà el missatge <code>La temperatura actual és 25ºC</code>.</p>
+<p><img alt="Ús de template" src="../img/u04-23.jpg" /></p>
+<h3 id="delay">Delay</h3>
+<p>El node <code>delay</code> permet retardar l'enviament d'un missatge. Això pot ser útil per esperar un temps determinat abans d'enviar un missatge, o per evitar enviar missatges massa ràpidament. Hi ha moltes opcions que podem configurar, així que recomanem que consulteu l'ajuda oficial de Node-RED. </p>
+<h3 id="wait-paths">Wait-paths</h3>
+<p>El node <code>wait-paths</code> permet esperar fins que arriben tots els missatges d'un grup, emesos per diferents fonts, per generar un únic missatge d'eixida. Això pot ser útil per esperar fins que arriben totes les dades d'un grup de sensors, per exemple.</p>
+<p>Els missatges entrants han de tindre en la propietat <code>paths</code> una clau que l'identifica i un valor que s'envia. El node <code>wait-paths</code> espera fins que arriben tots els missatges amb la mateixa clau o amb les claus especificades, i quan arriben tots envia un únic missatge amb totes les claus i valors.</p>
+<p>Podem fer un exemple utilitzant el node <code>delay</code> per fer que els missatges arriben en moments diferents, i nodes <code>change</code> per afegir la clau <code>paths</code> als missatges. En l'exemple següent un <code>inject</code> envia una senyal que passa directament a un <code>change</code> que crea un path, per un costat, i per un altre costat la mateixa senyal s'envia a un altre <code>change</code> que estableix un altre path amb altres valors, però passant prèviament per un <code>delay</code>. Així podem veure que fins que els dos paths especificats no arriben, el node <code>debug</code> no mostra res. </p>
+<p><img alt="Change del path 1" src="../img/u04-24-01.jpg" /></p>
+<p><img alt="Change del path 2" src="../img/u04-24-02.jpg" /></p>
+<p><img alt="Node wait-paths" src="../img/u04-24-03.jpg" /></p>
+<p><img alt="Flux complet" src="../img/u04-24-04.jpg" /></p>
+<blockquote>
+<p>L'exemple el teniu en el flux importat <code>Basic node &amp; operations</code> i per tant podeu provar el seu funcionament.</p>
+</blockquote>
+<h3 id="data-generator">Data generator</h3>
+<p>El node <code>data generator</code> permet generar dades aleatòries. Això pot ser útil per provar el flux amb dades fictícies, o per generar dades per a un node <code>chart</code>. L'advantatge d'aquest node respecte a <code>random</code> és que podem generar dades de diferents tipus, com ara noms, text, dates, etc., fins i tot amb un significat concret (noms inventats, poblacions, països, etc.)</p>
+<p>Per exemple, en un node <code>data generator</code> podem escriure la següent plantilla com a valor del <code>payload</code>:</p>
+<pre><code class="language-json">{
+    &quot;name&quot;: &quot;{{firstName}} {{lastName}}&quot;,
+    &quot;work&quot;: &quot;{{company}}&quot;,
+    &quot;email&quot;: &quot;{{email}}&quot;,
+    &quot;age&quot;: &quot;{{random.number(100)}}&quot;,
+    &quot;city&quot;: &quot;{{address.city}}&quot;,
+    &quot;country&quot;: &quot;{{address.country}}&quot;
+}
+</code></pre>
+<p>Això generarà un missatge amb un nom, una empresa, un correu electrònic, una edat, una ciutat i un país aleatoris. Podeu veure el contingut del node <code>data generator</code> i la seua eixida en les següents imatges. </p>
+<p><img alt="Node data generator" src="../img/u04-25-01.jpg" /></p>
+<p><img alt="Eixida del node data generator" src="../img/u04-25-02.jpg" /></p>
+<h2 id="nodes-analitzadors">Nodes analitzadors</h2>
+<p>Anem a veure alguns nodes de la secció "Analysers" que poden ser útils per analitzar dades.</p>
+<h3 id="csv">CSV</h3>
+<p>Converteix de cadenes CSV a objectes JavaScript, i viceversa.</p>
+<h3 id="json">JSON</h3>
+<p>Converteix de cadenes JSON a objectes JavaScript, i viceversa.</p>
+<h3 id="html">HTML</h3>
+<p>Converteix de cadenes HTML a objectes JavaScript, i viceversa.</p>
+<h3 id="xml">XML</h3>
+<p>Converteix de cadenes XML a objectes JavaScript, i viceversa.</p>
+<h3 id="yaml">YAML</h3>
+<p>Converteix de cadenes YAML a objectes JavaScript, i viceversa.</p>
+<p>Podeu fer proves redirigint un node <code>inject</code> a un node <code>csv</code> amb un valor com <code>1,2,3,4,5</code>, per exemple, i veure com el converteix en un objecte JavaScript. També podeu crear una plantilla en format JSON i passar-la a un node <code>json</code> per veure com la converteix en un objecte JavaScript. Al revés també funciona. </p>
+<p>En l'exemple del <code>data generator</code> que hem vist abans, podem veure que se genera un objecte JavaScript que se mostra directament en un <code>debug</code>, i per altra banda filtrem l'objecte a través d'un node <code>json</code> abans de passar-lo a l'altre <code>debug</code>. Així, mostrem per una part l'objecte JavaScript original, i per altra part la conversió a json.</p>
+<p><img alt="Les dues sortides" src="../img/u04-30.jpg" /></p>
+<p><img alt="Dades originals i convertides a JSON" src="../img/u04-31.jpg" /></p>
+<blockquote>
+<p>En este moment podeu intentar fer <strong>l'exercici 1</strong> que trobareu al final del document.</p>
+</blockquote>
+<h2 id="arrancar-i-parar-fluxos-amb-variables-de-flux">Arrancar i parar fluxos amb variables de flux</h2>
+<p>Quan vam veure com crear variables dins d'un missatge, comentàrem també que se poden crear <strong><em>variables de flux</em></strong>. Eixes variables són visibles per tot el flux, i poden ser utilitzades, entre altres coses, per controlar l'execució del flux.</p>
+<p>Una forma típica de fer-ho és utilitzar un node <code>inject</code> per enviar un missatge amb valor <code>true</code>, i un altre que envie un missatge <code>false</code>. Els dos nodes <code>inject</code> envien el seu valor a un node <code>change</code> que el llegirà i serà el que canviarà el valor de la variable de flux. </p>
+<p><img alt="Establint una variable de flux" src="../img/u04-34.jpg" /></p>
+<p>Després, en un altre flux de dades dins del mateix grup, podem utilitzar un node <code>switch</code> per preguntar si la variable de flux és <code>true</code> o <code>false</code>, i permetre que continue el flux o no. Podem fer que si la variable és <code>true</code> el flux continue per l'eixida 1 del <code>switch</code>, i que si és <code>false</code> no continue per cap eixida. </p>
+<p><img alt="Utilitzant la variable de flux" src="../img/u04-35.jpg" /></p>
+<blockquote>
+<p>En este moment podeu intentar fer <strong>l'exercici 2</strong> que trobareu al final del document.</p>
+</blockquote>
+<h2 id="nodes-de-xarxa">Nodes de xarxa</h2>
+<p>Anem a veure alguns nodes relacionats amb la comunicació amb altres dispositus o serveis. </p>
+<h3 id="http-request">HTTP request</h3>
+<p>El node <code>http request</code> permet fer peticions HTTP a altres servidors. Això pot ser útil per obtenir dades d'una API, per enviar dades a un servidor (method PUT, POST), o per rebre dades d'un servidor (GET). També, amb el mètode DELETE, per eliminar dades. </p>
+<p>Per a que funcione, hem d'especificar la URL del servidor, el mètode HTTP (GET, POST, PUT, DELETE), i opcionalment les dades a enviar. Podem connectar-nos a endpoints creats per nosaltres amb Node-RED, o a qualsevol altre servidor que tinga una API HTTP.</p>
+<p>Per exemple, hi ha una API que ens permet obtenir les coordenades de la ISS (Estació Espacial Internacional). Podem utilitzar el node <code>http request</code> per obtenir les coordenades de la ISS, i després utilitzar-les per mostrar-les en un node <code>debug</code> o en un node <code>ui_text</code>.</p>
+<p>L'adreça és <code>http://api.open-notify.org/iss-now.json</code>.</p>
+<p>Així, el node <code>http request</code> quedaria així:</p>
+<p><img alt="Node http request" src="../img/u04-26.jpg" /></p>
+<p>Podem passar el <strong><em>response</em></strong> a través d'un filtre JSON (converteix el JSON rebut a un objecte JavaScript) i el mostrem amb un node <code>debug</code>.</p>
+<p><img alt="Resultat del node request" src="../img/u04-27.jpg" /></p>
+<p>També podríem mostrar les dades en forma gràfica, però això ho veurem més endavant.</p>
+<h3 id="http-response">HTTP response</h3>
+<p>El node <code>http response</code> permet enviar respostes HTTP a clients que han fet una petició HTTP. Això pot ser útil per crear una API HTTP amb Node-RED, o per respondre a peticions HTTP d'altres servidors.</p>
+<p>Per enviar peticions a un node <code>http_response</code> necessitem un node <code>http in</code> que serà el nostre endpoint al que li podrem enviar peticions des del navegador, Postman, curl, o similar.</p>
+<h3 id="http-in">HTTP in</h3>
+<p>El node <code>http in</code> permet crear un endpoint HTTP al que es poden fer peticions HTTP. Així podem crear la nostra API amb Node-RED. </p>
+<p>Anem a veure un exemple senzill amb <code>http in</code> i <code>http response</code>.</p>
+<p>Creem un node <code>http in</code> amb la següent configuració:</p>
+<ul>
+<li>Method: GET</li>
+<li>URL: /test</li>
+</ul>
+<p>Ara connectem el node <code>http in</code> a un node <code>template</code> amb contingut HTML. En el <code>payload</code> podem posar, per exemple:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;Prova Node-RED&lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hola! Benvingut a la meua API generada amb Node-RED&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Finalment, connectem el node <code>template</code> a un node <code>http response</code> que serà el que tornarà la resposta al client. En el node <code>http response</code> no cal configurar res, ja que la resposta ja està configurada en el node <code>template</code>, però podem afegir un codi d'estat i unes capçaleres, si volem. </p>
+<p>El resultat se veuria així:</p>
+<p><img alt="Node http in" src="../img/u04-28.jpg" /></p>
+<p>Fixeu-vos que, a diferència del node <code>inject</code>, no podem llançar manualment el node <code>http in</code>. Ho hem de fer des d'un navegador o un programa tipus Postman, curl o similar. Recordeu que li havíem donat el nom <code>test</code> al endpoint. Així, hem d'accedir a l'adreça <code>http://localhost:1881/test</code> des del navegador i veurem què ens torna el node <code>http response</code>.</p>
+<p>Hauríem de veure:</p>
+<p><img alt="Resultat de la prova" src="../img/u04-29.jpg" /></p>
+<h2 id="nodes-darxius">Nodes d'arxius</h2>
+<p>Anem a veure alguns nodes de la secció <code>almacenamiento</code> que poden ser útils per llegir i escriure arxius.</p>
+<h3 id="escribir-archivo">Escribir archivo</h3>
+<p>El node <code>escribir archivo</code> permet escriure dades en un arxiu. Podem afegir informació al final de l'arxiu, o sobreescriure totalment el seu contingut. </p>
+<p><img alt="Node escribir archivo" src="../img/u04-32.jpg" /></p>
+<h3 id="leer-archivo">Leer archivo</h3>
+<p>El node <code>leer archivo</code> permet llegir dades d'un arxiu. Se pot tornar tot el contingut de l'arxiu en una cadena, un missatge diferent per cada línia de l'arxiu, o bé un objecte (o un stream d'objectes) de tipus <code>Buffer</code>.</p>
+<p><img alt="Node leer archivo" src="../img/u04-33.jpg" /></p>
+<p>Pots intentar fer una prova generant un conjunt de dades aleatòries, guardant-les en un arxiu, i després llegint-lo i mostrant-lo en un node <code>debug</code>.</p>
+<blockquote>
+<p>Ara ja pots fer la resta d'exercicis que trobaràs a continuació.</p>
+</blockquote>
+<h2 id="exercicis">Exercicis</h2>
+<h3 id="exercici-01">Exercici 01</h3>
+<p>Imaginem que tenim 2 estacions meteorològiques que comuniquen dades de manera independent en un mateix instant de temps. Volem guardar les dades de les dues estacions en un sol document JSON i mostrar-lo amb un node <code>debug</code></p>
+<p>La primera estació envia les següents dades:</p>
+<ul>
+<li>NO, NO2, NOx, SO2, Humitat, Temperatura, Velocitat del vent, Direcció del vent.</li>
+</ul>
+<p>La segona estació envia només dues dades: </p>
+<ul>
+<li>CO i CO2. </li>
+</ul>
+<p>Les dades seran generades aleatòriament amb el node <code>data generator</code>. Tots els valors poden tindre decimals i un valor mínim de 0 i un màxim de 50. Cada estació enviará valors nous a intervals de 0.5 segons.</p>
+<p>Tots dos conjunts tindran un camp <code>Data</code> que serà l'input del payload i que haurem de construir a partir del <code>timestamp</code> del injector .</p>
+<p>Hem de juntar tots dos conjunts de dades en un sol utilitzant el node <code>join</code> i aplicant tot el que hem vist.</p>
+<h3 id="exercici-02">Exercici 02</h3>
+<p>Fent ús de les variables de flux, modifica l'exercici anterior per poder iniciar, parar o reiniciar la injecció de dades. </p>
+<ul>
+<li>
+<p>Necessitarem tindre 2 fluxes de dades en un mateix grup.</p>
+</li>
+<li>
+<p>El primer flux de dades tindria els nodes <code>inject</code> per activar o desactivar el segon flux.</p>
+</li>
+<li>
+<p>El segon flux de dades seria el mateix que l'exercici anterior.</p>
+</li>
+<li>
+<p>En el primer flux de dades podem utilitzar un node <code>inject</code> per enviar un missatge <code>true</code> i un altre per enviar un missatge <code>false</code>. El valor s'hauria de guardar en una variable de flux.</p>
+</li>
+<li>
+<p>En el segon flux de dades pots utilizar el node <code>switch</code> per preguntar si la variable de flux és <code>true</code> o <code>false</code> i permetre que continue el flux o no.</p>
+</li>
+</ul>
+<h3 id="exercici-03">Exercici 03</h3>
+<p>Instal·la el node <code>flightradar24</code> i busca informació a veure com funciona. Podem demanar informació dels vols que estan passant per la nostra zona? Com? Intenta fer-ho. Envia l'eixida a un node <code>debug</code> que mostre el resultat, i analitza les dades rebudes. </p>
+<h3 id="exercici-04">Exercici 04</h3>
+<p>Modifica el flux anterior per guardar en un arxiu <code>vols.txt</code> l'aeroport d'origen, el de destí, el número de vol, l'altitud i la velocitat.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

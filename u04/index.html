@@ -1,0 +1,863 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../u03/annex/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Introducció a Node-RED - Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../styles/taules.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#node-red" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-header__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../img/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introducció a Node-RED
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-nav__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../img/logo.svg" alt="logo">
+
+    </a>
+    Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inici
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Presentació
+    
+      <br>
+      <small>Mòdul Big Data Aplicat</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1. Introducció al Big Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2. Elements i arquitectura Big Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.1 Repàs Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u03/annex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.2 Docker Compose
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    4.1 Introducció a Node-RED
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.1 Introducció a Node-RED
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installacio-en-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instal·lació en Linux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installacio-en-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instal·lació en Windows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installacio-en-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instal·lació en Docker
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interficie-de-node-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interfície de Node-RED
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components-de-node-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      Components de Node-RED
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nodes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#missatges-i-payload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Missatges i Payload
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importar-i-exportar-fluxos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importar i exportar fluxos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodes-addicionals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodes addicionals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nodes addicionals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercici-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 01
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 02
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installacio-en-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instal·lació en Linux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installacio-en-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instal·lació en Windows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installacio-en-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instal·lació en Docker
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interficie-de-node-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interfície de Node-RED
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components-de-node-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      Components de Node-RED
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nodes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#missatges-i-payload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Missatges i Payload
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importar-i-exportar-fluxos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importar i exportar fluxos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodes-addicionals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodes addicionals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nodes addicionals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercici-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 01
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 02
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="node-red">Node-RED</h1>
+<p><strong>Node-RED</strong> es una eina de programació visual (de les anomenades "no-Code", encara que en este cas seria millor "low-Code") que permet connectar dispositius de hardware, APIs i serveis en línia. Es basa en la programació amb blocs, on cada bloc realitza una tasca específica. Aquests blocs són anomenats <strong>nodes</strong> i es poden connectar entre ells per crear un flux de dades. És open-source i està desenvolupat inicialment per IBM.</p>
+<p><img alt="Logo de Node-RED" src="img/u04-logo.jpg" /></p>
+<p>Informació en GitHub: <a href="https://github.com/node-red/node-red">Node-RED en GitHub</a></p>
+<p>Pàgina oficial: <a href="https://nodered.org/">Pàgina oficial de Node-RED</a></p>
+<p>Documentació: <a href="https://nodered.org/docs/">Documentació de Node-RED</a></p>
+<h2 id="installacio-en-linux">Instal·lació en Linux</h2>
+<p>Anem a veure els passos per instal·lar Node-RED en un sistema Linux. De totes formes en principi anem a treballar amb un Node-RED en Docker per evitar problemes de compatibilitat, versions, etc.</p>
+<p>Per a instal·lar Node-RED, primer cal tenir instal·lat <strong>Node.js</strong>. Si no el tenim instal·lat, podem descarregar-lo des de la pàgina oficial: <a href="https://nodejs.org/es/download">Descarregar Node.js</a></p>
+<p>Podem comprobar si tenim NodeJS instal·lat, així com el gestor de paquets <strong><em>npm</em></strong>, amb les següents comandes:</p>
+<pre><code class="language-bash">node -v
+npm -v
+</code></pre>
+<p>Una vegada tenim instal·lat <strong><em>node</em></strong> i <strong><em>npm</em></strong>, podem instal·lar Node-RED amb la següent comanda:</p>
+<pre><code class="language-bash">sudo npm install -g --unsafe-perm node-red
+</code></pre>
+<p>Per a executar Node-RED, simplement cal executar la comanda:</p>
+<pre><code class="language-bash">node-red
+</code></pre>
+<h2 id="installacio-en-windows">Instal·lació en Windows</h2>
+<p>Podeu trobar les instruccions per instal·lar Node-RED en Windows en la pàgina oficial de l'aplicació.</p>
+<p><a href="https://nodered.org/docs/getting-started/windows">Node-RED en Windows</a></p>
+<h2 id="installacio-en-docker">Instal·lació en Docker</h2>
+<p>Per a instal·lar Node-RED en un contenidor Docker, tenim 2 opcions:</p>
+<ul>
+<li>directament:</li>
+</ul>
+<pre><code class="language-bash">docker run -it -p 1880:1880 -v node-red-data:/data --name nodeRED nodered/node-red
+</code></pre>
+<ul>
+<li>utilitzant <code>docker-compose</code> (recomanable per a projectes una miqueta més complexos), crearem un arxiu <code>docker-compose.yml</code> amb el següent contingut:</li>
+</ul>
+<pre><code class="language-yaml">services:
+   node-red:
+      image: nodered/node-red:latest
+      container_name: nodeRED
+      restart: unless-stopped
+      networks:
+         - net
+      ports:
+         - &quot;1881:1880&quot;
+      volumes:
+         - &quot;./node-red-data:/data&quot;
+
+networks:
+   net:
+      driver: bridge
+</code></pre>
+<p>(per evitar problemes de tabulacions, espais, etc. quan copieu i pegueu, teniu l'arxiu <code>docker-compose.yml</code> pujat a Aules)</p>
+<p>Ara, com ja sabeu, per crear i alçar el contenidor haurem de fer, la primera vegada i en la mateixa carpeta on tenim el <code>docker-compose.yml</code>:</p>
+<pre><code class="language-bash">docker-compose up -d
+</code></pre>
+<p>A partir d'ahí, podem parar el contenidor i tornar-lo a iniciar amb <code>docker start nodeRED</code> i <code>docker stop nodeRED</code>.</p>
+<h2 id="interficie-de-node-red">Interfície de Node-RED</h2>
+<p>Una vegada feta la instal·lació, per comprovar que tenim Node-RED funcionant intentarem accedir amb el navegador al port que hem mapejat, en este cas el 1881:</p>
+<p><strong>En Linux</strong>:</p>
+<pre><code>http://localhost:1881
+</code></pre>
+<p>o també:</p>
+<pre><code>http://172.17.0.1:1881
+</code></pre>
+<p><strong>En Windows</strong>:</p>
+<pre><code>http://&lt;IP_del_PC&gt;:1881
+</code></pre>
+<p>o també:</p>
+<pre><code>http://localhost:1881
+</code></pre>
+<p>i si no funciona amb localhost en Windows, recordeu que podeu provar:</p>
+<pre><code>http://host.docker.internal:1881
+</code></pre>
+<p>Si tot ha anat bé, ens hauria de mostrar la interfície de Node-RED.</p>
+<p><img alt="Pantalla de Node-RED" src="img/u04-01.jpg" /></p>
+<p>Si Node-RED no arranca i ens mostra errors de permisos, mireu amb quin usuari ha creat la carpeta compartida. Potser ho ha fet com a root, i després el vostre usuari no té permisos per a escriure en ella. En aquest cas, caldrà canviar els permisos de la carpeta o modificar el nostre fitxer <code>docker-compose.yml</code> perquè l'usuari siga el nostre i no root:</p>
+<p><code>yaml
+   services:
+      node-red:
+         image: nodered/node-red:latest
+         container_name: nodeRED
+         restart: unless-stopped
+         networks:
+            - net
+         ports:
+            - "1881:1880"
+         volumes:
+            - "./node-red-data:/data"
+         user: "1000:1000"</code></p>
+<p>La línia <code>user: "1000:1000"</code> significa que l'usuari que crearà la carpeta compartida serà el que tinga l'ID 1000 i el grup també 1000. Per a saber quin és el vostre ID d'usuari, podeu fer <code>id -u</code> i per al grup <code>id -g</code>.</p>
+<h2 id="components-de-node-red">Components de Node-RED</h2>
+<p>Node-RED es basa en 3 components principals:</p>
+<ul>
+<li><strong>Flows</strong>: Són els programes que creem amb Node-RED. Estan formats per nodes connectats entre ells.</li>
+<li><strong>Nodes</strong>: Són els blocs que realitzen tasques específiques. Podem trobar nodes per interactuar amb dispositius de hardware, per connectar-se a serveis en línia, per realitzar càlculs, per afegir funcions en JavaScript, per connectar a bases de dades, etc.</li>
+<li><strong>Dashboard</strong>: És un node especial que ens permet crear una interfície web per a controlar els nostres programes.</li>
+</ul>
+<p>En la pantalla principal podem veure 3 seccions:</p>
+<ul>
+<li>a la part esquerra, una paleta on trobem tots els nodes disponibles per a ser utilitzats.</li>
+<li>a la part central, la zona de treball on podem crear els nostres programes. És l'anomenat <strong>Flow Editor</strong>, i allí crearem els nostres fluxes.</li>
+<li>a la part dreta, tenim la informació dels nodes seleccionats, així com la consola de debug i altres opcions de configuració.</li>
+</ul>
+<h2 id="nodes">Nodes</h2>
+<p>Un <strong>node</strong> es un bloc bàsic que fa una tasca específica i, moltes vegades, predeterminada. Els nodes se connecten entre ells per a crear un flux de dades. Com hem comentat, els nodes disponibles podem trobar-los en la paleta de la part esquerra de la interfície. De totes formes, més endavant veurem que podem instal·lar més nodes per a ampliar les funcionalitats de Node-RED.</p>
+<p>Els nodes poden posar-se en funcionament per algun event extern, o perquè reben un missatge d'un altre node. A la seua vegada, poden generar un nou missatge que serà enviat a un altre node. Un node pot tindre un port d'entrada i un o més ports d'eixida. </p>
+<p>En general crearem els nodes arrosegant-los des de la paleta fins a la zona de treball, i connectant-los entre ells amb les fletxes que apareixen quan arrossegem una fletxa des d'un port d'eixida a un port d'entrada.</p>
+<p>Per exemple, anem a fer un flux amb un node de tipus "inject", i un altre de tipus "debug". Després els connectarem entre ells. </p>
+<p><img alt="Flux amb inject i debug" src="img/u04-02.jpg" /></p>
+<p>Si se fixeu, veureu un xicotet punt blau en cada node. Això vol dir que el flux no està guardat (desplegat). Per a guardar el flux, cal fer clic en el botó de la part superior dreta, on diu "Deploy" o "Instanciar". Veureu que els punts blaus desapareixen.</p>
+<p>Alguns nodes, com el de tipus "inject", tenen un botó a l'esquerra que serveix per posar-lo en marxa si no està associat a cap event extern o a cap altre node. En el nostre exemple, si fem clic en el botó de l'inject, se posa en marxa el flux. En principi no veurem que haja passat res, però si en la part de l'esquerra anem al botó de debug i fem clic, veurem el resultat del flux. En este cas, un número que representa el timestamp del moment en què s'ha executat el flux.</p>
+<p><img alt="Execució del flux" src="img/u04-03.jpg" /></p>
+<h3 id="missatges-i-payload">Missatges i Payload</h3>
+<p>Els nodes de Node-RED es comuniquen entre ells enviant missatges. Un missatge està compost per 3 parts principals:</p>
+<ul>
+<li><strong>msg.payload</strong>: És la informació continguda en el missatge</li>
+<li><strong>msg.topic</strong>: És el tema del missatge</li>
+<li><strong>msg.<em>any other property</em></strong>: Podem afegir altres propietats al missatge</li>
+</ul>
+<p>El <strong>payload</strong> és la informació principal que es transmet entre els nodes. Per exemple, si tenim un node que llegeix un sensor de temperatura, el valor de la temperatura seria el payload. El <strong>topic</strong> és una cadena de text que ens permet classificar els missatges. Per exemple, si tenim un node que llegeix un sensor de temperatura, el topic podria ser "temperatura".</p>
+<p>Si fem clic en el node d'injecció, veurem que podem modificar el tipus de missatge que envia. Per defecte, envia un timestamp amb la data i hora actuals, que eś el número que ens mostra al fer el debug. Però podem canviar-ho per a que envie un missatge de tipus string, un número, un booleà, etc. modificant el camp "Payload" del missatge.</p>
+<p><img alt="Propietats del node inject" src="img/u04-04.jpg" /></p>
+<p>Si fem  clic en el node de debug, veurem que té una propietat <strong><em>Salida</em></strong> que per defecte mostrarà el payload que li passa el node anterior.</p>
+<p><img alt="Propietats del node debug" src="img/u04-05.jpg" /></p>
+<p>Si en lloc de mostrar el timestamp tal qual volem mostrar la data i hora en format llegible, podem afegir un node de tipus <strong>function</strong> entre l'inject i el debug. Aquest node ens permetrà modificar el missatge abans de passar-lo al node de debug. Per exemple, podem utilitzar el següent codi per a convertir el timestamp en una data i hora llegible:</p>
+<pre><code class="language-javascript">var date = new Date(msg.payload);
+msg.payload = date.toString();
+return msg;
+</code></pre>
+<p>Si torneu a fer el deploy i executeu el flux, haurieu de veure la data en un format més llegible.</p>
+<p><img alt="Flux amb una funció de JavaScript" src="img/u04-06.jpg" /></p>
+<h2 id="importar-i-exportar-fluxos">Importar i exportar fluxos</h2>
+<p>Node-RED ens permet importar i exportar els nostres fluxos. Això ens permet compartir els nostres programes amb altres persones, així com fer còpies de seguretat dels nostres programes. Els fluxos són exportats en format JSON, i podem importar-los des de la interfície de Node-RED.</p>
+<p>Per a exportar un flux, cal fer clic en el botó de la part superior dreta, i seleccionar <strong><em>Exportar</em></strong>. Això ens mostrarà una finestra on podem seleccionar què volem exportar. Podem exportar tot el flux, només la selecció actual, o només un node.</p>
+<p><img alt="Exportar un flux des del menú de la dreta" src="img/u04-07.jpg" /></p>
+<p>També podem exportar un flux fent clic amb el botó dret del ratolí sobre el flux, el grup o el node que volem exportar, i seleccionant <strong><em>Exportar</em></strong>.</p>
+<p><img alt="Exportar un flux amb el botó dret del ratolí" src="img/u04-08.jpg" /></p>
+<p>Per a importar un flux prèviament guardat en format JSON, fem clic en el menú de la part superior dreta i seleccionem l'opció <strong><em>Importar</em></strong>. Haurem de seleccionar el fitxer JSON que conté el flux que volem importar i ens crearà un flux nou en la zona de treball amb els nodes importats.</p>
+<p><img alt="Importar un flux des del menú de la dreta" src="img/u04-09.jpg" /></p>
+<h2 id="nodes-addicionals">Nodes addicionals</h2>
+<p>Node-RED permet instal·lar nodes addicionals per a ampliar les funcionalitats de l'aplicació. Per a fer-ho, cal anar a la paleta de la part esquerra de la interfície i fer clic en el botó de la part superior dreta, on diu <strong><em>Manage palette</em></strong> o <strong><em>Administrar paleta</em></strong>. Això ens obrirà una finestra on podem veure els nodes que tenim instal·lats (pestanya <strong><em>Nodos</em></strong>), així com els que podem instal·lar (pestanya <strong><em>Instalar</em></strong>). Per a instal·lar un node, cal anar a la pestanya <strong><em>Install</em></strong> o <strong><em>Instalar</em></strong> i buscar el node que volem instal·lar. Un cop trobat, fem clic en el botó <strong><em>Install</em></strong> i el node serà instal·lat. A partir d'ara, el node estarà disponible en la paleta de nodes que tenim a la part esquerra de la pantalla de treball.</p>
+<p><img alt="Gestió de la paleta de nodes" src="img/u04-10.jpg" /></p>
+<h3 id="exercici-01">Exercici 01</h3>
+<p>Intenteu fer un "Hola, mundo!". Recordeu que per veure el missatge haureu de tindre un node de debug, fer clic en el botó de debug que teniu a la part dreta de la pantalla, i llançar el primer node manualment. </p>
+<p>Modifiqueu el flux anterior per a que mostre també, a més del "Hola, mundo!" la data actual. </p>
+<h3 id="exercici-02">Exercici 02</h3>
+<ul>
+<li>
+<p>Descarregueu el flux <strong><em>Basic nodes operations</em></strong> que trobareu a Aules i importeu-lo al vostre NodeRED.</p>
+</li>
+<li>
+<p>Intenteu fer el desplegament del flux. Vos donarà un error perquè el flux importat inclou nodes que no teniu instal·lats.</p>
+</li>
+<li>
+<p>Intenteu instal·lar els nodes que falten i torneu a fer el desplegament a veure si ja no dona error.</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

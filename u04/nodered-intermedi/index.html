@@ -1,0 +1,603 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Node-Red Intermedi - Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../styles/taules.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#node-red-intermedi" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-header__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../../img/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Node-Red Intermedi
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-nav__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../../img/logo.svg" alt="logo">
+
+    </a>
+    Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inici
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Presentació
+    
+      <br>
+      <small>Mòdul Big Data Aplicat</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1. Introducció al Big Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2. Elements i arquitectura Big Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.1 Repàs Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u03/annex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.2 Docker Compose
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.1 Introducció a Node-RED
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nodes-de-sequencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodes de seqüències
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nodes de seqüències">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#split" class="md-nav__link">
+    <span class="md-ellipsis">
+      Split
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#join" class="md-nav__link">
+    <span class="md-ellipsis">
+      Join
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sort
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Batch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodes-de-funcio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodes de funció
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nodes de funció">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Switch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="node-red-intermedi">Node-RED intermedi</h1>
+<p>Ara que ja sabem com funcionen els nodes i com podem crear un flux de dades senzill, anem a veure com podem fer coses més complexes amb Node-RED. Per fer-ho, analitzarem alguns exemples de fluxos que heu important des d'Aules amb l'arxiu <code>Basic nodes operations</code>.</p>
+<h2 id="nodes-de-sequencies">Nodes de seqüències</h2>
+<p>Els nodes de seqüencies permeten actuar sobre una seqüència de missatges, o crear-ne una de nova. Això ens permet fer coses com filtrar missatges, dividir-los en parts, o afegir-los a una llista.</p>
+<h3 id="split">Split</h3>
+<p>El node <code>split</code> permet dividir un missatge en parts. Per exemple, si tenim un missatge amb un text que conté diverses paraules, podem dividir-lo en tantes parts com paraules hi hagi si especifiquem l'espai en blanc com a separador. Això ens permetrà actuar sobre cada paraula de forma independent.</p>
+<p>A més de l'espai en blanc, podem utilitzar qualsevol altre caràcter com a separador en l'apartat <code>Split using</code> o <code>Dividir usando</code> del node.</p>
+<p>A banda de text, també podem dividir un array en les seues parts, o un objecte en les seues propietats, tal com podeu veure a la imatge.</p>
+<p><img alt="Split node" src="../img/u04-11.jpg" /></p>
+<h3 id="join">Join</h3>
+<p>El node <code>join</code> permet unir les parts d'un missatge en un únic missatge d'eixida. Per exemple, si tenim un array amb diverses parts, podem unir-les en un sol missatge.</p>
+<p>També podem treballar amb <code>msg.parts</code>. El funcionament de <code>msg.parts</code> en NodeRED és similar al de <code>msg.payload</code>, però en lloc de contenir el valor del missatge, conté informació sobre la part del missatge que estem tractant. Això ens permet, per exemple, unir les parts d'un missatge en un ordre diferent al que tenien inicialment. També podem fer que el receptor del missatge espere a que li arriben totes les parts per executar alguna acció.</p>
+<p>Ací teniu un exemple d'ús de <code>split</code> i <code>join</code>. El que fa el flux és agafar una cadena, dividir-la en paraules, i enviar el resultat per un costat a un node <code>debug</code> que mostrarà per pantalla els diferents missatges que li arriben (les diferents paraules), i per altre costat li envia el mateix resultat a un node <code>join</code> que torna a juntar les paraules i les envia a un altre <code>Debug</code> que mostra la frase reconstruïda. </p>
+<p><img alt="Split i Join" src="../img/u04-12.jpg" /></p>
+<p>Una altra utilitat de <code>join</code>, com hem comentat, és unificar diferents missatges en un únic missatge. Se pot fer de manera automàtica o manual. Per exemple, si tenim un sensor que ens envia la temperatura i la humitat en dos missatges diferents, podem utilitzar <code>join</code> per unir-los en un sol missatge. Veiem un exemple:</p>
+<p><img alt="Join" src="../img/u04-13.jpg" /></p>
+<p>En este flux, tres nodes <code>inject</code> envien una dada diferent cadascun. Amb la etiqueta <code>topic</code> definim el nom de la propietat del missatge que contindrà la dada. Després, el node <code>Join</code> uneix els tres missatges en un sol missatge, i el node <code>debug</code> mostra el resultat. Fixeu-vos que el node <code>join</code> sap que ha d'esperar fins que li arriben els 3 missatges abans d'unir-los i enviar-los al node <code>debug</code>.</p>
+<p><img alt="Propietats de Join" src="../img/u04-14.jpg" /></p>
+<h3 id="sort">Sort</h3>
+<p>El node <code>sort</code> permet ordenar les propietats d'un missatge, o una seqüència de missatges. L'ordre pot ser ascendent o descendent. Se poden definir molts criteris d'ordenació diferents, o també utilitzar <code>msg.parts</code> per ordenar els missatges. Veiem un exemple molt senzill on el node <code>inject</code> envia un JSON amb un array de números, i el node <code>sort</code> els ordena. En les propietats del node <code>sort</code> podem veure com estem utilitzant com a clau d'ordenació el valor de l'element. </p>
+<p><img alt="Sort" src="../img/u04-15.jpg" /></p>
+<h3 id="batch">Batch</h3>
+<p>El node <code>batch</code> permet crear seqüències de missatges seguint certes regles. Hi ha tres formes de seqüenciar els missatges:</p>
+<ul>
+<li>per quantitat de missatges: agrupa missatges en seqüències d'una longitud determinada</li>
+<li>per intervals de temps: agrupa els missatges que arriben en un determinat interval de temps</li>
+<li>concatenar seqüències: agrupa distintes seqüències en una sola</li>
+</ul>
+<p>A continuació podeu veure un exemple on els nodes <code>join</code>, <code>batch</code>, <code>split</code> i <code>sort</code> treballen de manera conjunta amb unes seqüències de números que envien dos nodes <code>inject</code>.</p>
+<p><img alt="Batch, join, split i sort" src="../img/u04-16.jpg" /></p>
+<h2 id="nodes-de-funcio">Nodes de funció</h2>
+<p>Els nodes de funció ens permeten executar codi JavaScript o fer altres operacions sobre els missatges que passen pel flux. Això ens permet fer moltes coses, com modificar el missatge, filtrar-lo, o crear-ne de nous. Hem vist abans un exemple amb el qual convertiem un <code>timestamp</code> en una data llegible. Això ho hem fet amb el node <code>function</code></p>
+<p>Exemple igualment senzill: tenim un sensor que ens envia la temperatura i la humitat en dos missatges diferents. Volem que si la temperatura és superior a 30ºC, s'envie un missatge d'alerta. Per fer-ho, utilitzarem un node <code>function</code> que comprovarà si la temperatura és superior a 30ºC, i si ho és, enviarà un missatge d'alerta.</p>
+<p>La funció seria així:</p>
+<pre><code class="language-javascript">if (msg.payload.temperature &gt; 30) {
+    return {payload: &quot;Alerta: temperatura superior a 30ºC&quot;};
+}
+</code></pre>
+<p>De totes maneres, a banda del node <code>function</code> hi ha altres dins del grup <strong><em>Función</em></strong>. Anem a veure alguns dels més importants.</p>
+<h3 id="switch">Switch</h3>
+<p>El node <code>switch</code> ens permet fer bifurcacions en el flux segons el valor d'una propietat del missatge. Per exemple, si tenim un sensor que ens envia la temperatura i la humitat, podem utilitzar <code>switch</code> per enviar un missatge d'alerta si la temperatura és superior a 30ºC, i un altre si la humitat és superior al 70%.</p>
+<p>Per fer això anem a necessitar també el node <code>Change</code>.</p>
+<h3 id="change">Change</h3>
+<p>El node <code>change</code> ens permet canviar les propietats d'un missatge. Per exemple, el nostre cas anterior, podem afegir una propietat <code>alert</code> al missatge si la temperatura és superior a 30ºC o si la humitat és superior al 70%. També podem canviar el valor d'una propietat, o eliminar-la. Fins i tot podem, si ens interessa, modificar el valor de <code>Payload</code>.</p>
+<p>El node <code>Change</code> del nostre exemple quedaria així:</p>
+<p>Ara podem combinar els nodes <code>Switch</code> i <code>Change</code> per enviar un missatge d'alerta si la temperatura és superior a 30ºC o si la humitat és superior al 70%, o simplement mostrar els valors si són normals. </p>
+<p><img alt="Switch i Change" src="../img/u04-17.jpg" /></p>
+<p>El <code>Switch</code> de la temperatura té dues eixides: </p>
+<ul>
+<li>la 1 si el valor és major que 30, i la 2 si no ho és. La 1 porta al node <code>Change</code> que afegeix la propietat <code>alert</code> al missatge, i finalment el node <code>debug</code> mostra l'alerta. La 2 porta directament al node <code>debug</code> que mostra el missatge transformat en un JSON llegible.</li>
+</ul>
+<p><img alt="Tot el flux de la temperatura" src="../img/u04-18.jpg" /></p>
+<p>El <code>Switch</code> de la humitat té dues eixides:</p>
+<ul>
+<li>la 1 si el valor és major que 70, i la 2 si no ho és. La 1 porta al node <code>Change</code> que afegeix la propietat <code>alert</code> al missatge, i finalment el node <code>debug</code> mostra l'alerta. La 2 porta directament al node <code>debug</code> que mostra el missatge transformat en un JSON llegible.</li>
+</ul>
+<p>L'esquema és el mateix que hem vist per la temperatura.</p>
+<h3 id="random">Random</h3>
+<p>El node <code>random</code> ens permet generar valors aleatoris. Això pot ser útil per simular sensors, o per fer proves, com anem a fer a continuació. </p>
+<p>En l'exemple anterior de la temperatura i la humitat, si volem saber què passa al canviar els valors d'entrada hem d'editar el node <code>inject</code> cada vegada. Utilitzant un node <code>random</code>, podem fer que el node d'injecció li envie una senyal al <code>random</code> i que este genere els valors aleatòriament. A més, com sabem, podem saber que el node <code>inject</code> envie una senyal cada cert temps per a que se generen els valors.</p>
+<p>El nostre exemple anterior, utilitzant nodes <code>random</code> per generar els valors, quedaria així:</p>
+<p><img alt="Senyals aleatòries" src="../img/u04-19.jpg" /></p>
+<p>El node <code>random</code> només genera valors numèrics. Per a generar altres tipus de valors, podem utilitzar el node <code>data-generator</code>, que segurament haurem d'instal·lar des de la paleta de la dreta. </p>
+<p>Amb <code>data-generator</code> podem generar dades amb sentit, textos que tinguen un significat. Per exemple, li podem dir que genere noms ficticis, adreces i poblacions inventades, i també numeros que estiguen dins d'un rang determinat. Ací teniu un exemple de generador de dades d'una persona:</p>
+<p><img alt="Generador de dades" src="../img/u04-20.jpg" /></p>
+<p><img alt="Flux complet amb dades generades aleatòriament" src="../img/u04-21.jpg" /></p>
+<p><img alt="Resultat en la pantalla de debug" src="../img/u04-22.jpg" /></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
