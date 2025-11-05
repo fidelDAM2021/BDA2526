@@ -9,10 +9,14 @@
       
       
       
+        <link rel="prev" href="../nodered-intermedi/">
+      
+      
+        <link rel="next" href="../nodered-dashboards/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
@@ -353,6 +357,407 @@
   
   <span class="md-ellipsis">
     4.2 Node-RED intermedi
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    4.3 Node-RED avançat
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.3 Node-RED avançat
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#altres-nodes-comuns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Altres nodes comuns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Altres nodes comuns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#catch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Catch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-in-i-link-out" class="md-nav__link">
+    <span class="md-ellipsis">
+      Link in i Link out
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-call" class="md-nav__link">
+    <span class="md-ellipsis">
+      Link call
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#altres-nodes-de-funcio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Altres nodes de funció
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Altres nodes de funció">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Template
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delay" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wait-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wait-paths
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data generator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodes-analitzadors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodes analitzadors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nodes analitzadors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSV
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSON
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml" class="md-nav__link">
+    <span class="md-ellipsis">
+      XML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      YAML
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arrancar-i-parar-fluxos-amb-variables-de-flux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arrancar i parar fluxos amb variables de flux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodes-de-xarxa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodes de xarxa
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nodes de xarxa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP response
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP in
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodes-darxius" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodes d'arxius
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nodes d&#39;arxius">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#escribir-archivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escribir archivo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leer-archivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leer archivo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercicis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercicis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercicis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercici-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 01
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 02
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 03
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 04
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nodered-dashboards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.4 Node-RED dashboards
     
   </span>
   
