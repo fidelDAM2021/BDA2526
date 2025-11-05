@@ -9,3 +9,5 @@
 * [3.2 Docker Compose](u03/annex.md)
 * [4.1 Introducció a Node-RED](u04/index.md)
 * [4.2 Node-RED intermedi](u04/nodered-intermedi.md)
+* [4.3 Node-RED avançat](u04/nodered-avançat.md)
+* [4.4 Node-RED dashboards](u04/nodered-dashboards.md)
