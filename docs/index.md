@@ -11,3 +11,4 @@
 * [4.2 Node-RED intermedi](u04/nodered-intermedi.md)
 * [4.3 Node-RED avançat](u04/nodered-avançat.md)
 * [4.4 Node-RED dashboards](u04/nodered-dashboards.md)
+* [4.5 Formularis en Node-RED](u04/nodered-formularis.md)
