@@ -1,0 +1,814 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../nodered-dashboards/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>Formularis en Node-RED - Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../styles/taules.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#node-red-formularis" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-header__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../../img/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Formularis en Node-RED
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-nav__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../../img/logo.svg" alt="logo">
+
+    </a>
+    Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inici
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Presentació
+    
+      <br>
+      <small>Mòdul Big Data Aplicat</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1. Introducció al Big Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2. Elements i arquitectura Big Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.1 Repàs Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u03/annex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.2 Docker Compose
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.1 Introducció a Node-RED
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nodered-intermedi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.2 Node-RED intermedi
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nodered-avan%C3%A7at/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.3 Node-RED avançat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nodered-dashboards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.4 Node-RED dashboards
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    4.5 Formularis en Node-RED
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.5 Formularis en Node-RED
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mes-nodes-per-a-dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Més nodes per a Dashboards
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layout
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theme
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formularis-en-node-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formularis en Node-RED
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formularis en Node-RED">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#components-de-formulari" class="md-nav__link">
+    <span class="md-ellipsis">
+      Components de formulari
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-node-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      El node form
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mes-nodes-per-a-dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Més nodes per a Dashboards
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layout
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theme
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formularis-en-node-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formularis en Node-RED
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formularis en Node-RED">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#components-de-formulari" class="md-nav__link">
+    <span class="md-ellipsis">
+      Components de formulari
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-node-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      El node form
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="node-red-formularis">Node-RED Formularis</h1>
+<p>En aquesta unitat veurem més possibilitats per a crear Dashboards. Seguirem repassant els nodes més importants per a Dashboards, en veurem algun nou, i també aprendrem a crear formularis i elements interactius dins dels nostres Dashboards.</p>
+<p>Primer anem a veure alguns nodes més de Dashboards que encara no hem utilitzat.</p>
+<h2 id="mes-nodes-per-a-dashboards">Més nodes per a Dashboards</h2>
+<p>Ja hem vist alguns nodes per a representar gràfics i dades en els nostres Dashboards, com ara el <strong>Gauge</strong>, el <strong>Chart</strong> o <strong>Table</strong>. Anem a veuren alguns més:</p>
+<ul>
+<li><strong>Text</strong>: ens permet mostrar text estàtic o dinàmic en el nostre Dashboard. Podem utilitzar-lo per a mostrar missatges, instruccions o qualsevol altra informació que vulguem compartir amb l'usuari.</li>
+</ul>
+<p>En l'exemple tenim un node <strong>Inject</strong> que envia un timestamp a un node <strong>Function</strong> que converteix el timestamp en una cadena de text amb la data actual. La cadena es passa al node <strong>Text</strong>, que la mostra en el Dashboard.</p>
+<p><img alt="Node Text" src="../img/u04-42.png" /> </p>
+<ul>
+<li><strong>Show Notification</strong>: este node ens permet mostrar notificacions emergents en el Dashboard. Podem utilitzar-lo per a alertar als usuaris sobre esdeveniments importants o canvis en les dades. Per defecte la notificació se mostra en la part superior dreta del Dashboard, però amb la propietat <strong><em>Position</em></strong> ho podem canviar. </li>
+</ul>
+<p>Amb la propietat <strong><em>timeout</em></strong> podem definir quant de temps es mostrarà la notificació abans de desaparèixer. Amb la propietat <strong><em>Allow Manual Dismissal</em></strong> podem permetre que l'usuari tanque la notificació manualment amb un botó.</p>
+<p>Per exemple, podem mostrar una notificació quan una propietat supere un cert valor. En l'exemple tenim un node <strong>Inject</strong> que activa un node <strong>Random</strong> que genera un valor aleatori entre 0 i 10. El node <strong>Switch</strong> comprova si el valor és major que 5. Si ho és li passa el payload a un node <strong><em>Template</em></strong> que crea un missatge que s'envia al node <strong>Show Notification</strong> per a mostrar la notificació en el Dashboard.</p>
+<p><img alt="Node Show Notification" src="../img/u04-43.png" /></p>
+<ul>
+<li>
+<p><strong>Template</strong>: ens permet crear contingut HTML personalitzat per al nostre Dashboard. Podem utilitzar-lo per a dissenyar elements visuals més complexos o per a integrar components externs en el nostre Dashboard. També per a crear estils que s'aplicaran (a tots els Dashboards o a una pàgina concreta).</p>
+</li>
+<li>
+<p><strong>Markdown</strong>: permet mostrar contingut en format Markdown en el nostre Dashboard, convertint-lo automàticament a HTML. Això és útil per a mostrar documentació, instruccions o qualsevol altre contingut formatat de manera senzilla.</p>
+</li>
+<li>
+<p><strong>Audio</strong>: ens permet reproduir fitxers d'àudio en el nostre Dashboard. Podem utilitzar-lo per a proporcionar retroalimentació sonora o per a reproduir sons específics en resposta a esdeveniments.</p>
+</li>
+<li>
+<p><strong>Progress</strong>: mostra una barra de progrés en el Dashboard. Agafa el valor numèric del payload i el representa com un percentatge en una barra de progrés.</p>
+</li>
+<li>
+<p><strong>ui Control</strong>: permet controlar diversos aspectes del Dashboard, com ara canviar la pàgina actual, mostrar o ocultar elements, o actualitzar el títol del Dashboard.</p>
+</li>
+</ul>
+<h2 id="layout">Layout</h2>
+<p>Abans de continuar, és important entendre com funciona el layout (disposició) en els Dashboards de Node-RED. El layout es basa en una estructura de pàgines i grups que ens permet organitzar els elements del nostre Dashboard de manera clara i accessible. Com hem vist, cada Dashboard pot incloure múltiples pàgines, cada pàgina pot incloure diversos grups, i en cada grup podem incloure diversos elements: gràfics, taules, formularis, etc.</p>
+<p>A banda d'això, si fem doble clic en un component del Dashboard, anem a editar el grup, i en les propietats del grup anem a editar la pàgina, trobarem que dins de les propietats de la pàgina (on posem el seu nom i el seu path) hi ha una pestanya anomenada <strong><em>Layout</em></strong>. Podem triar entre:</p>
+<ul>
+<li><strong>Grid</strong>: és el layout per defecte. Els elements es col·loquen en una quadrícula, i s'ajusten automàticament segons la mida de la finestra del navegador. Divideix la pàgina en 12 columnes del mateix ample, i els grups ajusten el seu ample ocupant un nombre definit d'estes columnes. Això permet flexibilitat i adaptació a diferents mides i resolucions de pantalla.</li>
+<li><strong>Fixed</strong>: ens permet definir una mida fixa per als elements del Dashboard. Utilitza unes mides anomenades <strong><em>unitats</em></strong>, on cada unitat són 90px, per oferir un control més exacte de les posicions de cada element. Normalment s'utilitza en interfícies industrials.</li>
+<li><strong>Tabs</strong>: ens permet organitzar els elements del Dashboard en pestanyes. Això és útil si tenim molts elements i volem mantenir el Dashboard net i organitzat.</li>
+<li><strong>Notebook</strong>: ens permet crear un format de llibre de notes amb un ample màxim de 1024px i centrat, on els elements es poden organitzar en seccions i subseccions. Això és útil per a presentacions o informes més complexos.</li>
+</ul>
+<h2 id="theme">Theme</h2>
+<p>També podem, en les propietas de la pàgina, editar el tema (theme) del Dashboard. El tema defineix l'aparença visual del Dashboard, incloent colors, fonts i estils dels elements. Node-RED ofereix diversos temes predefinits, però també podem crear els nostres propis temes personalitzats. Directament des d'este apartat podem modificar colors de fons del dashboard, les pàgines i grups, així com l'alt de les files, el padding, els bordes, etc.</p>
+<p><img alt="Theme Editor" src="../img/u04-46.png" /></p>
+<h2 id="formularis-en-node-red">Formularis en Node-RED</h2>
+<p>Els formularis són una part essencial de molts Dashboards, ja que permeten als usuaris introduir dades i interactuar amb l'aplicació. En Node-RED, podem crear formularis utilitzant diversos nodes de Dashboards que faciliten la creació d'elements interactius. Podem utilitzar els components per separat, o crear formularis que integren diferents components.</p>
+<h3 id="components-de-formulari">Components de formulari</h3>
+<ul>
+<li><strong>Dropdown</strong>: ens permet crear un desplegable amb opcions predefinides. L'usuari pot seleccionar una opció de la llista, i el valor seleccionat es passa com a payload al següent node.</li>
+</ul>
+<p>En l'exemple veureu un node <strong>Dropdown</strong> que permet triar una província entre València, Castelló i Alacant, i torna el valor que associem a l'opció seleccionada. En l'exemple la mostrem en un node <strong>Debug</strong>, però podríem fer qualsevol altra cosa amb el valor seleccionat.</p>
+<p><img alt="Node Dropdown" src="../img/u04-44.png" /></p>
+<ul>
+<li>
+<p><strong>Switch</strong>: ja l'hem vist en altres exemples. Ens permet crear un botó d'encesa i apagada que l'usuari pot utilitzar per a activar o desactivar una funció. El valor del payload serà <code>true</code> quan el botó estiga activat i <code>false</code> quan estiga desactivat.</p>
+</li>
+<li>
+<p><strong>Slider</strong>: ens permet crear un control lliscant que l'usuari pot utilitzar per a seleccionar un valor dins d'un rang específic. El valor seleccionat es passa com a payload al següent node. Podem definir el valor mínim, el màxim, i el pas del control (d'un en un, de dos en dos, etc.).</p>
+</li>
+</ul>
+<p><img alt="Node Slider" src="../img/u04-45.png" /></p>
+<ul>
+<li><strong>Button</strong>: ens permet crear un botó que l'usuari pot clicar per a activar una acció. Quan polsem el botó, s'envia un missatge amb un payload predefinit al següent node. Per exemple, podem utilitzar un botó per netejar un component de text o un gràfic enviant un payload buit. </li>
+</ul>
+<p>Algunes dades del botó (i d'altres components) es poden canviar en temps d'execució mitjançant missatges. Per exemple, podem canviar l'etiqueta del botó enviant un missatge amb la propietat <code>msg.label</code> que continga el nou text. També podem canviar l'estat del botó (habilitat o deshabilitat) enviant un missatge amb la propietat <code>msg.enabled</code> amb valor <code>true</code> o <code>false</code>. També podem canviar propietas com <code>label</code>, <code>buttonColor</code>, <code>textColor</code> o fins i tot aplicar una classe al botó utilitzant <code>msg.ui_update</code> i la propietat corresponent. En l'exemple teniu uns botons que canvien l'estat, el label i el color d'un altre botó.</p>
+<p><img alt="Node Button" src="../img/u04-47.png" /></p>
+<p>En el node <strong>change</strong> d'activació, modifiquem les següents propietats del botó principal:</p>
+<pre><code>msg.enabled = true
+msg.ui_update.label = Activat&quot;
+msg.ui_update.buttonColor = &quot;blue&quot;
+</code></pre>
+<p>En el node <strong>change</strong> de desactivació, modifiquem les següents propietats del botó principal:</p>
+<pre><code>msg.enabled = false
+msg.ui_update.label = &quot;Desactivat&quot;
+msg.ui_update.buttonColor = &quot;grey&quot;
+</code></pre>
+<p>També se pot enviar un únic missatge a un botó amb més d'una propietat amb:</p>
+<pre><code>msg.ui_update = {
+    label: &quot;Nou Label&quot;,
+    buttonColor: &quot;red&quot;,
+    textColor: &quot;white&quot;
+}
+</code></pre>
+<blockquote>
+<p>Amb <code>msg.ui_update</code> podem canviar moltes propietats de quasi tots els components d'un Dashboard. Pots consultar l'ajuda en línia de Node-RED per a saber quines propietats es poden canviar en cada component. Són les que apareixen com a <strong><em>Dynamic properties</em></strong>.</p>
+</blockquote>
+<p><img alt="Propietats dinàmiques de button" src="../img/u04-48.png" /></p>
+<ul>
+<li>
+<p><strong>Text input</strong>: ens permet crear un camp de text on l'usuari pot introduir dades. El text introduït es passa com a payload al següent node. Podem utilitzar-lo per a recollir informació com noms, correus electrònics, o qualsevol altra dada textual.</p>
+</li>
+<li>
+<p><strong>Number input</strong>: similar al <strong>Text input</strong>, però només permet introduir valors numèrics. Això és útil quan necessitem que l'usuari introduïsca nombres, com edats, quantitats o valors mesurats. Podem definir límits mínims i màxims, així com el pas entre valors.</p>
+</li>
+</ul>
+<p><img alt="Text i Number input" src="../img/u04-49.png" /></p>
+<blockquote>
+<p>No hi ha nodes especials, com en HTML, per introduir textos específics com correus electrònics, dates, contrasenyes, <em>color pickers</em>, etc. De totes formes, en les propietas del node <strong>Text input</strong> podem definir el tipus de dades que volem introduir en la propietat <strong><em>Mode</em></strong>. En la figura següent podeu veure els diferents tipus que podem triar.</p>
+</blockquote>
+<p><img alt="Tipus de dades en Text input" src="../img/u04-50.png" /></p>
+<ul>
+<li><strong>File input</strong>: ens permet crear un camp on l'usuari pot seleccionar i pujar un fitxer des del seu dispositiu. El contingut del fitxer es passa com a payload al següent node, permetent-nos processar o analitzar el fitxer pujat.</li>
+</ul>
+<p><img alt="Node File input" src="../img/u04-51.png" /></p>
+<p><img alt="Pujar arxius" src="../img/u04-52.png" /></p>
+<ul>
+<li><strong>Radio group</strong>: ens permet crear un grup de botons d'opció on l'usuari pot seleccionar una única opció d'una llista predefinida. El valor seleccionat es passa com a payload al següent node. És el <strong><em>radio button</em></strong> d'HTML.</li>
+</ul>
+<p><img alt="Node Radio group" src="../img/u04-53.png" /></p>
+<h3 id="el-node-form">El node form</h3>
+<p>Per a crear formularis més complexos, podem utilitzar el node <strong>Form</strong>. Este node ens permet agrupar diversos components de formulari en un únic formulari que l'usuari pot omplir i enviar. Quan l'usuari envia el formulari, tots els valors dels components s'envien com un objecte JSON en el payload.</p>
+<p><img alt="Node Form" src="../img/u04-54.png" /></p>
+<p>Si definim controls de tipus <strong><em>dropdown</em></strong> en el formulari, les hem de declarar en la pestanya <strong><em>Dropdown options</em></strong> del node <strong>Form</strong>. Allí hem d'afegir les opcions que tindrà cada desplegable, amb el seu valor i la seua etiqueta.</p>
+<p><img alt="Opcions de Dropdown en Form" src="../img/u04-55.png" /></p>
+<p>En el Dashboard el formulari se veurà així:</p>
+<p><img alt="Apariència del formulari en el Dashboard" src="../img/u04-56.png" /></p>
+<p>Quan enviem el formulari, el payload que rep el següent node és un objecte JSON amb les propietats corresponents a cada camp del formulari:</p>
+<p><img alt="Payload del formulari" src="../img/u04-57.png" /></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
