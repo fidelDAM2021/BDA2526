@@ -1,0 +1,1107 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../u04/nodered-formularis/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Fiware. Conceptes bàsics. - Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../styles/taules.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduccio" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-header__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../img/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fiware. Conceptes bàsics.
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-nav__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../img/logo.svg" alt="logo">
+
+    </a>
+    Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentació
+  
+
+    
+      <br>
+      <small>Mòdul Big Data Aplicat</small>
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introducció al Big Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Elements i arquitectura Big Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.1 Repàs Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u03/annex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.2 Docker Compose
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.1 Introducció a Node-RED
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u04/nodered-intermedi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.2 Node-RED intermedi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u04/nodered-avan%C3%A7at/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.3 Node-RED avançat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u04/nodered-dashboards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.4 Node-RED dashboards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u04/nodered-formularis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.5 Formularis en Node-RED
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Fiware. Orion. Context Broker
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Fiware. Orion. Context Broker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#broker-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Broker de dades
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tòpic
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-repas-rapid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API. Repàs ràpid.
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API. Repàs ràpid.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ngsiv2-i-ngsi-ld" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NGSIv2 i NGSI-LD
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ontologia-de-les-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ontologia de les dades
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fiware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIWARE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FIWARE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arquitectura-de-fiware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitectura de FIWARE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-darquitectures-fiware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemples d'arquitectures FIWARE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smart-data-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Smart Data Models
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Smart Data Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-dun-smart-data-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura d'un Smart Data Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orion-context-broker-ocb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orion Context Broker (OCB)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Orion Context Broker (OCB)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funcionament-especific-dorion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcionament específic d'Orion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#broker-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Broker de dades
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tòpic
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-repas-rapid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API. Repàs ràpid.
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API. Repàs ràpid.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ngsiv2-i-ngsi-ld" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NGSIv2 i NGSI-LD
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ontologia-de-les-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ontologia de les dades
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fiware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIWARE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FIWARE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arquitectura-de-fiware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitectura de FIWARE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-darquitectures-fiware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemples d'arquitectures FIWARE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smart-data-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Smart Data Models
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Smart Data Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-dun-smart-data-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura d'un Smart Data Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orion-context-broker-ocb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orion Context Broker (OCB)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Orion Context Broker (OCB)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funcionament-especific-dorion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcionament específic d'Orion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="introduccio">Introducció</h1>
+<p>En esta unitat veurem què és <strong>Fiware</strong>, com funciona i com podem utilitzar-lo per a desenvolupar aplicacions que utilitzen dades obertes. En primer lloc, anem a veure alguns conceptes bàsics que necessitem conèixer o repassar.</p>
+<h2 id="broker-de-dades">Broker de dades</h2>
+<p>Un <strong>broker de dades</strong> és un component de software que permet als desenvolupadors de software accedir a dades de diferents fonts. El broker de dades actua com a intermediari entre la font on estan les dades que necessitem i les aplicacions que volen accedir a elles.</p>
+<p>Exemples de brokers de dades són <strong>Orion</strong> o <strong>Kafka</strong>. <strong>Orion</strong> és un broker de dades que permet als desenvolupadors accedir a dades obertes de diferents fonts, com ara sensors, xarxes socials o bases de dades. <strong>Kafka</strong> és un altre broker de dades que permet als desenvolupadors accedir a dades en temps real. </p>
+<p>El funcionament d'un <strong>broker de dades</strong> se basa, en general, en la <strong>subscripció</strong> a les fonts de dades a les quals volem tindre accés. Podrem accedir a les dades de vàries formes: </p>
+<ul>
+<li><strong>Subscripció a dades en temps real</strong>: el broker de dades ens notificarà quan hi haja noves dades disponibles.</li>
+<li><strong>Consulta de dades</strong>: el broker de dades ens permetrà realitzar consultes a les dades que estan disponibles, o descarregar-les.</li>
+</ul>
+<p>En el nostre mòdul estudiarem com utilitzar <strong>Orion</strong> per a accedir a dades obertes. En el mòdul de <strong>Sistemes Big Data</strong> veureu <strong>Kafka</strong>, encara que potser nosaltres també farem alguna pràctica per entendre com funciona.</p>
+<h2 id="topic">Tòpic</h2>
+<p>Un <strong>tòpic</strong> és una categoria o un canal al qual es poden subscriure els usuaris per rebre missatges o dades relacionades amb aquest tema. Els tòpics s'utilitzen en sistemes de missatgeria i brokers de dades per organitzar i distribuir la informació de manera eficient. Per exemple, en un sistema de monitoratge ambiental, podríem tenir diferents tòpics per a cada tipus de sensor, com ara un tòpic per a sensors de temperatura, un altre per a sensors d'humitat, etc. El tòpic podria també estar relacionat amb una ubicació geogràfica específica, com ara una ciutat concreta.</p>
+<h2 id="api-repas-rapid">API. Repàs ràpid.</h2>
+<p>Com ja sabeu, una <strong>API</strong> (Application Programming Interface) és un conjunt d'eines que permeten als desenvolupadors de software interactuar amb un sistema de software. Les <strong>APIs</strong> poden ser de molts tipus, però en general permeten als desenvolupadors realitzar les operacions bàsiques (<strong><em>CRUD</em></strong>: Create, Read, Update, Delete) sobre un repositori de dades, oferint-les en forma de serveis web.</p>
+<h3 id="ngsiv2-i-ngsi-ld">NGSIv2 i NGSI-LD</h3>
+<p><strong>NGSI</strong> (Next Generation Service Interface) és un estàndard per a la gestió de dades de context en sistemes d'informació. Hi ha dues versions principals d'este estàndard: <strong>NGSIv2</strong> i <strong>NGSI-LD</strong>. </p>
+<ul>
+<li><strong>NGSIv2</strong> és la versió original i es basa en el model de dades <strong>JSON</strong>. Esta versió és àmpliament utilitzada en moltes aplicacions i sistemes d'informació. La informació està organitzada en entitats, atributs i metadades opcionals. Té suport per GEOJSON per a la representació de dades geoespacials, i també per a la gestió de temps.</li>
+</ul>
+<p><img alt="Context elements en NGSIv2" src="images/u05-context-elements.png" /></p>
+<ul>
+<li><strong>NGSI-LD</strong> és una versió més recent que es basa en el model de dades <strong>JSON-LD</strong> (JSON for Linked Data).Esta versió està dissenyada per a ser més flexible i representar relacions entre les entitats utilitzant grafs. Això permetre la integració amb altres sistemes d'informació basats en dades enllaçades.</li>
+</ul>
+<p>En Orion Context Broker es pot utilitzar tant <strong>NGSIv2</strong> com <strong>NGSI-LD</strong> per a gestionar les dades de context. La tria entre una versió o una altra dependrà dels requisits específics de l'aplicació que estem desenvolupant.</p>
+<h2 id="ontologia-de-les-dades">Ontologia de les dades</h2>
+<p>Una <strong>ontologia de les dades</strong> és una descripció formal de les dades que permet als desenvolupadors de software entendre què representen les dades i com estan relacionades entre elles. És un concepte similar al de esquema o model en bases de dades relacionals, però més flexible i pot descriure relacions més complexes entre les dades. </p>
+<p>La ontologia de les dades, en contextos on la informació és compartida, permet establir un llenguatge comú entre diferents sistemes i aplicacions. Això facilita la interoperabilitat i la integració de dades de diferents fonts. Principalment una ontologia defineix un model semàntic que inclou:</p>
+<ul>
+<li><strong>Entitats</strong>: els objectes o conceptes que es volen representar.</li>
+<li><strong>Atributs</strong>: les propietats o característiques de les entitats.</li>
+<li><strong>Relacions</strong>: les connexions entre les entitats.</li>
+<li><strong>Regles</strong>: les restriccions o condicions que s'apliquen a les entitats, atributs i relacions.</li>
+</ul>
+<h2 id="fiware">FIWARE</h2>
+<p><strong>FIWARE</strong> és una plataforma de codi obert, impulsada per la Unió Europea, per al desenvolupament i el desplegament global d'aplicacions relacionades amb <strong>IoT</strong> (<strong><em>Internet of Things</em></strong>). </p>
+<p><a href="https://www.fiware.org/">Pàgina web de FIWARE</a></p>
+<p>Es tracta d'una iniciativa que defineix un conjunt universal de estàndards per a la gestió de dades de context. Això implica definir, com hem comentat abans, una <strong><em>ontologia</em></strong> de les dades. Així se facilita el desenvolupament de solucions per a diferents dominis, com per exemple <strong>Smart Cities</strong>, <strong>Smart Industry</strong>, <strong>Smart Agrifood</strong> i <strong>Smart Energy</strong>.</p>
+<p><img alt="FIWARE" src="images/u05-01.jpg" /></p>
+<h3 id="arquitectura-de-fiware">Arquitectura de FIWARE</h3>
+<p>La plataforma <strong>FIWARE</strong> està formada per diferents components que permeten als desenvolupadors accedir a dades de context de diferents fonts. Aquests components es poden agrupar en tres capes:</p>
+<ul>
+<li><strong>Capa de dades</strong>: en aquesta capa es troben els <strong>brokers de dades</strong> que permeten als desenvolupadors accedir a dades de context de diferents fonts. Com a broker de dades de <strong>FIWARE</strong> es fa servir <strong>Orion Context Broker (OCB)</strong>.</li>
+<li><strong>Capa de processament</strong>: en aquesta capa es troben els components que permeten als desenvolupadors processar les dades de context. Aquests components poden ser <strong>Cygnus</strong> o <strong>Stardog</strong>.</li>
+<li><strong>Capa d'aplicació</strong>: en aquesta capa es troben els components que permeten als desenvolupadors desenvolupar aplicacions que utilitzen les dades de context. Aquests components poden ser <strong>Wirecloud</strong> o <strong>Keyrock</strong>.</li>
+<li><strong>Capa de gestió</strong>: en aquesta capa es troben els components que permeten als administradors gestionar la plataforma <strong>FIWARE</strong>. Aquests components poden ser <strong>Orion-LD</strong> o <strong>Keyrock</strong>.</li>
+</ul>
+<p><img alt="Localització de FIWARE en una arquitectura Big Data" src="images/u05-02.jpg" /></p>
+<h3 id="exemples-darquitectures-fiware">Exemples d'arquitectures FIWARE</h3>
+<p><img alt="Exemple d'arquitectura FIWARE" src="images/u05-03.jpg" /></p>
+<p><img alt="Exemple d'arquitectura FIWARE" src="images/u05-04.jpg" /></p>
+<h2 id="smart-data-models">Smart Data Models</h2>
+<p>Els <strong>Smart Data Models</strong> són una part fonamental de <strong>FIWARE</strong>. Es tracta d'una col·lecció de models de dades que defineixen com representar les dades de context en diferents dominis. Aquests models de dades estan definits en forma de <strong>ontologies</strong>, un concepte que, com hem vist, permet als desenvolupadors entendre el significat de les dades.</p>
+<p>Les ontologies dels <strong>Smart Data Models</strong> se basen en un llenguatge anomenat <strong>JSON Schema</strong>, que permet descriure l'estructura de les dades i les restriccions que han de complir. En el context de <strong>FIWARE</strong> i <strong>Smart Data Models</strong>, un <strong>JSON Schema</strong> defineix els atributs i les propietats que han de tenir les entitats que formen part del model de dades. En certs casos, cal definir dos atributs obligatoris per a les entitats:</p>
+<ul>
+<li><strong>id</strong>: un identificador únic per a l'entitat.</li>
+<li><strong>type</strong>: el tipus d'entitat</li>
+</ul>
+<p>Cada element dins de l'entitat pot tindre diversos atributs que venen definits, si volem utilitzar estàndars validats per <strong>Fiware</strong>, per una ontologia. En general se demanen els següents atributs bàsics:</p>
+<ul>
+<li><strong>name</strong></li>
+<li><strong>type</strong></li>
+<li><strong>description</strong></li>
+<li><strong>value</strong> </li>
+<li><strong>location</strong> (ubicació geogràfica)</li>
+<li><strong>dateObserved</strong> (data i hora d'observació)</li>
+</ul>
+<p>De totes formes, si volem utilitzar un model de dades estàndar hem de seguir les seues especificacions. No cal utilitzar-les totes, només les que necessitem (a banda de les obligatòries). La idea és que qualsevol informació que compartim seguint un model de dades estàndar siga comprensible per a qualsevol altre desenvolupador que utilitze el mateix model. I el mateix quan nosaltres actuem com a consumidors.</p>
+<p>La definició d'un model de dades intel·ligent inclou quatre elements: </p>
+<ul>
+<li>l'<strong>esquema</strong> o representació tècnica del model que defineix els tipus de dades tècniques i l'estructura. Se poden afegir propietats noves, pròpies, a un esquema que ja existeix.</li>
+<li>l'<strong>especificació</strong> d'un document escrit per a lectors humans</li>
+<li>una URI amb una <strong>URL de treball</strong> amb dades bàsiques sobre l'atribut o l'entitat</li>
+<li><strong>exemples</strong> de les càrregues útils per a les versions <strong>NGSIv2</strong> i <strong>NGSI-LD</strong></li>
+</ul>
+<p>Tots els models de dades són públics i de naturalesa lliure de drets d'autor. La modalitat de llicència atorga 3 drets als usuaris:</p>
+<ul>
+<li>Ús gratuït</li>
+<li>Modificació gratuïta</li>
+<li>Compartició gratuïta de les modificacions</li>
+</ul>
+<p><a href="https://www.fiware.org/smart-data-models/">Catàleg de Smart Data Models</a></p>
+<p><a href="https://fiware-datamodels.readthedocs.io/en/stable/">Fiware Data-Models actualitzats</a></p>
+<h3 id="estructura-dun-smart-data-model">Estructura d'un Smart Data Model</h3>
+<p>Els <strong>Smart Data Models</strong> s'agrupen en <strong>temes</strong>. Cada tema pot pertànyer a un <strong>domini</strong> o a més d'un. Els dominis representen <strong>sectors</strong> o contexts on s'utilitzen els models de dades. </p>
+<p>Un <strong>Smart Data Model</strong> està format per diferents elements:</p>
+<ul>
+<li><strong>Context Model</strong>: es una descripció formal de les entitats que formen part del model de dades.</li>
+<li><strong>Data Model</strong>: és una descripció formal dels atributs que formen part de les entitats, incloent un identificador únic, el seus tipus, valors i possibles restriccions.</li>
+</ul>
+<p>Els <strong>Data Model</strong> estan codificats, com hem comentat, seguint un <strong>JSON Schema</strong>. Un esquema ens permet descriure l'estructura de les dades i les restriccions que han de complir. Els models estan normalment disponibles en repositoris de GitHub. </p>
+<p>Per exemple, des del següent enllaç podem accedir al <strong>Smart Data Model</strong> de <strong>Vehicle</strong>:</p>
+<p><a href="https://github.com/smart-data-models/dataModel.Transportation/blob/master/Vehicle/schema.json">Vehicle Smart Data Model</a></p>
+<p>Des d'este enllaç podem accedir al <strong>Smart Data Model</strong> de <strong>Weather Observed</strong>:</p>
+<p><a href="https://fiware-datamodels.readthedocs.io/en/stable/Weather/WeatherObserved/doc/spec/index.html">Weather Observed Smart Data Model</a></p>
+<h2 id="orion-context-broker-ocb">Orion Context Broker (OCB)</h2>
+<p><strong>Orion Context Broker (OCB)</strong> és un <strong>broker de dades</strong> que permet als desenvolupadors accedir a dades de context de diferents fonts. <strong>OCB</strong> és un dels components més importants de <strong>FIWARE</strong> i es fa servir en moltes aplicacions que utilitzen dades de context. Com qualsevol <strong><em>broker</em></strong>, <strong>OCB</strong> permet als desenvolupadors subscriure's a les dades de context que els interessen i rebre notificacions quan hi haja noves dades disponibles.</p>
+<p><strong>OCB</strong> permet la publicació d'informació de context per part de entitats <em>productores</em> (per exemple, sensors IoT o aplicacions que els facen servir). Altres entitats <em>consumidores</em> poden consultar esta informació mitjançant subscripcions per rebre notificacions quan hi haja canvis en la informació de context, o amb una freqüència determinada.</p>
+<p><img alt="Orion Context Broker" src="images/u05-orion.png" /></p>
+<h3 id="funcionament-especific-dorion">Funcionament específic d'Orion</h3>
+<p><strong>Orion</strong> utilitza un model de dades anomenat <strong>NGSI</strong> (Next Generation Service Interface). Este model de dades defineix com representar les dades de context i com accedir a elles. Permet realitzar operacions com ara:</p>
+<ul>
+<li>registrar aplicacions de productors de context (per exemple, un nou sensor IoT)</li>
+<li>actualitzar la informació de context</li>
+<li>consultar la informació de context</li>
+<li>subscriure's a canvis en la informació de context</li>
+</ul>
+<p>Un principi fonamental d'<strong>OCB</strong> és la separació entre productors i consumidors. És a dir, els productors publiquen dades de context sense preocupar-se de qui les consumirà, i els consumidors accedeixen a les dades de context sense preocupar-se de qui les ha publicat. El principal avantatge és que <strong>l'emisor i el receptor de les dades no han d'estar connectats directament</strong>.</p>
+<p>El servidor OCB sempre està escoltant, generalment a través del port <strong>1026</strong>. Per a interactuar amb ell, podem fer servir eines com <strong>Postman</strong>, <strong>cURL</strong> o qualsevol altre client HTTP que ens permeta realitzar peticions <strong>RESTful</strong>. Així, si tenim el broker en funcionament podem accedir a veure llistats d'entitats, crear noves entitats, realizar consultes, etc.</p>
+<blockquote>
+<p><strong>OCB</strong> no és una base de dades, sinó un broker de dades. Això significa que les dades que s'hi emmagatzemen poden ser temporals i poden ser esborrades quan el broker es reinicia, a menys que s'utilitze un connector per a una base de dades externa com <strong>MongoDB</strong>. En general només se guarda l'estat actual de les dades de context d'una entitat, no els canvis al llarg del temps. Per exemple, si actuem com a productors, <strong>no és bona pràctica crear entitats noves per a cada lectura d'un sensor, sinó actualitzar l'entitat existent amb les noves dades</strong>.</p>
+</blockquote>
+<p>Per exemple, si alcem un servidor <strong>OCB</strong> de forma local i volem veure totes les entitats que tenim en el broker, podem fer una petició <strong>GET</strong> a la següent URL:</p>
+<pre><code>http://localhost:1026/v2/entities
+</code></pre>
+<blockquote>
+<p>Recordeu canviar el vostre port si no és el 1026, així com la IP si no és localhost.</p>
+</blockquote>
+<p>Ens dirà, lògicament, que no hi ha cap entitat encara. Podem provar
+Esta petició ens retornarà un llistat de totes les entitats que tenim en el broker. Podem crear noves entitats fent una petició <strong>POST</strong> a la mateixa URL, enviant les dades de l'entitat en format <strong>JSON</strong>.</p>
+<p>Fins fa uns mesos se podien fer proves utilitzant el núvol de Fiware, pero ara l'adreça no està disponible i no he trobat alternatives només que amb màquines virtuals en el núvol. Per tant, instal·larem <strong>Orion</strong> de forma local utilitzant <strong>Docker</strong> amb un fitxer <strong>docker-compose.yml</strong> que trobareu a Aules.</p>
+<p>Després veurem com utilitzar <strong>Orion</strong> amb <strong>MongoDB</strong> i <strong>Node-RED</strong> amb un exemple pràctic. </p>
+<h1 id="enllacos-dinteres">Enllaços d'interès</h1>
+<p><a href="https://www.esmartcity.es/comunicaciones/i-congreso-ciudades-inteligentes-fiware">https://www.esmartcity.es/comunicaciones/i-congreso-ciudades-inteligentes-fiware</a></p>
+<p><a href="https://www.ciudadesdelfuturo.org.ar">https://www.ciudadesdelfuturo.org.ar</a></p>
+<p><a href="https://www.fiware.org/smart-data-models/">https://www.fiware.org/smart-data-models/</a></p>
+<p><a href="https://github.com/smart-data-models">https://github.com/smart-data-models</a></p>
+<p><a href="https://telefonicaiotcb.docs.apiary.io/#">https://telefonicaiotcb.docs.apiary.io/#</a></p>
+<p><a href="https://oriontourguide.docs.apiary.io/#">https://oriontourguide.docs.apiary.io/</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
