@@ -1,0 +1,1107 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../u06/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Stack ELK. Introducció. - Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../styles/taules.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#stack-elk-elasticsearch-logstash-kibana" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-header__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../img/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Stack ELK. Introducció.
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-nav__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../img/logo.svg" alt="logo">
+
+    </a>
+    Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentació
+  
+
+    
+      <br>
+      <small>Mòdul Big Data Aplicat</small>
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introducció al Big Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Elements i arquitectura Big Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.1 Repàs Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u03/annex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.2 Docker Compose
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.1 Introducció a Node-RED
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u04/nodered-intermedi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.2 Node-RED intermedi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u04/nodered-avan%C3%A7at/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.3 Node-RED avançat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u04/nodered-dashboards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.4 Node-RED dashboards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u04/nodered-formularis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.5 Formularis en Node-RED
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Fiware. Orion. Context Broker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. MQTT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.1 Stack ELK. Introducció
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.1 Stack ELK. Introducció
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        INTRODUCCIÓ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitectura-delastic-elk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ARQUITECTURA D'ELASTIC ELK
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ARQUITECTURA D&#39;ELASTIC ELK">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nodes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nodes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipus-de-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipus de nodes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#master-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Master-node
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data-node
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ingest-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ingest-node
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coordinating-only-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coordinating-only-node
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Índexs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shards-i-repliques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shards i rèpliques
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        INTRODUCCIÓ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitectura-delastic-elk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ARQUITECTURA D'ELASTIC ELK
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ARQUITECTURA D&#39;ELASTIC ELK">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nodes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nodes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipus-de-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipus de nodes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#master-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Master-node
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data-node
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ingest-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ingest-node
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coordinating-only-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coordinating-only-node
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Índexs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shards-i-repliques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shards i rèpliques
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="stack-elk-elasticsearch-logstash-kibana">STACK ELK (ELASTICSEARCH, LOGSTASH, KIBANA)</h1>
+<p><strong>Elastic Stack</strong> o també conegut com <strong>ELK Stack</strong> és una plataforma de codi obert desenvolupat per l'empresa <strong>Elastic</strong>. La plataforma permet la recopilació, l'arxivament, la visualització i l'anàlisi de dades. Per a realitzar eixes funcions <strong>Elastic Stack</strong> inclou un sistema d'emmagatzematge distribuït, un motor de recerca i de processament, i un sistema de visualització. </p>
+<h2 id="introduccio">INTRODUCCIÓ</h2>
+<p>La plataforma <strong>ELK</strong> està formada per quatre components:</p>
+<ul>
+<li><strong>Elasticsearch</strong>: És un motor de recerca i anàlisi de dades distribuït i altament escalable. Permet emmagatzemar, buscar i analitzar grans volums de dades en temps real.</li>
+<li><strong>Logstash</strong>: És una eina d'ingesta, processament i transformació de dades. Permet recopilar dades de diverses fonts, transformar-les i enviar-les a <strong>Elasticsearch</strong>.</li>
+<li><strong>Kibana</strong>: És una eina de visualització de dades. Permet crear gràfics, taules i mapes a partir de les dades emmagatzemades a <strong>Elasticsearch</strong>. També permet interactuar amb les dades directament.</li>
+<li><strong>Beats</strong>: Són agents lleugers que recopilen dades de diverses fonts i les envien a <strong>Logstash</strong> o <strong>Elasticsearch</strong>.</li>
+</ul>
+<p>Podríem dir que <strong>Logstash</strong> és l'eina que fa l'ingesta de dades, llegint de diferents fonts i amb diferents formats, processant les dades per guardar-les en <strong>Elasticsearch</strong>, i després <strong>Kibana</strong> accedirà a les dades per analitzar-les, representar-les gràficament, crear dashboards, etc.</p>
+<p>Una de les principals utilitats de <strong>Elastic Stack</strong> és la gestió i anàlisi de <code>logs</code>, i de qualsevol fluxe de dades en general, en arquitectures de programari amb components diversos on la informació no segueix un model unificat. Amb esta solució podem implementar un sistema de gestió i de visualització de la informació senzill d'operar i eficaç. Amb <strong>ELK</strong> podem, per exemple, realitzar consultes en temps real per a identificar ràpidament errors o comportaments en els nostres sistemes.</p>
+<p>En alguns esquemes, com el que veurem a continuació, trobareu un altre component anomenat <strong>X-Pack</strong>. <strong>X-Pack</strong> és una extensió de <strong>Elastic Stack</strong> que proporciona funcionalitats addicionals com la seguretat, la monitorització, la gestió de registres etc. fent ús en moltes ocasions d'eines de <strong><em>Machine learning</em></strong>. <strong>X-Pack</strong> és una solució de pagament, però <strong>Elastic</strong> ofereix una llicència gratuïta per a ús no comercial.</p>
+<p><img alt="ELK Stack" src="images/u07-01.png" /></p>
+<h2 id="arquitectura-delastic-elk">ARQUITECTURA D'ELASTIC ELK</h2>
+<p>L'arquitectura d'<strong>Elastic ELK</strong> està formada per:</p>
+<ul>
+<li>Nodes</li>
+<li>Clústers</li>
+<li>Índexs</li>
+<li>Documents</li>
+<li>Shards i rèpliques</li>
+</ul>
+<h3 id="nodes">Nodes</h3>
+<p>Un <strong>node</strong> és una instància d'<strong>Elasticsearch</strong> que forma part d'un <strong>cluster</strong>. Cada node té un identificador únic, un nom, i pot tenir diferents rols. Els nodes en general s'encarreguen del tràfic HTTP en la capa d'aplicació i en la capa de transport per a comunicar-se amb altres nodes del cluster. </p>
+<h4 id="tipus-de-nodes">Tipus de nodes</h4>
+<p>Segons les seues funcionalitats, els nodes poden ser:</p>
+<ul>
+<li><strong>Master-node</strong>. </li>
+<li><strong>Data-node</strong>.</li>
+<li><strong>Ingest-node</strong>.</li>
+<li><strong>Coordinating-only-node</strong>.</li>
+</ul>
+<h4 id="master-node">Master-node</h4>
+<p>Els nodes <strong>Master</strong> són els responsables de la gestió del cluster. Aquest tipus de nodes són els encarregats de realitzar tasques com:</p>
+<ul>
+<li>Mantenir la informació dels nodes que formen el cluster.</li>
+<li>Mantenir la informació dels índexs i els shards.</li>
+<li>Crear i eliminar índexs.</li>
+<li>Decidir en quin node se guardarà un nou shard.</li>
+</ul>
+<p>El <strong>Master-node</strong>, idealment, hauria d'estar en un equip dedicat amb alta disponibilitat i tolerància a fallades. </p>
+<h4 id="data-node">Data-node</h4>
+<p>Els nodes <strong>Data</strong> són els encarregats de guardar les dades. Aquests nodes són els que contenen els shards i les rèpliques dels índexs. Realitzan funcions com:</p>
+<ul>
+<li>Operacions <strong>CRUD</strong> sobre les dades emmagatzemades</li>
+<li>Operacions de recerca obre les dades</li>
+<li>Operacions d'agregació sobre les dades</li>
+</ul>
+<p>Els <strong>Data-nodes</strong> consumeixen molts recursos. És recomanable també, per tant, que estiguen en equips dedicats que formen un sistema distribuït amb creixement horitzontal.</p>
+<h4 id="ingest-node">Ingest-node</h4>
+<p>Els nodes <strong>Ingest</strong> són els encarregats de processar les dades abans de ser emmagatzemades. És a dir, abans d'indexar les dades. Aquests nodes poden realitzar tasques com:</p>
+<ul>
+<li>Filtrar les dades.</li>
+<li>Normalitzar les dades.</li>
+<li>Enriquir les dades.</li>
+</ul>
+<p>També anem a necessitar alta capacitat de processament si treballem amb velocitats de centenars o milers de dades per segon. </p>
+<h4 id="coordinating-only-node">Coordinating-only-node</h4>
+<p>Els nodes <strong>Coordinating-only</strong> són els encarregats de rebre les peticions dels clients i de distribuir-les als nodes <strong>Data</strong>. Aquests nodes no emmagatzemen dades, per tant, no consumeixen molts recursos. Les seues tasques principals són:</p>
+<ul>
+<li>Distribuir les peticions als nodes <strong>Data</strong>.</li>
+<li>Distribuir les indexacions.</li>
+</ul>
+<p>Estos nodes són balancejadors de càrrega per ajudar a descarregar de feina al <strong>Master-node</strong>, principalment. En principi, només serien necessaris si treballem amb grans volums de dades i molts clients.</p>
+<p><img alt="Nodes" src="images/u07-02.png" /></p>
+<h3 id="documents">Documents</h3>
+<p>Un <strong>document</strong> és la unitat bàsica d'informació que es pot emmagatzemar en <strong>Elasticsearch</strong>. Un <strong>document</strong> és una estructura JSON que conté les dades que volem emmagatzemar en format <strong>clau:valor</strong> com en qualsevol document JSON. A més de les dades que anem a emmagatzemar, <strong>Elasticsearch</strong> també guarda metadades sobre el document. Les metadades d'un document són:</p>
+<ul>
+<li><strong>_index</strong>: L'índex on es guardarà el document.</li>
+<li><strong>_type</strong>: El tipus de document.</li>
+<li><strong>_id</strong>: L'identificador únic del document.</li>
+</ul>
+<p>És una cosa semblant al que hem vist en <strong>Fiware</strong> amb els <strong>data-models</strong>, encara que ací les metadades se poden guardar explícitament en el document o indicar-les quan fem una operació amb el document, per exemple un POST per guardar-lo.</p>
+<h3 id="indexs">Índexs</h3>
+<p>Un <strong>índex</strong> és una col·lecció de documents que tenen característiques similars (un catàleg de productes, una llista de clients, factures...) Hem de remarcar <strong>similars</strong> perquè no necessàriament han de tindre la mateixa estructura tots els documents d'un índex. Així, es tracta d'un concepte similar al que en MongoDB seria una col·lecció, o en SQL una taula però sense una estructura fixa.</p>
+<p>Un índex pot contenir molts documents i cada document pot estar en un índex.</p>
+<h3 id="types">Types</h3>
+<p>Un <strong>type</strong> és una manera de classificar els documents d'un índex. Un <strong>schema</strong> defineix els camps que formen el type, i de quin tipus són: string, integer, boolean, date... Un índex pot tindre diversos tipus.</p>
+<blockquote>
+<p>A partir de la versió 7.0 de <strong>Elasticsearch</strong> els tipus han quedat obsolets.</p>
+</blockquote>
+<h3 id="shards-i-repliques">Shards i rèpliques</h3>
+<p>Un <strong>shard</strong> és una part d'un índex. <strong>Elasticsearch</strong> divideix els índexs en <strong>shards</strong> per a poder distribuir-los en els nodes del cluster. Així les dades se poden processar de manera distribuïda i paral·lela, repartint la càrrega de computació entre diferents nodes. </p>
+<p><img alt="Shards" src="images/u07-03.png" /></p>
+<p>D'entrada, els <strong>shards</strong> no tenen redundància, per tant si en cau un perdem les dades. Això ho solucionem amb les <strong>rèpliques</strong>.</p>
+<p>Una <strong>rèplica</strong> és una còpia d'un <strong>shard</strong>. <strong>Elasticsearch</strong> permet crear rèpliques dels shards per a garantir la disponibilitat de les dades i la tolerància a fallades. D'esta manera, els índexs estan formats pels <strong>shards primaris</strong> i les seues corresponents <strong>rèpliques</strong>. Per millorar la disponibilitat, <strong>Elasticsearch</strong> distribueix les rèpliques en diferents nodes del cluster on estan els shards primaris. </p>
+<p><img alt="Shards amb rèpliques" src="images/u07-04.png" /></p>
+<p>En la següent imatge, vegem que si cau un node el sistema pot funcionar amb les rèpliques que tenim en els altres nodes.</p>
+<p><img alt="Indexació amb rèpliques" src="images/u07-05.png" /></p>
+<p>El hardware recomanat per montar clústers d'<strong>Elasticsearch</strong> és:</p>
+<ul>
+<li><strong>CPU</strong>: 16-32 cores. Millor més nuclis que CPUs més ràpides, perquè en realitat <strong>Elasticsearch</strong> és molt intensiu en operacions d'entrada/sortida i no tant en ús de CPU.</li>
+<li><strong>RAM</strong>: mínim 16 GB, encara que amb 8 GB també podria funcionar amb una càrrega mitjana.</li>
+<li><strong>Disc</strong>: recomanable SSDs amb una alta tasa d'IOPS (Operacions d'entrada i eixida per segon). </li>
+<li><strong>Xarxa</strong>: 1 Gbps com a mínim. Recomanable 10 Gbps. No se recomana utilitzar <strong>NAS</strong> (Network Attached Storage) per a emmagatzemar les dades.</li>
+</ul>
+<p>Nosaltres, com hem fet fins ara, treballarem amb contenidors Docker, i per tant no necessitarem preocupar-nos per les característiques del hardware. Però és important conèixer-les per a poder dimensionar correctament el nostre cluster d'<strong>Elasticsearch</strong> quan el despleguem en un entorn de producció.</p>
+<p>Més informació sobre <strong>Elastic Stack</strong> en la seua <a href="https://www.elastic.co/">web oficial</a>.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
