@@ -1,0 +1,1164 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Stack ELK. Funcionament pràctic. - Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../styles/taules.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#stack-elk-practic" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-header__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../../img/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Stack ELK. Funcionament pràctic.
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-nav__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../../img/logo.svg" alt="logo">
+
+    </a>
+    Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentació
+  
+
+    
+      <br>
+      <small>Mòdul Big Data Aplicat</small>
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introducció al Big Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Elements i arquitectura Big Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.1 Repàs Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u03/annex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.2 Docker Compose
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.1 Introducció a Node-RED
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u04/nodered-intermedi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.2 Node-RED intermedi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u04/nodered-avan%C3%A7at/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.3 Node-RED avançat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u04/nodered-dashboards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.4 Node-RED dashboards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u04/nodered-formularis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.5 Formularis en Node-RED
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Fiware. Orion. Context Broker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. MQTT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.1 Stack ELK. Introducció
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.2 Stack ELK pràctic
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.2 Stack ELK pràctic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#desplegar-el-stack-elk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desplegar el stack ELK
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprovar-que-funciona" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comprovar que funciona
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elastic-des-de-node-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elastic des de Node-RED
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elastic-des-de-kibana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elastic des de Kibana
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemples-de-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemples de queries
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#desplegar-el-stack-elk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desplegar el stack ELK
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprovar-que-funciona" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comprovar que funciona
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elastic-des-de-node-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elastic des de Node-RED
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elastic-des-de-kibana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elastic des de Kibana
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemples-de-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemples de queries
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="stack-elk-practic">STACK ELK PRÀCTIC</h1>
+<p>Anem a preparar un entorn de treball per a poder practicar els components principals de <strong>Elastic</strong>. Treballarem amb <strong>Docker</strong> per a desplegar els components d'<strong>Elastic</strong> i <strong>Kibana</strong>. L'arxiu <strong>docker-compose.yml</strong> que utilitzarem el teniu en Aules. De totes formes ací podeu veure els principals serveis:</p>
+<pre><code class="language-yaml">services:
+</code></pre>
+<p><strong>Node-RED</strong></p>
+<pre><code class="language-yaml">  node-redELK:
+    container_name: nodeRED_ELK
+    environment:
+      SERVER_NAME: localhost
+      ELASTICSEARCH_URL: http://elasticsearch:9200/
+    image: nodered/node-red:latest
+    user: &quot;1000:0&quot;
+    restart: unless-stopped
+    volumes:
+      - &quot;./node-red:/data&quot;
+    ports:
+      - &quot;1880:1880&quot;
+    networks:
+      - elk
+</code></pre>
+<p><strong>Elastic Search</strong></p>
+<pre><code class="language-yaml">  elasticsearch:
+    restart: always
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.19.11
+    container_name: elasticsearch
+    environment:
+      - cluster.name=iestavernes
+      - discovery.type=single-node
+      - xpack.security.enabled=true
+      - ELASTIC_PASSWORD=tavernes
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    healthcheck:
+      test: curl --cacert /usr/share/elasticsearch/config/certs/ca/ca.crt -s https://localhost:9200 &gt;/dev/null; if [[ $$? == 52 ]]; then echo 0; else echo 1; fi
+      interval: 30s
+      timeout: 10s
+      retries: 5 
+    ports:
+      - '9200:9200'
+    networks:
+      - elk
+    user: &quot;1000:0&quot;
+    logging:
+      driver: 'json-file'
+      options:
+        max-size: '100m'
+        max-file: '10'
+</code></pre>
+<p><strong>Kibana</strong></p>
+<pre><code class="language-yaml">  kibana:
+    restart: always
+    image: docker.elastic.co/kibana/kibana:8.19.11
+    user: &quot;1000:0&quot;
+    container_name: kibana
+    depends_on:
+      - elasticsearch
+    environment:
+      - SERVER_NAME=kibana.localhost
+      - ELASTICSEARCH_URL=http://elasticsearch:9200
+      - ELASTICSEARCH_HOST=elasticsearch
+      - ELASTICSEARCH_PORT=9200
+      - xpack.security.enabled=true
+      - ELASTICSEARCH_USERNAME=kibana_system
+      - ELASTICSEARCH_PASSWORD=tavernes
+      - SERVER_HOST=0.0.0.0
+      - NODE_OPTIONS=&quot;--max-old-space-size=3096&quot;
+    healthcheck:
+      test: curl --cacert /usr/share/elasticsearch/config/certs/ca/ca.crt -s https://localhost:5601 &gt;/dev/null; if [[ $$? == 52 ]]; then echo 0; else echo 1; fi
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    ports:
+      - &quot;5601:5601&quot;
+    networks:
+      - elk
+</code></pre>
+<p><strong>Networks</strong></p>
+<pre><code class="language-yaml">networks:
+  elk:
+    driver: bridge
+</code></pre>
+<p>Fixeu-vos que l'usuari per accedir als serveis, quan ho demane, és <strong>elastic</strong> i la contrasenya <strong>tavernes</strong>. En principi hauriem de treballar amb altres usuarios, perquè <strong>elastic</strong> és superusuari, però per veure com va tot ens anirà bé. </p>
+<p>A més, tenim un <strong>Node-RED</strong> per a poder treballar amb dades. Aneu en compte amb els ports i els noms dels serveis que ja teniu en marxa d'altres contenidors que hem creat en classe. Podeu canviar l'arxiu <strong>docker-compose</strong> si és necessari. També podeu parar o eliminar contenidors que ja no aneu a utilitzar.</p>
+<h2 id="desplegar-el-stack-elk">Desplegar el stack ELK</h2>
+<p>Baixeu l'arxiu <strong>docker-compose-elk.yml</strong> que teniu a Aules. El copieu a una carpeta específica per treballar amb <strong>elk</strong>. Canvieu-li el nom a <strong>docker-compose.yml</strong> per si no voleu posar el nom cada vegada que executeu les comandes de <strong>docker compose</strong>.</p>
+<p>Alcem els contenidors com sempre:</p>
+<pre><code class="language-bash">docker-compose up -d
+</code></pre>
+<p>Si teniu problemes amb els permisos, recordeu que podeu crear la carpeta del volum (node-red) manualment abans d'executar el <code>docker compose</code>.</p>
+<p>Comprovem amb <code>docker ps</code> que tots els serveis estan en marxa i en estat <code>healty</code>. Si no és així, podeu veure els logs del servei que no funciona correctament amb <code>docker compose logs &lt;nom-del-contenidor&gt;</code>.</p>
+<p>Quan tots els contenidors estiguen en marxa: executem les següents instruccions des de la consola:</p>
+<pre><code class="language-bash">docker compose exec elasticsearch bin/elasticsearch-reset-password -u elastic -i
+docker compose exec elasticsearch bin/elasticsearch-reset-password -u kibana_system -i
+</code></pre>
+<p>En els dos casos, quan vos demane el password poseu <code>tavernes</code>. Així ja tindreu el password de l'usuari <strong>elastic</strong> i de l'usuari <strong>kibana_system</strong>.</p>
+<p>Este pas no hauria de ser necessari, però sembla ser que ara s'ha de fer així la primera vegada. </p>
+<h2 id="comprovar-que-funciona">Comprovar que funciona</h2>
+<p>De moment les úniques comprovacions que podem fer eś intentar accedir a <strong>Elastic</strong> i a <strong>Kibana</strong> des del navegador i veure si s'obrin les pàgines.</p>
+<p>Posa en el navegador <code>http://localhost:9200</code> per a accedir a <strong>Elastic</strong>. Posa usuari <code>elastic</code> i contrasenya <code>tavernes</code>. T'hauria d'aparéixer alguna cosa com:</p>
+<p><img alt="Comprovació Elastic" src="../images/u07_elastic.png" /></p>
+<p>Ara entra en <code>http://localhost:5601</code> per a accedir a <strong>Kibana</strong>. L'usuari i la contrasenya haurien de ser igual (<em>elastic</em> i <em>tavernes</em>). Comprova que entres a la pàgina principal de <strong>Kibana</strong>.</p>
+<p><img alt="Comprovació Kibana" src="../images/u07_kibana.png" /></p>
+<h2 id="elastic-des-de-node-red">Elastic des de Node-RED</h2>
+<p>En aules també teniu un arxiu JSON (<code>Node-RED Elasticsearch.json</code>) per a explicar com funciona <strong>Elastic</strong> i veure alguns exemples.</p>
+<h2 id="elastic-des-de-kibana">Elastic des de Kibana</h2>
+<p>Dins de <strong>Kibana</strong> treballarem amb el <strong>dev-tools</strong>, que està accessible des de la barra lateral esquerra amb una icona que té forma de clau anglesa. Aquesta eina ens permet fer consultes a <strong>Elastic</strong> i veure els resultats. La pantalla se veu així:</p>
+<p><img alt="Dev-Tools" src="../images/u07-12devtools.png" /></p>
+<p>Des d'esta pantalla provarem les peticions que enviem a la base de dades d'<strong>Elastic</strong>. Teniu en aules un arxiu anomenat <strong><em>Queries_elasticsearch.txt</em></strong> amb algunes consultes que anem a provar. </p>
+<h2 id="exemples-de-queries">Exemples de queries</h2>
+<p>Estes queries que anem a veure se poden fer des de Kibana, escrivint-les tal qual al <strong>dev-tools</strong>, o des de Node-RED tal com teniu en l'exemple que heu importat. També es poden fer alguns GETs directament des del navegador, i també podrieu utilitzar eines com <strong>Postman</strong>, <strong>curl</strong> o <strong>Hoopscotch</strong> per a fer proves.</p>
+<p>Anem a Kibana (localhost:5601), en el menú de l'esquerra aneu a <strong>Management</strong> i <strong>Dev-Tools</strong>, i proveu les següents operacions:</p>
+<p><strong>Llistar els indexs que tenim en Elastic</strong></p>
+<p>Des del <strong>dev-tools</strong> executem la següent comanda:</p>
+<pre><code>GET /_cat/indices
+</code></pre>
+<p>Veurem el resultat.</p>
+<blockquote>
+<p>També obtenim el mateix resultat si executem la petició des de la url d'elastic: http://localhost:9200/_cat/indices</p>
+</blockquote>
+<p><strong>Crear un índex nou</strong></p>
+<pre><code>PUT /exam?pretty
+</code></pre>
+<p>Si ara tornàrem a executar la consulta <code>GET /_cat/indices</code> veuríem que tenim un nou índex anomenat <strong>exam</strong>.</p>
+<p><strong>Crear un índex amb certes característiques</strong></p>
+<p>En este cas anem a especificar quants shards i rèpliques volem que tinga el nou índex.</p>
+<pre><code>PUT /facebook?pretty
+{
+  &quot;settings&quot; : {
+    &quot;index&quot; : {
+      &quot;number_of_shards&quot; : 3,
+      &quot;number_of_replicas&quot; : 2 
+    }
+  }
+}
+</code></pre>
+<p>Si ara fem un <code>GET /facebook/_settings</code> veurem les característiques de l'índex.</p>
+<p><strong>Un altre índex</strong></p>
+<pre><code>PUT instagram
+{
+  &quot;settings&quot; : {
+      &quot;number_of_shards&quot; : 3,
+      &quot;number_of_replicas&quot; : 2
+  }
+}
+</code></pre>
+<p><strong>Eliminar un índex</strong></p>
+<pre><code>DELETE /instagram
+</code></pre>
+<p>Si intentem eliminar un índex que no existeix, per exemple fent <code>DELETE /twitter</code>, ens donarà un error.</p>
+<p><strong>Crear un índex amb propietats</strong></p>
+<p>A més de la propietat <code>settings</code> també podem afegir una propietat <code>mappings</code> per a definir els camps que tindrà l'índex. No és necessari, però si volem definir noms i tipus de dades dels camps ho farem de la següent forma:</p>
+<pre><code>PUT prueba
+{
+  &quot;settings&quot; : {
+      &quot;number_of_shards&quot; : 1
+  },
+  &quot;mappings&quot; : {
+    &quot;properties&quot; : {
+        &quot;age&quot; : { &quot;type&quot; : &quot;long&quot; },
+        &quot;name&quot;: { &quot;type&quot;: &quot;text&quot;}
+    }
+  }
+}
+</code></pre>
+<p>Si ara fem un <code>GET /prueba/_mapping</code> veurem les propietats de l'índex.</p>
+<p><strong>Veure l'estat d'un índex</strong></p>
+<pre><code>GET /prueba/_stats
+</code></pre>
+<p><strong>Afegir un document a un índex</strong></p>
+<pre><code>POST /facebook/_doc
+{
+  &quot;nick&quot;: &quot;Hannon&quot;,
+  &quot;email&quot;: &quot;joselito@gmail.com&quot;
+}
+</code></pre>
+<p><strong>Consultar els documents d'un índex</strong></p>
+<pre><code>GET /facebook/_search
+</code></pre>
+<p>Per defecte només se mostren 10 documents de l'index. A més no se sap si són els 10 primers o els 10 últims, ho fa en funció de l'indexació interna (els 10 primers documents que recupere).</p>
+<p>Si volem veure una quantitat major ho farem de la següent forma:</p>
+<pre><code>GET /facebook/_search?size=1000
+</code></pre>
+<p><strong>Recuperar l'últim document afegit</strong></p>
+<p>Com que no sabem quan demanem una quantitat de documents quins ens va a mostrar, podem demanar per exemple els últims que hem afegit. Per això farem servir un <code>timestamp</code> que no se crea automàticament, per tant l'haurem d'incloure quan afegim documents. Ja veurem com fer-ho. Demanem ordre descendent i només un document.</p>
+<pre><code>GET /facebook/_search
+{
+  &quot;query&quot;: {
+    &quot;match_all&quot;: {}
+  },
+  &quot;sort&quot;: [
+    {
+      &quot;timestamp&quot;: &quot;desc&quot;
+    }
+  ],
+  &quot;size&quot;: 1
+}
+</code></pre>
+<p>Podem canviar la propietat "size" per demanar més documents.</p>
+<p><strong>Consultar un document concret</strong></p>
+<p>Hauríem de saber l'id del document que volem consultar. Per exemple, si volem consultar el document amb id 1 de l'índex <strong>facebook</strong>:</p>
+<pre><code>GET /facebook/_doc/1
+</code></pre>
+<blockquote>
+<p>Teniu en compte que Elastic, com que no definim nosaltres l'id manualment, el crea automàticament i li assigna un valor alfanumèric aleatori. Per tant, el document amb id 1 no existirà. Mireu quin id li ha assignat Elastic al document que hem afegit i torneu a provar la consulta amb l'id correcte.</p>
+</blockquote>
+<p><strong>Consultar documents per condició</strong></p>
+<p>També podem consultar els documents que compleixen una condició:</p>
+<pre><code>GET /facebook/_search
+{
+  &quot;query&quot;: {
+    &quot;match&quot;: {
+      &quot;nick&quot;: &quot;Hannon&quot;
+    }
+  }
+}
+</code></pre>
+<p>Amb versions anteriors d'Elastic se podia utilitzar les <strong>query string</strong> en la URL per fer consultes senzilles. </p>
+<pre><code>GET /facebook/_search?q=nick:Hannon
+</code></pre>
+<p>Ara bé, amb les últimes versions d'Elastic ha quedat obsolet l'ús de les query string.</p>
+<p><strong>Consultar els documents que tinguen un camp determinat (sense importar el valor)</strong></p>
+<pre><code>GET /facebook/_search
+{
+  &quot;query&quot;: {
+    &quot;exists&quot;: {
+      &quot;field&quot;: &quot;nick&quot;
+    }
+  }
+}
+</code></pre>
+<p><strong>Quants documents té un índex</strong></p>
+<pre><code>GET /exam/_count
+</code></pre>
+<p><strong>Quants documents d'un índex compleixen una condició</strong></p>
+<pre><code>GET /facebook/_count
+{
+  &quot;query&quot;: {
+    &quot;match&quot;: {
+      &quot;nick&quot;: &quot;Hannon&quot;
+    }
+  }
+}
+</code></pre>
+<p>Més complex:</p>
+<pre><code>GET /exam/_count
+{
+  &quot;query&quot;: {
+    &quot;bool&quot;: {
+      &quot;must&quot;: [
+        {
+          &quot;match_phrase&quot;: {
+            &quot;type&quot;: &quot;WeatherObserved&quot;
+          }
+        },
+        {
+          &quot;range&quot;:{
+            &quot;date&quot;: {
+              &quot;gte&quot;: &quot;01/01/2022 00:30:00&quot;,
+              &quot;lte&quot;: &quot;11/01/2022 21:00:00&quot;
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+</code></pre>
+<p>També podem contar quants documents tenen una propietat determinada utilitzant <code>exists</code> com hem vist abans:</p>
+<pre><code>GET /facebook/_count
+{
+  &quot;query&quot;: {
+    &quot;exists&quot;: {
+      &quot;field&quot;: &quot;nick&quot;
+    }
+  }
+}
+</code></pre>
+<p><strong>Eliminar un document</strong></p>
+<pre><code>DELETE /facebook/_doc/1
+</code></pre>
+<p><strong>Eliminar tots els documents d'un índex</strong></p>
+<pre><code>DELETE /facebook/_delete_by_query
+{
+  &quot;query&quot;: {
+    &quot;match_all&quot;: {}
+  }
+}
+</code></pre>
+<p><strong>Modificar un document d'un índex</strong></p>
+<pre><code>POST /facebook/_update/1
+{
+  &quot;doc&quot;: {
+    &quot;nick&quot;: &quot;Hannon&quot;,
+    &quot;email&quot;: &quot;hannon@gmail.com&quot;
+  }
+}
+</code></pre>
+<p><strong>Modificar un camp d'un document</strong></p>
+<pre><code>POST /facebook/_update/1
+{
+  &quot;doc&quot;: {
+    &quot;nick&quot;: &quot;Hannon&quot;
+  }
+}
+</code></pre>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
