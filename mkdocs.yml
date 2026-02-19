@@ -32,3 +32,4 @@ nav:
   - "5. Fiware. Orion. Context Broker": "u05/index.md"
   - "6. MQTT": "u06/index.md"
   - "7.1 Stack ELK. Introducció": "u07/index.md"
+  - "7.2 Stack ELK pràctic": "u07/elk_practic.md"
