@@ -184,7 +184,7 @@ En aules també teniu un arxiu JSON (`Node-RED Elasticsearch.json`) per a explic
 
 ## Elastic des de Kibana
 
-Dins de **Kibana** treballarem amb el ***dev-tools**, que està accessible des de la barra lateral esquerra amb una icona que té forma de clau anglesa. Aquesta eina ens permet fer consultes a **Elastic** i veure els resultats. La pantalla se veu així:
+Dins de **Kibana** treballarem amb el **dev-tools**, que està accessible des de la barra lateral esquerra amb una icona que té forma de clau anglesa. Aquesta eina ens permet fer consultes a **Elastic** i veure els resultats. La pantalla se veu així:
 
 ![Dev-Tools](./images/u07-12devtools.png)
 
