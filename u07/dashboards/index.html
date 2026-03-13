@@ -1,0 +1,1063 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Fidel Oltra">
+      
+      
+      
+        <link rel="prev" href="../logstash/">
+      
+      
+        <link rel="next" href="../practica_dashboards_kibana/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>Unitat 07.04. Dashboards en Kibana. - Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../styles/taules.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#creacio-de-dashboards-en-kibana" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-header__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../../img/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Unitat 07.04. Dashboards en Kibana.
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-nav__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../../img/logo.svg" alt="logo">
+
+    </a>
+    Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentació
+  
+
+    
+      <br>
+      <small>Mòdul Big Data Aplicat</small>
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introducció al Big Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Elements i arquitectura Big Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.1 Repàs Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u03/annex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.2 Docker Compose
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.1 Introducció a Node-RED
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u04/nodered-intermedi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.2 Node-RED intermedi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u04/nodered-avan%C3%A7at/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.3 Node-RED avançat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u04/nodered-dashboards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.4 Node-RED dashboards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u04/nodered-formularis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.5 Formularis en Node-RED
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Fiware. Orion. Context Broker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. MQTT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.1 Stack ELK. Introducció
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elk_practic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.2 Stack ELK pràctic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logstash/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.3 Stack ELK pràctic: Logstash
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.4 Dashboards en Kibana
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.4 Dashboards en Kibana
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducció
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introducció">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-un-data-view-index-pattern-manualment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear un Data View (Index Pattern) manualment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explorar-les-dades-amb-discover" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explorar les dades amb Discover
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-visualizatcions-i-dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear Visualizatcions i Dashboards
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-de-mostra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple de mostra
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica_dashboards_kibana/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.5 Pràctica guiada Dashboards en Kibana
+  
+
+    
+      <br>
+      <small>Pràctica guiada</small>
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducció
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introducció">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-un-data-view-index-pattern-manualment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear un Data View (Index Pattern) manualment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explorar-les-dades-amb-discover" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explorar les dades amb Discover
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-visualizatcions-i-dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear Visualizatcions i Dashboards
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-de-mostra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple de mostra
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="creacio-de-dashboards-en-kibana">Creació de Dashboards en Kibana</h1>
+<p>Anem a veure com podem crear <strong>dashboards</strong> en <strong>Kibana</strong> per a visualitzar i monitoritzar les dades que tenim emmagatzemades a <strong>Elasticsearch</strong>. </p>
+<p>Hem de tindre en compte que des de Kibana només podem visualitzar les dades que tenim a Elasticsearch. De forma nativa no pot connectar amb altres fonts de dades. Si necessitem visualitzar dades que no estan en Elasticsearch, primer les hauríem d'importar amb <strong>Logstash</strong>, <strong>Beats</strong> o el <strong>File Data Visualizer</strong> de Kibana.</p>
+<p>Diverses maneres de treballar amb dades que, en principi, no tenim a Elasticsearch:</p>
+<ul>
+<li><strong>Logstash</strong> la forma més habitual, com hem vist en classe. Pots fer ingesta de diferents fonts i passar les dades a Elastic de forma senzilla.</li>
+<li><strong>Beats</strong> són agents lleugers per mètriques de sistema, logs, dades de xarxa, etc.</li>
+<li><strong>Elastic Agents</strong> una versió moderna dels Beats</li>
+<li><strong>File Data Visualizer</strong> permet pujar arxius CSV o logs directament des de Kibana (<em>Machine Learning → Data Visualizer</em>), indexant-los de forma automàtica en Elasticsearch.</li>
+<li><strong>Elasticsearch REST API</strong> pots indexar dades des de qualsevol API</li>
+<li><strong>Connectors d'Elasticsearch</strong> connectors natius per a MongoDB, MySQL, PostgreSQL, S3, SharePoint, etc.</li>
+</ul>
+<p>Més endavant veurem alternativas com <strong>Grafana</strong>, que sí que permet connectar a múltiples fonts de dades, però de moment ens centrarem en les capacitats de visualització de Kibana amb les dades que tenim a Elasticsearch.</p>
+<h2 id="introduccio">Introducció</h2>
+<p>Com ja sabeu, <strong>Kibana</strong> es la capa de visualización del stack ELK. De moment només l'hem utilitzat per fer consultes i llançar instruccions sobre els indexs d'Elasticsearch, pero també permet crear <strong>dashboards interactius</strong> amb gràfics, mètriques i mapes.</p>
+<p>Per accedir a Kibana, ho fem des del navegador en <code>http://localhost:5601</code>. Comproveu si el port és correcte segons el vostre <strong><em>docker-compose</em></strong>.</p>
+<p>En el menú lateral esquerre (☰), a banda de l'apartat <strong><em>Management -&gt; Dev Tools</em></strong>, on hem estat treballant per fer peticions directament a les API d'Elasticsearch, tenim altres seccions interesssants:</p>
+<ul>
+<li><strong>Analytics -&gt; Discover</strong>: exploració de dades</li>
+<li><strong>Dashboards</strong>: panels de control</li>
+<li><strong>Visualize Library</strong>: llibreria de visualitzacions</li>
+<li><strong>Machine Learning</strong>: anàlisi amb ML de les dades d'Elasticsearch o directament d'arxius logs/CSV (inclou opcions de pagament que no estan actives però se poden activar amb una llicència de prova de 30 dies)</li>
+</ul>
+<p>Per exemple, des de <strong>Machine Learning → Data Visualizer</strong> podem pujar el nostre arxiu CSV de dades de vins, i convertir-lo en un índex d'Elasticsearch.</p>
+<p><img alt="Data Visualizer" src="../images/u07-13.png" /></p>
+<p>Automàticament ens ha creat l'índex en Elasticsearch, i també un Data View a Kibana, que és el que ens permetrà crear visualitzacions i dashboards a partir d'estes dades.</p>
+<h3 id="crear-un-data-view-index-pattern-manualment">Crear un Data View (Index Pattern) manualment</h3>
+<p>El <strong>Data View</strong> connecta Kibana amb un índex d'Elasticsearch. Si importem les dades com hem vist en l'apartat anterior, ja tindrem un Data View creat automàticament. Però si volem crear-lo manualment, els passos són:</p>
+<ol>
+<li>Anar a <strong>Management → Stack Management → Kibana → Data Views</strong> (veureu que ja tenim el de vins, si heu fet l'importació)</li>
+<li>Fer clic en <strong>Create data view</strong> (dalt a la dreta)</li>
+<li>Omplir els camps <strong><em>Name</em></strong> (nom del data view), <strong><em>index-pattern</em></strong> (nom de l'índex o un patró per connectar a més d'un índex), i <strong><em>Timestamp field</em></strong> (camp on tenim el timestamp, també podem dir que no hi ha cap seleccionant <em>"I don't want to use the time filter"</em> ).</li>
+<li>Fer clic en <strong>Save data view to Kibana</strong></li>
+</ol>
+<p><img alt="Crear Data View" src="../images/u07-14.png" /></p>
+<p>Si ara accediu a l'opció <strong><em>Data Views</em></strong> veureu que tenim ja dos Data Views disponibles: el que s'ha creat automàticament quan vam importar les dades dels vins, i el que hem creat manualment des de l'índex <strong><em>air-data</em></strong>.</p>
+<p><img alt="Llista de Data Views" src="../images/u07-15.png" /></p>
+<h3 id="explorar-les-dades-amb-discover">Explorar les dades amb Discover</h3>
+<p>Abans de crear visualizatcions, podem explorar les dades disponibles.</p>
+<ol>
+<li>Anar a <strong>Analytics -&gt; Discover</strong> en el menú lateral</li>
+<li>Seleccionar el Data View</li>
+<li>Podem ajustar el <strong>rang temporal</strong> si tenim un camp de timestamp</li>
+<li>Examinar els campos disponibles en el panel esquerre, i els documents en el panel central</li>
+<li>Fer clic en un campo per veure la seua distribució de valors</li>
+<li>Filtrar amb la barra de búsqueda <strong><em>KQL</em></strong> o el botó <strong><em>Try ES|QL</em></strong>. </li>
+<li>Podem guardar els filtres i búsquedes amb un nom per a utilitzar-les més endavant en els dashboards.</li>
+</ol>
+<p><img alt="Discover amb el data view dels vins" src="../images/u07-16.png" /></p>
+<h3 id="crear-visualizatcions-i-dashboards">Crear Visualizatcions i Dashboards</h3>
+<p><strong><em>Kibana Lens</em></strong> es un editor visual i modern que podem utilitzar per crear gràfics en Kibana.</p>
+<p>Ací hem de diferenciar entre <strong>visualitzacions</strong> i <strong>dashboards</strong>:</p>
+<ul>
+<li><strong>Visualitzacions</strong>: són gràfics individuals que després podem utilitzar en els dashboards</li>
+<li><strong>Dashboard</strong>: eś el panel de control on podem ensamblar diferents visualitzacions</li>
+</ul>
+<p>Per crear una visualitzación anem a <strong>Analytics → Visualize Library → Create visualization</strong>. Podem triar com a interfície <strong>Lens</strong>, <strong>Maps</strong> o un editor personalitzat. Anem a utilitzar <strong>Lens</strong>.</p>
+<p>Per crear una visualització senzilla, podem obrir el Data View dels vins i arrosegar el camp <strong><em>color</em></strong> al panel central. En la part de la dreta podem triar el tipus de visualització que volem. En la part inferior de la pantalla també tenim diverses opcions. Per exemple, podem triar el tipus de gràfic <strong>Pie</strong> i la mètrica percentatge.</p>
+<p><img alt="Visualització amb Lens" src="../images/u07-17.png" /></p>
+<p>Quan guardem la visualització li donarem un títol i una descripció. A més, podem afegir etiquetes (tags) per organitzar les visualitzacions que ja tenim. Al mateix temps que la guardem, ens dona l'opció d'afegir-la a un dashboard existent o crear-ne un de nou. També podem, simplement, guardar-la en la llibreria i utilitzar-la posteriorment.</p>
+<p>Una vegada tenim les visualitzacions, podem anar a <strong>Dashboard → Create dashboard</strong> i afegir-les. També podem crear filtres i controls interactius per a fer el dashboard més dinàmic.</p>
+<p>Per defecte, en el dashboard tenim una barra de búsqueda per fer consultes. Podem veure com, al posar filtres, els percentatges dels colors van canviant.</p>
+<p><img alt="Dashboard amb filtres" src="../images/u07-18.png" /></p>
+<p>En el mateix dashboard hi ha opcions per afegir noves visualitzacions, crear-les directament des del dashboard, o afegir controls com desplegables per a filtrar per camps específics.</p>
+<blockquote>
+<p>Se pot fer tot des de l'apartat <strong>Dashboards</strong>, però si volem crear una visualització que anem a utilitzar en més d'un dashboard, és millor crear-la primer en la llibreria de visualitzacions. Així la tenim disponible per a altres dashboards en un futur.</p>
+</blockquote>
+<h2 id="exemple-de-mostra">Exemple de mostra</h2>
+<p>Anem a treballar amb un arxiu d'exemple que porta Kibana. Aneu a la pàgina principal i busqueu l'apartat <strong><em>Get started by adding integrations</em></strong>, i dins d'eixe apartat l'opció <strong><em>Try sample data</em></strong>. Feu clic.</p>
+<p><img alt="Afegir dades de mostra" src="../images/u07-19.png" /></p>
+<p>En l'opció <strong><em>Try sample data</em></strong> tenim vàries opcions:</p>
+<ul>
+<li><strong>Explore our live demo environment</strong>: podeu provar una demo en línia </li>
+<li><strong>Upload file</strong>: podeu pujar un arxiu i el passarà a Elastic</li>
+<li><strong>Other sample data sets</strong>: podeu baixar-se uns conjunts de dades de prova</li>
+</ul>
+<p>En <strong>Other sample data sets</strong> teniu tres datasets de prova:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Dataset</th>
+<th style="text-align: left;">Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Sample Ecommerce Orders</strong></td>
+<td style="text-align: left;">Dades de vendes d'una botiga en línia</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sample Web Logs</strong></td>
+<td style="text-align: left;">Dades de logs d'un servidor web</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sample Flight Data</strong></td>
+<td style="text-align: left;">Dades de vols i aerolínies</td>
+</tr>
+</tbody>
+</table>
+<p>Podeu fer clic en <strong>Add data</strong> en qualsevol d'estos conjunts de dades. Automàticament crearà un índex en Elasticsearch, el Data View a Kibana i diverses visualitzacions i un dashboard preconfigurat.</p>
+<p>Jo, per exemple, he triat el dataset de <strong>Sample Ecommerce Orders</strong>. Ara tinc un índex en Elastic que se diu <strong><em>kibana_sample_Data_ecommerce</em></strong> puc utilitzar per fer proves.</p>
+<p>També tinc un Dashboard anomenat <strong>[eCommerce] Revenue Dashboard</strong>.</p>
+<p><img alt="Llistat de dashboards" src="../images/u07-20.png" /></p>
+<p>Si fem clic en el dashboard, accedim a veure'l. També podem veure com estan fetes les visualitzacions que hi ha dins del dashboard, i modificar-les o crear-ne de noves.</p>
+<p><img alt="Dashboard de mostra" src="../images/u07-21.png" /></p>
+<p>En eixe dashboard podeu veure diverses visualitzacions, editar-les per veure com estan fetes, crear i afegir visualitzacions noves i fer tot tipus de proves. Si trenqueu alguna cosa no passa res, podeu eliminar el dataset i tornar-lo a importar, però de totes formes no feu <strong>Save</strong> al dashboard si no voleu perdre les visualitzacions que ja hi ha.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

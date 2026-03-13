@@ -1,0 +1,1291 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Fidel Oltra">
+      
+      
+      
+        <link rel="prev" href="../dashboards/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>Unitat 07.04. Dashboards en Kibana. - Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../styles/taules.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#practica-guiada-de-creacio-de-dashboards-en-kibana" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-header__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../../img/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Unitat 07.04. Dashboards en Kibana.
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-nav__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../../img/logo.svg" alt="logo">
+
+    </a>
+    Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentació
+  
+
+    
+      <br>
+      <small>Mòdul Big Data Aplicat</small>
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introducció al Big Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Elements i arquitectura Big Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.1 Repàs Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u03/annex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.2 Docker Compose
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.1 Introducció a Node-RED
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u04/nodered-intermedi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.2 Node-RED intermedi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u04/nodered-avan%C3%A7at/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.3 Node-RED avançat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u04/nodered-dashboards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.4 Node-RED dashboards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u04/nodered-formularis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.5 Formularis en Node-RED
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Fiware. Orion. Context Broker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. MQTT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.1 Stack ELK. Introducció
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elk_practic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.2 Stack ELK pràctic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logstash/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.3 Stack ELK pràctic: Logstash
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.4 Dashboards en Kibana
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.5 Pràctica guiada Dashboards en Kibana
+  
+
+    
+      <br>
+      <small>Pràctica guiada</small>
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.5 Pràctica guiada Dashboards en Kibana
+  
+
+    
+      <br>
+      <small>Pràctica guiada</small>
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abans-de-comencar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abans de començar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pas-1-entra-en-kibana-i-carrega-les-dades-de-mostra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pas 1 – Entra en Kibana i carrega les dades de mostra
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crear-visualitzacions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear visualitzacions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Crear visualitzacions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visualitzacio-1-errors-per-hora-grafic-de-barres-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualització 1: Errors per hora (Gràfic de barres / Bar)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualitzacio-2-distribucio-per-sistema-operatiu-del-client-pastel-pie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualització 2: Distribució per Sistema Operatiu del client (Pastel / Pie)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualitzacio-3-metrica-unica-total-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualització 3: Métrica única (Total events')
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disseny-del-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disseny del Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crear-filtres-i-controls-interactius" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear filtres i controls interactius
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Crear filtres i controls interactius">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filtre-temporal-global" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtre temporal global
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtre-per-clic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtre per clic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#afegir-un-control-selector-desplegable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Afegir un Control (selector desplegable)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#busquedes-kql-global" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Búsquedes KQL global
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guardar-i-compartir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Guardar i compartir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercici" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercici
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abans-de-comencar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abans de començar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pas-1-entra-en-kibana-i-carrega-les-dades-de-mostra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pas 1 – Entra en Kibana i carrega les dades de mostra
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crear-visualitzacions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear visualitzacions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Crear visualitzacions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visualitzacio-1-errors-per-hora-grafic-de-barres-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualització 1: Errors per hora (Gràfic de barres / Bar)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualitzacio-2-distribucio-per-sistema-operatiu-del-client-pastel-pie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualització 2: Distribució per Sistema Operatiu del client (Pastel / Pie)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualitzacio-3-metrica-unica-total-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualització 3: Métrica única (Total events')
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disseny-del-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disseny del Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crear-filtres-i-controls-interactius" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear filtres i controls interactius
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Crear filtres i controls interactius">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filtre-temporal-global" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtre temporal global
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtre-per-clic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtre per clic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#afegir-un-control-selector-desplegable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Afegir un Control (selector desplegable)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#busquedes-kql-global" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Búsquedes KQL global
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guardar-i-compartir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Guardar i compartir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercici" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercici
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="practica-guiada-de-creacio-de-dashboards-en-kibana">Pràctica guiada de creació de Dashboards en Kibana</h1>
+<p>Anem a fer una pràctica guiada pas a pas per crear un dashboard a Kibana. Utilitzarem un conjunt de dades de logs web de mostra que ve integrat amb Kibana, així no necessitarem configurar Logstash ni carregar dades externes.</p>
+<h2 id="abans-de-comencar">Abans de començar</h2>
+<p>Alça els contenidors, comprova que estan tots funcionant.</p>
+<p>Intenta accedir a Kibana a través de <code>http://localhost:5601</code>. Si tot està correcte, veuràs la interfície de Kibana. Si tens problemes per accedir, revisa els logs del contenidor (<code>docker logs kibana</code>) per identificar posibles errors. Si el problema és de permisos, segurament necessitaràs executar les instruccions de resetejar els passwords que tens en els apunts.</p>
+<h2 id="pas-1-entra-en-kibana-i-carrega-les-dades-de-mostra">Pas 1 – Entra en Kibana i carrega les dades de mostra</h2>
+<ol>
+<li>Obri el navegador <code>http://localhost:5601</code></li>
+<li>Ves al menú principal (☰) → <strong>Home</strong></li>
+<li>Localitza la secció <strong>"Try sample data"</strong></li>
+<li>Ves a <strong>'Other sample data sets'</strong></li>
+<li>Localitza el data set <strong>Sample web logs</strong>, fes clic en <strong>"Add data"</strong></li>
+<li>Espera uns segons. Kibana crearà automáticament:<ul>
+<li>Un índex anomenat <code>kibana_sample_data_logs</code> en Elasticsearch</li>
+<li>Un Data View ja configurat</li>
+<li>Un dashboard d'exemple amb diverses visualitzacions</li>
+</ul>
+</li>
+</ol>
+<p>Pots comprovar que tot ha anat bé:</p>
+<ul>
+<li>Ves a <strong>Stack Management → Data Views</strong> i verifica que tens un Data View per <code>kibana_sample_data_logs</code></li>
+<li>Ves a <strong>Discover</strong> i selecciona el Data View <code>kibana_sample_data_logs</code> per veure les dades de logs web</li>
+<li>Ves a <strong>Dashboard</strong> i busca el dashboard de mostra que s'ha creat automàticament</li>
+</ul>
+<blockquote>
+<p>Pots explorar com està fet el dashboard d'exemple i anar agafant idees. Nosaltres crearem el nostre, més senzill, des de zero.</p>
+</blockquote>
+<h2 id="crear-visualitzacions">Crear visualitzacions</h2>
+<p>Anem a crear una sèrie de visualitzacions bàsiques a partir del Data View <code>kibana_sample_data_logs</code> que després afegirem al nostre dashboard personalitzat.</p>
+<h3 id="visualitzacio-1-errors-per-hora-grafic-de-barres-bar">Visualització 1: Errors per hora (Gràfic de barres / Bar)</h3>
+<ol>
+<li>Ves a <strong>Analytics → Visualize Library</strong> </li>
+<li>Fes clic en <strong>Create visualization</strong>. Selecciona l'opció <strong>Lens</strong> (editor visual recomanat)</li>
+<li>En la part superior esquerra, selecciona el Data View <code>Kibana Sample Data Logs</code></li>
+<li>Arrastra el camp <code>@timestamp</code> a la part central de la pantalla. Automàticament Kibana crearà un gràfic de barres.</li>
+<li>En l'eix <strong>Y</strong>, si no ho ha fet per defecte, tria la mètrica <strong>Count</strong> (compta documents)</li>
+<li>
+<p>En la part superior esquerra, al costat del nom de l'índex, hi ha un botó amb un signe +. Si te situes sobre ell veuràs la legenda <strong><em>Add filter</em></strong>. Crea un filtre nou amb:</p>
+</li>
+<li>
+<p>atribut: <code>response.keyword</code></p>
+</li>
+<li>condició: <code>is one of</code></li>
+<li>
+<p>valors: <code>404</code> <code>503</code></p>
+</li>
+<li>
+<p>Busca com canviar els títols dels eixos X i Y. Canvia el títol de l'eix X a <code>Últimes 24 hores</code> i el de l'eix Y a <code>Quantitat d'errors</code></p>
+</li>
+<li>En la part superior dreta, busca el botó per seleccionar l'interval de temps i selecciona <code>Last 24 hours</code>.</li>
+<li>Fes clic en <strong>Save</strong>. Com a títol, posa <strong>[Kibana Logs] Errors últimes 24 hores</strong>. En l'apartat <code>Add to dashboard</code> selecciona <code>None</code>. Fes clic en <strong>Save and add to library</strong>.</li>
+</ol>
+<h3 id="visualitzacio-2-distribucio-per-sistema-operatiu-del-client-pastel-pie">Visualització 2: Distribució per Sistema Operatiu  del client (Pastel / Pie)</h3>
+<ol>
+<li>Crea una nova visualització</li>
+<li>Arrastra el camp <code>machine.os.keyword</code> a la part central de la pantalla</li>
+<li>Kibana lo convertirá en un <strong>Top values</strong> on mostrarà els 5 sistemes operatius més comuns. En la configuració del gràfic, a la dreta, pots canviar-ho i posar-ne més, si vols.</li>
+<li>Canvia el tipus de gràfic a <strong>Pie</strong> (pastel)</li>
+<li>Guarda la visualització amb el nom <code>[Kibana Logs] Distribució de sistemes operatius</code>. No l'afegisques a cap dashboard, de moment.</li>
+</ol>
+<h3 id="visualitzacio-3-metrica-unica-total-events">Visualització 3: Métrica única (Total events')</h3>
+<ol>
+<li>Crea una nova visualització</li>
+<li>Selecciona el tipus <strong>Metric</strong></li>
+<li>En la mètrica principal, selecciona <strong>Count</strong></li>
+<li>Canvia el títol de la mètrica a <code>Total d'accessos</code></li>
+<li>Guarda la visualització amb el nom <code>[Kibana Logs] Total d'accessos'</code>. Recorda no afegir-lo a cap dashboard.</li>
+</ol>
+<h2 id="disseny-del-dashboard">Disseny del Dashboard</h2>
+<p>Ara anem a crear el Dashboard amb les tres visualitzacions que hem creat. També afegirem la cerca guardada de Discover que mostra els logs filtrats per errors 404 i 503.</p>
+<ol>
+<li>Ves a <strong>Dashboard</strong> en el menú lateral</li>
+<li>Fes clic en <strong>Create dashboard</strong></li>
+<li>Ens dirà que està buit. Fes clic en <strong>Add from library</strong></li>
+<li>Selecciona las tres visualitzacions creades:<ul>
+<li><code>[Kibana Logs] Errors últimes 24 hores</code></li>
+<li><code>[Kibana Logs] Distribució de sistemes operatius</code></li>
+<li><code>[Kibana Logs] Total d'accessos</code></li>
+</ul>
+</li>
+<li>Pots <strong>Organitzar els components</strong> del dashboard canviant-los de lloc i també de tamany.</li>
+</ol>
+<p>El resultat podria ser una cosa semblant a esta:</p>
+<p><img alt="Dashboard de logs web" src="../images/u07-22.png" /></p>
+<h2 id="crear-filtres-i-controls-interactius">Crear filtres i controls interactius</h2>
+<p>Els filtres i controls fan que l'usuari puga interactuar amb el dashboard i fa que tinga més valor. Anem a veure com crear diferents tipus de filtres i controls.</p>
+<h3 id="filtre-temporal-global">Filtre temporal global</h3>
+<p>Dalt a la dreta podem modificar l'interval de temps que afecta a totes les visualitzacions del dashboard. Per exemple, podem seleccionar <code>Last 7 days</code> per veure les dades de la última setmana.</p>
+<h3 id="filtre-per-clic">Filtre per clic</h3>
+<p>Si vas al gràfic de pastel i fas clic sobre un secció (un sistema operatiu), automàticament tot el dashboard canvia per filtrar només els documents del sistema operatiu seleccionat. Dalt a l'esquerra apareix el filtre, si voleu tornar a mostrar totes les dades feu clic en <code>x</code> i el filtre se borra. </p>
+<p>Per exemple, si fem clic en Windows 7, veurem:</p>
+<p><img alt="Filtre per sistema operatiu" src="../images/u07-23.png" /></p>
+<p>Fixeu-vos que dalt a l'esquerra teniu el filtre activat. El podeu eliminar fent clic en la <code>x</code> que hi ha al costat del filtre.</p>
+<h3 id="afegir-un-control-selector-desplegable">Afegir un Control (selector desplegable)</h3>
+<ol>
+<li>Fes clic en <strong>Controls → Add control</strong></li>
+<li>Selecciona <strong>Options list</strong></li>
+<li>Tria un camp, per exemple <code>clientip</code>. </li>
+<li>Guarda el control i el dashboard. </li>
+</ol>
+<p>Ara teniu un desplegable per filtrar per IP del client. Si seleccioneu una IP concreta, el dashboard mostrarà només les dades d'aquesta IP.</p>
+<p><img alt="Control de client IP" src="../images/u07-24.png" /></p>
+<h3 id="busquedes-kql-global">Búsquedes KQL global</h3>
+<p>En la part superior del dashboard teniu un quadre de text on podeu escriure consultes KQL que afecten a tots els panels. Quan feu clic en el quadre, se desplega un llistat amb tots els camps disponibles. Podeu seleccionar-ne un i posar una condició seguint la guia que vos apareix.</p>
+<h2 id="guardar-i-compartir">Guardar i compartir</h2>
+<ol>
+<li>Per guardar el Dashboard, fem clic en <strong>Save</strong> (dalt a la dreta). Si és la primera vegada, li donem un nom.</li>
+<li>
+<p>A l'esquerra del botó <strong>Save</strong>, hi un botó de compartir. Vos ofereix 2 opcions:</p>
+</li>
+<li>
+<p><strong>Link</strong>: URL per compartir el dashboard amb altres usuaris de Kibana</p>
+</li>
+<li><strong>Embed code</strong>: codi HTML per incrustar el dashboard en una pàgina web externa</li>
+</ol>
+<h2 id="exercici">Exercici</h2>
+<p>Sobre el dashboard que hem dissenyat, intenta fer els següents canvis:</p>
+<ul>
+<li>Afegeix un gràfic de barres amb els codis de resposta més freqüents (<code>response.keyword</code>)</li>
+<li>Crea un mapa de calor o geogràfic amb el camp <code>geo.coordinates</code> per veure la distribució geogràfica dels logs</li>
+</ul>
+<p>Reorganiza el dashboard per a que quede presentable i guarda-lo amb un altre nom. Per exemple,<code>Exercici-Dashboard</code>.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
