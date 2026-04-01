@@ -19,4 +19,5 @@
 * [7.3 Stack ELK pràctic: Logstash](u07/logstash.md)
 * [7.4 Dashboards en Kibana](u07/dashboards.md)
 * [7.5 Pràctica guiada Dashboards en Kibana](u07/practica_dashboards_kibana.md)
+* [8. Grafana](u08/Grafana.md)
 * [Annex: n8n](annex_n8n/index.md)
