@@ -1,0 +1,5997 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../u07/practica_dashboards_kibana/">
+      
+      
+        <link rel="next" href="../../annex_n8n/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>Big Data Aplicat - Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../styles/taules.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#grafana" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-header__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../../img/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Big Data Aplicat
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-nav__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../../img/logo.svg" alt="logo">
+
+    </a>
+    Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentació
+  
+
+    
+      <br>
+      <small>Mòdul Big Data Aplicat</small>
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introducció al Big Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Elements i arquitectura Big Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.1 Repàs Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u03/annex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.2 Docker Compose
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.1 Introducció a Node-RED
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u04/nodered-intermedi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.2 Node-RED intermedi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u04/nodered-avan%C3%A7at/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.3 Node-RED avançat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u04/nodered-dashboards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.4 Node-RED dashboards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u04/nodered-formularis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.5 Formularis en Node-RED
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Fiware. Orion. Context Broker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. MQTT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.1 Stack ELK. Introducció
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u07/elk_practic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.2 Stack ELK pràctic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u07/logstash/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.3 Stack ELK pràctic: Logstash
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u07/dashboards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.4 Dashboards en Kibana
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u07/practica_dashboards_kibana/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.5 Pràctica guiada Dashboards en Kibana
+  
+
+    
+      <br>
+      <small>Pràctica guiada</small>
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Grafana
+  
+
+    
+      <br>
+      <small>Annex - Grafana</small>
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Grafana
+  
+
+    
+      <br>
+      <small>Annex - Grafana</small>
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#caracteristiques-principals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Característiques principals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grafana-oss-vs-enterprise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grafana OSS vs Enterprise
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparativa-grafana-vs-kibana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparativa: Grafana vs Kibana
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installacio-amb-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instal·lació amb Docker
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instal·lació amb Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stack-basic-grafana-prometheus-node-exporter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stack bàsic: Grafana + Prometheus + node-exporter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credencials-i-urls-dacces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credencials i URLs d'accés
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connexio-amb-elk-xarxa-externa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connexió amb ELK (xarxa externa)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prometheus-conceptes-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prometheus: Conceptes Bàsics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prometheus: Conceptes Bàsics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-prometheus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Què és Prometheus?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explorant-prometheus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explorant Prometheus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metriques-utils-de-node-exporter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mètriques útils de node-exporter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explorar-totes-les-metriques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explorar totes les mètriques
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#promql-llenguatge-de-consultes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PromQL: Llenguatge de Consultes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-practics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemples pràctics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regles-de-gravacio-recording-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regles de gravació (Recording Rules)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connexio-de-grafana-amb-prometheus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connexió de Grafana amb Prometheus
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connexió de Grafana amb Prometheus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurar-prometheus-com-a-datasource" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configurar Prometheus com a Datasource
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-un-dashboard-basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear un Dashboard bàsic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipus-de-visualitzacions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipus de visualitzacions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elasticsearch-com-a-datasource" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elasticsearch com a Datasource
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Elasticsearch com a Datasource">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracio-de-la-xarxa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuració de la xarxa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-el-datasource" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear el Datasource
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultes-en-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consultes en Elasticsearch
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bases-de-dades-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bases de dades SQL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bases de dades SQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quan-utilitzar-sql-vs-nosql-amb-grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quan utilitzar SQL vs NoSQL amb Grafana
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-amb-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple amb PostgreSQL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemple amb PostgreSQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurar-postgresql-a-grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configurar PostgreSQL a Grafana
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultes-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consultes PostgreSQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MySQL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MySQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurar-mysql-a-grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configurar MySQL a Grafana
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultes-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consultes MySQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#influxdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        InfluxDB
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="InfluxDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conceptes-clau-dinfluxdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conceptes clau d'InfluxDB
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diferencies-entre-influxdb-i-prometheus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diferències entre InfluxDB i Prometheus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quan-utilitzar-influxdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quan utilitzar InfluxDB?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avantatges-sobre-prometheus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avantatges sobre Prometheus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracio-amb-variables-dentorn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuració amb variables d'entorn
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicacio-de-les-variables-dentorn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explicació de les variables d'entorn
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#com-generar-un-token-segur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Com generar un token segur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternativa-influxdb-sense-inicialitzacio-automatica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alternativa: InfluxDB sense inicialització automàtica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracio-de-telegraf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuració de Telegraf
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verificar-que-telegraf-funciona" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verificar que Telegraf funciona
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurar-influxdb-a-grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configurar InfluxDB a Grafana
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtenir-el-token-des-de-la-interficie-dinfluxdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obtenir el token des de la interfície d'InfluxDB
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolucio-de-problemes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resolució de problemes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flux-llenguatge-de-consultes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flux: Llenguatge de consultes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queries-a-grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Queries a Grafana
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MongoDB
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MongoDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quan-utilitzar-mongodb-amb-grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quan utilitzar MongoDB amb Grafana?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparativa-mongodb-vs-bases-de-dades-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparativa: MongoDB vs Bases de dades SQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avantatges-de-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avantatges de MongoDB
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script-dinicialitzacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Script d'inicialització
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plugin-de-mongodb-per-a-grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plugin de MongoDB per a Grafana
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plugin de MongoDB per a Grafana">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installacio-del-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instal·lació del plugin
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurar-mongodb-a-grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configurar MongoDB a Grafana
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultes-mongodb-amb-leditor-visual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consultes MongoDB amb l'editor visual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-dagregacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pipeline d'agregació
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-i-plantilles-en-grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables i Plantilles en Grafana
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables i Plantilles en Grafana">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concepte-de-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepte de Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avantatges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avantatges
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utilitzar-variables-en-consultes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Utilitzar Variables en Consultes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-select" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-select
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables-amb-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables amb PostgreSQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#templates-i-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Templates i Links
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Templates i Links">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enllacos-entre-dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enllaços entre dashboards
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables-globals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables globals
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panells-i-visualitzacions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Panells i Visualitzacions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Panells i Visualitzacions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#time-series-serie-temporal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Time Series (Sèrie Temporal)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gauge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gauge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bar-gauge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bar Gauge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pie-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pie Chart
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#histogram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histogram
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heatmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heatmap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transformacions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transformacions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#field-overrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Field Overrides
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Field Overrides">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-color-diferent-per-cada-servei" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple: Color diferent per cada servei
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overrides-comuns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overrides comuns
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sistema-dalertes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sistema d'Alertes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sistema d&#39;Alertes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-una-alerta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear una Alerta
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Crear una Alerta">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pas-1-definir-la-consulta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pas 1: Definir la consulta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pas-2-configurar-condicions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pas 2: Configurar condicions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pas-3-crear-notificacions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pas 3: Crear notificacions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pas-4-crear-politica-dalertes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pas 4: Crear política d'alertes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#templates-dalertes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Templates d'Alertes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-compose-amb-alertmanager-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        docker-compose amb Alertmanager (opcional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importar-i-exportar-dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importar i Exportar Dashboards
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Importar i Exportar Dashboards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exportar-un-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exportar un Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#via-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Via API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importar-un-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importar un Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importar-dashboards-predefinits-des-de-grafanacom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importar Dashboards predefinits des de Grafana.com
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aprovisionament-provisioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aprovisionament (Provisioning)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connection-refused-o-connection-timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Connection refused" o "Connection timeout"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permission-denied-a-la-base-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Permission denied" a la base de dades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problemes-amb-prometheus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problemes amb Prometheus
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Problemes amb Prometheus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no-data-en-els-panells" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "No data" en els panells
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeout-en-les-consultes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Timeout" en les consultes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problemes-amb-grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problemes amb Grafana
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Problemes amb Grafana">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pagina-en-blanc-o-errors-de-cors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pàgina en blanc o errors de CORS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboards-molt-lents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboards molt lents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dades-incorrectes-amb-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dades incorrectes amb dates
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprovacions-rapides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comprovacions Ràpides
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-complet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reset Complet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencia-rapida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referència Ràpida
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Referència Ràpida">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instruccions-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instruccions Docker
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credencials-per-defecte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credencials per defecte
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ports
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursos
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex_n8n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Annex: n8n
+  
+
+    
+      <br>
+      <small>Annex - n8n</small>
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#caracteristiques-principals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Característiques principals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grafana-oss-vs-enterprise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grafana OSS vs Enterprise
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparativa-grafana-vs-kibana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparativa: Grafana vs Kibana
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installacio-amb-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instal·lació amb Docker
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instal·lació amb Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stack-basic-grafana-prometheus-node-exporter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stack bàsic: Grafana + Prometheus + node-exporter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credencials-i-urls-dacces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credencials i URLs d'accés
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connexio-amb-elk-xarxa-externa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connexió amb ELK (xarxa externa)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prometheus-conceptes-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prometheus: Conceptes Bàsics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prometheus: Conceptes Bàsics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-prometheus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Què és Prometheus?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explorant-prometheus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explorant Prometheus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metriques-utils-de-node-exporter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mètriques útils de node-exporter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explorar-totes-les-metriques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explorar totes les mètriques
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#promql-llenguatge-de-consultes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PromQL: Llenguatge de Consultes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-practics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemples pràctics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regles-de-gravacio-recording-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regles de gravació (Recording Rules)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connexio-de-grafana-amb-prometheus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connexió de Grafana amb Prometheus
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connexió de Grafana amb Prometheus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurar-prometheus-com-a-datasource" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configurar Prometheus com a Datasource
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-un-dashboard-basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear un Dashboard bàsic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipus-de-visualitzacions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipus de visualitzacions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elasticsearch-com-a-datasource" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elasticsearch com a Datasource
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Elasticsearch com a Datasource">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracio-de-la-xarxa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuració de la xarxa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-el-datasource" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear el Datasource
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultes-en-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consultes en Elasticsearch
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bases-de-dades-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bases de dades SQL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bases de dades SQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quan-utilitzar-sql-vs-nosql-amb-grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quan utilitzar SQL vs NoSQL amb Grafana
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-amb-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple amb PostgreSQL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemple amb PostgreSQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurar-postgresql-a-grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configurar PostgreSQL a Grafana
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultes-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consultes PostgreSQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MySQL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MySQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurar-mysql-a-grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configurar MySQL a Grafana
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultes-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consultes MySQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#influxdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        InfluxDB
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="InfluxDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conceptes-clau-dinfluxdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conceptes clau d'InfluxDB
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diferencies-entre-influxdb-i-prometheus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diferències entre InfluxDB i Prometheus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quan-utilitzar-influxdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quan utilitzar InfluxDB?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avantatges-sobre-prometheus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avantatges sobre Prometheus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracio-amb-variables-dentorn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuració amb variables d'entorn
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicacio-de-les-variables-dentorn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explicació de les variables d'entorn
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#com-generar-un-token-segur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Com generar un token segur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternativa-influxdb-sense-inicialitzacio-automatica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alternativa: InfluxDB sense inicialització automàtica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracio-de-telegraf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuració de Telegraf
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verificar-que-telegraf-funciona" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verificar que Telegraf funciona
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurar-influxdb-a-grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configurar InfluxDB a Grafana
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtenir-el-token-des-de-la-interficie-dinfluxdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obtenir el token des de la interfície d'InfluxDB
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolucio-de-problemes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resolució de problemes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flux-llenguatge-de-consultes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flux: Llenguatge de consultes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queries-a-grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Queries a Grafana
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MongoDB
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MongoDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quan-utilitzar-mongodb-amb-grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quan utilitzar MongoDB amb Grafana?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparativa-mongodb-vs-bases-de-dades-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparativa: MongoDB vs Bases de dades SQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avantatges-de-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avantatges de MongoDB
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script-dinicialitzacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Script d'inicialització
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plugin-de-mongodb-per-a-grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plugin de MongoDB per a Grafana
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plugin de MongoDB per a Grafana">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installacio-del-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instal·lació del plugin
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurar-mongodb-a-grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configurar MongoDB a Grafana
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultes-mongodb-amb-leditor-visual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consultes MongoDB amb l'editor visual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-dagregacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pipeline d'agregació
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-i-plantilles-en-grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables i Plantilles en Grafana
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables i Plantilles en Grafana">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concepte-de-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepte de Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avantatges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avantatges
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utilitzar-variables-en-consultes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Utilitzar Variables en Consultes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-select" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-select
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables-amb-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables amb PostgreSQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#templates-i-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Templates i Links
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Templates i Links">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enllacos-entre-dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enllaços entre dashboards
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables-globals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables globals
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panells-i-visualitzacions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Panells i Visualitzacions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Panells i Visualitzacions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#time-series-serie-temporal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Time Series (Sèrie Temporal)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gauge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gauge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bar-gauge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bar Gauge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pie-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pie Chart
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#histogram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histogram
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heatmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heatmap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transformacions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transformacions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#field-overrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Field Overrides
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Field Overrides">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-color-diferent-per-cada-servei" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple: Color diferent per cada servei
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overrides-comuns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overrides comuns
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sistema-dalertes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sistema d'Alertes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sistema d&#39;Alertes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-una-alerta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear una Alerta
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Crear una Alerta">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pas-1-definir-la-consulta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pas 1: Definir la consulta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pas-2-configurar-condicions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pas 2: Configurar condicions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pas-3-crear-notificacions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pas 3: Crear notificacions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pas-4-crear-politica-dalertes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pas 4: Crear política d'alertes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#templates-dalertes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Templates d'Alertes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-compose-amb-alertmanager-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        docker-compose amb Alertmanager (opcional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importar-i-exportar-dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importar i Exportar Dashboards
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Importar i Exportar Dashboards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exportar-un-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exportar un Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#via-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Via API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importar-un-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importar un Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importar-dashboards-predefinits-des-de-grafanacom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importar Dashboards predefinits des de Grafana.com
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aprovisionament-provisioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aprovisionament (Provisioning)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connection-refused-o-connection-timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Connection refused" o "Connection timeout"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permission-denied-a-la-base-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Permission denied" a la base de dades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problemes-amb-prometheus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problemes amb Prometheus
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Problemes amb Prometheus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no-data-en-els-panells" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "No data" en els panells
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeout-en-les-consultes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Timeout" en les consultes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problemes-amb-grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problemes amb Grafana
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Problemes amb Grafana">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pagina-en-blanc-o-errors-de-cors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pàgina en blanc o errors de CORS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboards-molt-lents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboards molt lents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dades-incorrectes-amb-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dades incorrectes amb dates
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprovacions-rapides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comprovacions Ràpides
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-complet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reset Complet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencia-rapida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referència Ràpida
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Referència Ràpida">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instruccions-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instruccions Docker
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credencials-per-defecte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credencials per defecte
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ports
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursos
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="grafana">Grafana</h1>
+<p><strong>Grafana</strong> és una plataforma de visualització de dades i monitorització de codi obert que permet crear dashboards interactius a partir de múltiples fonts de dades. És àmpliament utilitzada en entorns empresarials per monitoritzar sistemes, aplicacions i infraestructures, així com per analitzar dades en temps real.</p>
+<h2 id="caracteristiques-principals">Característiques principals</h2>
+<ul>
+<li><strong>Multi-font de dades</strong>: Connecta amb Prometheus, Elasticsearch, PostgreSQL, MySQL, InfluxDB, MongoDB, i moltes altres</li>
+<li><strong>Visualitzacions interactives</strong>: Gràfiques de línies, barres, gauges, mapes de calor, taules, etc.</li>
+<li><strong>Alertes intel·ligents</strong>: Configuració d'alertes amb múltiples canals (email, Slack, webhook, PagerDuty)</li>
+<li><strong>Plantilles i variables</strong>: Dashboards dinàmics amb variables reutilitzables</li>
+<li><strong>Plugins</strong>: Sistema de plugins per estendre funcionalitats</li>
+<li><strong>Col·laboració</strong>: Compartició de dashboards, anotacions i comentaris</li>
+</ul>
+<h2 id="grafana-oss-vs-enterprise">Grafana OSS vs Enterprise</h2>
+<p><strong>Grafana OSS (Open Source Software)</strong> és completament gratuïta i de codi obert. La versió <strong>Enterprise</strong> ofereix característiques avançades com:</p>
+<ul>
+<li>Control d'accessos basat en rols (RBAC)</li>
+<li>Suport prioritari</li>
+<li>Capacitats d'aprovisionament avançades</li>
+<li>Integració amb SAML i LDAP</li>
+</ul>
+<p>Per a entorns educatius i la majoria d'usos, la versió OSS és més que suficient.</p>
+<h2 id="comparativa-grafana-vs-kibana">Comparativa: Grafana vs Kibana</h2>
+<p>Com que heu vist un poc de dashboards amb Kibana, ací teniu una breu comparativa de les dues eines.</p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Grafana</th>
+<th>Kibana</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Enfocament principal</strong></td>
+<td>Mètriques, sèries temporals</td>
+<td>Logs, cerca, anàlisi</td>
+</tr>
+<tr>
+<td><strong>Fonts de dades</strong></td>
+<td>Moltes (Prometheus, SQL, NoSQL, Cloud...)</td>
+<td>Principalment Elasticsearch</td>
+</tr>
+<tr>
+<td><strong>Alertes</strong></td>
+<td>Integrades, multi-canal</td>
+<td>Via Watcher o alerting</td>
+</tr>
+<tr>
+<td><strong>Learning curve</strong></td>
+<td>Moderada</td>
+<td>Moderada</td>
+</tr>
+<tr>
+<td><strong>Dashboards</strong></td>
+<td>Molt flexible</td>
+<td>Flexible</td>
+</tr>
+</tbody>
+</table>
+<p>Grafana és ideal quan necessites visualitzar dades de múltiples fonts en un mateix lloc. Kibana és millor quan treballes exclusivament amb Elasticsearch i logs.</p>
+<hr />
+<h2 id="installacio-amb-docker">Instal·lació amb Docker</h2>
+<h3 id="stack-basic-grafana-prometheus-node-exporter">Stack bàsic: Grafana + Prometheus + node-exporter</h3>
+<p>El següent <code>docker-compose.yml</code> arranca Grafana juntament amb Prometheus (per a mètriques) i node-exporter (per a obtindre dades del sistema).</p>
+<pre><code class="language-yaml"># docker-compose.yml
+services:
+
+  # ── 1. PROMETHEUS ──────────────────────────────────────────────
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    restart: unless-stopped
+    ports:
+      - &quot;9090:9090&quot;
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    networks:
+      - monitoring
+
+  # ── 2. NODE EXPORTER ───────────────────────────────────────────
+  node-exporter:
+    image: prom/node-exporter:latest
+    container_name: node-exporter
+    restart: unless-stopped
+    ports:
+      - &quot;9100:9100&quot;
+    networks:
+      - monitoring
+
+  # ── 3. GRAFANA ─────────────────────────────────────────────────
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    restart: unless-stopped
+    ports:
+      - &quot;3000:3000&quot;
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin123
+    volumes:
+      - grafana_data:/var/lib/grafana
+    depends_on:
+      - prometheus
+    networks:
+      - monitoring
+
+# ── VOLÚMENES I XARXA ────────────────────────────────────────────────
+volumes:
+  prometheus_data: {}
+  grafana_data: {}
+
+networks:
+  monitoring:
+    driver: bridge
+</code></pre>
+<p>Necessitem el fitxer <code>prometheus.yml</code>:</p>
+<pre><code class="language-yaml"># prometheus.yml
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: prometheus
+    static_configs:
+      - targets: ['prometheus:9090']
+
+  - job_name: node-exporter
+    static_configs:
+      - targets: ['node-exporter:9100']
+</code></pre>
+<p>Per arrancar:</p>
+<pre><code class="language-bash">docker compose up -d
+</code></pre>
+<h3 id="credencials-i-urls-dacces">Credencials i URLs d'accés</h3>
+<table>
+<thead>
+<tr>
+<th>Servei</th>
+<th>URL</th>
+<th>Credencials</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grafana</td>
+<td>http://localhost:3000</td>
+<td>admin / admin123</td>
+</tr>
+<tr>
+<td>Prometheus</td>
+<td>http://localhost:9090</td>
+<td>-</td>
+</tr>
+<tr>
+<td>node-exporter</td>
+<td>http://localhost:9100</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="connexio-amb-elk-xarxa-externa">Connexió amb ELK (xarxa externa)</h3>
+<p>Per connectar Grafana amb un stack ELK ja existent, afegim la xarxa <code>elk_elk</code>:</p>
+<pre><code class="language-yaml"># Afegir a networks:
+networks:
+  monitoring:
+    driver: bridge
+  elk_elk:
+    external: true
+
+# Afegir al servei grafana:
+  grafana:
+    ...
+    networks:
+      - monitoring
+      - elk_elk
+</code></pre>
+<blockquote>
+<p><strong>Nota</strong>: El nom <code>elk_elk</code> pot variar. Comprova amb <code>docker network ls</code> quin és el nom exacte de la xarxa del teu stack ELK.</p>
+</blockquote>
+<p>Haurieu d'arrancar primer el contenidor amb Elastic, i després el de Grafana.</p>
+<hr />
+<h2 id="prometheus-conceptes-basics">Prometheus: Conceptes Bàsics</h2>
+<h3 id="que-es-prometheus">Què és Prometheus?</h3>
+<p><strong>Prometheus</strong> és un sistema de monitorització i alertes de codi obert que:</p>
+<ul>
+<li>Recopila mètriques com a sèries temporals</li>
+<li>Utilitza un model de dades basat en etiquetes (labels)</li>
+<li>Permet consultes potents amb PromQL</li>
+<li>S'integra perfectament amb Grafana</li>
+</ul>
+<h3 id="explorant-prometheus">Explorant Prometheus</h3>
+<p>Accedeix a http://localhost:9090 per veure la interfície de Prometheus.</p>
+<p><img alt="Prometheus UI" src="../images/prometheus01.jpg" /></p>
+<h3 id="metriques-utils-de-node-exporter">Mètriques útils de node-exporter</h3>
+<table>
+<thead>
+<tr>
+<th>Mètrica</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>node_cpu_seconds_total</code></td>
+<td>Segons de CPU consumits (per mode, cpu)</td>
+</tr>
+<tr>
+<td><code>node_memory_MemAvailable_bytes</code></td>
+<td>Memòria disponible en bytes</td>
+</tr>
+<tr>
+<td><code>node_memory_MemTotal_bytes</code></td>
+<td>Memòria total</td>
+</tr>
+<tr>
+<td><code>node_filesystem_avail_bytes</code></td>
+<td>Espai disponible en sistemes de fitxers</td>
+</tr>
+<tr>
+<td><code>node_network_receive_bytes_total</code></td>
+<td>Bytes rebuts per interfície</td>
+</tr>
+<tr>
+<td><code>node_network_transmit_bytes_total</code></td>
+<td>Bytes transmesos</td>
+</tr>
+<tr>
+<td><code>node_disk_read_bytes_total</code></td>
+<td>Bytes llegits del disc</td>
+</tr>
+<tr>
+<td><code>node_disk_written_bytes_total</code></td>
+<td>Bytes escrits al disc</td>
+</tr>
+<tr>
+<td><code>up</code></td>
+<td>Estat del target (1=up, 0=down)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="explorar-totes-les-metriques">Explorar totes les mètriques</h3>
+<p>Fes clic en <strong>"Explore metrics"</strong> (icona de brúixola) per veure totes les mètriques disponibles.</p>
+<p><img alt="Prometheus Explore" src="../images/prometheus02.jpg" /></p>
+<hr />
+<h3 id="promql-llenguatge-de-consultes">PromQL: Llenguatge de Consultes</h3>
+<p><strong>Estructura d'una mètrica</strong></p>
+<pre><code>nom_mètrica{etiqueta1=&quot;valor1&quot;, etiqueta2=&quot;valor2&quot;}
+</code></pre>
+<p>Exemple:</p>
+<pre><code>node_cpu_seconds_total{mode=&quot;idle&quot;, cpu=&quot;0&quot;, instance=&quot;localhost:9100&quot;}
+</code></pre>
+<p><strong>Tipus de dades</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tipus</th>
+<th>Descripció</th>
+<th>Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Gauge</strong></td>
+<td>Valor que pot pujar i baixar</td>
+<td><code>node_memory_MemAvailable_bytes</code></td>
+</tr>
+<tr>
+<td><strong>Counter</strong></td>
+<td>Valor que només puja</td>
+<td><code>node_cpu_seconds_total</code></td>
+</tr>
+<tr>
+<td><strong>Histogram</strong></td>
+<td>Distribució de valors</td>
+<td><code>http_request_duration_seconds</code></td>
+</tr>
+<tr>
+<td><strong>Summary</strong></td>
+<td>Percentils calculats</td>
+<td><code>http_request_duration_seconds</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Funcions de temps</strong></p>
+<pre><code class="language-promql"># Valor actual d'una mètrica
+node_memory_MemAvailable_bytes
+
+# Valor fa 5 minuts
+node_memory_MemAvailable_bytes offset 5m
+
+# Taxa de canvi (per segon)
+rate(node_cpu_seconds_total[5m])
+
+# Increment en un interval
+increase(node_cpu_seconds_total[1h])
+</code></pre>
+<p><strong>Funcions d'agregació</strong></p>
+<pre><code class="language-promql"># Suma de tots els valors
+sum(node_cpu_seconds_total)
+
+# Mitjana
+avg(node_cpu_seconds_total) by (mode)
+
+# Màxim
+max(node_memory_MemAvailable_bytes)
+
+# Mínim
+min(node_disk_read_bytes_total)
+
+# Comptador
+count(node_cpu_seconds_total)
+</code></pre>
+<p><strong>Funcions útils</strong></p>
+<pre><code class="language-promql"># Predicció lineal (serà 2h en el futur)
+predict_linear(node_cpu_seconds_total[5m], 2*60*60)
+
+# Absent (detecta quan una mètrica desapareix)
+absent(up{job=&quot;prometheus&quot;})
+
+# Canvi de taxa (útil per a counters)
+rate(node_network_receive_bytes_total[5m])
+
+# Percentil
+histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[5m]))
+</code></pre>
+<p><strong>Operadors</strong></p>
+<pre><code class="language-promql"># Suma
+node_memory_MemAvailable_bytes / 1024 / 1024 / 1024
+
+# Multiplicació
+rate(node_cpu_seconds_total[5m]) * 100
+
+# Comparació
+node_memory_MemAvailable_bytes &gt; 1024 * 1024 * 1024
+</code></pre>
+<p><strong>Operadors lògics</strong></p>
+<pre><code class="language-promql"># AND (interseció)
+up{job=&quot;prometheus&quot;} and up{instance=&quot;localhost:9100&quot;}
+
+# OR (unió)
+up{job=&quot;prometheus&quot;} or up{job=&quot;node-exporter&quot;}
+
+# Unless (exclusió)
+up and absent(up{job=&quot;prometheus&quot;})
+</code></pre>
+<h3 id="exemples-practics">Exemples pràctics</h3>
+<p><strong>Utilització de CPU</strong></p>
+<pre><code class="language-promql"># CPU utilitzada (no idle)
+100 - (rate(node_cpu_seconds_total{mode=&quot;idle&quot;}[5m]) * 100)
+
+# Per cpu individual
+100 - (rate(node_cpu_seconds_total{mode=&quot;idle&quot;,cpu=&quot;0&quot;}[5m]) * 100)
+</code></pre>
+<p><strong>Memòria en GB</strong></p>
+<pre><code class="language-promql">node_memory_MemAvailable_bytes / 1073741824
+</code></pre>
+<p><strong>Espai en disc lliure (percentatge)</strong></p>
+<pre><code class="language-promql">(node_filesystem_avail_bytes / node_filesystem_size_bytes) * 100
+</code></pre>
+<p><strong>Rendiment de la xarxa</strong></p>
+<pre><code class="language-promql"># MB/s rebuts
+rate(node_network_receive_bytes_total{device=&quot;eth0&quot;}[1m]) / 1024 / 1024
+
+# MB/s transmesos
+rate(node_network_transmit_bytes_total{device=&quot;eth0&quot;}[1m]) / 1024 / 1024
+</code></pre>
+<p><strong>Requests per segon (servidor web)</strong></p>
+<pre><code class="language-promql">rate(http_requests_total[5m])
+</code></pre>
+<h3 id="regles-de-gravacio-recording-rules">Regles de gravació (Recording Rules)</h3>
+<p>Les regles de gravació precalculen consultes freqüents per millorar el rendiment.</p>
+<pre><code class="language-yaml"># prometheus.yml
+rule_files:
+  - &quot;recording_rules.yml&quot;
+  - &quot;alert_rules.yml&quot;
+</code></pre>
+<pre><code class="language-yaml"># recording_rules.yml
+groups:
+  - name: cpu_rules
+    rules:
+      - record: job:node_cpu_utilisation:rate5m
+        expr: 100 - (rate(node_cpu_seconds_total{mode=&quot;idle&quot;}[5m]) * 100)
+
+  - name: memory_rules
+    rules:
+      - record: job:node_memory_free_percent
+        expr: (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes) * 100
+</code></pre>
+<p>Ara haurieu de crear volums en el docker-compose per mapejar les regles. Per exemple, en el nostre cas que l'arxiu se diu <code>recording_rules.yml</code>:</p>
+<pre><code class="language-yaml">  volumes:
+    - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    - ./recording_rules.yml:/etc/prometheus/recording_rules.yml        # afegiriem esta línia
+</code></pre>
+<p>En l'arxiu <code>prometheus.yml</code> també hem d'afegir l'arxiu de regles:</p>
+<pre><code class="language-yml">rule_files:
+  - &quot;recording_rules.yml&quot;    
+</code></pre>
+<p>Si ho tornem a reiniciar tot, ara des de Prometheus podem demanar eixes mètriques cridant a la regla corresponent.</p>
+<pre><code>job:node_memory_free_percent
+</code></pre>
+<p>Igualment podem cridar-les des de Grafana quan ens demana quina mètrica volem.</p>
+<hr />
+<h2 id="connexio-de-grafana-amb-prometheus">Connexió de Grafana amb Prometheus</h2>
+<h3 id="configurar-prometheus-com-a-datasource">Configurar Prometheus com a Datasource</h3>
+<ol>
+<li>Accedeix a Grafana: http://localhost:3000</li>
+<li>Ves a <strong>Connections → Data Sources</strong></li>
+<li>Clica <strong>Add data source</strong></li>
+<li>Busca <strong>Prometheus</strong> (Time series databases)</li>
+<li>En <strong>Connection</strong>, posa: <code>http://prometheus:9090</code></li>
+<li>Clica <strong>Save &amp; Test</strong></li>
+</ol>
+<p><img alt="Data Source Prometheus" src="../images/grafana03.jpg" /></p>
+<h3 id="crear-un-dashboard-basic">Crear un Dashboard bàsic</h3>
+<ol>
+<li>Ves a <strong>Dashboards → New → New Dashboard</strong></li>
+<li>Clica <strong>Add visualization</strong></li>
+<li>Selecciona <strong>Prometheus</strong> com a font de dades</li>
+<li>Escriu una consulta PromQL:</li>
+</ol>
+<pre><code class="language-promql">100 - (rate(node_cpu_seconds_total{mode=&quot;idle&quot;}[5m]) * 100)
+</code></pre>
+<ol>
+<li>Clica <strong>Run queries</strong> per veure el resultat</li>
+</ol>
+<p><img alt="Query Prometheus" src="../images/grafana04.jpg" /></p>
+<h2 id="tipus-de-visualitzacions">Tipus de visualitzacions</h2>
+<p>Grafana ofereix molts tipus de panells:</p>
+<table>
+<thead>
+<tr>
+<th>Tipus</th>
+<th>Ús</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Time series</strong></td>
+<td>Sèries temporals (gràfica de línies)</td>
+</tr>
+<tr>
+<td><strong>Stat</strong></td>
+<td>Valor individual amb tendència</td>
+</tr>
+<tr>
+<td><strong>Gauge</strong></td>
+<td>Valor amb rang visual</td>
+</tr>
+<tr>
+<td><strong>Bar chart</strong></td>
+<td>Comparacions entre categories</td>
+</tr>
+<tr>
+<td><strong>Table</strong></td>
+<td>Dades tabulars</td>
+</tr>
+<tr>
+<td><strong>Pie chart</strong></td>
+<td>Proporcions</td>
+</tr>
+<tr>
+<td><strong>Heatmap</strong></td>
+<td>Densitat de dades</td>
+</tr>
+<tr>
+<td><strong>Logs</strong></td>
+<td>Visualització de logs</td>
+</tr>
+<tr>
+<td><strong>Text</strong></td>
+<td>Text estàtic o Markdown</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="elasticsearch-com-a-datasource">Elasticsearch com a Datasource</h2>
+<h3 id="configuracio-de-la-xarxa">Configuració de la xarxa</h3>
+<p>Assegura't que Grafana i Elasticsearch estan en la mateixa xarxa Docker si no estan en el mateix arxiu docker-compose.yml:</p>
+<pre><code class="language-yaml"># Afegir a docker-compose.yml on tenim Grafana
+networks:
+  elk_elk:
+    external: true
+
+# En el servei grafana del mateix docker-compose.yml:
+networks:
+  - monitoring
+  - elk_elk
+</code></pre>
+<blockquote>
+<p>Teniu en compte que cada fitxer docker-compose crea les seues xarxes, afegint al nom de la xarxa el nom del servei que la crea. Per això la xarxa elk del docker-compose.yml d'Elastic ací s'anomena elk_elk. A més hem de posar <code>external:true</code> en lloc de <code>driver:bridge</code>.</p>
+</blockquote>
+<h3 id="crear-el-datasource">Crear el Datasource</h3>
+<ol>
+<li>Ves a <strong>Connections → Data Sources → Add data source</strong></li>
+<li>Busca <strong>Elasticsearch</strong></li>
+<li>Configura:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Camp</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URL</td>
+<td><code>http://elasticsearch:9200</code></td>
+</tr>
+<tr>
+<td>Auth</td>
+<td><strong>Basic auth</strong></td>
+</tr>
+<tr>
+<td>User</td>
+<td><code>elastic</code></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><code>la_teua_contrasenya</code></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>En <strong>Elasticsearch Details</strong>:</li>
+<li><strong>Index name</strong>: <code>kibana_sample_data_ecommerce</code> (o el teu índex)</li>
+<li>
+<p><strong>Time field</strong>: <code>@timestamp</code></p>
+</li>
+<li>
+<p>Clica <strong>Save &amp; Test</strong></p>
+</li>
+</ol>
+<p><img alt="Elasticsearch Config" src="../images/grafana10.jpg" /></p>
+<h3 id="consultes-en-elasticsearch">Consultes en Elasticsearch</h3>
+<p>Les consultes al datasource se poden fer amb el llenguatge <code>Lucene</code>, o des del formulari que ens ofereix el datasource.</p>
+<p><strong>Utilitzant Lucene</strong></p>
+<p>Si aneu al datasource, feu clic en <code>Explore</code> i seleccioneu l'opció <code>Logs</code>, podeu fer consultes directament des del quadre de text <code>Lucene Query</code>. Per exemple, podeu provar:</p>
+<pre><code class="language-lucene"># Tots els documents
+*
+
+# Amb filtre
+category:&quot;Shoes&quot;
+
+geoip.continent_name:&quot;Africa&quot;
+
+# Rang de dates
+order_date: [2026-03-20 TO 2026-03-30]
+
+# Múltiples condicions
+category:&quot;Electronics&quot; AND manufacturer:&quot;Apple&quot;
+</code></pre>
+<p><strong>Metrics i Group By</strong></p>
+<p>Grafana permet agregar dades directament:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Count</strong></td>
+<td>Nombre de documents</td>
+</tr>
+<tr>
+<td><strong>Average</strong></td>
+<td>Mitjana del camp</td>
+</tr>
+<tr>
+<td><strong>Sum</strong></td>
+<td>Suma del camp</td>
+</tr>
+<tr>
+<td><strong>Min/Max</strong></td>
+<td>Valors extrems</td>
+</tr>
+<tr>
+<td><strong>Unique count</strong></td>
+<td>Valors únics</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Group By</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tipus</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Terms</strong></td>
+<td>Agrupar per valors d'un camp</td>
+</tr>
+<tr>
+<td><strong>Date Histogram</strong></td>
+<td>Agrupar per intervals de temps</td>
+</tr>
+<tr>
+<td><strong>Histogram</strong></td>
+<td>Rang de valors numèrics</td>
+</tr>
+</tbody>
+</table>
+<p>Per exemple, des de el datasource podem fer clic en <code>Explore</code> i crear una consulta tal com se veu a la figura:</p>
+<p><img alt="Consulta de prova des de Explore" src="../images/grafana13.jpg" /></p>
+<p>Si feu scroll cap a baix, en la part inferior podeu veure el gràfic en la secció <code>Graph</code>, i les dades en la secció <code>Table</code>. Podeu accedir directament des del menú esquerre canviant de <code>Queries</code> a <code>Graph</code> o <code>Table</code>.</p>
+<p><img alt="Resultat de la consulta" src="../images/grafana14.jpg" /></p>
+<p>Podeu provar diferents consultes sobre el datasource. Quan ja vos funciona i obteniu el resultat que voleu, siga una consulta en Lucene o des del formulari, podeu afegir-lo directament a un Dashboard existent, o crear-ne un de nou. </p>
+<p><img alt="Afegir la consulta a un Dashboard" src="../images/grafana15.jpg" /></p>
+<p>Si tenim les dades en Elastic és més natural fer els dashboards en Kibana, però ara ja sabeu fer-los també utilitzant Grafana. </p>
+<p>Anem a veure altres tipus de fonts de dades.</p>
+<hr />
+<h2 id="bases-de-dades-sql">Bases de dades SQL</h2>
+<p>Com ja sabeu, les bases de dades SQL (Structured Query Language) són bases de dades <strong>relacionals</strong> que emmagatzemen les dades en taules amb files i columnes. Són ideals quan les dades tenen una estructura clarament definida i estable, o si necessitem establir relaciones complexes entre les dades. Hem de tindre en compte que si la quantitat d'informació és molt elevada, segurament funcionaran més lentes que una no SQL.</p>
+<h3 id="quan-utilitzar-sql-vs-nosql-amb-grafana">Quan utilitzar SQL vs NoSQL amb Grafana</h3>
+<table>
+<thead>
+<tr>
+<th>Situació</th>
+<th>Recomanació</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dades transaccionals (comandes, inventari)</td>
+<td><strong>SQL</strong> (PostgreSQL/MySQL)</td>
+</tr>
+<tr>
+<td>Mètriques amb alta granularitat (IoT)</td>
+<td><strong>InfluxDB</strong></td>
+</tr>
+<tr>
+<td>Dades de monitorització clàssica</td>
+<td><strong>Prometheus</strong></td>
+</tr>
+<tr>
+<td>Logs i cerca de text</td>
+<td><strong>Elasticsearch</strong> o <strong>Loki</strong></td>
+</tr>
+<tr>
+<td>Documents amb estructura variable</td>
+<td><strong>MongoDB</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="exemple-amb-postgresql">Exemple amb PostgreSQL</h3>
+<p><strong>PostgreSQL</strong> és un sistema de gestió de bases de dades objecte-relacional (ORDBMS) de codi obert, àmpliament considerat com una de les bases de dades més avançades i potents disponibles. Suporta l'estàndard SQL, tipus de dades avançats, programació, etc.</p>
+<p>Anem a fer un exemple amb PostgresSQL. Primer alcem el servei. Ho haurem de fer en la mateixa xarxa de Grafana.</p>
+<p><strong>docker-compose per a PostgreSQL</strong></p>
+<pre><code class="language-yaml"># docker-compose.postgresql.yml
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: monitoring
+      POSTGRES_USER: grafana
+      POSTGRES_PASSWORD: grafana123
+    ports:
+      - &quot;5432:5432&quot;
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - monitoring
+
+volumes:
+  postgres_data: {}
+
+networks:
+  monitoring:
+    driver: bridge
+</code></pre>
+<p>Si copieu l'arxiu <code>init.sql</code> en la mateixa carpeta on teniu el yaml per alçar el contenidor de PostgreSQL, se suposa que s'executarà i ja tindreu dades per fer proves.</p>
+<p><strong>Script d'inicialització</strong></p>
+<pre><code class="language-sql">-- Init SQL per a PostgreSQL
+-- Executat automàticament quan es crea el contenidor
+
+SET NAMES utf8mb4;
+SET CHARACTER SET utf8mb4;
+
+-- Taula de sensors IoT
+CREATE TABLE IF NOT EXISTS sensors (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    location VARCHAR(100),
+    temperature DECIMAL(5,2),
+    humidity DECIMAL(5,2),
+    pressure DECIMAL(7,2),
+    reading_time TIMESTAMP DEFAULT NOW()
+);
+
+-- Taula de mètriques de servidor
+CREATE TABLE IF NOT EXISTS server_metrics (
+    id SERIAL PRIMARY KEY,
+    server VARCHAR(50) NOT NULL,
+    cpu_usage DECIMAL(5,2),
+    memory_usage DECIMAL(5,2),
+    disk_usage DECIMAL(5,2),
+    timestamp TIMESTAMP DEFAULT NOW()
+);
+
+-- Taula de comandes
+CREATE TABLE IF NOT EXISTS orders (
+    id SERIAL PRIMARY KEY,
+    customer_name VARCHAR(100),
+    product VARCHAR(100),
+    quantity INT,
+    price DECIMAL(10,2),
+    order_date TIMESTAMP DEFAULT NOW()
+);
+
+-- Inserir dades de'exemple
+INSERT INTO sensors (name, location, temperature, humidity, pressure) VALUES
+('Sensor-001', 'Warehouse-A', 22.5, 45.2, 1013.25),
+('Sensor-002', 'Warehouse-B', 23.1, 46.8, 1013.10),
+('Sensor-003', 'Office', 21.8, 42.5, 1013.30),
+('Sensor-004', 'Server-Room', 18.5, 35.0, 1013.50);
+
+INSERT INTO server_metrics (server, cpu_usage, memory_usage, disk_usage) VALUES
+('server-01', 45.5, 72.3, 65.0),
+('server-02', 32.1, 58.9, 45.2),
+('server-03', 78.3, 85.1, 82.5),
+('server-01', 48.2, 73.1, 65.1),
+('server-02', 35.8, 59.2, 45.3);
+
+INSERT INTO orders (customer_name, product, quantity, price) VALUES
+('Anna García', 'Portàtil HP ProBook', 1, 799.99),
+('Joan Martí', 'Ratolí Wireless', 2, 29.99),
+('Maria López', 'Teclat Mecànic', 1, 149.99),
+('Pere Sánchez', 'Monitor 27&quot;', 2, 249.00),
+('Laura Torres', 'Auriculars USB', 3, 49.99);
+</code></pre>
+<h4 id="configurar-postgresql-a-grafana">Configurar PostgreSQL a Grafana</h4>
+<ol>
+<li><strong>Connections → Data Sources → Add data source</strong></li>
+<li>Busca <strong>PostgreSQL</strong></li>
+<li>Configura:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Camp</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Host</td>
+<td><code>postgres:5432</code></td>
+</tr>
+<tr>
+<td>Database</td>
+<td><code>monitoring</code></td>
+</tr>
+<tr>
+<td>User</td>
+<td><code>grafana</code></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><code>grafana123</code></td>
+</tr>
+<tr>
+<td>SSL mode</td>
+<td><code>disable</code></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Clica <strong>Save &amp; Test</strong></li>
+</ol>
+<blockquote>
+<p>Si teniu problemes de connexió entre Grafana i PostgreSQL, comproveu si els dos serveis estan en la mateixa xarxa (feu <code>docker network ls</code> per comprovar els noms de les xarxes), i també si la versió de Grafana i la de PostgreSQL són compatibles. </p>
+</blockquote>
+<h4 id="consultes-postgresql">Consultes PostgreSQL</h4>
+<p>Les consultes se poden fer des del mateix datasource amb l'opció <code>explore</code>. Tenim l'opció d'utilitzar el formulari que ens apareix, o canviar a l'opció <code>Code</code> en el selector de l'esquerra. Amb <code>Builder</code> tornem al formulari.</p>
+<p><img alt="Consultes des del formulari" src="../images/grafana16.jpg" /></p>
+<p><img alt="Consultes des de Code" src="../images/grafana17.jpg" /></p>
+<p>Consultes en SQL per provar-les des de l'opció <code>Code</code>:</p>
+<p><strong>Utilització de CPU per servidor</strong></p>
+<blockquote>
+<p>Comproveu els valors de temps en les taules per si heu d'ajustar el seu valor en la consulta. Per exemple, si les dades són de fa 1 hora si poseu <code>5m</code> no vos eixirà res.</p>
+</blockquote>
+<pre><code class="language-sql">SELECT
+    $__timeGroup(timestamp, '5m'),
+    server,
+    avg(cpu_usage) as &quot;CPU %&quot;
+FROM server_metrics
+WHERE $__timeFilter(timestamp)
+GROUP BY 1, server
+ORDER BY 1
+</code></pre>
+<p><strong>Temperatura mitjana per sensor</strong></p>
+<pre><code class="language-sql">SELECT
+    $__timeGroup(reading_time, '1h'),
+    name as &quot;Sensor&quot;,
+    avg(temperature) as &quot;Temp (°C)&quot;
+FROM sensors
+WHERE $__timeFilter(reading_time)
+GROUP BY 1, name
+ORDER BY 1
+</code></pre>
+<p><strong>Últim valor de cada sensor</strong></p>
+<pre><code class="language-sql">SELECT
+    name,
+    location,
+    temperature,
+    humidity,
+    reading_time
+FROM sensors s
+WHERE reading_time = (
+    SELECT MAX(reading_time) 
+    FROM sensors 
+    WHERE name = s.name
+)
+</code></pre>
+<p><strong>Tots els servidors i tots els sensors</strong></p>
+<pre><code class="language-sql">-- Tots els servidors
+SELECT DISTINCT server FROM server_metrics ORDER BY server
+
+-- Tots els sensors
+SELECT DISTINCT name FROM sensors ORDER BY name
+</code></pre>
+<hr />
+<h3 id="mysql">MySQL</h3>
+<p>Per a treballar amb MySQL només heu de tindre un servei dockeritzat com hem vist abans, i connectar-lo amb Grafana.</p>
+<p>Copieu també l'arxiu <code>init_mysql.sql</code> a la carpeta on estiga el <code>docker-compose.yml</code> i així quan alceu el contenidor ja tindreu dades en la base de dades.</p>
+<p><strong>docker-compose per a MySQL</strong></p>
+<pre><code class="language-yaml"># docker-compose.mysql.yml
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: monitoring
+      MYSQL_USER: grafana
+      MYSQL_PASSWORD: grafana123
+    ports:
+      - &quot;3307:3306&quot;  # pose 3307 perquè el 3306 el tinc ocupat en el meu ordinador
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./init_mysql.sql:/docker-entrypoint-initdb.d/init_mysql.sql
+    networks:
+      - grafana_monitoring
+    command: --default-authentication-plugin=mysql_native_password
+
+volumes:
+  mysql_data: {}
+
+networks:
+  grafana_monitoring:
+    external: true
+</code></pre>
+<p><strong>Script d'inicialització</strong></p>
+<pre><code class="language-sql">-- init_mysql.sql
+-- Init SQL per a MySQL
+-- Executat automàticament quan es crea el contenidor
+
+SET NAMES utf8mb4;
+SET CHARACTER SET utf8mb4;
+
+-- Taula d'estadístiques de lloc web
+CREATE TABLE IF NOT EXISTS website_stats (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    url VARCHAR(255),
+    status_code INT,
+    response_time_ms INT,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Taula de comandes
+CREATE TABLE IF NOT EXISTS orders (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_name VARCHAR(100),
+    product VARCHAR(100),
+    category VARCHAR(50),
+    quantity INT,
+    price DECIMAL(10,2),
+    order_date DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Taula d'usuaris actius
+CREATE TABLE IF NOT EXISTS user_activity (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100),
+    action VARCHAR(100),
+    page VARCHAR(255),
+    duration_seconds INT,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Inserir dades de exemple
+INSERT INTO website_stats (url, status_code, response_time_ms) VALUES
+('https://api.example.com/users', 200, 45),
+('https://api.example.com/products', 200, 32),
+('https://api.example.com/orders', 500, 0),
+('https://api.example.com/users', 200, 52),
+('https://api.example.com/products', 200, 28),
+('https://api.example.com/cart', 200, 78);
+
+INSERT INTO orders (customer_name, product, category, quantity, price) VALUES
+('Anna García', 'Portàtil HP', 'Electrònica', 1, 799.99),
+('Joan Martí', 'Ratolí Wireless', 'Perifèrics', 2, 29.99),
+('Maria López', 'Teclat Mecànic', 'Perifèrics', 1, 149.99),
+('Pere Sánchez', 'Monitor 27&quot;', 'Electrònica', 2, 249.00),
+('Laura Torres', 'Auriculars USB', 'Perifèrics', 3, 49.99),
+('David Ruiz', 'Webcam HD', 'Perifèrics', 1, 79.99);
+
+INSERT INTO user_activity (username, action, page, duration_seconds) VALUES
+('user1', 'view', '/products', 120),
+('user1', 'click', '/cart', 30),
+('user2', 'view', '/home', 45),
+('user2', 'view', '/products', 180),
+('user3', 'purchase', '/checkout', 60);
+
+</code></pre>
+<h4 id="configurar-mysql-a-grafana">Configurar MySQL a Grafana</h4>
+<ol>
+<li><strong>Connections → Data Sources → Add data source</strong></li>
+<li>Busca <strong>MySQL</strong></li>
+<li>Configura:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Camp</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Host</td>
+<td><code>mysql:3306</code></td>
+</tr>
+<tr>
+<td>Database</td>
+<td><code>monitoring</code></td>
+</tr>
+<tr>
+<td>User</td>
+<td><code>grafana</code></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><code>grafana123</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Teniu en compte que el port que poseu és el intern del servei en Docker, que és 3306 encara que cap a fora l'exposem com a 3307</p>
+</blockquote>
+<ol>
+<li>Clica <strong>Save &amp; Test</strong></li>
+</ol>
+<h4 id="consultes-mysql">Consultes MySQL</h4>
+<p>Estes consultes en SQL són per posar-les en la pestanya <code>Code</code> de <code>Explore</code>, però també podeu intentar fer consultes amb el formulari igual que en PostgreSQL.</p>
+<p><strong>Temps de resposta mitjà per URL</strong></p>
+<pre><code class="language-sql">SELECT
+    $__timeGroup(timestamp, '5m'),
+    url,
+    AVG(response_time_ms) as &quot;Response Time (ms)&quot;
+FROM website_stats
+WHERE $__timeFilter(timestamp)
+  AND status_code = 200
+GROUP BY 1, url
+ORDER BY 1
+</code></pre>
+<p><strong>Comandes per client</strong></p>
+<pre><code class="language-sql">SELECT
+    customer_name,
+    COUNT(*) as &quot;Total Orders&quot;,
+    SUM(quantity * price) as &quot;Total Spent&quot;
+FROM orders
+WHERE $__timeFilter(order_date)
+GROUP BY customer_name
+ORDER BY &quot;Total Spent&quot; DESC
+</code></pre>
+<p><strong>Distribució de codis de resposta</strong></p>
+<pre><code class="language-sql">SELECT
+    status_code,
+    COUNT(*) as count
+FROM website_stats
+WHERE $__timeFilter(timestamp)
+GROUP BY status_code
+</code></pre>
+<p>En tots els exemples que hem vist, sempre teniu l'opció de, quan ja teniu la consulta que necessiteu, afegir-la a un Dahsboard (existent o nou) amb el botó <code>Add</code>-&gt; <code>Add to dashboard</code>.</p>
+<p>Per exemple, afegim a un dashboard nou la consulta de comandes totals per client.</p>
+<pre><code class="language-sql">SELECT
+    customer_name,
+    COUNT(*) as &quot;Total Orders&quot;,
+    SUM(quantity * price) as &quot;Total Spent&quot;
+FROM orders
+WHERE $__timeFilter(order_date)
+GROUP BY customer_name
+ORDER BY &quot;Total Spent&quot; DESC
+</code></pre>
+<p>En el dashboard veurem el resultat de la consulta en format taula.</p>
+<p><img alt="Resultat de la consulta en format taula" src="../images/grafana18.jpg" /></p>
+<p>Però si aneu a la part dreta i canvieu el tipus de visualització a <code>Bar chart</code>, per exemple, veureu com també canvia la visualització:</p>
+<p><img alt="Resultat de la consulta en format bar chart" src="../images/grafana19.jpg" /></p>
+<hr />
+<h2 id="influxdb">InfluxDB</h2>
+<p><strong>InfluxDB</strong> és una base de dades de codi obert especialment dissenyada per emmagatzemar i consultar <strong>sèries temporals</strong> (time series). Una sèrie temporal és una seqüència de dades mesurades al llarg del temps, com ara temperatures d'un sensor cada segon, el preu d'una acció cada minut, o l'ús de CPU cada 5 segons.</p>
+<h3 id="conceptes-clau-dinfluxdb">Conceptes clau d'InfluxDB</h3>
+<p>InfluxDB utilitza un model de dades específic que cal entendre:</p>
+<table>
+<thead>
+<tr>
+<th>Concepte</th>
+<th>Descripció</th>
+<th>Equivalent SQL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Measurement</strong></td>
+<td>Categoria de dades (com una taula)</td>
+<td>Table</td>
+</tr>
+<tr>
+<td><strong>Tag</strong></td>
+<td>Metadades indexades (per a cerques ràpides)</td>
+<td>Indexada column</td>
+</tr>
+<tr>
+<td><strong>Field</strong></td>
+<td>Les dades reals (no indexades)</td>
+<td>Non-indexed column</td>
+</tr>
+<tr>
+<td><strong>Timestamp</strong></td>
+<td>Moment de la mesura</td>
+<td>Primary key (timestamp)</td>
+</tr>
+<tr>
+<td><strong>Point</strong></td>
+<td>Una única mesura amb tags i fields</td>
+<td>Row</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exemple pràctic:</strong> Imaginem un sensor de temperatura:</p>
+<pre><code>Measurement: temperature
+Tags:        location=warehouse-A, sensor_id=TEMP-001
+Fields:      value=22.5
+Timestamp:   2024-01-15 10:30:00 UTC
+</code></pre>
+<p>Això es traduiria en InfluxDB com:</p>
+<pre><code>temperature,location=warehouse-A,sensor_id=TEMP-001 value=22.5 1705315800000000000
+</code></pre>
+<h3 id="diferencies-entre-influxdb-i-prometheus">Diferències entre InfluxDB i Prometheus</h3>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>InfluxDB</th>
+<th>Prometheus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Model de dades</strong></td>
+<td>Pull/Push (flexible)</td>
+<td>Pull only</td>
+</tr>
+<tr>
+<td><strong>Escriptura</strong></td>
+<td>Alta velocitat d'ingesta</td>
+<td>Limitada</td>
+</tr>
+<tr>
+<td><strong>Consultes</strong></td>
+<td>Flux o InfluxQL</td>
+<td>PromQL</td>
+</tr>
+<tr>
+<td><strong>Retenció</strong></td>
+<td>Configurable (dies, mesos)</td>
+<td>Limitada</td>
+</tr>
+<tr>
+<td><strong>Escalabilitat</strong></td>
+<td>Molt alta</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td><strong>Ús recomanat</strong></td>
+<td>IoT, finances, DevOps</td>
+<td>Monitorització app</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quan-utilitzar-influxdb">Quan utilitzar InfluxDB?</h3>
+<ul>
+<li><strong>IoT i sensors</strong>: Milers de sensors enviant dades cada segon</li>
+<li><strong>Aplicacions financeres</strong>: Tick data, preus, volatilitat</li>
+<li><strong>Monitorització industrial</strong>: Temperatura, humitat, pressió</li>
+<li><strong>Anàlisi de rendiment</strong>: Mètriques d'aplicacions amb alta granularitat</li>
+<li><strong>Dades científiques</strong>: Experiments amb moltes lectures temporals</li>
+</ul>
+<h3 id="avantatges-sobre-prometheus">Avantatges sobre Prometheus</h3>
+<ul>
+<li><strong>Millor per a grans volums</strong>: Pot ingestar milions de punts per segon</li>
+<li><strong>Consultes més potents</strong>: Flux és molt expressiu</li>
+<li><strong>Continuous queries</strong>: Precalcula dades automàticament</li>
+<li><strong>Downsampling</strong>: Redueix resolució de dades antigues automàticament</li>
+<li><strong>Multiple buckets</strong>: Diferents polítiques de retenció per a diferents dades</li>
+</ul>
+<p><strong>docker-compose per a InfluxDB</strong></p>
+<p>El següent <code>docker-compose.yml</code> arranca InfluxDB amb Telegraf (per a recopilar mètriques del sistema) i Grafana.</p>
+<h3 id="configuracio-amb-variables-dentorn">Configuració amb variables d'entorn</h3>
+<pre><code class="language-yaml"># docker-compose.influxdb.yml
+services:
+  influxdb:
+    image: influxdb:2.7
+    container_name: influxdb
+    restart: unless-stopped
+    ports:
+      - &quot;8086:8086&quot;
+    environment:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=admin
+      - DOCKER_INFLUXDB_INIT_PASSWORD=admin123
+      - DOCKER_INFLUXDB_INIT_ORG=myorg
+      - DOCKER_INFLUXDB_INIT_BUCKET=sensors
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=my-super-secret-token
+    volumes:
+      - influxdb_data:/var/lib/influxdb2
+    networks:
+      - monitoring
+
+  telegraf:
+    image: telegraf:1.29
+    container_name: telegraf
+    restart: unless-stopped
+    volumes:
+      - ./telegraf.conf:/etc/telegraf/telegraf.conf:ro
+    depends_on:
+      - influxdb
+    networks:
+      - monitoring
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    restart: unless-stopped
+    ports:
+      - &quot;3000:3000&quot;
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin123
+    volumes:
+      - grafana_data:/var/lib/grafana
+    networks:
+      - monitoring
+    depends_on:
+      - influxdb
+
+volumes:
+  influxdb_data: {}
+  grafana_data: {}
+
+networks:
+  monitoring:
+    driver: bridge
+</code></pre>
+<h3 id="explicacio-de-les-variables-dentorn">Explicació de les variables d'entorn</h3>
+<p>Quan InfluxDB s'inicialitza per primera vegada amb <code>DOCKER_INFLUXDB_INIT_MODE=setup</code>, es creen automàticament els recursos inicials:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Descripció</th>
+<th>Valor en l'exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DOCKER_INFLUXDB_INIT_MODE</code></td>
+<td>Mode d'inicialització (<code>setup</code> o <code>upgrade</code>)</td>
+<td><code>setup</code></td>
+</tr>
+<tr>
+<td><code>DOCKER_INFLUXDB_INIT_USERNAME</code></td>
+<td>Nom d'usuari de l'administrador</td>
+<td><code>admin</code></td>
+</tr>
+<tr>
+<td><code>DOCKER_INFLUXDB_INIT_PASSWORD</code></td>
+<td>Contrasenya de l'administrador</td>
+<td><code>admin123</code></td>
+</tr>
+<tr>
+<td><code>DOCKER_INFLUXDB_INIT_ORG</code></td>
+<td>Organització (agrupació lògica)</td>
+<td><code>myorg</code></td>
+</tr>
+<tr>
+<td><code>DOCKER_INFLUXDB_INIT_BUCKET</code></td>
+<td>Bucket inicial (base de dades)</td>
+<td><code>sensors</code></td>
+</tr>
+<tr>
+<td><code>DOCKER_INFLUXDB_INIT_ADMIN_TOKEN</code></td>
+<td><strong>Token d'accés</strong> (necessari per a totes les connexions)</td>
+<td><code>my-super-secret-token</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>IMPORTANT - El token</strong>: El token és una clau d'autenticació necessària perquè qualsevol servei (Telegraf, Grafana, etc.) puga connectar a InfluxDB. En l'exemple hem posat <code>my-super-secret-token</code>, però en producció hauries de generar un token únic i complex.</p>
+</blockquote>
+<h3 id="com-generar-un-token-segur">Com generar un token segur</h3>
+<p>Per generar un token segur, pots utilitzar:</p>
+<pre><code class="language-bash"># Generar un token aleatori de 32 caràcters (Linux/Mac)
+openssl rand -base64 32
+
+# O amb Python
+python3 -c &quot;import secrets; print(secrets.token_urlsafe(32))&quot;
+
+# O utilitzar un generador online com https://randomkeygen.com/
+</code></pre>
+<p>El token generat ha de reemplaçar <code>my-super-secret-token</code> a:
+1. La variable <code>DOCKER_INFLUXDB_INIT_ADMIN_TOKEN</code> del docker-compose
+2. El fitxer <code>telegraf.conf</code>
+3. La configuració del datasource a Grafana</p>
+<h3 id="alternativa-influxdb-sense-inicialitzacio-automatica">Alternativa: InfluxDB sense inicialització automàtica</h3>
+<p>Si prefereixes configurar InfluxDB manualment des de la interfície web:</p>
+<ol>
+<li><strong>Elimina</strong> les variables d'inicialització del docker-compose:</li>
+</ol>
+<pre><code class="language-yaml">environment:
+  - DOCKER_INFLUXDB_INIT_MODE=setup  # Eliminar
+  # - DOCKER_INFLUXDB_INIT_USERNAME=admin  # Eliminar
+  # ...
+</code></pre>
+<ol>
+<li>
+<p><strong>Arranca</strong> el contenidor: <code>docker compose -f docker-compose/influxdb.yml up -d</code></p>
+</li>
+<li>
+<p><strong>Accedeix</strong> a http://localhost:8086 i segueix l'assistent de configuració</p>
+</li>
+<li>
+<p><strong>Crea</strong> una organització, bucket i token manualment</p>
+</li>
+<li>
+<p><strong>Utilitza</strong> el token generat a Grafana</p>
+</li>
+</ol>
+<h3 id="configuracio-de-telegraf">Configuració de Telegraf</h3>
+<p><strong>Telegraf</strong> és l'agent que recull mètriques i les envia a InfluxDB. És altament configurable i suporta centenars de inputs i outputs.</p>
+<pre><code class="language-toml"># telegraf.conf
+[agent]
+  interval = &quot;10s&quot;          # Quan de temps entre lectures
+  round_interval = true     # Arrodoneix l'interval
+  metric_batch_size = 1000  # Punts per lot
+  metric_buffer_limit = 10000
+
+# ── INPUTS: Dades que recollim ────────────────────────────────
+# CPU: Ús de processador
+[[inputs.cpu]]
+  percpu = true             # Per CPU individual
+  totalcpu = true           # Total de totes les CPUs
+  collect_cpu_time = false
+
+# MEM: Ús de memòria
+[[inputs.mem]]
+
+# DISK: Espai en disc
+[[inputs.disk]]
+  ignore_fs = [&quot;tmpfs&quot;, &quot;devtmpfs&quot;, &quot;devfs&quot;, &quot;iso9660&quot;]
+
+# FILESYSTEM: Sistemes de fitxers
+[[inputs.filesystem]]
+
+# NET: Tràfic de xarxa
+[[inputs.net]]
+  interfaces = [&quot;eth*&quot;, &quot;en*&quot;]
+
+# PROCESSES: Processos en execució
+[[inputs.processes]]
+
+# SYSTEM: Informació general del sistema
+[[inputs.system]]
+
+# ── OUTPUT: On enviem les dades ────────────────────────────────
+[[outputs.influxdb_v2]]
+  urls = [&quot;http://influxdb:8086&quot;]  # URL del contenidor
+  token = &quot;my-super-secret-token&quot;  # Token d'autenticació
+  organization = &quot;myorg&quot;            # Organització
+  bucket = &quot;sensors&quot;                # Bucket destí
+  content_encoding = &quot;gzip&quot;         # Compressió
+</code></pre>
+<h3 id="verificar-que-telegraf-funciona">Verificar que Telegraf funciona</h3>
+<p>Després d'arrancar el stack, pots verificar que Telegraf està enviant dades:</p>
+<pre><code class="language-bash"># Veure logs de Telegraf
+docker compose logs telegraf
+
+# Hauries de veure missatges com:
+# 2024-01-15T10:30:00Z I! Starting Telegraf 1.29.0
+# 2024-01-15T10:30:00Z I! Loaded inputs: cpu disk mem net
+# 2024-01-15T10:30:00Z I! Loaded outputs: influxdb_v2
+</code></pre>
+<p>També pots accedir a la interfície web d'InfluxDB (http://localhost:8086) i verificar que apareixen dades al bucket <code>sensors</code>.</p>
+<h3 id="configurar-influxdb-a-grafana">Configurar InfluxDB a Grafana</h3>
+<ol>
+<li><strong>Accedeix a Grafana</strong>: http://localhost:3000</li>
+<li><strong>Navega a connexions</strong>: Menú lateral → <strong>Connections</strong> → <strong>Data Sources</strong></li>
+<li><strong>Afegeix un nou datasource</strong>: Clica el botó blau <strong>Add data source</strong></li>
+<li><strong>Busca InfluxDB</strong>: Escriu "InfluxDB" al cercador o busca'l a la categoria <strong>Time series databases</strong></li>
+<li><strong>Configura el datasource</strong>:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Camp</th>
+<th>Valor</th>
+<th>Explicació</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td><code>InfluxDB Local</code></td>
+<td>Nom identificatiu</td>
+</tr>
+<tr>
+<td>URL</td>
+<td><code>http://influxdb:8086</code></td>
+<td>URL del contenidor Docker</td>
+</tr>
+<tr>
+<td>Auth</td>
+<td><strong>Browser</strong></td>
+<td>Mètode d'autenticació</td>
+</tr>
+<tr>
+<td>Organization</td>
+<td><code>myorg</code></td>
+<td>Organització creada a InfluxDB</td>
+</tr>
+<tr>
+<td>Token</td>
+<td><code>my-super-secret-token</code></td>
+<td><strong>Token generat anteriorment</strong></td>
+</tr>
+<tr>
+<td>Default Bucket</td>
+<td><code>sensors</code></td>
+<td>Bucket on Telegraf envia les dades</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Important</strong>: La URL ha de ser <code>http://influxdb:8086</code> (nom del servei Docker), no <code>localhost:8086</code>. Això és perquè Grafana accedix al servei des de dins de la xarxa Docker.</p>
+</blockquote>
+<ol>
+<li><strong>Verifica la connexió</strong>: Clica <strong>Save &amp; test</strong></li>
+</ol>
+<p>Si tot funciona, veuràs un missatge verd: <strong>"Data source is working"</strong></p>
+<h3 id="obtenir-el-token-des-de-la-interficie-dinfluxdb">Obtenir el token des de la interfície d'InfluxDB</h3>
+<p>Si no has utilitzat la inicialització automàtica i has configurat InfluxDB manualment:</p>
+<ol>
+<li>Accedeix a http://localhost:8086</li>
+<li>Inicia sessió amb les teues credencials</li>
+<li>Ves a <strong>Load Data</strong> → <strong>Tokens</strong></li>
+<li>Clica el token que vulgues utilitzar o crea'n un de nou amb <strong>Generate Token</strong> → <strong>Read/Write Token</strong></li>
+<li>Copia el token i utilitza'l a Grafana</li>
+</ol>
+<h3 id="resolucio-de-problemes">Resolució de problemes</h3>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Solució</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Connection refused"</td>
+<td>Verifica que InfluxDB està arrancat: <code>docker compose ps</code></td>
+</tr>
+<tr>
+<td>"Token is invalid"</td>
+<td>Comprova que el token coincidisca exactament</td>
+</tr>
+<tr>
+<td>"Bucket not found"</td>
+<td>Verifica que el bucket <code>sensors</code> existix a InfluxDB</td>
+</tr>
+<tr>
+<td>"Permission denied"</td>
+<td>Crea un token amb permisos de lectura i escriptura</td>
+</tr>
+</tbody>
+</table>
+<h3 id="flux-llenguatge-de-consultes">Flux: Llenguatge de consultes</h3>
+<p>InfluxDB 2.x utilitza <strong>Flux</strong> com a llenguatge de consultes.</p>
+<p><strong>Consultes bàsiques</strong></p>
+<pre><code class="language-flux">// Totes les dades d'un mesurament
+from(bucket: &quot;sensors&quot;)
+  |&gt; range(start: -1h)
+  |&gt; filter(fn: (r) =&gt; r._measurement == &quot;cpu&quot;)
+
+// Amb condicions
+from(bucket: &quot;sensors&quot;)
+  |&gt; range(start: -1h)
+  |&gt; filter(fn: (r) =&gt; r._measurement == &quot;cpu&quot;)
+  |&gt; filter(fn: (r) =&gt; r.cpu == &quot;cpu0&quot;)
+
+// Múltiples measurements
+from(bucket: &quot;sensors&quot;)
+  |&gt; range(start: -1h)
+  |&gt; filter(fn: (r) =&gt; r._measurement == &quot;cpu&quot; or r._measurement == &quot;mem&quot;)
+
+// Agregacions
+from(bucket: &quot;sensors&quot;)
+  |&gt; range(start: -1h)
+  |&gt; filter(fn: (r) =&gt; r._measurement == &quot;cpu&quot;)
+  |&gt; mean()
+</code></pre>
+<p><strong>Funcions d'agregació</strong></p>
+<pre><code class="language-flux">// Mitjana
+|&gt; mean()
+
+// Màxim
+|&gt; max()
+
+// Mínim
+|&gt; min()
+
+// Suma
+|&gt; sum()
+
+// Comptador
+|&gt; count()
+
+// Percentils
+|&gt; quantile(q: 0.95)
+</code></pre>
+<p><strong>Grouping i windowing</strong></p>
+<pre><code class="language-flux">from(bucket: &quot;sensors&quot;)
+  |&gt; range(start: -24h)
+  |&gt; filter(fn: (r) =&gt; r._measurement == &quot;cpu&quot;)
+  |&gt; aggregateWindow(every: 5m, fn: mean)
+  |&gt; group(columns: [&quot;cpu&quot;])
+</code></pre>
+<h3 id="queries-a-grafana">Queries a Grafana</h3>
+<p>A Grafana, les consultes Flux es defineixen en el panell:</p>
+<pre><code class="language-flux">from(bucket: &quot;sensors&quot;)
+  |&gt; range(start: v.timeRangeStart, stop: v.timeRangeStop)
+  |&gt; filter(fn: (r) =&gt; r._measurement == &quot;cpu&quot;)
+  |&gt; filter(fn: (r) =&gt; r._field == &quot;usage_idle&quot;)
+  |&gt; filter(fn: (r) =&gt; r.cpu == &quot;${cpu}&quot;)
+  |&gt; aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)
+  |&gt; map(fn: (r) =&gt; ({r with _value: 100.0 - r._value}))
+</code></pre>
+<hr />
+<h2 id="mongodb">MongoDB</h2>
+<p><strong>MongoDB</strong> és una base de dades NoSQL de codi obert <strong>orientada a documents</strong>. A diferència de les bases de dades relacionals (SQL), MongoDB emmagatzema les dades en documents similars a <strong>JSON</strong> anomenats <strong>BSON</strong> (Binary JSON). Conceptes claus en MongoDB:</p>
+<table>
+<thead>
+<tr>
+<th>Concepte MongoDB</th>
+<th>Equivalent SQL</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Database</strong></td>
+<td>Database</td>
+<td>Contenidor de col·leccions</td>
+</tr>
+<tr>
+<td><strong>Collection</strong></td>
+<td>Table</td>
+<td>Grup de documents</td>
+</tr>
+<tr>
+<td><strong>Document</strong></td>
+<td>Row</td>
+<td>Una entrada amb camps i valors</td>
+</tr>
+<tr>
+<td><strong>Field</strong></td>
+<td>Column</td>
+<td>Parell clau-valor dins d'un document</td>
+</tr>
+<tr>
+<td><strong>ObjectId</strong></td>
+<td>Primary Key</td>
+<td>Identificador únic del document</td>
+</tr>
+<tr>
+<td><strong>Embedded document</strong></td>
+<td>-</td>
+<td>Document dins d'un altre document</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exemple de document:</strong></p>
+<pre><code class="language-json">{
+  &quot;_id&quot;: ObjectId(&quot;...&quot;),
+  &quot;username&quot;: &quot;admin&quot;,
+  &quot;email&quot;: &quot;admin@example.com&quot;,
+  &quot;role&quot;: &quot;admin&quot;,
+  &quot;profile&quot;: {
+    &quot;name&quot;: &quot;Administrador&quot;,
+    &quot;department&quot;: &quot;IT&quot;
+  },
+  &quot;created_at&quot;: ISODate(&quot;2024-01-15&quot;),
+  &quot;tags&quot;: [&quot;admin&quot;, &quot;security&quot;, &quot;manager&quot;]
+}
+</code></pre>
+<h3 id="quan-utilitzar-mongodb-amb-grafana">Quan utilitzar MongoDB amb Grafana?</h3>
+<p>MongoDB és ideal quan:</p>
+<ul>
+<li><strong>Estructura flexible</strong>: Les dades no tenen un esquema fix (sensors IoT amb diferents tipus de mesures)</li>
+<li><strong>Documents embebuts</strong>: Pots guardar totes les dades relacionades en un sol document</li>
+<li><strong>Esquema variable</strong>: L'estructura de les dades canvia amb el temps</li>
+<li><strong>Volum gran</strong>: Milions de documents amb cerca ràpida per índex</li>
+<li><strong>Prototipat ràpid</strong>: No cal definir l'esquema abans d'inserir dades</li>
+</ul>
+<h3 id="comparativa-mongodb-vs-bases-de-dades-sql">Comparativa: MongoDB vs Bases de dades SQL</h3>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>MongoDB</th>
+<th>PostgreSQL/MySQL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Model</strong></td>
+<td>Documents (BSON)</td>
+<td>Taules (files/columnes)</td>
+</tr>
+<tr>
+<td><strong>Esquema</strong></td>
+<td>Flexible (sense esquema fix)</td>
+<td>Rigid (cal definir-lo)</td>
+</tr>
+<tr>
+<td><strong>Relacions</strong></td>
+<td>Documents embebuts o referències</td>
+<td>JOINs entre taules</td>
+</tr>
+<tr>
+<td><strong>Transaccions</strong></td>
+<td>Sessions, transactions</td>
+<td>ACID complet</td>
+</tr>
+<tr>
+<td><strong>Índexs</strong></td>
+<td>Camps simples i compostos</td>
+<td>Molt optimitzats</td>
+</tr>
+<tr>
+<td><strong>Millor per</strong></td>
+<td>IoT, logs, catàlegs</td>
+<td>Dades transaccionals</td>
+</tr>
+</tbody>
+</table>
+<h3 id="avantatges-de-mongodb">Avantatges de MongoDB</h3>
+<ul>
+<li><strong>Sense esquema fix</strong>: Pots afegir nous camps sense migracions</li>
+<li><strong>Documents embebuts</strong>: Redueix consultes, millora rendiment</li>
+<li><strong>Horitzontalment escalable</strong>: Sharding per a dades massives</li>
+<li><strong>Índexs potents</strong>: Suport per a índexs geoespacials, text, i compostos</li>
+<li><strong>BSON</strong>: Suport natiu per a dates, ObjectId, i altres tipus especials</li>
+</ul>
+<p><strong>docker-compose per a MongoDB</strong></p>
+<pre><code class="language-yaml"># docker-compose.mongodb.yml
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: mongodb
+    restart: unless-stopped
+    ports:
+      - &quot;27017:27017&quot;
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin123
+      MONGO_INITDB_DATABASE: monitoring
+    volumes:
+      - mongodb_data:/data/db
+      - ./init.js:/docker-entrypoint-initdb.d/init.js
+    networks:
+      - monitoring
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    restart: unless-stopped
+    ports:
+      - &quot;3000:3000&quot;
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin123
+    volumes:
+      - grafana_data:/var/lib/grafana
+    networks:
+      - monitoring
+    depends_on:
+      - mongodb
+
+volumes:
+  mongodb_data: {}
+  grafana_data: {}
+
+networks:
+  monitoring:
+    driver: bridge
+</code></pre>
+<h3 id="script-dinicialitzacio">Script d'inicialització</h3>
+<pre><code class="language-javascript">// init.js
+use('monitoring');
+
+// Col·lecció de sensors IoT
+db.sensors.insertMany([
+    {
+        sensor_id: &quot;TEMP-001&quot;,
+        type: &quot;temperature&quot;,
+        location: { building: &quot;A&quot;, floor: 1, room: &quot;101&quot; },
+        readings: [
+            { timestamp: new Date(), value: 22.5, unit: &quot;°C&quot; },
+            { timestamp: new Date(Date.now() - 3600000), value: 21.8, unit: &quot;°C&quot; }
+        ]
+    },
+    {
+        sensor_id: &quot;HUM-001&quot;,
+        type: &quot;humidity&quot;,
+        location: { building: &quot;A&quot;, floor: 1, room: &quot;101&quot; },
+        readings: [
+            { timestamp: new Date(), value: 45.2, unit: &quot;%&quot; }
+        ]
+    }
+]);
+
+// Col·lecció de logs d'aplicació
+db.app_logs.insertMany([
+    { level: &quot;INFO&quot;, message: &quot;Application started&quot;, timestamp: new Date(), service: &quot;api&quot; },
+    { level: &quot;WARN&quot;, message: &quot;High memory usage detected&quot;, timestamp: new Date(), service: &quot;worker&quot; },
+    { level: &quot;ERROR&quot;, message: &quot;Connection timeout&quot;, timestamp: new Date(), service: &quot;api&quot; }
+]);
+
+print(&quot;MongoDB initialized with sample data&quot;);
+</code></pre>
+<h3 id="plugin-de-mongodb-per-a-grafana">Plugin de MongoDB per a Grafana</h3>
+<p>Grafana no té suport natiu per a MongoDB. Necessitem instal·lar el plugin <strong>"mongodb-datasource"</strong>.</p>
+<h4 id="installacio-del-plugin">Instal·lació del plugin</h4>
+<pre><code class="language-bash">docker exec -it grafana grafana-cli plugins install volkovlabs-mongodb-datasource
+docker restart grafana
+</code></pre>
+<p>O afegir al docker-compose:</p>
+<pre><code class="language-yaml">grafana:
+  ...
+  environment:
+    GF_INSTALL_PLUGINS: volkovlabs-mongodb-datasource
+</code></pre>
+<h3 id="configurar-mongodb-a-grafana">Configurar MongoDB a Grafana</h3>
+<ol>
+<li><strong>Connections → Data Sources → Add data source</strong></li>
+<li>Cerca <strong>MongoDB</strong> (ha d'aparèixer després d'instal·lar el plugin)</li>
+<li>Configura:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Camp</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Server</td>
+<td><code>mongodb://admin:admin123@mongodb:27017</code></td>
+</tr>
+<tr>
+<td>Database</td>
+<td><code>monitoring</code></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Clica <strong>Save &amp; Test</strong></li>
+</ol>
+<h3 id="consultes-mongodb-amb-leditor-visual">Consultes MongoDB amb l'editor visual</h3>
+<p>L'editor de MongoDB a Grafana permet:</p>
+<ul>
+<li><strong>Collection</strong>: Seleccionar la col·lecció</li>
+<li><strong>Find</strong>: Filtrar documents</li>
+<li><strong>Project</strong>: Seleccionar camps</li>
+<li><strong>Sort</strong>: Ordenar resultats</li>
+<li><strong>Limit</strong>: Limitar resultats</li>
+</ul>
+<p><strong>Exemple: Temperatures del darrer dia</strong></p>
+<pre><code>Collection: sensors
+Find: { type: &quot;temperature&quot; }
+Project: { sensor_id: 1, readings: 1 }
+</code></pre>
+<h3 id="pipeline-dagregacio">Pipeline d'agregació</h3>
+<p>Per a consultes complexes, utilitza l'aggregation pipeline:</p>
+<pre><code class="language-javascript">[
+    { $match: { type: &quot;temperature&quot; } },
+    { $unwind: &quot;$readings&quot; },
+    { $match: { &quot;readings.timestamp&quot;: { $gte: ISODate(&quot;2024-01-01&quot;) } } },
+    { $group: {
+        _id: &quot;$sensor_id&quot;,
+        avg_temp: { $avg: &quot;$readings.value&quot; },
+        max_temp: { $max: &quot;$readings.value&quot; },
+        min_temp: { $min: &quot;$readings.value&quot; }
+    }},
+    { $sort: { avg_temp: -1 } }
+]
+</code></pre>
+<hr />
+<h2 id="variables-i-plantilles-en-grafana">Variables i Plantilles en Grafana</h2>
+<h3 id="concepte-de-variables">Concepte de Variables</h3>
+<p>Les variables permeten crear dashboards dinàmics on pots canviar valors (servidors, sensors, time ranges) sense duplicar dashboards.</p>
+<h3 id="avantatges">Avantatges</h3>
+<ul>
+<li>Un sol dashboard per a múltiples servidors</li>
+<li>Consultes més llegibles</li>
+<li>Filtratge dinàmic</li>
+</ul>
+<h3 id="crear-variables">Crear Variables</h3>
+<ol>
+<li>Ves a <strong>Dashboard Settings → Variables</strong></li>
+<li>Clica <strong>Add variable</strong></li>
+</ol>
+<p><strong>Variable d'un datasource</strong></p>
+<pre><code>Name: server
+Label: Servidor
+Type: Query
+Data source: Prometheus
+Query: label_values(up, instance)
+</code></pre>
+<p><strong>Variable per a intervals de temps</strong></p>
+<pre><code>Name: interval
+Label: Interval
+Type: Interval
+Values: 30s, 1m, 5m, 10m, 30m, 1h
+</code></pre>
+<p><strong>Variable amb valors personalitzats</strong></p>
+<pre><code>Name: environment
+Label: Entorn
+Type: Custom
+Values: production, staging, development
+</code></pre>
+<h3 id="utilitzar-variables-en-consultes">Utilitzar Variables en Consultes</h3>
+<pre><code class="language-promql"># Substituir amb $variable
+rate(node_cpu_seconds_total{instance=&quot;$server&quot;}[5m])
+
+# Amb expressió regular
+rate(node_cpu_seconds_total{instance=~&quot;$server.*&quot;}[5m])
+
+# Variable en el nom de mètrica
+${metric_name}{instance=&quot;$server&quot;}
+
+# Variable com a interval
+rate(node_cpu_seconds_total{instance=&quot;$server&quot;}[$interval])
+</code></pre>
+<h3 id="multi-select">Multi-select</h3>
+<pre><code class="language-promql"># Seleccionar múltiples valors
+{instance=~&quot;${server:regex}&quot;}
+
+# Amb variable multi-select
+rate(node_cpu_seconds_total{instance=~&quot;${server:pipe}&quot;}[5m])
+</code></pre>
+<h3 id="variables-amb-postgresql">Variables amb PostgreSQL</h3>
+<pre><code class="language-sql">-- Variable: Tots els servidors
+SELECT DISTINCT server FROM cpu_metrics ORDER BY server
+
+-- Variable: Rang de dates
+SELECT 
+    $__timeGroup(timestamp, '$__interval') as time,
+    avg(cpu_usage) 
+FROM cpu_metrics
+WHERE $__timeFilter(timestamp)
+  AND server = '$server'
+GROUP BY 1
+</code></pre>
+<h2 id="templates-i-links">Templates i Links</h2>
+<h3 id="enllacos-entre-dashboards">Enllaços entre dashboards</h3>
+<ol>
+<li>Ves a <strong>Dashboard Settings → Variables</strong></li>
+<li>Clica <strong>Add variable → Constant</strong></li>
+<li>Configura:</li>
+<li>Name: <code>target_dashboard</code></li>
+<li>Hide: Hidden</li>
+<li>
+<p>Options: ID del dashboard destí</p>
+</li>
+<li>
+<p>En el panell, crea un link:</p>
+</li>
+<li>Type: <strong>Link</strong></li>
+<li>URL: <code>/d/$target_dashboard?var-server=${server}</code></li>
+</ol>
+<h3 id="variables-globals">Variables globals</h3>
+<pre><code class="language-yaml"># grafana.ini
+[users]
+default_theme = light
+
+[dashboards]
+default_home_dashboard_path = /etc/grafana/provisioning/dashboards/overview.json
+</code></pre>
+<hr />
+<h2 id="panells-i-visualitzacions">Panells i Visualitzacions</h2>
+<p>Hi ha diferents tipus de visualitzacions que podem incorporar a un dashboard en Grafana. Alguns dels meś utilitzats són:</p>
+<h3 id="time-series-serie-temporal">Time Series (Sèrie Temporal)</h3>
+<p>El panell per defecte per a dades temporals.</p>
+<p><strong>Configuració comuna:</strong>
+- <strong>Graph styles</strong>: Línia, àrea, barres
+- <strong>Line interpolation</strong>: Suau, pas a pas
+- <strong>Point size</strong>: Mida dels punts
+- <strong>Gradient mode</strong>: Opacitat de l'àrea sota la corba</p>
+<h3 id="stat">Stat</h3>
+<p>Mostra un valor individual amb opcions de tendència.</p>
+<pre><code>Configuració:
+- Show: Value only / Label and Value / All
+- Color mode: Background solid / Background gradient / None
+- Graph mode: None / Area
+</code></pre>
+<h3 id="gauge">Gauge</h3>
+<p>Indicador visual amb rangs de colors.</p>
+<pre><code>Configuració:
+- Min/Max: Valors límit
+- Thresholds: Verd (0-50), Groc (50-80), Vermell (80-100)
+- Unit: percent, bytes, etc.
+</code></pre>
+<h3 id="bar-gauge">Bar Gauge</h3>
+<p>Barres horitzontals o verticals amb gradient de colors.</p>
+<h3 id="table">Table</h3>
+<p>Dades tabulars amb opcions de cerca i ordenació.</p>
+<p><strong>Opcions:</strong>
+- <strong>Cell display mode</strong>: Color background, Color text, JSON view
+- <strong>Filter by name</strong>: Cercar columnes
+- <strong>Sort by</strong>: Ordenar per columna</p>
+<h3 id="pie-chart">Pie Chart</h3>
+<p>Gràfic circular per mostrar proporcions.</p>
+<h3 id="histogram">Histogram</h3>
+<p>Distribució de valors en intervals.</p>
+<h3 id="heatmap">Heatmap</h3>
+<p>Densitat de dades amb colors (similar a Kibana).</p>
+<h3 id="logs">Logs</h3>
+<p>Visualització de logs amb cerca i filtratge.</p>
+<h3 id="text">Text</h3>
+<p>Panell estàtic amb suport Markdown i HTML.</p>
+<h2 id="transformacions">Transformacions</h2>
+<p>Les transformacions permeten modificar les dades abans de visualitzar-les. Alguns exemples:</p>
+<p><strong>Ordenar per camp</strong></p>
+<pre><code>Input: Taula desordenada
+Output: Taula ordenada per columna específica
+</code></pre>
+<p><strong>Agrupar per temps</strong></p>
+<pre><code>Combina múltiples series en intervals de temps comuns
+</code></pre>
+<p><strong>Fusionar camps</strong></p>
+<pre><code>Combina camps amb el mateix nom de múltiples consultes
+</code></pre>
+<p><strong>Reduir</strong></p>
+<pre><code>De sèrie temporal a valor únic (mitjana, suma, màxim, etc.)
+</code></pre>
+<p><strong>Outer Join</strong></p>
+<pre><code>Uneix consultes basant-se en una etiqueta comuna
+</code></pre>
+<p><strong>Configurar des de camp</strong></p>
+<pre><code>Crea columnes dinàmiques des de camps JSON
+</code></pre>
+<p>Podeu anar fent proves canviant la forma de mostrar la mateixa consulta. </p>
+<h2 id="field-overrides">Field Overrides</h2>
+<p>Els overrides permeten personalitzar camps específics sense afectar altres.</p>
+<h3 id="exemple-color-diferent-per-cada-servei">Exemple: Color diferent per cada servei</h3>
+<ol>
+<li>Clica <strong>Overrides → Add override</strong></li>
+<li>Selecciona camps: <code>Series: /.*/</code></li>
+<li>Afegir regla:</li>
+<li><strong>Fields with name</strong>: instance</li>
+<li><strong>Static text</strong>: Color: #FF5733</li>
+</ol>
+<h3 id="overrides-comuns">Overrides comuns</h3>
+<table>
+<thead>
+<tr>
+<th>Override</th>
+<th>Ús</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hide from</strong></td>
+<td>Ocultar en legend, tooltip, etc.</td>
+</tr>
+<tr>
+<td><strong>Display name</strong></td>
+<td>Canviar el nom de la serie</td>
+</tr>
+<tr>
+<td><strong>Colors</strong></td>
+<td>Assignar colors condicionals</td>
+</tr>
+<tr>
+<td><strong>Thresholds</strong></td>
+<td>Canviar llindars</td>
+</tr>
+<tr>
+<td><strong>Data links</strong></td>
+<td>Afegir enllaços als valors</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="sistema-dalertes">Sistema d'Alertes</h2>
+<p>El sistema d'alertes de Grafana (<code>Grafana Alerting</code>) té dos modes:</p>
+<ol>
+<li><strong>Legacy Alerts</strong>: Sistema clàssic (encara funcional)</li>
+<li><strong>Grafana Alerting (unified alerting)</strong>: Nou sistema centralitzat</li>
+</ol>
+<p>Utilitzarem el <strong>unified alerting</strong> (recomanat).</p>
+<h3 id="crear-una-alerta">Crear una Alerta</h3>
+<ol>
+<li>Edita un panell existent</li>
+<li>Clica en <strong>Alert</strong> a la pestanya lateral</li>
+</ol>
+<h4 id="pas-1-definir-la-consulta">Pas 1: Definir la consulta</h4>
+<pre><code class="language-promql"># CPU superior al 80%
+100 - (rate(node_cpu_seconds_total{mode=&quot;idle&quot;}[5m]) * 100) &gt; 80
+</code></pre>
+<h4 id="pas-2-configurar-condicions">Pas 2: Configurar condicions</h4>
+<pre><code>WHEN: avg() OF query(A)
+IS ABOVE: 80
+FOR: 5m
+</code></pre>
+<h4 id="pas-3-crear-notificacions">Pas 3: Crear notificacions</h4>
+<ol>
+<li>Ves a <strong>Alerting → Contact points</strong></li>
+<li>Clica <strong>Add contact point</strong></li>
+</ol>
+<p><strong>Email</strong></p>
+<pre><code>Name: admin-email
+Email: admin@example.com
+</code></pre>
+<p><strong>Slack</strong></p>
+<pre><code>Name: slack-alerts
+Integration: Slack
+Webhook URL: https://hooks.slack.com/services/XXX/YYY/ZZZ
+</code></pre>
+<p><strong>Webhook</strong></p>
+<pre><code>Name: webhook-alerts
+Webhook URL: http://myservice:8080/alerts
+</code></pre>
+<h4 id="pas-4-crear-politica-dalertes">Pas 4: Crear política d'alertes</h4>
+<ol>
+<li>Ves a <strong>Alerting → Notification policies</strong></li>
+<li>Clica <strong>Add policy</strong></li>
+<li>Configura:</li>
+<li><strong>Match by</strong>: Severity = critical</li>
+<li><strong>Contact point</strong>: slack-alerts</li>
+<li><strong>Timing</strong>: Send every 5m</li>
+</ol>
+<h3 id="templates-dalertes">Templates d'Alertes</h3>
+<p>Personalitza el contingut dels missatges:</p>
+<pre><code class="language-go">{{ define &quot;my_alert&quot; }}
+[{{ .Status }}] {{ .GroupLabels.alertname }}
+
+{{ range .Alerts }}
+  {{ if .Labels.instance }}Instance: {{ .Labels.instance }}{{ end }}
+  {{ if .Labels.job }}Job: {{ .Labels.job }}{{ end }}
+  Value: {{ .Values }}
+  {{ .Annotations.summary }}
+{{ end }}
+{{ end }}
+</code></pre>
+<h3 id="docker-compose-amb-alertmanager-opcional">docker-compose amb Alertmanager (opcional)</h3>
+<pre><code class="language-yaml"># docker-compose.alerts.yml
+services:
+  alertmanager:
+    image: prom/alertmanager:latest
+    container_name: alertmanager
+    restart: unless-stopped
+    ports:
+      - &quot;9093:9093&quot;
+    volumes:
+      - ./alertmanager.yml:/etc/alertmanager/alertmanager.yml
+      - alertmanager_data:/alertmanager
+    command:
+      - '--config.file=/etc/alertmanager/alertmanager.yml'
+      - '--storage.path=/alertmanager'
+    networks:
+      - monitoring
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    restart: unless-stopped
+    ports:
+      - &quot;3000:3000&quot;
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin123
+    volumes:
+      - grafana_data:/var/lib/grafana
+    networks:
+      - monitoring
+
+volumes:
+  alertmanager_data: {}
+  grafana_data: {}
+
+networks:
+  monitoring:
+    driver: bridge
+</code></pre>
+<pre><code class="language-yaml"># alertmanager.yml
+global:
+  resolve_timeout: 5m
+
+route:
+  group_by: ['alertname']
+  group_wait: 10s
+  group_interval: 10s
+  repeat_interval: 1h
+  receiver: 'slack-notifications'
+
+receivers:
+  - name: 'slack-notifications'
+    slack_configs:
+      - channel: '#alerts'
+        send_resolved: true
+        api_url: 'https://hooks.slack.com/services/XXX/YYY/ZZZ'
+        title: '{{ range .Alerts }}{{ .Annotations.summary }}{{ end }}'
+</code></pre>
+<hr />
+<h2 id="importar-i-exportar-dashboards">Importar i Exportar Dashboards</h2>
+<h3 id="exportar-un-dashboard">Exportar un Dashboard</h3>
+<ol>
+<li>Ves al dashboard</li>
+<li>Clica <strong>Share → Export</strong></li>
+<li>Selecciona <strong>Export for sharing externally</strong> (opcional)</li>
+<li>Desa com a JSON</li>
+</ol>
+<h3 id="via-api">Via API</h3>
+<pre><code class="language-bash">curl -s -H &quot;Authorization: Bearer $GF_API_KEY&quot; \
+  http://localhost:3000/api/dashboards/uid/$DASHBOARD_UID | jq .
+</code></pre>
+<h3 id="importar-un-dashboard">Importar un Dashboard</h3>
+<ol>
+<li><strong>Dashboards → Import</strong></li>
+<li>Puja el fitxer JSON o enganxa el contingut</li>
+<li>Selecciona el datasource</li>
+<li>Clica <strong>Import</strong></li>
+</ol>
+<h3 id="importar-dashboards-predefinits-des-de-grafanacom">Importar Dashboards predefinits des de Grafana.com</h3>
+<ol>
+<li>Ves a https://grafana.com/grafana/dashboards/</li>
+<li>Cerca el dashboard (ex: "Node Exporter Full")</li>
+<li>Clica <strong>Copy ID to Clipboard</strong></li>
+<li>A Grafana: <strong>Dashboards → Import → Paste the ID</strong></li>
+</ol>
+<h2 id="aprovisionament-provisioning">Aprovisionament (Provisioning)</h2>
+<p>Per crear dashboards automàticament amb Docker:</p>
+<pre><code class="language-yaml"># docker-compose.provisioned.yml
+services:
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    restart: unless-stopped
+    ports:
+      - &quot;3000:3000&quot;
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin123
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./provisioning/dashboards:/etc/grafana/provisioning/dashboards
+      - ./provisioning/datasources:/etc/grafana/provisioning/datasources
+      - ./dashboards:/var/lib/grafana/dashboards
+    networks:
+      - monitoring
+</code></pre>
+<pre><code class="language-yaml"># provisioning/datasources/prometheus.yml
+apiVersion: 1
+
+datasources:
+  - name: Prometheus
+    type: prometheus
+    access: proxy
+    url: http://prometheus:9090
+    isDefault: true
+    editable: false
+</code></pre>
+<pre><code class="language-yaml"># provisioning/dashboards/dashboards.yml
+apiVersion: 1
+
+providers:
+  - name: 'default'
+    orgId: 1
+    folder: ''
+    type: file
+    disableDeletion: false
+    updateIntervalSeconds: 10
+    options:
+      path: /var/lib/grafana/dashboards
+</code></pre>
+<hr />
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="connection-refused-o-connection-timeout">"Connection refused" o "Connection timeout"</h3>
+<p><strong>Causes possibles:</strong></p>
+<ol>
+<li>
+<p><strong>El servei no està arrancat</strong>
+   <code>bash
+   docker compose ps</code></p>
+</li>
+<li>
+<p><strong>El port està ocupat</strong>
+   ```bash
+   # Linux
+   lsof -i :3000</p>
+</li>
+</ol>
+<p># Windows (PowerShell)
+   netstat -ano | findstr :3000
+   ```</p>
+<ol>
+<li><strong>Xarxes Docker diferents</strong>
+   <code>bash
+   # Verificar que Grafana i el datasource estan en la mateixa xarxa
+   docker network inspect monitoring</code></li>
+</ol>
+<p><strong>Solució:</strong> Assegura't que Grafana pot accedir al datasource utilitzant el nom del servei Docker (no <code>localhost</code>).</p>
+<h3 id="permission-denied-a-la-base-de-dades">"Permission denied" a la base de dades</h3>
+<p><strong>PostgreSQL:</strong></p>
+<pre><code class="language-sql">-- Crear usuari amb permisos
+GRANT ALL PRIVILEGES ON DATABASE monitoring TO grafana;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO grafana;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO grafana;
+</code></pre>
+<p><strong>MySQL:</strong></p>
+<pre><code class="language-sql">GRANT ALL PRIVILEGES ON monitoring.* TO 'grafana'@'%';
+FLUSH PRIVILEGES;
+</code></pre>
+<h3 id="problemes-amb-prometheus">Problemes amb Prometheus</h3>
+<h4 id="no-data-en-els-panells">"No data" en els panells</h4>
+<ol>
+<li>
+<p><strong>Verificar que Prometheus scrapeja les dades:</strong>
+   <code>bash
+   curl http://localhost:9090/api/v1/targets</code></p>
+</li>
+<li>
+<p><strong>Comprovar expressions al navegador de Prometheus:</strong></p>
+</li>
+<li>Ves a http://localhost:9090/graph</li>
+<li>
+<p>Executa la consulta directament</p>
+</li>
+<li>
+<p><strong>Verificar el fitxer prometheus.yml:</strong></p>
+</li>
+<li>Els targets han d'utilitzar el nom del servei Docker</li>
+<li>Els ports han de ser correctes</li>
+</ol>
+<h4 id="timeout-en-les-consultes">"Timeout" en les consultes</h4>
+<p>Afegir <code>timeout</code> al fitxer prometheus.yml:</p>
+<pre><code class="language-yaml">global:
+  scrape_timeout: 10s
+  evaluation_interval: 15s
+</code></pre>
+<h3 id="problemes-amb-grafana">Problemes amb Grafana</h3>
+<h4 id="pagina-en-blanc-o-errors-de-cors">Pàgina en blanc o errors de CORS</h4>
+<p>Verificar la configuració de CORS al grafana.ini:</p>
+<pre><code class="language-ini">[server]
+domain = localhost
+
+[cors]
+enabled = true
+allow_credentials = true
+allow_origins = *
+</code></pre>
+<h4 id="dashboards-molt-lents">Dashboards molt lents</h4>
+<ol>
+<li><strong>Reduir el rang de dates</strong> a la consulta</li>
+<li><strong>Utilitzar regles de gravació</strong> per a consultes complexes</li>
+<li><strong>Canviar l'interval de scrutini:</strong>
+   <code>promql
+   rate(node_cpu_seconds_total[5m])  # No 1m o 10s</code></li>
+</ol>
+<h4 id="dades-incorrectes-amb-dates">Dades incorrectes amb dates</h4>
+<p>Assegurar-se que el timezone és correcte:</p>
+<pre><code class="language-yaml">environment:
+  - GF_TIMEZONE=Europe/Madrid
+</code></pre>
+<h3 id="comprovacions-rapides">Comprovacions Ràpides</h3>
+<pre><code class="language-bash"># 1. Status de tots els contenidors
+docker compose ps
+
+# 2. Logs d'un servei
+docker compose logs grafana --tail=50
+
+# 3. Logs en temps real
+docker compose logs -f prometheus
+
+# 4. Accedir a un contenidor
+docker exec -it grafana /bin/sh
+
+# 5. Verificar que el port està escoltant
+curl -I http://localhost:3000
+
+# 6. Testar connexió des de Grafana a Prometheus
+docker exec -it grafana wget -qO- http://prometheus:9090/-/healthy
+
+# 7. Inspectar xarxes
+docker network ls
+docker network inspect monitoring
+</code></pre>
+<h3 id="reset-complet">Reset Complet</h3>
+<p>Si tens problemes persistents, prova un reset complet:</p>
+<pre><code class="language-bash"># Aturar i eliminar contenidors i volums
+docker compose down -v
+
+# Eliminar imatges antigues (opcional)
+docker image prune -f
+
+# Recompilar
+docker compose up -d
+
+# Verificar
+docker compose ps
+</code></pre>
+<hr />
+<h2 id="referencia-rapida">Referència Ràpida</h2>
+<h3 id="instruccions-docker">Instruccions Docker</h3>
+<pre><code class="language-bash"># Arrancar
+docker compose up -d
+
+# Aturar
+docker compose down
+
+# Aturar i eliminar volums
+docker compose down -v
+
+# Reiniciar un servei
+docker compose restart grafana
+
+# Veure logs
+docker compose logs -f grafana
+
+# Entrar al contenidor
+docker exec -it grafana /bin/sh
+</code></pre>
+<h3 id="credencials-per-defecte">Credencials per defecte</h3>
+<table>
+<thead>
+<tr>
+<th>Servei</th>
+<th>Usuari</th>
+<th>Contrasenya</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grafana</td>
+<td>admin</td>
+<td>admin123</td>
+</tr>
+<tr>
+<td>Prometheus</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>PostgreSQL</td>
+<td>grafana</td>
+<td>grafana123</td>
+</tr>
+<tr>
+<td>MySQL</td>
+<td>grafana</td>
+<td>grafana123</td>
+</tr>
+<tr>
+<td>InfluxDB</td>
+<td>admin</td>
+<td>admin123</td>
+</tr>
+<tr>
+<td>MongoDB</td>
+<td>admin</td>
+<td>admin123</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ports">Ports</h3>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>Servei</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3000</td>
+<td>Grafana</td>
+</tr>
+<tr>
+<td>9090</td>
+<td>Prometheus</td>
+</tr>
+<tr>
+<td>9100</td>
+<td>node-exporter</td>
+</tr>
+<tr>
+<td>5432</td>
+<td>PostgreSQL</td>
+</tr>
+<tr>
+<td>3306</td>
+<td>MySQL</td>
+</tr>
+<tr>
+<td>8086</td>
+<td>InfluxDB</td>
+</tr>
+<tr>
+<td>27017</td>
+<td>MongoDB</td>
+</tr>
+<tr>
+<td>9093</td>
+<td>Alertmanager</td>
+</tr>
+<tr>
+<td>3100</td>
+<td>Loki</td>
+</tr>
+</tbody>
+</table>
+<h2 id="recursos">Recursos</h2>
+<ul>
+<li>Documentació oficial: https://grafana.com/docs/grafana/latest/</li>
+<li>PromQL reference: https://prometheus.io/docs/prometheus/latest/querying/basics/</li>
+<li>Dashboards compartits: https://grafana.com/grafana/dashboards/</li>
+<li>Plugins: https://grafana.com/grafana/plugins/</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
