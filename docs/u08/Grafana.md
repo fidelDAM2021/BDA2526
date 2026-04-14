@@ -502,7 +502,7 @@ networks:
 
 4. En **Elasticsearch Details**:
    - **Index name**: `kibana_sample_data_ecommerce` (o el teu índex)
-   - **Time field**: `@timestamp`
+   - **Time field**: `order_date`
 
 5. Clica **Save & Test**
 
