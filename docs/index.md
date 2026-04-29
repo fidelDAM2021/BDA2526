@@ -20,4 +20,4 @@
 * [7.4 Dashboards en Kibana](u07/dashboards.md)
 * [7.5 Pràctica guiada Dashboards en Kibana](u07/practica_dashboards_kibana.md)
 * [8. Grafana](u08/Grafana.md)
-* [Annex: n8n](annex_n8n/index.md)
+* [9. n8n](annex_n8n/n8n.md)
