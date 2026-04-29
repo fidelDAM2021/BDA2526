@@ -1,0 +1,7418 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../u08/Grafana/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>Big Data Aplicat - Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../styles/taules.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#n8n" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-header__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../../img/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Big Data Aplicat
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" class="md-nav__button md-logo" aria-label="Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26" data-md-component="logo">
+      
+  <img src="../../img/logo.svg" alt="logo">
+
+    </a>
+    Mòdul: Big Data Aplicat (CE IA i Big Data) Curs 25/26
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentació
+  
+
+    
+      <br>
+      <small>Mòdul Big Data Aplicat</small>
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introducció al Big Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Elements i arquitectura Big Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.1 Repàs Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u03/annex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.2 Docker Compose
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.1 Introducció a Node-RED
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u04/nodered-intermedi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.2 Node-RED intermedi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u04/nodered-avan%C3%A7at/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.3 Node-RED avançat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u04/nodered-dashboards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.4 Node-RED dashboards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u04/nodered-formularis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.5 Formularis en Node-RED
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Fiware. Orion. Context Broker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. MQTT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.1 Stack ELK. Introducció
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u07/elk_practic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.2 Stack ELK pràctic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u07/logstash/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.3 Stack ELK pràctic: Logstash
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u07/dashboards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.4 Dashboards en Kibana
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u07/practica_dashboards_kibana/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7.5 Pràctica guiada Dashboards en Kibana
+  
+
+    
+      <br>
+      <small>Pràctica guiada</small>
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u08/Grafana/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Grafana
+  
+
+    
+      <br>
+      <small>Annex - Grafana</small>
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. n8n
+  
+
+    
+      <br>
+      <small>Manual de n8n</small>
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. n8n
+  
+
+    
+      <br>
+      <small>Manual de n8n</small>
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-n8n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Què és n8n?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Què és n8n?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filosofia-i-caracteristiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filosofia i característiques
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparativa-amb-node-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparativa amb Node-RED
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#casos-dus-principals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos d'ús principals
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installacio-i-configuracio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instal·lació i Configuració
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instal·lació i Configuració">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requisits-previs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requisits previs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installacio-amb-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instal·lació amb Docker Compose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables-dentorn-importants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables d'entorn importants
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generar-una-clau-dencriptacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generar una clau d'encriptació
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acces-a-n8n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accés a n8n
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interficie-dusuari" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interfície d'Usuari
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interfície d&#39;Usuari">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elements-de-la-interficie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elements de la interfície
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navegacio-pel-canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navegació pel canvas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#afegir-nodes-al-canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Afegir nodes al canvas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elements-principals-de-n8n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elements principals de n8n
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Elements principals de n8n">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#triggers-disparadors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Triggers (Disparadors)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Triggers (Disparadors)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manual-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manual Trigger
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schedule-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schedule Trigger
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook Trigger
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#app-event-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        App Event Triggers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#form-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Form Trigger
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nodes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connexions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connexions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credencials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credencials
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-panell-dexecucio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El panell d'execució
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="El panell d&#39;execució">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#executar-nodes-individuals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Executar nodes individuals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organitzacio-del-canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Organització del canvas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dreceres-de-teclat-generals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dreceres de teclat generals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dreceres-de-teclat-del-canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dreceres de teclat del canvas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navegacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navegació
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dades-i-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dades i Expressions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dades i Expressions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#items-i-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Items i JSON
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arrays
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dades-niuades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dades niuades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expressions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Expressions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintaxi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sintaxi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables-especials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables especials
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcions-utils" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcions útils
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convertir-tipus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Convertir tipus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplanar-objectes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aplanar objectes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodes-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nodes core
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nodes core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code Node
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code Node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acces-a-les-dades-de-linput" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accés a les dades de l'input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#casos-practics-de-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos pràctics de Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llibreries-disponibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Llibreries disponibles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Set Node
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Set Node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modes-doperacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modes d'operació
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assignar-valors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assignar valors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filter Node
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Filter Node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operadors-disponibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operadors disponibles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condicions-combinades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Condicions combinades
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integracio-amb-altres-serveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integració amb altres serveis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integració amb altres serveis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connexio-amb-kafka" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connexió amb Kafka
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conexio-amb-telegram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conexió amb Telegram
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conexió amb Telegram">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enviar-missatges-a-telegram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enviar missatges a Telegram
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-request-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP Request Node
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP Request Node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Headers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Body
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autenticacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autenticació
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodes-de-control-de-flux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nodes de control de flux
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nodes de control de flux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IF Node
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Switch Node
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-over-items-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loop Over Items Node
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merge-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Merge Node
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wait-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wait Node
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credencials_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credencials
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Credencials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-credencials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear credencials
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipus-dautenticacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipus d'autenticació
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bones-practiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bones pràctiques
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autenticacio-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autenticació HTTP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-i-memoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables i Memòria
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables i Memòria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workflow-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memory Nodes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Memory Nodes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buffer-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer Memory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#window-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Window Memory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vector-store-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector Store Memory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integracio-amb-ai-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integració amb AI Agents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuració
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-chatbot-amb-memoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple: Chatbot amb memòria
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sub-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sub-workflows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sub-workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passar-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passar dades
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Passar dades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rebre-dades-del-sub-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rebre dades del sub-workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Workflows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quan-sactiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quan s'activa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-un-error-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear un Error Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-notificar-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple: Notificar errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestio-derrors-en-nodes-individuals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestió d'errors en nodes individuals
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connexio-a-bases-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connexió a bases de dades
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connexió a bases de dades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connexio-amb-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connexió amb MySQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connexio-amb-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connexió amb Elasticsearch
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integracio-amb-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integració amb IA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integració amb IA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#claude-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Claude Node
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Claude Node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#credencials_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credencials
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracio-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuració bàsica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametres-avancats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paràmetres avançats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output Format
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openai-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenAI Node
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OpenAI Node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#models-disponibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Models disponibles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-classificar-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple: Classificar text
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-practic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple Pràctic
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemple Pràctic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workflow-classificar-incidencies-amb-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow: Classificar incidències amb IA
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-agents-amb-langchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Agents amb LangChain
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AI Agents amb LangChain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conceptes-fonamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conceptes fonamentals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conceptes fonamentals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#components-dun-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Components d'un agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodes-dagents-a-n8n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nodes d'Agents a n8n
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chat-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chat Agent
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chat Agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracio-basica_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuració bàsica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Message
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tools-eines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tools (Eines)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tools (Eines)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tools-predefinides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tools predefinides
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-una-tool-personalitzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear una tool personalitzada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-tool-per-consultar-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple: Tool per consultar Elasticsearch
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chain-router" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chain: Router
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chain: Router">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-chain-de-classificacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple: Chain de classificació
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-agent-cercador-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple: Agent cercador de dades
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemple: Agent cercador de dades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracio-del-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuració del workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-message_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Message
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tools-configurades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tools configurades
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execucio-dun-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Execució d'un agent
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Execució d&#39;un agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logs-de-lagent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logs de l'agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bones-practiques-amb-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bones pràctiques amb agents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bones pràctiques amb agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evitar-bucle-infinit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evitar bucle infinit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestio-derrors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestió d'errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integracio-amb-memoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integració amb Memòria
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-guiada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pràctica Guiada
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pràctica Guiada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sistema-de-monitoritzacio-intelligent-amb-telegram-ia-i-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sistema de Monitorització Intelligent amb Telegram, IA i Elasticsearch
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sistema de Monitorització Intelligent amb Telegram, IA i Elasticsearch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flux-complet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flux Complet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practiques-modulars" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pràctiques Modulars
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pràctiques Modulars">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#practica-1-recollida-de-dades-de-formulari" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pràctica 1: Recollida de Dades de Formulari
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pràctica 1: Recollida de Dades de Formulari">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectiu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectiu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flux
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preguntes-dampliacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preguntes d'ampliació
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practica-2-sincronitzacio-de-dades-amb-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pràctica 2: Sincronització de Dades amb MySQL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pràctica 2: Sincronització de Dades amb MySQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectiu_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectiu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flux_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flux
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practica-3-alertes-de-monitoritzacio-de-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pràctica 3: Alertes de Monitorització de Web
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pràctica 3: Alertes de Monitorització de Web">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectiu_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectiu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flux_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flux
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passos_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practica-4-processament-de-fitxers-amb-ftp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pràctica 4: Processament de Fitxers amb FTP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pràctica 4: Processament de Fitxers amb FTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectiu_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectiu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flux_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flux
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passos_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apendixs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        APÈNDIXS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APÈNDIXS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-referencia-rapida-de-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Referència Ràpida de Nodes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A. Referència Ràpida de Nodes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nodes-core-mes-utilitzats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nodes Core Més Utilitzats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodes-de-base-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nodes de Base de Dades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodes-de-comunicacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nodes de Comunicació
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-referencia-dexpressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Referència d'Expressions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="B. Referència d&#39;Expressions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variables-globals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables Globals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcions-de-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcions de Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcions-de-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcions de String
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operador-ternari" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operador Ternari
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Recursos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C. Recursos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#documentacio-oficial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentació Oficial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodes-i-integracions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nodes i Integracions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ia-amb-n8n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IA amb n8n
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cursos-i-tutorials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cursos i Tutorials
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-n8n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Què és n8n?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Què és n8n?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filosofia-i-caracteristiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filosofia i característiques
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparativa-amb-node-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparativa amb Node-RED
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#casos-dus-principals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos d'ús principals
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installacio-i-configuracio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instal·lació i Configuració
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instal·lació i Configuració">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requisits-previs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requisits previs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installacio-amb-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instal·lació amb Docker Compose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables-dentorn-importants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables d'entorn importants
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generar-una-clau-dencriptacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generar una clau d'encriptació
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acces-a-n8n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accés a n8n
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interficie-dusuari" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interfície d'Usuari
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interfície d&#39;Usuari">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elements-de-la-interficie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elements de la interfície
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navegacio-pel-canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navegació pel canvas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#afegir-nodes-al-canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Afegir nodes al canvas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elements-principals-de-n8n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elements principals de n8n
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Elements principals de n8n">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#triggers-disparadors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Triggers (Disparadors)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Triggers (Disparadors)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manual-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manual Trigger
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schedule-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schedule Trigger
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook Trigger
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#app-event-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        App Event Triggers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#form-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Form Trigger
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nodes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connexions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connexions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credencials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credencials
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-panell-dexecucio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El panell d'execució
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="El panell d&#39;execució">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#executar-nodes-individuals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Executar nodes individuals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organitzacio-del-canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Organització del canvas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dreceres-de-teclat-generals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dreceres de teclat generals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dreceres-de-teclat-del-canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dreceres de teclat del canvas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navegacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navegació
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dades-i-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dades i Expressions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dades i Expressions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#items-i-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Items i JSON
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arrays
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dades-niuades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dades niuades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expressions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Expressions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintaxi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sintaxi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables-especials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables especials
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcions-utils" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcions útils
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convertir-tipus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Convertir tipus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplanar-objectes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aplanar objectes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodes-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nodes core
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nodes core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code Node
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code Node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acces-a-les-dades-de-linput" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accés a les dades de l'input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#casos-practics-de-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos pràctics de Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llibreries-disponibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Llibreries disponibles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Set Node
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Set Node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modes-doperacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modes d'operació
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assignar-valors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assignar valors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filter Node
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Filter Node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operadors-disponibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operadors disponibles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condicions-combinades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Condicions combinades
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integracio-amb-altres-serveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integració amb altres serveis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integració amb altres serveis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connexio-amb-kafka" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connexió amb Kafka
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conexio-amb-telegram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conexió amb Telegram
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conexió amb Telegram">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enviar-missatges-a-telegram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enviar missatges a Telegram
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-request-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP Request Node
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP Request Node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Headers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Body
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autenticacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autenticació
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodes-de-control-de-flux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nodes de control de flux
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nodes de control de flux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IF Node
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Switch Node
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-over-items-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loop Over Items Node
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merge-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Merge Node
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wait-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wait Node
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credencials_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credencials
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Credencials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-credencials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear credencials
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipus-dautenticacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipus d'autenticació
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bones-practiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bones pràctiques
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autenticacio-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autenticació HTTP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-i-memoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables i Memòria
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables i Memòria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workflow-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memory Nodes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Memory Nodes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buffer-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer Memory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#window-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Window Memory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vector-store-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector Store Memory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integracio-amb-ai-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integració amb AI Agents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuració
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-chatbot-amb-memoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple: Chatbot amb memòria
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sub-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sub-workflows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sub-workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passar-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passar dades
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Passar dades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rebre-dades-del-sub-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rebre dades del sub-workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Workflows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quan-sactiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quan s'activa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-un-error-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear un Error Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-notificar-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple: Notificar errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestio-derrors-en-nodes-individuals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestió d'errors en nodes individuals
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connexio-a-bases-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connexió a bases de dades
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connexió a bases de dades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connexio-amb-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connexió amb MySQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connexio-amb-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connexió amb Elasticsearch
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integracio-amb-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integració amb IA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integració amb IA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#claude-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Claude Node
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Claude Node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#credencials_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credencials
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracio-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuració bàsica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametres-avancats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paràmetres avançats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output Format
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openai-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenAI Node
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OpenAI Node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#models-disponibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Models disponibles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-classificar-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple: Classificar text
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-practic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple Pràctic
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemple Pràctic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workflow-classificar-incidencies-amb-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow: Classificar incidències amb IA
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-agents-amb-langchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Agents amb LangChain
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AI Agents amb LangChain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conceptes-fonamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conceptes fonamentals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conceptes fonamentals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#components-dun-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Components d'un agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodes-dagents-a-n8n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nodes d'Agents a n8n
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chat-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chat Agent
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chat Agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracio-basica_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuració bàsica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Message
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tools-eines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tools (Eines)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tools (Eines)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tools-predefinides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tools predefinides
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-una-tool-personalitzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear una tool personalitzada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-tool-per-consultar-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple: Tool per consultar Elasticsearch
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chain-router" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chain: Router
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chain: Router">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-chain-de-classificacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple: Chain de classificació
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-agent-cercador-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple: Agent cercador de dades
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemple: Agent cercador de dades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracio-del-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuració del workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-message_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Message
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tools-configurades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tools configurades
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execucio-dun-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Execució d'un agent
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Execució d&#39;un agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logs-de-lagent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logs de l'agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bones-practiques-amb-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bones pràctiques amb agents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bones pràctiques amb agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evitar-bucle-infinit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evitar bucle infinit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestio-derrors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestió d'errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integracio-amb-memoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integració amb Memòria
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-guiada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pràctica Guiada
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pràctica Guiada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sistema-de-monitoritzacio-intelligent-amb-telegram-ia-i-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sistema de Monitorització Intelligent amb Telegram, IA i Elasticsearch
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sistema de Monitorització Intelligent amb Telegram, IA i Elasticsearch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flux-complet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flux Complet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practiques-modulars" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pràctiques Modulars
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pràctiques Modulars">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#practica-1-recollida-de-dades-de-formulari" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pràctica 1: Recollida de Dades de Formulari
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pràctica 1: Recollida de Dades de Formulari">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectiu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectiu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flux
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preguntes-dampliacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preguntes d'ampliació
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practica-2-sincronitzacio-de-dades-amb-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pràctica 2: Sincronització de Dades amb MySQL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pràctica 2: Sincronització de Dades amb MySQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectiu_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectiu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flux_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flux
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practica-3-alertes-de-monitoritzacio-de-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pràctica 3: Alertes de Monitorització de Web
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pràctica 3: Alertes de Monitorització de Web">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectiu_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectiu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flux_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flux
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passos_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practica-4-processament-de-fitxers-amb-ftp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pràctica 4: Processament de Fitxers amb FTP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pràctica 4: Processament de Fitxers amb FTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectiu_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectiu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flux_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flux
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passos_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apendixs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        APÈNDIXS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APÈNDIXS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-referencia-rapida-de-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Referència Ràpida de Nodes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A. Referència Ràpida de Nodes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nodes-core-mes-utilitzats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nodes Core Més Utilitzats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodes-de-base-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nodes de Base de Dades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodes-de-comunicacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nodes de Comunicació
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-referencia-dexpressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Referència d'Expressions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="B. Referència d&#39;Expressions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variables-globals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables Globals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcions-de-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcions de Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcions-de-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcions de String
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operador-ternari" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operador Ternari
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Recursos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C. Recursos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#documentacio-oficial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentació Oficial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodes-i-integracions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nodes i Integracions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ia-amb-n8n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IA amb n8n
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cursos-i-tutorials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cursos i Tutorials
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="n8n">n8n</h1>
+<h2 id="que-es-n8n">Què és n8n?</h2>
+<p><strong>n8n</strong> (pronunciat "n-eight-n") és una ferramenta d'automatització de fluxos de treball (<em>workflow automation</em>) de codi obert que permet connectar diferents serveis i aplicacions per automatitzar tasques repetitives. L'eina utilitza una interfície visual on els usuaris poden crear fluxos de treball mitjançant la connexió de nodes, sense necessitat de programar codi complex. En eixe sentit és prou semblant a <strong>Node-RED</strong>, que ja hem vist a classe.</p>
+<h3 id="filosofia-i-caracteristiques">Filosofia i característiques</h3>
+<p>n8n es fonamenta en tres pilars:</p>
+<ul>
+<li>
+<p><strong>Codi obert</strong>: El projecte és completament obert, permetent que qualsevol puga contribuir amb millores. La versió gratuïta inclou la majoria de funcionalitats.</p>
+</li>
+<li>
+<p><strong>Flexibilitat</strong>: Es pot utilitzar de tres maneres diferents:</p>
+</li>
+<li><strong>Cloud</strong>: Servei allotjat per n8n.io, amb plans gratuïts i de pagament</li>
+<li><strong>Self-hosted</strong>: Instal·lació pròpia amb Docker o npm</li>
+<li>
+<p><strong>Desktop</strong>: Aplicació per a Windows, Mac i Linux</p>
+</li>
+<li>
+<p><strong>IA nativa</strong>: Des de la versió 1.0, n8n incorpora nodes específics per treballar amb models d'IA com Claude, GPT-4 o Gemini, permetent crear agents intel·ligents.</p>
+</li>
+</ul>
+<h3 id="comparativa-amb-node-red">Comparativa amb Node-RED</h3>
+<p>Com hem comentat, n8n és un producte similar a Node-RED pel que fa a la forma de treballar. La taula següent mostra les diferències principals:</p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>n8n</th>
+<th>Node-RED</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Llicència</strong></td>
+<td>Apache 2.0</td>
+<td>Apache 2.0</td>
+</tr>
+<tr>
+<td><strong>Interfície</strong></td>
+<td>Més polida, similar a disseny modern</td>
+<td>Funcional però més austera</td>
+</tr>
+<tr>
+<td><strong>Integració IA</strong></td>
+<td>Nativa amb nodes específics</td>
+<td>Requereix nodes externs</td>
+</tr>
+<tr>
+<td><strong>Focus principal</strong></td>
+<td>Integració de serveis, API</td>
+<td>IoT, sensors</td>
+</tr>
+<tr>
+<td><strong>Preu</strong></td>
+<td>Gratuït (self-hosted)</td>
+<td>Totalment gratuït</td>
+</tr>
+<tr>
+<td><strong>Escalabilitat</strong></td>
+<td>Workers per a alta càrrega</td>
+<td>Limitada</td>
+</tr>
+<tr>
+<td><strong>Gestió d'errors</strong></td>
+<td>Error workflows centralitzats</td>
+<td>Nodes catch</td>
+</tr>
+<tr>
+<td><strong>Sub-workflows</strong></td>
+<td>Execute Workflow natiu</td>
+<td>Link nodes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="casos-dus-principals">Casos d'ús principals</h3>
+<p>n8n s'utilitza habitualment per a:</p>
+<ul>
+<li><strong>Integració d'aplicacions</strong>: Connectar serveis com Salesforce amb Slack, o Gmail amb Google Sheets</li>
+<li><strong>Automatització de processos</strong>: Notificar equips quan es rep un formulari web</li>
+<li><strong>ETL (Extract, Transform, Load)</strong>: Migrar dades entre sistemes diferents</li>
+<li><strong>Monitorització</strong>: Alertar d'incidències detectades automàticament</li>
+<li><strong>Chatbots</strong>: Crear respostes automàtiques amb IA</li>
+<li><strong>Processament de dades</strong>: Analitzar, filtrar i transformar dades de sensors o APIs</li>
+</ul>
+<hr />
+<h2 id="installacio-i-configuracio">Instal·lació i Configuració</h2>
+<h3 id="requisits-previs">Requisits previs</h3>
+<p>Per instal·lar n8n amb Docker, necessiteu:</p>
+<ul>
+<li><strong>Docker</strong> instal·lat i en execució</li>
+<li><strong>Docker Compose</strong> (o usar <code>docker compose</code> sense guions)</li>
+<li>Com a mínim 2 GB de RAM</li>
+<li>5 GB d'espai en disc</li>
+</ul>
+<h3 id="installacio-amb-docker-compose">Instal·lació amb Docker Compose</h3>
+<p>Podem incloure <strong>n8n</strong> en el nostre entorn Docker afegint el següent servei a un fitxer <code>docker-compose.yml</code>:</p>
+<pre><code class="language-yaml">n8n:
+    image: docker.n8n.io/n8nio/n8n:latest
+    container_name: n8n
+    restart: unless-stopped
+    ports:
+      - &quot;5678:5678&quot;
+    environment:
+      - GENERIC_TIMEZONE=Europe/Madrid
+      - TZ=Europe/Madrid
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
+      - N8N_RUNNERS_ENABLED=true
+      - N8N_ENCRYPTION_KEY=POSEU_UNA_CLAU_SEGURA_64_CARÀCTERS
+    volumes:
+      - n8n_storage:/home/node/.n8n
+</code></pre>
+<p>Com sempre, si volem utilitzar n8n juntament amb altres serveis que tenim dockeritzats caldrá incloure'ls tots en la mateixa xarxa.</p>
+<blockquote>
+<p>En Aules teniu un docker-compose preparat amb n8n, Kafka, Elasticsearch i Kibana. Podeu utilitzar-lo com a base per a les vostres pràctiques.</p>
+</blockquote>
+<h3 id="variables-dentorn-importants">Variables d'entorn importants</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Descripció</th>
+<th>Requerit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>N8N_ENCRYPTION_KEY</code></td>
+<td>Clau de 64 caràcters per xifrar credencials</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td><code>GENERIC_TIMEZONE</code></td>
+<td>Zona horària per defecte</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>N8N_RUNNERS_ENABLED</code></td>
+<td>Habilita executors d'IA</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>WEBHOOK_URL</code></td>
+<td>URL pública per a webhooks (producció)</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>EXECUTIONS_MODE</code></td>
+<td><code>regular</code> o <code>queue</code></td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>N8N_LOG_LEVEL</code></td>
+<td>Nivell de log: debug, info, warn, error</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="generar-una-clau-dencriptacio">Generar una clau d'encriptació</h3>
+<p>Executeu esta comanda per generar una clau segura:</p>
+<pre><code class="language-bash">openssl rand -hex 32
+</code></pre>
+<p>El resultat serà una cadena de 64 caràcters hexadecimals que podeu copiar a la variable <code>N8N_ENCRYPTION_KEY</code>.</p>
+<h3 id="acces-a-n8n">Accés a n8n</h3>
+<ol>
+<li>Inicieu els serveis amb <code>docker-compose up -d</code></li>
+<li>Obriu el navegador a <code>http://localhost:5678</code></li>
+<li>La primera vegada us demanarà crear un usuari i contrasenya</li>
+<li>Un cop creat, podreu veure el canvas principal</li>
+</ol>
+<p><img alt="Pantalla inicial de n8n" src="../images/n8n01.jpg" /></p>
+<hr />
+<h2 id="interficie-dusuari">Interfície d'Usuari</h2>
+<p>L'editor visual de n8n és on es dissenyen i modifiquen els fluxos de treball. Es tracta d'un canvas interactiu on podeu arrossegar, connectar i configurar nodes.</p>
+<h3 id="elements-de-la-interficie">Elements de la interfície</h3>
+<p>La interfície es divideix en les següents zones:</p>
+<ul>
+<li><strong>Canvas (centre)</strong>: Àrea principal on es visualitzen i editen els nodes</li>
+<li><strong>Panell de nodes (esquerra)</strong>: Cercador i llista de nodes disponibles</li>
+<li><strong>Panell de configuració (dreta)</strong>: Propietats del node seleccionat</li>
+<li><strong>Barra superior</strong>: Accions generals (executar, guardar, compartir)</li>
+<li><strong>Barra inferior</strong>: Informació de l'estat i execucions recents</li>
+</ul>
+<h3 id="navegacio-pel-canvas">Navegació pel canvas</h3>
+<table>
+<thead>
+<tr>
+<th>Acció</th>
+<th>Ratolí</th>
+<th>Teclat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Moure el canvas</td>
+<td>Clic mig + arrastrar</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Zoom</td>
+<td>Rodeta del ratolí</td>
+<td><code>Ctrl + +</code> / <code>Ctrl + -</code></td>
+</tr>
+<tr>
+<td>Seleccionar node</td>
+<td>Clic simple</td>
+<td><code>Tab</code> per navegar</td>
+</tr>
+<tr>
+<td>Seleccionar múltiples</td>
+<td><code>Shift + clic</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>Moure nodes</td>
+<td>Arrosegar</td>
+<td>Fletxes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="afegir-nodes-al-canvas">Afegir nodes al canvas</h3>
+<ol>
+<li>Feu clic al botó <strong>+</strong> blau o polseu <code>Ctrl + A</code></li>
+<li>Es mostrarà el cercador de nodes</li>
+<li>Escriviu el nom del node o navegueu per categories</li>
+<li>Feu clic per afegir-lo al canvas</li>
+</ol>
+<h2 id="elements-principals-de-n8n">Elements principals de n8n</h2>
+<p>n8n utilitza quatre elements fonamentals per construir fluxos de treball:</p>
+<h3 id="triggers-disparadors">Triggers (Disparadors)</h3>
+<p>En n8n tenim nodes que inicien el flux de treball, nodes que executen accions, que se connecten a altres aplicacions, que treballen amb agents IA, etc.</p>
+<p>Un <strong>trigger</strong> és el node inicial que inicia l'execució del flux. Sense trigger, un workflow no s'executarà mai automàticament.</p>
+<p><strong>Tipus de triggers:</strong>
+- <strong>Manual</strong>: S'executa quan se fa clic en un botó
+- <strong>Schedule</strong>: S'executa segons una planificació (cron)
+- <strong>Webhook</strong>: S'executa en rebre una petició HTTP
+- <strong>App Event</strong>: S'activa per esdeveniments d'aplicacions (Gmail, Telegram, etc.)
+- <strong>Form</strong>: S'executa quan un usuari ompli un formulari</p>
+<p><img alt="Tipus de triggers" src="../images/n8n02.jpg" /></p>
+<h4 id="manual-trigger">Manual Trigger</h4>
+<p><img alt="Trigger Manual" src="../images/n8n02_01.jpg" /></p>
+<p>El trigger manual és el més senzill. Permet executar el flux fent clic en un botó des de la interfície de n8n.</p>
+<p><strong>Utilització:</strong></p>
+<ul>
+<li>Provar fluxos en desenvolupament</li>
+<li>Fluxos que es volen executar sota demanda</li>
+<li>Integració amb altres workflows via "Execute Workflow"</li>
+</ul>
+<p><strong>Configuració:</strong></p>
+<ol>
+<li>Afegiu el node "Manual Trigger"</li>
+<li>El node no té opcions de configuració</li>
+<li>Feu clic a "Test workflow" per executar</li>
+</ol>
+<p>Lògicament, si el node disparador no va enganxat a nodes d'acció, no farà res.</p>
+<h4 id="schedule-trigger">Schedule Trigger</h4>
+<p>Permet executar el flux de manera periòdica segons una planificació. Funciona per regles cron o intervals fixos.</p>
+<p>En esta captura de pantalla podeu veure un <code>Trigger Schedule</code> configurat per executar-se cada 30 segons. També es pot configurar per executar-se cada dia a una hora concreta, o cada setmana, etc. Per a expressions cron, en <code>Trigger interval</code> hem de seleccionar <code>Custom (Cron)</code>.</p>
+<p><img alt="Trigger Schedule" src="../images/n8n02_02.jpg" /></p>
+<p><strong>Utilització:</strong></p>
+<ul>
+<li>Tasques de manteniment diàries</li>
+<li>Sincronització de dades cada cert temps</li>
+<li>Reports programats</li>
+</ul>
+<p><strong>Configuració:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Paràmetre</th>
+<th>Descripció</th>
+<th>Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rule</td>
+<td>Expressió cron o interval</td>
+<td><code>0 * * * *</code></td>
+</tr>
+<tr>
+<td>Timezone</td>
+<td>Zona horària</td>
+<td><code>Europe/Madrid</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Formats de planificació:</strong></p>
+<ol>
+<li><strong>Interval fix</strong>: Executa cada X temps</li>
+<li>
+<p>Cada minut, hora, dia, setmana, mes</p>
+</li>
+<li>
+<p><strong>Expressió Cron</strong>: Més control sobre el temps</p>
+</li>
+<li><code>0 9 * * 1-5</code> → Dilluns a divendres a les 9:00</li>
+<li><code>*/15 * * * *</code> → Cada 15 minuts</li>
+<li><code>0 0 1 * *</code> → Primer dia de cada mes</li>
+</ol>
+<p><strong>Eines per construir expressions cron:</strong></p>
+<ul>
+<li><a href="https://crontab.guru">Crontab.guru</a> - Permet visualitzar expressions cron</li>
+</ul>
+<h4 id="webhook-trigger">Webhook Trigger</h4>
+<p>Permet iniciar el flux quan arriba una petició HTTP a una URL específica (que genera el propi node Webhook). És ideal per integrar amb serveis externs.</p>
+<p><img alt="Trigger Webhook" src="../images/n8n02_03.jpg" /></p>
+<p><strong>Utilització:</strong></p>
+<ul>
+<li>Rebre notificacions de serveis externs</li>
+<li>Crear APIs personalitzades</li>
+<li>Integració amb formularis web</li>
+<li>Webhooks de GitHub, Stripe, etc.</li>
+</ul>
+<p><strong>Configuració:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Paràmetre</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Path</td>
+<td>Camí de la URL</td>
+</tr>
+<tr>
+<td>HTTP Method</td>
+<td>GET, POST, PUT, DELETE, etc.</td>
+</tr>
+<tr>
+<td>Response Mode</td>
+<td>Quan retornar la resposta</td>
+</tr>
+<tr>
+<td>Response Data</td>
+<td>Dades a retornar</td>
+</tr>
+</tbody>
+</table>
+<p><strong>URL del Webhook:</strong></p>
+<p>Quan afegiu un Webhook Trigger, n8n genera una URL única. Per exemple (en test):</p>
+<pre><code>http://localhost:5678/webhook-test/5ab28b3a-22fb-4204-9c56-4f60b835b95a
+</code></pre>
+<p>Quan enviem una petició a eixa URL, el flux s'executarà.</p>
+<p>Hi ha diferents modes de resposta: <code>immediately</code> (respon tan aviat com arriba la petició), <code>when last node finishes</code> (espera que l'últim node acabe i retorna la seua eixida), <code>using Respond to Webhook node</code> (la resposta està definida en un node <code>Respond to webhook</code>) o <code>streaming</code> (torna dades en temps real). També podem configurar les dades que volem retornar en la resposta (<code>add option</code>).</p>
+<p>És molt senzill fer una prova. Podeu crear un node <code>Webhook</code> en tots els valors per defecte (HTTP method GET), poseu-lo en modo listening, preneu nota de la URL que genera i feu una petició des del navegador o amb curl. Veure la resposta predefinida:</p>
+<pre><code class="language-json">{&quot;message&quot;:&quot;Workflow has started&quot;}
+</code></pre>
+<p>A classe veurem algun exemple senzill. </p>
+<h4 id="app-event-triggers">App Event Triggers</h4>
+<p>Els triggers d'aplicacions permeten iniciar el flux quan passa un esdeveniment en un servei extern. Hi ha molts, si vols veure'ls tecleja <code>Trigger</code> en el cercador de nodes que hi ha a la dreta del canvas.</p>
+<p>Alguns triggers d'aplicació disponibles són:</p>
+<table>
+<thead>
+<tr>
+<th>Aplicació</th>
+<th>Esdeveniments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Gmail</strong></td>
+<td>Nou email, email etiquetat</td>
+</tr>
+<tr>
+<td><strong>Telegram</strong></td>
+<td>Nou missatge, callback query</td>
+</tr>
+<tr>
+<td><strong>Slack</strong></td>
+<td>Nou missatge, reaccions</td>
+</tr>
+<tr>
+<td><strong>GitHub</strong></td>
+<td>Push, PR, issue, release</td>
+</tr>
+<tr>
+<td><strong>Notion</strong></td>
+<td>Pàgina creada, actualitzada</td>
+</tr>
+<tr>
+<td><strong>Stripe</strong></td>
+<td>Pagament rebut, client nou</td>
+</tr>
+<tr>
+<td><strong>Shopify</strong></td>
+<td>Comanda rebuda, producte actualitzat</td>
+</tr>
+<tr>
+<td><strong>Airtable</strong></td>
+<td>Registre creat, modificat</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Configuració general:</strong></p>
+<ol>
+<li>Afegiu el trigger de l'aplicació</li>
+<li>Autenticació amb credencials (API key, OAuth, etc.)</li>
+<li>Seleccioneu l'esdeveniment a escoltar</li>
+<li>Configureu filtres opcionals</li>
+</ol>
+<h4 id="form-trigger">Form Trigger</h4>
+<p>Permet crear formularis web que inicien el flux quan un usuari els envia.</p>
+<p><strong>Tipus de camps:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tipus</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Text</td>
+<td>Camp de text curt</td>
+</tr>
+<tr>
+<td>Textarea</td>
+<td>Camp de text llarg</td>
+</tr>
+<tr>
+<td>Number</td>
+<td>Camp numèric</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>Selector de data</td>
+</tr>
+<tr>
+<td>Select</td>
+<td>Llista desplegable</td>
+</tr>
+<tr>
+<td>Multi-select</td>
+<td>Selecció múltiple</td>
+</tr>
+<tr>
+<td>File</td>
+<td>Càrrega de fitxers</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Configuració:</strong></p>
+<ol>
+<li>Afegiu el Form Trigger</li>
+<li>Afegiu camps amb el botó "Add Field"</li>
+<li>Configureu cada camp (nom, tipus, requerit, etc.)</li>
+<li>Personalitzeu el formulari (títol, descripció)</li>
+</ol>
+<p><strong>URL del formulari:</strong></p>
+<p>El formulari estarà accessible a:</p>
+<pre><code>https://seu-n8n.io/form/{id-workflow}
+</code></pre>
+<blockquote>
+<p>Comproveu que la url és correcta, en alguns casos el domini pot ser diferent</p>
+</blockquote>
+<h3 id="nodes">Nodes</h3>
+<p>Els nodes són blocs que realitzen operacions específiques. Cada node:</p>
+<ul>
+<li>Rep dades d'entrada (o les genera)</li>
+<li>Processa les dades</li>
+<li>Produeix dades de sortida</li>
+</ul>
+<p><strong>Categories de nodes:</strong></p>
+<ul>
+<li><strong>Core</strong>: Nodes bàsics inclosos amb n8n</li>
+<li><strong>App</strong>: Nodes per a aplicacions externes (Slack, Gmail, etc.)</li>
+<li><strong>AI</strong>: Nodes per a integració amb models d'IA</li>
+</ul>
+<p>El workflow comença amb un trigger. Per exemple, podem crear un trigger manual (això implica que el flux de treball el llançarem manualment). Si ara fem clic en el botó <code>+</code> que té a la dreta, ens demanarà si volem afegir un altre node. Apareixerà un buscador i podem triar quin node volem afegir. </p>
+<p><img alt="Afegir un node" src="../images/n8n03.jpg" /></p>
+<h3 id="connexions">Connexions</h3>
+<p>Les connexions lliguen nodes entre si, permetent que les dades passen d'un node a un altre. Cada node pot tindre múltiples connexions d'eixida.</p>
+<p>A n8n, les dades es passen entre nodes en format <strong>JSON</strong>. Cada execució genera un o més <strong>items</strong> (elements) que contenen:</p>
+<ul>
+<li><strong>json</strong>: Dades estructurades en format clau-valor</li>
+<li><strong>binary</strong>: Dades binaries (fitxers, imatges, etc.) - opcional</li>
+</ul>
+<pre><code class="language-json">{
+  &quot;json&quot;: {
+    &quot;nom&quot;: &quot;Maria&quot;,
+    &quot;email&quot;: &quot;maria@example.com&quot;,
+    &quot;edat&quot;: 25
+  },
+  &quot;binary&quot;: {}
+}
+</code></pre>
+<blockquote>
+<p>Els nodes que estan connectats entre sí tenen un INPUT (informació que arriba del node anterior) i un OUTPUT (informació que s'envia al node següent). Eixa informació està disponible en edició si feu clic sobre un node qualsevol. A l'esquerra del canvas apareix l'input, i la dreta l'output.</p>
+</blockquote>
+<h3 id="credencials">Credencials</h3>
+<p>Les credencials guarden de forma segura les claus d'API, tokens i contrasenyes necessàries per autenticar-se a serveis externs.</p>
+<h2 id="el-panell-dexecucio">El panell d'execució</h2>
+<p>Quan executeu un flux manualment, el panell d'execució mostra el resultat de cada node. Això és molt útil per:</p>
+<ul>
+<li>Veure quines dades produeix cada node</li>
+<li>Identificar errors</li>
+<li>Depurar el flux</li>
+</ul>
+<p>Podeu accedir a les execucions en la part superior del canvas, en l'opció <code>Executions</code>. </p>
+<p>Des del panell d'execució podeu veure a l'esquerra totes les execucions recents. En el canvas podeu fer clic en un node i veure les dades d'entrada i eixida d'eixe node en particular. Això és molt útil per depurar i entendre com flueixen les dades.</p>
+<p>En la part inferior, fent clic en logs, se veu més informació sobre l'execució de cada node que seleccionem.</p>
+<p>Fent clic en una execució també veiem les dades corresponents (input i output dels nodes que seleccionem). Això és especialment útil si utilitzem un Schedule Trigger que envie dades cada x temps. En la llista d'execucions podem veure si s'està executant periòdicament o no, i el resultat de cada execució.</p>
+<p>Si volem executar tot el flux, farem sempre clic en el botó <code>Execute workflow</code>. Hem de tindre en compte que no podem tindre dos workflows en el mateix canvas. Pot funcionar bé en alguns casos, però en altres no. Si tenim dos workflows en 2 canvas diferents i volem que continuen executant-se quan eixim d'un canvas i anem a l'altre, els haurem de posar en producció (botó Publish en la part superior del canvas).</p>
+<h3 id="executar-nodes-individuals">Executar nodes individuals</h3>
+<p>Podeu executar un node específic sense executar tot el flux:</p>
+<ol>
+<li>Seleccioneu el node fent doble clic.</li>
+<li>Feu clic a <strong>Execute step</strong> (nom del node → Test step)</li>
+<li>S'executarà només este node</li>
+</ol>
+<p>Com hem comentat abans, a l'esquerra del panell podem veure l'input del node que estem executant, i a la dreta el seu output.</p>
+<h3 id="organitzacio-del-canvas">Organització del canvas</h3>
+<p>Per millorar la llegibilitat dels fluxos complexos:</p>
+<ul>
+<li><strong>Sticky Notes</strong>: Afegiu notes adhesives amb <code>Shift + N</code></li>
+<li><strong>Tags</strong>: Assigneu tags als workflows per organitzar-los</li>
+<li><strong>Alineació</strong>: Seleccioneu múltiples nodes i useu les opcions d'alineació</li>
+<li><strong>Colors</strong>: Podeu assignar colors als nodes per categories</li>
+</ul>
+<h3 id="dreceres-de-teclat-generals">Dreceres de teclat generals</h3>
+<table>
+<thead>
+<tr>
+<th>Acció</th>
+<th>Drecera</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Guardar workflow</td>
+<td><code>Ctrl + S</code></td>
+</tr>
+<tr>
+<td>Executar workflow</td>
+<td><code>Ctrl + Enter</code></td>
+</tr>
+<tr>
+<td>Tancar editor</td>
+<td><code>Esc</code></td>
+</tr>
+<tr>
+<td>Obrir cercador de nodes</td>
+<td><code>Ctrl + A</code></td>
+</tr>
+<tr>
+<td>Cercar workflow</td>
+<td><code>Ctrl + F</code></td>
+</tr>
+<tr>
+<td>Desfer</td>
+<td><code>Ctrl + Z</code></td>
+</tr>
+<tr>
+<td>Refer</td>
+<td><code>Ctrl + Shift + Z</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="dreceres-de-teclat-del-canvas">Dreceres de teclat del canvas</h3>
+<table>
+<thead>
+<tr>
+<th>Acció</th>
+<th>Drecera</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zoom in</td>
+<td><code>Ctrl + +</code></td>
+</tr>
+<tr>
+<td>Zoom out</td>
+<td><code>Ctrl + -</code></td>
+</tr>
+<tr>
+<td>Zoom reset</td>
+<td><code>Ctrl + 0</code></td>
+</tr>
+<tr>
+<td>Seleccionar tots</td>
+<td><code>Ctrl + A</code></td>
+</tr>
+<tr>
+<td>Copiar</td>
+<td><code>Ctrl + C</code></td>
+</tr>
+<tr>
+<td>Enganxar</td>
+<td><code>Ctrl + V</code></td>
+</tr>
+<tr>
+<td>Eliminar seleccionat</td>
+<td><code>Supr</code></td>
+</tr>
+<tr>
+<td>Duplicar</td>
+<td><code>Ctrl + D</code></td>
+</tr>
+<tr>
+<td>Afegir sticky note</td>
+<td><code>Shift + N</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="navegacio">Navegació</h3>
+<table>
+<thead>
+<tr>
+<th>Acció</th>
+<th>Drecera</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Següent node</td>
+<td><code>Tab</code></td>
+</tr>
+<tr>
+<td>Node anterior</td>
+<td><code>Shift + Tab</code></td>
+</tr>
+<tr>
+<td>Obrir configuració</td>
+<td><code>Enter</code></td>
+</tr>
+<tr>
+<td>Tancar configuració</td>
+<td><code>Esc</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="dades-i-expressions">Dades i Expressions</h2>
+<p>Anem a veure algunes estructures de dades i expressions que podem utilitzar en n8n.</p>
+<h3 id="items-i-json">Items i JSON</h3>
+<p>A n8n, les dades flueixen com a <strong>items</strong>. Cada item conté:</p>
+<pre><code class="language-json">{
+  &quot;json&quot;: {
+    &quot;id&quot;: 1,
+    &quot;nom&quot;: &quot;Maria&quot;,
+    &quot;email&quot;: &quot;maria@example.com&quot;
+  },
+  &quot;binary&quot;: {}
+}
+</code></pre>
+<h3 id="arrays">Arrays</h3>
+<p>Els arrays contenen múltiples elements:</p>
+<pre><code class="language-json">[
+  { &quot;json&quot;: { &quot;id&quot;: 1 } },
+  { &quot;json&quot;: { &quot;id&quot;: 2 } },
+  { &quot;json&quot;: { &quot;id&quot;: 3 } }
+]
+</code></pre>
+<h3 id="dades-niuades">Dades niuades</h3>
+<p>Els objectes poden contindre objectes o arrays:</p>
+<pre><code class="language-json">{
+  &quot;json&quot;: {
+    &quot;usuari&quot;: {
+      &quot;nom&quot;: &quot;Joan&quot;,
+      &quot;adreca&quot;: {
+        &quot;carrer&quot;: &quot;Carrer Major&quot;,
+        &quot;ciutat&quot;: &quot;València&quot;
+      }
+    },
+    &quot;comandes&quot;: [
+      { &quot;id&quot;: 1, &quot;producte&quot;: &quot;Llibre&quot; },
+      { &quot;id&quot;: 2, &quot;producte&quot;: &quot;Bolígraf&quot; }
+    ]
+  }
+}
+</code></pre>
+<h3 id="expressions">Expressions</h3>
+<p>Les expressions permeten accedir i manipular dades dinàmicament.</p>
+<h4 id="sintaxi">Sintaxi</h4>
+<p>Les expressions s'escriuen entre <code>{{ }}</code>:</p>
+<pre><code class="language-javascript">{{ $json.camp }}
+{{ $json.usuari.nom }}
+{{ $vars.variable }}
+{{ $node &quot;NodeName&quot; }}
+</code></pre>
+<h4 id="variables-especials">Variables especials</h4>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$json</code></td>
+<td>Dades JSON de l'item actual</td>
+</tr>
+<tr>
+<td><code>$input</code></td>
+<td>Tots els items d'entrada</td>
+</tr>
+<tr>
+<td><code>$node</code></td>
+<td>Dades d'un node específic</td>
+</tr>
+<tr>
+<td><code>$vars</code></td>
+<td>Variables de workflow</td>
+</tr>
+<tr>
+<td><code>$execution</code></td>
+<td>Dades de l'execució actual</td>
+</tr>
+<tr>
+<td><code>$parameter</code></td>
+<td>Paràmetres del node</td>
+</tr>
+<tr>
+<td><code>$workflow</code></td>
+<td>Propietats del workflow</td>
+</tr>
+<tr>
+<td><code>$now</code></td>
+<td>Data/hora actual</td>
+</tr>
+<tr>
+<td><code>$today</code></td>
+<td>Data d'avui</td>
+</tr>
+<tr>
+<td><code>$json.meuCamp || "valorPerDefecte"</code></td>
+<td>Valor per defecte</td>
+</tr>
+</tbody>
+</table>
+<h4 id="funcions-utils">Funcions útils</h4>
+<p><strong>Strings:</strong></p>
+<pre><code class="language-javascript">{{ $json.nom.toUpperCase() }}                    // Majúscules
+{{ $json.nom.toLowerCase() }}                    // Minúscules
+{{ $json.email.split('@')[0] }}                   // Part abans de @
+{{ $json.nom.trim() }}                           // Eliminar espais
+{{ $json.nom.length }}                           // Longitud
+{{ $json.nom.includes('test') }}                 // Conté 'test'
+</code></pre>
+<p><strong>Dates (Luxon):</strong></p>
+<pre><code class="language-javascript">{{ $now.toISO() }}                               // ISO 8601
+{{ $now.toFormat('dd/MM/yyyy') }}                // Format dia/mes/any
+{{ $now.minus({ days: 7 }).toISO() }}            // Fa 7 dies
+{{ $now.plus({ hours: 2 }).toFormat('HH:mm') }} // D'aquí 2 hores
+</code></pre>
+<p><strong>Arrays:</strong></p>
+<pre><code class="language-javascript">{{ $json.elements[0] }}                          // Primer element
+{{ $json.elements.length }}                      // Nombre d'elements
+{{ $json.elements.join(', ') }}                  // Unir elements
+</code></pre>
+<p><strong>Condicionals:</strong></p>
+<pre><code class="language-javascript">{{ $json.edat &gt;= 18 ? 'Adult' : 'Menor' }}
+</code></pre>
+<h3 id="convertir-tipus">Convertir tipus</h3>
+<p>Amb el node <strong>Code</strong> (el veure més endavant, és un node que permet executar codi):</p>
+<pre><code class="language-javascript">// String a number
+parseInt($json.edat, 10)
+
+// Number a string
+String($json.id)
+
+// String a boolean
+$json.actiu === 'si' || $json.actiu === true
+
+// String a data
+new Date($json.data).toISOString()
+</code></pre>
+<h3 id="aplanar-objectes">Aplanar objectes</h3>
+<pre><code class="language-javascript">// Aplanar objecte niuat
+const aplanat = {};
+for (const [clau, valor] of Object.entries($input.first().json)) {
+  if (typeof valor === 'object' &amp;&amp; valor !== null) {
+    for (const [subclau, subvalor] of Object.entries(valor)) {
+      aplanat[`${clau}_${subclau}`] = subvalor;
+    }
+  } else {
+    aplanat[clau] = valor;
+  }
+}
+return { json: aplanat };
+</code></pre>
+<h2 id="nodes-core">Nodes core</h2>
+<p>Hi ha molts tipus de nodes i moltes opcions per crear fluxos de treball. No és factible anar veient tots els nodes un a un, així que intentarem familiaritzar-nos amb alguns dels més utilitzats.</p>
+<h3 id="code-node">Code Node</h3>
+<p>El node Code permet executar codi JavaScript (o Python) personalitzat per transformar dades.</p>
+<p><img alt="Node Code" src="../images/n8n03_02.jpg" /></p>
+<p>En l'apartat <code>Mode</code> per defecte tenim <code>Run once for all items</code>. Això vol dir que el node amb el codi s'executarà <strong>una vegada només</strong> quan li arriba l'input. Si en l'input hi arriben molts valors, i volem que el codi s'execute per cada un d'ells, seleccionarem l'opció <code>Run once for each item</code>. En este cas, el codi s'executarà <strong>una vegada per cada item</strong> que arribe a l'input.</p>
+<pre><code class="language-javascript">// Les dades d'entrada estan a items
+const dades = $input.all();
+
+return dades.map(item =&gt; ({
+  json: {
+    // Modifiqueu les dades ací
+    nouCamp: item.json.camp * 2,
+    processat: true
+  }
+}));
+</code></pre>
+<blockquote>
+<p>Penseu en els nodes Code de n8n com si foren els nodes Function de Node-RED.</p>
+</blockquote>
+<h4 id="acces-a-les-dades-de-linput">Accés a les dades de l'input</h4>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$input.all()</code></td>
+<td>Tots els items d'entrada</td>
+</tr>
+<tr>
+<td><code>$input.first()</code></td>
+<td>Primer item</td>
+</tr>
+<tr>
+<td><code>$input.last()</code></td>
+<td>Últim item</td>
+</tr>
+<tr>
+<td><code>$node("NomNode")</code></td>
+<td>Dades d'un node específic</td>
+</tr>
+<tr>
+<td><code>$json</code></td>
+<td>Item actual (sintaxi curta)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="casos-practics-de-code">Casos pràctics de Code</h4>
+<p><strong>Exemple 1: Transformar dades</strong></p>
+<pre><code class="language-javascript">// Afegir camps calculats
+return $input.all().map(item =&gt; ({
+  json: {
+    nom: item.json.nom,
+    email: item.json.email.toLowerCase(),
+    data_creacio: new Date().toISOString(),
+    hash: require('crypto')
+      .createHash('md5')
+      .update(item.json.email)
+      .digest('hex')
+  }
+}));
+</code></pre>
+<p><strong>Exemple 2: Filtrar dades</strong></p>
+<pre><code class="language-javascript">// Filtrar només majors d'edat
+return $input.all().map(item =&gt; {
+  if (item.json.edat &gt;= 18) {
+    return { json: item.json };
+  }
+}).filter(item =&gt; item !== undefined);
+</code></pre>
+<p><strong>Exemple 3: Agrupar dades</strong></p>
+<pre><code class="language-javascript">// Agrupar per categoria
+const grups = {};
+
+for (const item of $input.all()) {
+  const cat = item.json.categoria;
+  if (!grups[cat]) grups[cat] = [];
+  grups[cat].push(item.json);
+}
+
+return Object.entries(grups).map(([categoria, items]) =&gt; ({
+  json: { categoria, quantitat: items.length, items }
+}));
+</code></pre>
+<h4 id="llibreries-disponibles">Llibreries disponibles</h4>
+<p>Podeu utilitzar els següents mòduls de Node.js:</p>
+<pre><code class="language-javascript">// Crypto
+const crypto = require('crypto');
+
+// Date/Time
+const avui = new Date();
+const faUnaSetmana = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+
+// Utils
+const _ = require('lodash'); // Si està disponible
+</code></pre>
+<h3 id="set-node">Set Node</h3>
+<p>El node <code>Set</code> permet assignar valors a camps nous o existents sense haver d'escriure codi en JavaScript / Python. És molt útil per a transformacions senzilles. Podem crear els camps en format JSON, o anar definint-los un a un.</p>
+<h4 id="modes-doperacio">Modes d'operació</h4>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Keep Only Set</td>
+<td>Elimina tots els camps excepte els especificats</td>
+</tr>
+<tr>
+<td>Set All</td>
+<td>Assigna valors a camps específics (no elimina els altres)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="assignar-valors">Assignar valors</h4>
+<p>Podeu assignar:</p>
+<p><strong>Valors fixos:</strong></p>
+<pre><code class="language-yaml">nom: &quot;Joan&quot;
+actiu: true
+quantitat: 42
+</code></pre>
+<blockquote>
+<p>Recordeu que els valors fixos poden afegir-se d'un en un, o en format JSON. Si seleccionen l'opció <code>Manual Mapping</code> els anirem afegint d'un en un en el requadre que podem veure en la imatge següent.</p>
+</blockquote>
+<p><img alt="Node Set" src="../images/n8n03_01.jpg" /></p>
+<p><strong>Expressions (dinàmiques):</strong></p>
+<p>Per assignar valors basats en expressions, hem de fer clic en el botó <code>Expression</code> que hi ha a la dreta del quadre de text <code>Value</code>. Per definir expressions utilitzarem la sintaxi <code>{{ }}</code>. Per exemple:</p>
+<pre><code class="language-javascript">{{ $json.camp }}           // Valor d'un camp
+{{ $now.toISO() }}         // Data actual
+{{ $vars.variable }}       // Variable de workflow
+</code></pre>
+<h3 id="filter-node">Filter Node</h3>
+<p>El node Filter permet filtrar elements segons condicions. Les condicions s'aniran afegint una a una tal com se veu en la imatge.</p>
+<p><img alt="Node Filter" src="../images/n8n03_03.jpg" /></p>
+<h4 id="operadors-disponibles">Operadors disponibles</h4>
+<p>Els operadors disponibles estaran en funció del tipus del valor amb el que treballem. Per exemple, si el valor és un string, els operadors disponibles seran diferents que si el valor és un número. A continuació teniu una taula amb els operadors més comuns:</p>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Descripció</th>
+<th>Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td>Exactament igual</td>
+<td><code>nom</code> equals <code>Joan</code></td>
+</tr>
+<tr>
+<td>Not Equals</td>
+<td>Diferent</td>
+<td><code>actiu</code> not equals <code>false</code></td>
+</tr>
+<tr>
+<td>Contains</td>
+<td>Conté el text</td>
+<td><code>email</code> contains <code>@example</code></td>
+</tr>
+<tr>
+<td>Not Contains</td>
+<td>No conté</td>
+<td><code>nom</code> not contains <code>test</code></td>
+</tr>
+<tr>
+<td>Starts With</td>
+<td>Comença amb</td>
+<td><code>nom</code> starts with <code>Dr.</code></td>
+</tr>
+<tr>
+<td>Ends With</td>
+<td>Acaba amb</td>
+<td><code>email</code> ends with <code>.com</code></td>
+</tr>
+<tr>
+<td>Greater Than</td>
+<td>Major que</td>
+<td><code>edat</code> &gt; 18</td>
+</tr>
+<tr>
+<td>Less Than</td>
+<td>Menor que</td>
+<td><code>edat</code> &lt; 65</td>
+</tr>
+<tr>
+<td>Is Empty</td>
+<td>Està buit</td>
+<td><code>nom</code> is empty</td>
+</tr>
+<tr>
+<td>Is Not Empty</td>
+<td>No està buit</td>
+<td><code>email</code> is not empty</td>
+</tr>
+<tr>
+<td>Regex</td>
+<td>Expressió regular</td>
+<td><code>telefon</code> matches <code>^\d{9}$</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="condicions-combinades">Condicions combinades</h4>
+<p>Podeu combinar condicions amb <strong>AND</strong> o <strong>OR</strong>:</p>
+<pre><code>( edat &gt; 18 ) AND ( actiu = true )
+</code></pre>
+<pre><code>( pais = &quot;Espanya&quot; ) OR ( pais = &quot;Portugal&quot; )
+</code></pre>
+<h2 id="integracio-amb-altres-serveis">Integració amb altres serveis</h2>
+<p>Anem a veure alguns nodes que permeten connectar el nostre flux de treball amb serveis o aplicacions externes.</p>
+<p>Hi ha moltíssimes opcions, així que en veurem unes quantes per a familiaritzar-nos amb el procés de connexió. </p>
+<h3 id="connexio-amb-kafka">Connexió amb Kafka</h3>
+<p>Com ja sabeu, <strong>Apache Kafka</strong> és un broker de missatges distribuït dissenyat per a pipelines de dades en temps real d'alt rendiment. Tal com hem vist en altres unitats, <strong>Kafka</strong> té <strong><em>producers</em></strong> i <strong><em>consumers</em></strong>. Al igual que <strong>Node-RED</strong>, <strong>n8n</strong> també té nodes per treballar amb Kafka.</p>
+<p>Anem a crear un flux senzill on enviem dades a Kafka i després les llegim.</p>
+<p><strong>Producer</strong></p>
+<p>Primer creem un node <code>Edit Fields (set)</code> per crear unes dades que enviarem a Kafka. Podem triar fer-ho directament en format JSON, però per poder utilitzar expressions per a la data triarem l'opció <code>Manual mapping</code>. Anem afegint camps especificant nom, tipus i valor. Per exemple:</p>
+<p><img alt="Node Set configurat per generar dades de sensor" src="../images/n8n04.jpg" /></p>
+<p>L'eixida del node <code>set</code> la podem enviar a un node <code>Kafka</code> que guarde la informació en un topic que anomenem, per exemple, <strong>my-topic</strong>.</p>
+<p>El node Kafka permet enviar missatges a un topic. El posem a l'eixida del node <code>set</code> i el configurem amb les dades del nostre broker Kafka a l'apartat <code>Credential</code>. En el nostre cas, com estem dockeritzant Kafka, el broker serà <code>broker:29092</code>. Les opcions <code>ssl</code> i <code>authentication</code> les deixarem deshabilitades perquè el nostre Kafka no té seguretat habilitada.</p>
+<p><img alt="Credencials per a Kafka" src="../images/n8n05.jpg" /></p>
+<p>Quan ja creem la credencial només queda definir el nom del topic i activar l'opció <code>Send Input Data</code>. Això farà que el node Kafka envie les dades que li arriben del node <code>set</code> al topic especificat.</p>
+<p><img alt="Node Kafka (producer)" src="../images/n8n06.jpg" /></p>
+<p><strong>Consumer</strong></p>
+<p>Per a llegir la informació de Kafka utilitzem un node <code>Kafka trigger</code>. Utilitzem la mateixa credencial que abans i configurem el node amb les dades del topic que volem consumir. Tenim l'opció de llegir cada vegada des del principi del topic (des del primer missatge) o només els missatges nous. També tenim l'opció de parsejar directament els missatges a JSON.</p>
+<p><img alt="Node Kafka Trigger (consumer)" src="../images/n8n07.jpg" /></p>
+<p>Si no funciona correctament el flux, proveu a posar el Kafka productor en un canvas i el Kafka consumidor (Kafka Trigger) en un altre. Publiqueu (botó Publish) els dos fluxos, i comproveu que s'estan executant tal com hem vist abans.</p>
+<p>Un flux típic per processar dades de sensors podria ser el següent:</p>
+<pre><code>Schedule (cada 10s) → Code (generar dades) → Kafka (produce)
+                                         ↓
+Kafka (consume) → Code (validar) → IF (és vàlid?) → Elasticsearch (index)
+                        ↓
+                  (no vàlid) → Set (marcar error) → Logstash (enviar a errors)
+</code></pre>
+<p>El flux senzill que hem fet quedaria així:</p>
+<p><img alt="Flux exemple de Kafka" src="../images/n8n08.jpg" /></p>
+<blockquote>
+<p>Torne a insistir: comproveu si vos funciona tot bé, i si no funciona correctament separeu els dos workflows en canves diferents i publiqueu-los (Botó Publish). A classe veurem un exemple més complet i comprovat.</p>
+</blockquote>
+<h3 id="conexio-amb-telegram">Conexió amb Telegram</h3>
+<p>n8n té nodes per a moltes aplicacions externes. Per exemple, podem connectar amb Telegram per enviar missatges o rebre notificacions.</p>
+<p>En el cas de Telegram, haurem de crear un bot a Telegram i obtenir el token d'API. Després, en n8n, crearem una credencial de tipus <code>Telegram</code> on introduirem el token per crear la connexió. També necessitarem saber el nostre chatID, cosa que podeu fer posant en el navegador la següent URL (substituïnt <code>TOKEN</code> pel token del vostre bot):</p>
+<pre><code>https://api.telegram.org/botTOKEN/getUpdates
+</code></pre>
+<h4 id="enviar-missatges-a-telegram">Enviar missatges a Telegram</h4>
+<p>Una prova senzilla seria fer un webhook que envie missatges a Telegram cada vegada que rep una petició.</p>
+<p>El node webhook quedaria així:</p>
+<p><img alt="Node webhook" src="../images/n8n09.jpg" /></p>
+<p>Connectem a l'eixida del webhook un node Telegram que quedaria així (se suposa que ha heu creat la credencial de Telegram amb el token del vostre bot i la URL https://api.telegram.org):</p>
+<p><img alt="Node Telegram" src="../images/n8n10.jpg" /></p>
+<p>El flux complet queda així:</p>
+<p><img alt="Flux webhook → Telegram" src="../images/n8n11.jpg" /></p>
+<p>Ara si executem el flux, i des del navegador fem una petició a la URL del webhook, hauriem de rebre una notificació en el nostre bot de Telegram.</p>
+<blockquote>
+<p>A classe farem una pràctica guiada (la tindreu en Aules) de com connectar Kafka i Telegram per rebre una notificació a Telegram quan arribe un missatge a Kafka que compleix una condició determinada.</p>
+</blockquote>
+<h3 id="http-request-node">HTTP Request Node</h3>
+<p>El node <strong>HTTP Request</strong> és un dels més versàtils, permetent fer peticions a qualsevol API REST (igual que el node HTTP Request de Node-RED).</p>
+<p>Admet els mètodes habituals:</p>
+<table>
+<thead>
+<tr>
+<th>Mètode</th>
+<th>Ús</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>Recuperar dades</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>Crear recursos</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>Actualitzar recursos</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>Modificació parcial</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>Eliminar recursos</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Node HTTP Request" src="../images/n8n04_01.jpg" /></p>
+<p>Com veieu, podem seleccionar el mètode HTTP corresponent, la URL, mètode d'autenticació si és necessari, i altres opcions com headers, query parameters, body, etc. Fent clic en el botó <code>Add option</code> podem accedir a més opcions de configuració.</p>
+<h4 id="headers">Headers</h4>
+<p>Els headers proporcionen informació addicional a la petició:</p>
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>Valor</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content-Type</td>
+<td>application/json</td>
+<td>Format de les dades</td>
+</tr>
+<tr>
+<td>Authorization</td>
+<td>Bearer TOKEN</td>
+<td>Token d'autenticació</td>
+</tr>
+<tr>
+<td>Accept</td>
+<td>application/json</td>
+<td>Format esperat de resposta</td>
+</tr>
+</tbody>
+</table>
+<h4 id="query-parameters">Query Parameters</h4>
+<p>Podeu afegir paràmetres de cerca a la URL:</p>
+<pre><code class="language-yaml">URL: https://exemple.api.com
+Query Parameters:
+  - name: limit
+    value: 10
+  - name: offset
+    value: 0
+</code></pre>
+<p>Resultat: <code>https://exemple.api.com/usuaris?limit=10&amp;offset=0</code></p>
+<blockquote>
+<p>Teniu en compte que la URL <code>https://exemple.api.com/</code> no existeix, és per posar un exemple.</p>
+</blockquote>
+<h4 id="body">Body</h4>
+<p>Per a peticions POST/PUT/PATCH, el cos de la petició conté les dades:</p>
+<pre><code class="language-json">{
+  &quot;nom&quot;: &quot;Joan&quot;,
+  &quot;email&quot;: &quot;joan@example.com&quot;,
+  &quot;edat&quot;: 30
+}
+</code></pre>
+<h4 id="autenticacio">Autenticació</h4>
+<p>El node HTTP Request suporta diversos tipus d'autenticació:</p>
+<p><strong>Basic Auth (Usuari i contrasenya):</strong></p>
+<pre><code class="language-yaml">Authentication: Basic Auth
+User: usuari
+Password: contrasenya
+</code></pre>
+<p><strong>Header Auth (API Key):</strong></p>
+<pre><code class="language-yaml">Authentication: Header Auth
+Name: X-API-Key
+Value: la-vostra-clau-api
+</code></pre>
+<p><strong>OAuth2:</strong></p>
+<pre><code class="language-yaml">Authentication: OAuth2 API
+Client ID: ...
+Client Secret: ...
+Authorization URL: ...
+Access Token URL: ...
+Scope: read write
+</code></pre>
+<h2 id="nodes-de-control-de-flux">Nodes de control de flux</h2>
+<p>Anem a veure alguns nodes que modifiquen la lògica del flux.</p>
+<h3 id="if-node">IF Node</h3>
+<p>Bifurca el flux en dues branques: veritat (true) o fals (false).</p>
+<p>En l'apartat <code>Conditions</code> podem anar afegint condicions una a una. Per exemple, podem afegir una condició que compare el valor d'un camp amb un valor fix, o que compare el valor d'un camp amb el valor d'un altre camp, etc.</p>
+<p>Si posem més d'una condició, podem seleccionar si volem que es connecte amb les altres amb AND o amb OR.</p>
+<p><img alt="IF node" src="../images/n8n05_01.jpg" /></p>
+<p>El node <code>IF</code> té una eixida per a la branca de veritat (true) i una altra per a la branca de fals (false). Així, podem connectar diferents nodes a cada branca segons el resultat de les condicions.</p>
+<blockquote>
+<p>Si només volem comprovar que l'IF funciona, i mostrar les dades que trau com a output, podem afegir a les dues eixides nodes de tipus <code>No Operation</code> (que no fan res) i així veurem les dades que passen per cada branca. Seria com els nodes <code>Debug</code> de Node-RED.</p>
+</blockquote>
+<h3 id="switch-node">Switch Node</h3>
+<p>Bifurca el flux en múltiples branques segons unes regles que anirem afegint. Cada regla genera una eixida del node a la qual li podem connectar altres nodes.</p>
+<p><img alt="Switch Node" src="../images/n8n05_02.jpg" /></p>
+<h3 id="loop-over-items-node">Loop Over Items Node</h3>
+<p>Permet iterar sobre cada element d'un array i executar un sub-flux per a cadascun.</p>
+<p><strong>Funcionament</strong></p>
+<ol>
+<li>El node rep un array d'items</li>
+<li>Per a cada item, executa el sub-flux connectat</li>
+<li>Recull els resultats de cada iteració</li>
+<li>Retorna tots els resultats</li>
+</ol>
+<p><strong>Exemple</strong></p>
+<pre><code class="language-javascript">// Dades d'entrada (array)
+[
+  { json: { id: 1, nom: &quot;Maria&quot; } },
+  { json: { id: 2, nom: &quot;Joan&quot; } },
+  { json: { id: 3, nom: &quot;Anna&quot; } }
+]
+</code></pre>
+<p>El node Loop processarà cada element individualment.</p>
+<blockquote>
+<p>En principi no necessitarem nodes <code>Loop</code> perquè molts nodes de n8n ja tenen l'opció, per defecte o a escollir per l'usuari, de processar cada ítem d'entrada de forma individual. Tot i això, en alguns casos pot ser útil per a iterar sobre arrays que arriben com a camp d'un item, o per a executar un sub-flux complex per a cada element.</p>
+</blockquote>
+<h3 id="merge-node">Merge Node</h3>
+<p>El node <strong>Merge</strong> permet unir múltiples branques en una única execució. Té diferents modes:</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Append</td>
+<td>Junta tots els items seqüencialment</td>
+</tr>
+<tr>
+<td>Combine</td>
+<td>Combina tots els items en un únic item (útil si hi ha valors duplicats en les diferents branques)</td>
+</tr>
+<tr>
+<td>SQL Query</td>
+<td>Podem crear una query SQL per definir com se fusionaran les dades</td>
+</tr>
+<tr>
+<td>Choose branch</td>
+<td>Permet seleccionar una branca específica per a la sortida</td>
+</tr>
+</tbody>
+</table>
+<pre><code>Branca A ─┐
+           ├─→ Merge ─→ Sortida
+Branca B ─┘
+</code></pre>
+<p><img alt="Node Merge" src="../images/n8n05_03.jpg" /></p>
+<p>Dins d'un flux podríem tindre per exemple 2 nodes que generen dades de fonts diferents, i un merge per unir-les totes i poder-les processar conjuntament.</p>
+<p><img alt="Exemple de Merge" src="../images/n8n05_03_01.jpg" /></p>
+<h3 id="wait-node">Wait Node</h3>
+<p>El node Wait permet pausar l'execució del flux durant un temps determinat.</p>
+<p><strong>Tipus de pausa</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tipus</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>After time initerval</td>
+<td>Pausa durant un temps fix</td>
+</tr>
+<tr>
+<td>At specified time</td>
+<td>Pausa fins a una hora específica</td>
+</tr>
+<tr>
+<td>On Webhook call</td>
+<td>Pausa fins a rebre una crida webhook</td>
+</tr>
+<tr>
+<td>On Form submitted</td>
+<td>Pausa fins a rebre dades d'un formulari</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Node Wait" src="../images/n8n05_04.jpg" /></p>
+<h2 id="credencials_1">Credencials</h2>
+<p>Les credencials emmagatzemen de forma segura les claus d'API, tokens i contrasenyes necessàries per autenticar-se a serveis externs.</p>
+<p>Podeu veure les credencials en cada node on s'utilitzen, amb el botó d'editar (icona de llapis) que hi ha a la dreta de l'apartat d'autenticació. </p>
+<p>També podeu gestionar totes les credencials si aneu a la pantalla principal de n8n i feu clic a <strong>Credentials</strong>.</p>
+<p><img alt="Credencials" src="../images/n8n12.jpg" /></p>
+<h3 id="crear-credencials">Crear credencials</h3>
+<ol>
+<li>Quan configureu un node, feu clic a <strong>"Create New Credential"</strong></li>
+<li>Seleccioneu el tipus d'autenticació</li>
+<li>Ompliu els camps requerits</li>
+<li>Feu clic a <strong>"Save"</strong></li>
+</ol>
+<h3 id="tipus-dautenticacio">Tipus d'autenticació</h3>
+<table>
+<thead>
+<tr>
+<th>Tipus</th>
+<th>Utilització</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>API Key</strong></td>
+<td>Claus d'API simples</td>
+</tr>
+<tr>
+<td><strong>Basic Auth</strong></td>
+<td>Usuari i contrasenya</td>
+</tr>
+<tr>
+<td><strong>OAuth2</strong></td>
+<td>Autenticació amb proveïdors OAuth</td>
+</tr>
+<tr>
+<td><strong>Header Auth</strong></td>
+<td>Clau en capçalera HTTP</td>
+</tr>
+<tr>
+<td><strong>Custom Auth</strong></td>
+<td>Autenticació personalitzada</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bones-practiques">Bones pràctiques</h3>
+<ol>
+<li><strong>No compartiu credencials</strong> entre múltiples nodes si no és necessari</li>
+<li><strong>Utilitzeu credencials compartides</strong> per a fluxes relacionats</li>
+<li><strong>Roteu les claus periòdicament</strong> segons la política de seguretat</li>
+<li><strong>No incloeu claus en expressions</strong> visibles als logs</li>
+<li><strong>Verifiqueu l'accessibilitat</strong> de les credencials per projecte</li>
+</ol>
+<h3 id="autenticacio-http">Autenticació HTTP</h3>
+<p>Podeu configurar autenticació global per al node HTTP Request:</p>
+<p><strong>Basic Auth:</strong></p>
+<pre><code class="language-yaml">Credential for Basic Auth:
+  Name: usuari
+  Password: contrasenya
+</code></pre>
+<p><strong>Bearer Token:</strong></p>
+<pre><code class="language-yaml">Credential for Header Auth:
+  Name: Authorization
+  Value: Bearer TOKEN_AQUÍ
+</code></pre>
+<h2 id="variables-i-memoria">Variables i Memòria</h2>
+<h3 id="workflow-variables">Workflow Variables</h3>
+<p>n8n permet definir i utilitzar variables de workflow per emmagatzemar dades temporals que es poden compartir entre nodes. Ara bé, eixa opció no està disponible en la versió autoinstal·lada gratuita.</p>
+<h3 id="memory-nodes">Memory Nodes</h3>
+<p>Els nodes de memòria emmagatzemen dades entre execucions, essencials per a AI Agents amb context.</p>
+<blockquote>
+<p>Si busqueu "Memory" en el cercador de nodes, no vos apareixeran els <code>Memory Nodes</code> perquè només poden utilitzar-se des d'un node que interactue amb un agent.</p>
+</blockquote>
+<h4 id="buffer-memory">Buffer Memory</h4>
+<p>Emmagatzema els últims N missatges de la conversa:</p>
+<pre><code class="language-yaml">Window Size: 10
+</code></pre>
+<p>Útil per a chatbots que necessiten context recent.</p>
+<h4 id="window-memory">Window Memory</h4>
+<p>Similar a Buffer, però amb finestres temporals:</p>
+<pre><code class="language-yaml">Window Size: 10
+Session Key: &quot;{{ $json.session_id }}&quot;
+</code></pre>
+<h4 id="vector-store-memory">Vector Store Memory</h4>
+<p>Emmagatzema vectors per a cerques semàntiques (requereix integració amb base de dades vectorial com Pinecone o Weaviate).</p>
+<h4 id="integracio-amb-ai-agents">Integració amb AI Agents</h4>
+<p>La memòria s'utilitza principalment amb AI Agents per mantindre context:</p>
+<pre><code>User Input → Chat Agent (amb Memory) → Response
+                         ↓
+                  Buffer Memory
+</code></pre>
+<h4 id="configuracio">Configuració</h4>
+<ol>
+<li>Afegiu el node <strong>Chat Agent</strong></li>
+<li>Connecteu un node de memòria a l'entrada "Memory"</li>
+<li>Configureu la mida de la finestra</li>
+</ol>
+<h4 id="exemple-chatbot-amb-memoria">Exemple: Chatbot amb memòria</h4>
+<pre><code class="language-yaml">Agent: Conversational Agent
+Memory: Buffer Memory (Window: 5)
+Model: Claude
+</code></pre>
+<p>El bot recordarà els últims 5 missatges de la conversa.</p>
+<h2 id="sub-workflows">Sub-workflows</h2>
+<p>Com a opcions més avançades, els fluxos de treball poden cridar-se uns a altres i passar-se informació. Això ho podem fer amb el node <strong>Execute Workflow</strong>.</p>
+<p>També poden crear <code>sub-workflows</code> que són fluxos de treball més petits i especialitzats que poden ser reutilitzats des de diferents fluxos principals.</p>
+<p>Eixos sub-workflows s'invoquen també amb el node <strong>Execute Workflow</strong>, però en lloc de seleccionar un workflow diferent, seleccionem el sub-workflow que hem creat.</p>
+<h3 id="passar-dades">Passar dades</h3>
+<p><strong>Opcions de pas de dades:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Opció</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>all</code></td>
+<td>Totes les dades de l'item actual</td>
+</tr>
+<tr>
+<td><code>none</code></td>
+<td>Sense dades</td>
+</tr>
+<tr>
+<td><code>select</code></td>
+<td>Camps específics</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Pas de camps específics:</strong></p>
+<pre><code class="language-yaml">Fields to Pass: nom, email, telefon
+</code></pre>
+<h4 id="rebre-dades-del-sub-workflow">Rebre dades del sub-workflow</h4>
+<p>El workflow cridat retorna les seues dades d'eixida. Podeu accedir amb:</p>
+<pre><code class="language-javascript">{{ $json.dades_retornades }}
+</code></pre>
+<h2 id="error-workflows">Error Workflows</h2>
+<p>Els error workflows permeten gestionar errors de manera centralitzada.</p>
+<h3 id="quan-sactiva">Quan s'activa</h3>
+<p>Un error workflow s'activa quan:</p>
+<ul>
+<li>Un node llença un error</li>
+<li>S'utilitza el node <strong>Stop and Error</strong></li>
+<li>S'utilitza el node <strong>Error Trigger</strong></li>
+</ul>
+<h3 id="crear-un-error-workflow">Crear un Error Workflow</h3>
+<ol>
+<li>Creeu un nou workflow</li>
+<li>Afegiu el trigger <strong>Error Workflow</strong></li>
+<li>Configura el workflow com a "Error Workflow" a les propietats</li>
+</ol>
+<h3 id="exemple-notificar-errors">Exemple: Notificar errors</h3>
+<pre><code>Error Trigger → Send Email (admin) → Log a Elasticsearch
+</code></pre>
+<h3 id="gestio-derrors-en-nodes-individuals">Gestió d'errors en nodes individuals</h3>
+<p>Cada node té una eixida d'error (Error Output). Podeu:</p>
+<ol>
+<li>Connectar esta eixida a un node de notificació</li>
+<li>Reintentar l'operació</li>
+<li>Registrar l'error per anàlisi posterior</li>
+</ol>
+<h2 id="connexio-a-bases-de-dades">Connexió a bases de dades</h2>
+<p>També tenim diferents nodes en n8n per a connectar amb múltiples bases de dades. Anem a veure un parell d'exemples.</p>
+<h3 id="connexio-amb-mysql">Connexió amb MySQL</h3>
+<p>Per a treballar amb MySQL/MariaDB, igual que amb qualsevol altre sistema gestor de bases de dades, necessitarem crear unes credencials.</p>
+<p><img alt="Credencials MySQL" src="../images/n8n13_01.jpg" /></p>
+<p>El node MySQL permet connectar i interactuar amb bases de dades MySQL/MariaDB. Quan seleccionem el node MySQL, ens demana quina operació volem executar.</p>
+<p><img alt="Seleccionar Node MySQL" src="../images/n8n13_02.jpg" /></p>
+<p>Després internament en el node ja podem especificar més clarament quines operacions volem realitzar.</p>
+<p><img alt="Node MySQL operacions" src="../images/n8n13_03.jpg" /></p>
+<h3 id="connexio-amb-elasticsearch">Connexió amb Elasticsearch</h3>
+<p>El node Elasticsearch permet indexar, cercar i gestionar documents a Elasticsearch.</p>
+<p>Igual que amb MySQL, necessitarem unes credencials. També hem de triar una operació quan seleccionem el node.</p>
+<p><img alt="Seleccionar Node Elasticsearch" src="../images/n8n14.jpg" /></p>
+<p>Una vegada tenim el node en el workflow, podem fer modificacions més específiques segons l'operació que hàgim triat.</p>
+<p><img alt="Node Elasticsearch operacions" src="../images/n8n14_01.jpg" /></p>
+<p>Veurem també algun exemple pràctic a classe on integrarem Elastic amb altres funcions de n8n.</p>
+<blockquote>
+<p>M'HE QUEDAT ACÍ. FALTARIA TOTA LA PART D'INTEGRACIÓ AMB IA. TAMBÉ AFEGIR INTEGRACIÓ AMB GMAIL I ALGUNA EINA MÉS.</p>
+</blockquote>
+<h2 id="integracio-amb-ia">Integració amb IA</h2>
+<p>Una de les opcions més potents que té n8n és que ofereix nodes natius per treballar amb els principals models d'IA:</p>
+<table>
+<thead>
+<tr>
+<th>Proveïdor</th>
+<th>Model</th>
+<th>Ús principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Anthropic</strong></td>
+<td>Claude 3</td>
+<td>Conversació, anàlisi, classificació</td>
+</tr>
+<tr>
+<td><strong>OpenAI</strong></td>
+<td>GPT-4, DALL-E, Whisper</td>
+<td>Generació text, imatges, àudio</td>
+</tr>
+<tr>
+<td><strong>Google</strong></td>
+<td>Gemini</td>
+<td>Multimodal, codi</td>
+</tr>
+</tbody>
+</table>
+<h3 id="claude-node">Claude Node</h3>
+<p>Permet utilitzar Claude 3 d'Anthropic per a tasques d'IA.</p>
+<!-- IMG: n8n13.jpg -->
+<p><em>Figura 30.1: Node Claude configurat amb prompt i paràmetres</em></p>
+<h4 id="credencials_2">Credencials</h4>
+<ol>
+<li>Creeu un compte a <a href="https://console.anthropic.com">console.anthropic.com</a></li>
+<li>Obteniu la clau API</li>
+<li>Configureu-la a n8n</li>
+</ol>
+<h4 id="configuracio-basica">Configuració bàsica</h4>
+<pre><code class="language-yaml">Resource: Chat
+Operation: Complete
+Model: claude-3-5-sonnet-20241022
+Messages:
+  - Role: system
+    Content: Eres un assistent que classifica missatges
+  - Role: user
+    Content: &quot;{{ $json.missatge }}&quot;
+</code></pre>
+<h4 id="parametres-avancats">Paràmetres avançats</h4>
+<table>
+<thead>
+<tr>
+<th>Paràmetre</th>
+<th>Descripció</th>
+<th>Valor típic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Temperature</td>
+<td>Creativitat (0-1)</td>
+<td>0.7</td>
+</tr>
+<tr>
+<td>Max Tokens</td>
+<td>Màxim de tokens</td>
+<td>1024</td>
+</tr>
+<tr>
+<td>System Message</td>
+<td>Instruccions de rol</td>
+<td>Depèn de la tasca</td>
+</tr>
+</tbody>
+</table>
+<h4 id="output-format">Output Format</h4>
+<p>Podeu demanar que l'eixida siga en format JSON:</p>
+<pre><code>Al final del teu missatge, inclou un JSON amb el format:
+{&quot;categoria&quot;: &quot;incident|consulta|altre&quot;, &quot;prioritat&quot;: &quot;alta|mitjana|baixa&quot;}
+</code></pre>
+<hr />
+<h3 id="openai-node">OpenAI Node</h3>
+<h4 id="models-disponibles">Models disponibles</h4>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Ús</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gpt-4</td>
+<td>Millor qualitat, més lent</td>
+</tr>
+<tr>
+<td>gpt-4-turbo</td>
+<td>Qualitat amb velocitat</td>
+</tr>
+<tr>
+<td>gpt-3.5-turbo</td>
+<td>Ràpid, menor cost</td>
+</tr>
+<tr>
+<td>dalle-3</td>
+<td>Generació d'imatges</td>
+</tr>
+<tr>
+<td>whisper-1</td>
+<td>Transcripció d'àudio</td>
+</tr>
+</tbody>
+</table>
+<h4 id="exemple-classificar-text">Exemple: Classificar text</h4>
+<pre><code class="language-yaml">Model: gpt-3.5-turbo
+Messages:
+  - Role: system
+    Content: Classifica este email en una paraula (spam|normal)
+  - Role: user
+    Content: &quot;{{ $json.email_body }}&quot;
+</code></pre>
+<hr />
+<h3 id="exemple-practic">Exemple Pràctic</h3>
+<h4 id="workflow-classificar-incidencies-amb-ia">Workflow: Classificar incidències amb IA</h4>
+<pre><code>Telegram Trigger → Claude (classificar) → IF (bifurcar) → ...
+</code></pre>
+<p><strong>Pas 1: Trigger de Telegram</strong></p>
+<p>Configureu el bot per rebre missatges del grup de monitorització.</p>
+<p><strong>Pas 2: Classificar amb Claude</strong></p>
+<pre><code class="language-yaml">System: |
+  Ets un sistema de classificació d'incidències.
+  Classifica cada missatge com:
+  - &quot;incident&quot;: Problema urgent que necessita atenció
+  - &quot;consulta&quot;: Pregunta o sol·licitud d'informació
+  - &quot;altre&quot;: Qualsevol altre missatge
+
+  Respon NOMÉS amb JSON:
+  {&quot;categoria&quot;: &quot;...&quot;, &quot;explicacio&quot;: &quot;...&quot;}
+
+User: {{ $json.text }}
+</code></pre>
+<p><strong>Pas 3: Bifurcar segons classificació</strong></p>
+<pre><code class="language-yaml">IF: {{ $json.categoria }}
+Conditions:
+  - Value: incident
+    Output: Output 1
+  - Value: consulta
+    Output: Output 2
+  - Value: altre
+    Output: Output 3
+</code></pre>
+<hr />
+<h2 id="ai-agents-amb-langchain">AI Agents amb LangChain</h2>
+<h3 id="conceptes-fonamentals">Conceptes fonamentals</h3>
+<p>Un <strong>AI Agent</strong> és un sistema que utilitza un model d'IA per prendre decisions i executar accions de manera autònoma. A diferència d'una simple crida a un model, un agent pot:</p>
+<ul>
+<li><strong>Razonar</strong> sobre les dades rebudes</li>
+<li><strong>Decidir</strong> quines accions fer</li>
+<li><strong>Utilitzar eines</strong> (tools) per completar tasques</li>
+<li><strong>Mantindre estat</strong> mitjançant memòria</li>
+</ul>
+<h4 id="components-dun-agent">Components d'un agent</h4>
+<pre><code>┌─────────────┐
+│    Agent    │◀── Utilitza un model d'IA
+└──────┬──────┘
+       │
+       ├───▶ Tools (eines: cerques, càlculs, APIs)
+       │
+       └───▶ Memory (memòria: conversa, fets)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Agent</strong></td>
+<td>Coordina tot, pren decisions</td>
+</tr>
+<tr>
+<td><strong>Model</strong></td>
+<td>El cervell: Claude, GPT-4, Gemini</td>
+</tr>
+<tr>
+<td><strong>Tools</strong></td>
+<td>Funcions que l'agent pot cridar</td>
+</tr>
+<tr>
+<td><strong>Memory</strong></td>
+<td>Emmagatzema estat i context</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="nodes-dagents-a-n8n">Nodes d'Agents a n8n</h3>
+<p>n8n ofereix diversos nodes per crear agents:</p>
+<!-- IMG: agent_nodes.jpg -->
+<p><em>Figura X.1: Nodes d'agent disponibles a n8n</em></p>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Chat Agent</strong></td>
+<td>Agent conversacional amb eines</td>
+</tr>
+<tr>
+<td><strong>Conversational Agent</strong></td>
+<td>Similar, orientat a chatbots</td>
+</tr>
+<tr>
+<td><strong>LangChain Agent</strong></td>
+<td>Agent complet amb configuració avançada</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="chat-agent">Chat Agent</h3>
+<p>El node <strong>Chat Agent</strong> és l'opció més senzilla per crear agents conversacionals amb eines.</p>
+<!-- IMG: chat_agent_config.jpg -->
+<p><em>Figura X.2: Configuració del Chat Agent</em></p>
+<h4 id="configuracio-basica_1">Configuració bàsica</h4>
+<pre><code class="language-yaml">Model: Claude
+System Message: Ets un assistent útil que ajuda amb tasques de dades.
+Memory: Buffer Memory
+Tools: Calculator, Wikipedia, HTTP Request
+</code></pre>
+<h4 id="system-message">System Message</h4>
+<p>El missatge del sistema defineix el comportament de l'agent:</p>
+<pre><code class="language-yaml">System Message: |
+  Ets un analista de dades expert.
+  Quan et demanen analitzar dades:
+  1. Verifica que les dades siguen completes
+  2. Identifica patrons i tendències
+  3. Proporciona recomanacions clares
+
+  Sempre sigues precís i cites les teues fonts.
+</code></pre>
+<hr />
+<h3 id="tools-eines">Tools (Eines)</h3>
+<p>Les eines permeten a l'agent actuar sobre el món real.</p>
+<h4 id="tools-predefinides">Tools predefinides</h4>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Funció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Calculator</strong></td>
+<td>Realitzar càlculs</td>
+</tr>
+<tr>
+<td><strong>Wikipedia</strong></td>
+<td>Cercar informació</td>
+</tr>
+<tr>
+<td><strong>HTTP Request</strong></td>
+<td>Fer peticions web</td>
+</tr>
+<tr>
+<td><strong>Search API</strong></td>
+<td>Cercar a serveis externs</td>
+</tr>
+</tbody>
+</table>
+<h4 id="crear-una-tool-personalitzada">Crear una tool personalitzada</h4>
+<p>Podeu crear les vostres pròpies eines amb el <strong>Custom Tool</strong> node:</p>
+<pre><code class="language-yaml">Tool Name: get_sensor_data
+Description: Obté les dades actuals d'un sensor. 
+             Input: sensor_id (string)
+             Output: dades del sensor en JSON
+</code></pre>
+<h4 id="exemple-tool-per-consultar-elasticsearch">Exemple: Tool per consultar Elasticsearch</h4>
+<pre><code class="language-javascript">// Custom Tool: Elasticsearch Search
+const fetch = require('node:https');
+
+// Configuració de la tool
+const toolConfig = {
+  name: &quot;elasticsearch_search&quot;,
+  description: &quot;Cerca documents a Elasticsearch. Input: query en JSON&quot;,
+};
+
+// Codi de la tool
+async function execute(query) {
+  const response = await fetch('http://elasticsearch:9200/missatges/_search', {
+    method: 'POST',
+    headers: { 
+      'Content-Type': 'application/json',
+      'Authorization': 'Basic ' + Buffer.from('elastic:tavernes').toString('base64')
+    },
+    body: JSON.stringify(query)
+  });
+  return await response.json();
+}
+</code></pre>
+<hr />
+<h3 id="chain-router">Chain: Router</h3>
+<p>Un <strong>Chain</strong> permet encadenar múltiples passos de processament.</p>
+<h4 id="exemple-chain-de-classificacio">Exemple: Chain de classificació</h4>
+<pre><code>User Input → Classifier → [Consultes | Incidents | Altres]
+                           ↓            ↓            ↓
+                        Respond     Processar    Ignorar
+</code></pre>
+<pre><code class="language-yaml">Chain: Router Chain
+Routes:
+  - Condition: &quot;{{ $json.intent }}&quot; equals &quot;consulta&quot;
+    Chain: Resposta Consulta
+  - Condition: &quot;{{ $json.intent }}&quot; equals &quot;incident&quot;  
+    Chain: Processar Incident
+  - Default: Respondre genèric
+</code></pre>
+<hr />
+<h3 id="exemple-agent-cercador-de-dades">Exemple: Agent cercador de dades</h3>
+<p>En este exemple, crearem un agent que pot cercar dades a Elasticsearch.</p>
+<!-- IMG: data_agent_workflow.jpg -->
+<p><em>Figura X.3: Workflow de l'agent cercador</em></p>
+<h4 id="configuracio-del-workflow">Configuració del workflow</h4>
+<pre><code>Chat Trigger
+     ↓
+Chat Agent (amb Elasticsearch tool)
+     ↓
+Telegram (respondre)
+</code></pre>
+<h4 id="system-message_1">System Message</h4>
+<pre><code class="language-yaml">System Message: |
+  Ets un assistent especialitzat en consultar bases de dades Elasticsearch.
+
+  Pots cercar incidències, missatges i altres dades indexades.
+  Quan l'usuari pregunta per dades:
+  1. Identifica què busca
+  2. Construeix la query adequada
+  3. Retorna els resultats de manera clara
+
+  Si no trobes res, indica'l honestament.
+</code></pre>
+<h4 id="tools-configurades">Tools configurades</h4>
+<ol>
+<li><strong>Elasticsearch Search</strong>: Cerca documents</li>
+<li><strong>Calculator</strong>: Càlculs sobre dades</li>
+<li><strong>Date Parser</strong>: Processar dates</li>
+</ol>
+<hr />
+<h3 id="execucio-dun-agent">Execució d'un agent</h3>
+<p>Quan executes un agent:</p>
+<ol>
+<li><strong>L'usuari envia un missatge</strong></li>
+<li><strong>L'agent analitza</strong> el missatge</li>
+<li><strong>Decideix quina tool usar</strong> (o cap)</li>
+<li><strong>Executa la tool</strong> si cal</li>
+<li><strong>Genera la resposta</strong> final</li>
+</ol>
+<!-- IMG: agent_execution_flow.jpg -->
+<p><em>Figura X.4: Flux d'execució d'un agent</em></p>
+<h4 id="logs-de-lagent">Logs de l'agent</h4>
+<p>Podeu veure el raonament de l'agent als logs:</p>
+<pre><code>🎯 Analitzant pregunta: &quot;Quantes incidències hem tingut esta setmana?&quot;
+🤔 Decidint: Necessite consultar Elasticsearch
+🔧 Executant tool: elasticsearch_search
+📊 Resultats: 15 incidències
+💬 Resposta: &quot;Esta setmana hem tingut 15 incidències...&quot;
+</code></pre>
+<hr />
+<h3 id="bones-practiques-amb-agents">Bones pràctiques amb agents</h3>
+<ol>
+<li><strong>System Message clar</strong>: Defineix bé el paper de l'agent</li>
+<li><strong>Tools limitades</strong>: No sobrecarregueu amb eines innecessàries</li>
+<li><strong>Memòria adequada</strong>: Trieu el tipus de memòria segons la tasca</li>
+<li><strong>Fallback</strong>: Preveu respostes quan l'agent no sap què fer</li>
+<li><strong>Testing</strong>: Proveu l'agent amb múltiples casos</li>
+</ol>
+<h4 id="evitar-bucle-infinit">Evitar bucle infinit</h4>
+<pre><code class="language-yaml">Max Iterations: 5
+Timeout: 30 seconds
+</code></pre>
+<h4 id="gestio-derrors">Gestió d'errors</h4>
+<pre><code class="language-yaml">On Error:
+  - Log error
+  - Return: &quot;No he pogut completar la teua sol·licitud&quot;
+</code></pre>
+<hr />
+<h3 id="integracio-amb-memoria">Integració amb Memòria</h3>
+<p>Els agents poden mantindre memòria de la conversa:</p>
+<pre><code>Conversació:
+  User: &quot;Cercа incidents de dilluns&quot;
+  Agent: &quot;He trobat 5 incidències&quot;
+
+  User: &quot;I de dimarts?&quot;  (recorda el context anterior)
+  Agent: &quot;He trobat 3 incidències de dimarts&quot;
+</code></pre>
+<p>Configureu la memòria al Chat Agent:</p>
+<pre><code class="language-yaml">Memory: Buffer Memory
+Window Size: 10  # Últims 10 missatges
+Session Key: &quot;{{ $json.session_id }}&quot;
+</code></pre>
+<hr />
+<h2 id="practica-guiada">Pràctica Guiada</h2>
+<h3 id="sistema-de-monitoritzacio-intelligent-amb-telegram-ia-i-elasticsearch">Sistema de Monitorització Intelligent amb Telegram, IA i Elasticsearch</h3>
+<p>En esta pràctica construirem un sistema complet de monitorització que:</p>
+<ol>
+<li>Rep missatges d'un grup de Telegram</li>
+<li>Classifica automàticament si és una incidència, consulta o altre</li>
+<li>Indexa tots els missatges a Elasticsearch</li>
+<li>Envia alertes a Slack quan es detecta una incidència</li>
+<li>Respon automàticament a les consultes</li>
+</ol>
+<!-- IMG: n8n14.jpg -->
+<p><em>Figura 32.1: Flux complet del Sistema de Monitorització Intelligent</em></p>
+<hr />
+<p><strong>Pas 1: Crear el Bot de Telegram</strong></p>
+<p><strong>1.1 Obtenir el token del bot</strong></p>
+<ol>
+<li>Obriu Telegram i busqueu <strong>@BotFather</strong></li>
+<li>Envieu el comandament <code>/newbot</code></li>
+<li>Indiqueu el nom del bot (p. ej., <code>MonitoritzacioBot</code>)</li>
+<li>Indiqueu el nom d'usuari (ha d'acabar en <code>bot</code>, p. ej., <code>monitoritzacio_test_bot</code>)</li>
+<li>BotFather us facilitarà un <strong>token</strong> com este:</li>
+</ol>
+<pre><code>1234567890:ABCdefGHIjklMNOpqrsTUVwxyz123456789
+</code></pre>
+<p><strong>Important:</strong> Compartiu este token de manera segura i mai el publiqueu.</p>
+<p><strong>1.2 Configurar el bot</strong></p>
+<ol>
+<li>Obriu una conversa amb el vostre bot</li>
+<li>Envieu qualsevol missatge (p. ej., "Hola")</li>
+<li>Això activa el webhook del bot</li>
+</ol>
+<hr />
+<p><strong>Pas 2: Configurar el Trigger de Telegram</strong></p>
+<p><strong>2.1 Afegir el trigger</strong></p>
+<ol>
+<li>Creeu un nou workflow</li>
+<li>Afegiu el node <strong>Telegram Trigger</strong></li>
+<li>Seleccioneu <strong>Message</strong> com a Updates</li>
+</ol>
+<p><strong>2.2 Credencials</strong></p>
+<ol>
+<li>Feu clic a <strong>"Create New Credential"</strong></li>
+<li>Seleccioneu <strong>Telegram Api</strong></li>
+<li>Introduïu el token del bot</li>
+</ol>
+<p><strong>2.3 Activar el workflow</strong></p>
+<ol>
+<li>Deseu el workflow</li>
+<li>Activeu-lo amb el commutador de la cantonada superior dreta</li>
+</ol>
+<!-- IMG: n8n04.jpg -->
+<p><em>Figura 32.2: Node Telegram Trigger configurat</em></p>
+<hr />
+<p><strong>Pas 3. Integrar Claude per Classificar</strong></p>
+<p><strong>3.1 Afegir el node Claude</strong></p>
+<ol>
+<li>Afegiu el node <strong>Claude</strong> després del trigger</li>
+<li>Connecteu-lo</li>
+</ol>
+<p><strong>3.2 Configurar credencials</strong></p>
+<ol>
+<li>Creeu credencials d'Anthropic</li>
+<li>Obteniu la clau API a console.anthropic.com</li>
+</ol>
+<p><strong>3.3 Prompt de classificació</strong></p>
+<pre><code class="language-yaml">Model: claude-3-5-sonnet-20241022
+Messages:
+  - Role: system
+    Content: |
+      Ets un sistema de classificació per a un canal de monitorització d'incidències informàtiques.
+
+      Classifica cada missatge en una d'estes categories:
+      - &quot;incident&quot;: Error, fallada, problema urgent, incident de seguretat
+      - &quot;consulta&quot;: Pregunta, sol·licitud d'informació, petició d'ajuda
+      - &quot;altre&quot;: Tot la resta
+
+      Per a incidents, assessora la prioritat:
+      - &quot;alta&quot;: Servei caigut, dades en perill
+      - &quot;mitjana&quot;: Degradació del servei, problemes parcials
+      - &quot;baixa&quot;: Incidències menors, optimitzacions
+
+      Respon EXACTAMENT en este format JSON, sense cap altre text:
+      {&quot;categoria&quot;: &quot;incident|consulta|altre&quot;, &quot;prioritat&quot;: &quot;alta|mitjana|baixa&quot;, &quot;resum&quot;: &quot;breu descripció&quot;}
+
+  - Role: user
+    Content: &quot;{{ $json.text }}&quot;
+</code></pre>
+<p><strong>3.4 Configurar eixida</strong></p>
+<pre><code class="language-yaml">Response Format: JSON
+</code></pre>
+<hr />
+<p><strong>Pas 4: Parsejar la Resposta de Claude</strong></p>
+<p><strong>4.1 Afegir node Code</strong></p>
+<p>Utilitzeu un node Code per extraure les dades del JSON:</p>
+<pre><code class="language-javascript">// Obtenir la resposta de Claude
+const resposta = $input.first().json.message.content;
+
+// Buscar el JSON a la resposta
+const jsonMatch = resposta.match(/\{[^}]+\}/);
+
+if (jsonMatch) {
+  const dades = JSON.parse(jsonMatch[0]);
+  return {
+    json: {
+      text: $input.first().json.text,
+      chat_id: $input.first().json.chat.id,
+      categoria: dades.categoria,
+      prioritat: dades.prioritat,
+      resum: dades.resum,
+      data: new Date().toISOString()
+    }
+  };
+} else {
+  // Si no es pot parsejar, marcar com altre
+  return {
+    json: {
+      text: $input.first().json.text,
+      chat_id: $input.first().json.chat.id,
+      categoria: &quot;altre&quot;,
+      prioritat: &quot;baixa&quot;,
+      resum: &quot;No es pot classificar&quot;,
+      data: new Date().toISOString()
+    }
+  };
+}
+</code></pre>
+<hr />
+<p><strong>Pas 5: Crear Branca Condicional</strong></p>
+<p><strong>5.1 Afegir node IF</strong></p>
+<pre><code class="language-yaml">Name: Classificar per categoria
+Conditions:
+  - Value: {{ $json.categoria }}
+    Operation: equals
+    Compare Value: incident
+</code></pre>
+<p><strong>5.2 Connectar eixides</strong></p>
+<ul>
+<li><strong>Output 1 (true)</strong>: Branca per a incidents</li>
+<li><strong>Output 2 (false)</strong>: Continuar amb més condicions</li>
+</ul>
+<p><strong>5.3 Afegir segona condició</strong></p>
+<p>Després de la branca d'incidents, afegiu una altra condició per a consultes:</p>
+<pre><code class="language-yaml">Conditions:
+  - Value: {{ $json.categoria }}
+    Operation: equals
+    Compare Value: consulta
+</code></pre>
+<hr />
+<p><strong>Pas 6: Branca d'Incidències</strong></p>
+<p><strong>6.1 Indexar a Elasticsearch</strong></p>
+<p>Afegiu un node <strong>Elasticsearch</strong> connectat a la branca d'incidents:</p>
+<pre><code class="language-yaml">Operation: Index Document
+Index: incidencies-{{ $now.toFormat('yyyy.MM.dd') }}
+Document: &quot;{{ $json }}&quot;
+</code></pre>
+<p><strong>6.2 Enviar alerta a Slack</strong></p>
+<ol>
+<li>Afegiu el node <strong>Slack</strong> → <strong>Send Message</strong></li>
+<li>Configureu les credencials de Slack</li>
+<li>Indiqueu el canal d'alertes</li>
+</ol>
+<pre><code class="language-yaml">Channel: &quot;#incidencies&quot;
+Message: |
+  🚨 *INCIDÈNCIA DETECTADA*
+
+  *Prioritat:* {{ $json.prioritat }}
+  *Resum:* {{ $json.resum }}
+  *Hora:* {{ $now.toFormat('HH:mm') }}
+
+  &gt; {{ $json.text }}
+</code></pre>
+<p><strong>6.3 Diagrama de la branca</strong></p>
+<pre><code>IF (categoria=incident)
+    ↓
+Elasticsearch (indexar)
+    ↓
+Slack (alerta)
+</code></pre>
+<hr />
+<p><strong>Pas 7: Branch de Consultes</strong></p>
+<p><strong>Generar resposta amb IA</strong></p>
+<p>Utilitzeu un altre node <strong>Claude</strong> per generar una resposta:</p>
+<pre><code class="language-yaml">System: |
+  Ets un assistent de suport tècnic amable i professional.
+  Respon a les consultes de manera clara i concisa.
+  Si no tens suficient informació, indica que cal més detalls.
+
+Messages:
+  - Role: user
+    Content: &quot;{{ $json.text }}&quot;
+</code></pre>
+<p><strong>7.2 Enviar resposta per Telegram</strong></p>
+<ol>
+<li>Afegiu el node <strong>Telegram</strong> → <strong>Send Message</strong></li>
+<li>Configureu:</li>
+</ol>
+<pre><code class="language-yaml">Chat ID: {{ $json.chat_id }}
+Message: &quot;{{ $json.message.content }}&quot;
+</code></pre>
+<hr />
+<p><strong>Pas 8: Verificar a Kibana</strong></p>
+<p><strong>8.1 Crear Índex Pattern</strong></p>
+<ol>
+<li>Obriu Kibana a <code>http://localhost:5601</code></li>
+<li>Aneu a <strong>Stack Management</strong> → <strong>Index Patterns</strong></li>
+<li>Feu clic a <strong>Create index pattern</strong></li>
+<li>Introduïu <code>incidencies-*</code></li>
+<li>Seleccioneu <code>data</code> com a camp de temps</li>
+</ol>
+<p><strong>8.2 Cercar incidències</strong></p>
+<ol>
+<li>Aneu a <strong>Discover</strong></li>
+<li>Cerqueu per categoria:</li>
+</ol>
+<pre><code class="language-json">{
+  &quot;query&quot;: {
+    &quot;match&quot;: {
+      &quot;categoria&quot;: &quot;incident&quot;
+    }
+  }
+}
+</code></pre>
+<!-- IMG: n8n15.jpg -->
+<p><em>Figura 32.3: Dashboard de Kibana mostrant les incidències indexades</em></p>
+<p><strong>8.3 Crear visualitzacions en Kibana</strong></p>
+<ol>
+<li>Creeu un <strong>Lens</strong> per veure incidències per prioritat</li>
+<li>Creeu un <strong>Markdown</strong> amb un resum</li>
+<li>Guardeu el dashboard</li>
+</ol>
+<hr />
+<h4 id="flux-complet">Flux Complet</h4>
+<p>El flux complet quedaria així:</p>
+<pre><code>Telegram Trigger
+       ↓
+  Claude (classificar)
+       ↓
+  Code (parsejar JSON)
+       ↓
+    IF / Switch
+    /     |     \
+   ↓      ↓      ↓
+Incidents Consultes Altre
+   ↓        ↓       ↓
+Elastic  Claude  Elasticsearch
+   ↓        ↓       ↓
+Slack   Telegram  (indexar)
+ (alerta) (resposta)
+</code></pre>
+<!-- IMG: n8n14.jpg -->
+<p><em>Figura 32.4: Flux complet amb tots els nodes</em></p>
+<hr />
+<h2 id="practiques-modulars">Pràctiques Modulars</h2>
+<h3 id="practica-1-recollida-de-dades-de-formulari">Pràctica 1: Recollida de Dades de Formulari</h3>
+<h4 id="objectiu">Objectiu</h4>
+<p>Crear un sistema que reculla dades d'un formulari web i les emmagatzeme a Google Sheets.</p>
+<h4 id="flux">Flux</h4>
+<pre><code>Form Trigger → Set (formatejar) → Google Sheets (afegir fila)
+</code></pre>
+<h4 id="passos">Passos</h4>
+<ol>
+<li><strong>Form Trigger</strong>: Creeu un formulari amb:</li>
+<li>Nom (text)</li>
+<li>Email (email)</li>
+<li>
+<p>Missatge (textarea)</p>
+</li>
+<li>
+<p><strong>Set Node</strong>: Formategeu les dades</p>
+</li>
+<li>
+<p><strong>Google Sheets</strong>: Configureu el node per afegir una fila</p>
+</li>
+</ol>
+<h4 id="preguntes-dampliacio">Preguntes d'ampliació</h4>
+<ul>
+<li>Com farieu per verificar si l'email ja existeix?</li>
+<li>Com enviarieu un email de confirmació?</li>
+</ul>
+<hr />
+<h3 id="practica-2-sincronitzacio-de-dades-amb-mysql">Pràctica 2: Sincronització de Dades amb MySQL</h3>
+<h4 id="objectiu_1">Objectiu</h4>
+<p>Sincronitzar productes des d'una API externa a una base de dades MySQL local.</p>
+<h4 id="flux_1">Flux</h4>
+<pre><code>Schedule (cada hora) → HTTP Request (API) → Code (transformar) → MySQL (upsert)
+</code></pre>
+<h4 id="passos_1">Passos</h4>
+<ol>
+<li>
+<p><strong>Schedule</strong>: Cada hora</p>
+</li>
+<li>
+<p><strong>HTTP Request</strong>: Obtenir productes
+   <code>yaml
+   URL: https://api.exemple.com/productes
+   Method: GET</code></p>
+</li>
+<li>
+<p><strong>Code</strong>: Preparar per a upsert
+   <code>javascript
+   return $input.all().map(item =&gt; ({
+     json: {
+       external_id: item.json.id,
+       nom: item.json.name,
+       preu: parseFloat(item.json.price),
+       stock: item.json.quantity,
+       actualitzat: new Date().toISOString()
+     }
+   }));</code></p>
+</li>
+<li>
+<p><strong>MySQL</strong>: Upsert
+   <code>sql
+   INSERT INTO productes (external_id, nom, preu, stock, actualitzat)
+   VALUES ("{{ $json.external_id }}", "{{ $json.nom }}", {{ $json.preu }}, {{ $json.stock }}, "{{ $json.actualitzat }}")
+   ON DUPLICATE KEY UPDATE
+     nom = VALUES(nom),
+     preu = VALUES(preu),
+     stock = VALUES(stock),
+     actualitzat = VALUES(actualitzat)</code></p>
+</li>
+</ol>
+<hr />
+<h3 id="practica-3-alertes-de-monitoritzacio-de-web">Pràctica 3: Alertes de Monitorització de Web</h3>
+<h4 id="objectiu_2">Objectiu</h4>
+<p>Monitoritzar l'estat d'un lloc web i enviar alertes si cau.</p>
+<h4 id="flux_2">Flux</h4>
+<pre><code>Schedule (cada 5 min) → HTTP Request (health check) → IF (és healthy?) → Slack (alerta)
+                                        ↓
+                              (tot bé) → No Operation
+</code></pre>
+<h4 id="passos_2">Passos</h4>
+<ol>
+<li>
+<p><strong>Schedule</strong>: Cada 5 minuts</p>
+</li>
+<li>
+<p><strong>HTTP Request</strong>:
+   <code>yaml
+   URL: https://meullocweb.com/api/health
+   Method: GET
+   Timeout: 10000</code></p>
+</li>
+<li>
+<p><strong>IF</strong>: Verificar estat
+   ```yaml
+   Conditions:</p>
+<ul>
+<li>Value: {{ $json.status }}
+   Operation: equals
+   Compare Value: "ok"
+   ```</li>
+</ul>
+</li>
+<li>
+<p><strong>Slack</strong>: Alertar
+   <code>json
+   {
+     "text": "⚠️ El lloc web no respongui correctament",
+     "attachments": [{
+       "color": "danger",
+       "fields": [
+         {"title": "URL", "value": "https://meullocweb.com"},
+         {"title": "Estat", "value": "{{ $json.status }}"},
+         {"title": "Hora", "value": "{{ $now }}"}
+       ]
+     }]
+   }</code></p>
+</li>
+</ol>
+<hr />
+<h3 id="practica-4-processament-de-fitxers-amb-ftp">Pràctica 4: Processament de Fitxers amb FTP</h3>
+<h4 id="objectiu_3">Objectiu</h4>
+<p>Monitoritzar una carpeta FTP i processar automàticament els fitxers nous.</p>
+<h4 id="flux_3">Flux</h4>
+<pre><code>Schedule (cada 10 min) → FTP (llistfitxers) → Loop → Code (processar) → FTP (moure)
+</code></pre>
+<h4 id="passos_3">Passos</h4>
+<ol>
+<li>
+<p><strong>Schedule</strong>: Cada 10 minuts</p>
+</li>
+<li>
+<p><strong>FTP</strong> → <strong>List Files</strong>:
+   <code>yaml
+   Path: /entrada</code></p>
+</li>
+<li>
+<p><strong>Loop Over Items</strong>: Per a cada fitxer</p>
+</li>
+<li>
+<p><strong>Code</strong>: Processar contingut
+   ```javascript
+   // Llegir i processar el fitxer
+   const fitxer = $input.first().binary.data;
+   const contingut = Buffer.from(fitxer, 'base64').toString('utf-8');</p>
+</li>
+</ol>
+<p>// Processar (exemple: llegir CSV)
+   const linies = contingut.split('\n');
+   const dades = linies.slice(1).map(linia =&gt; {
+     const [nom, email] = linia.split(',');
+     return { json: { nom, email } };
+   });</p>
+<p>return dades;
+   ```</p>
+<ol>
+<li><strong>FTP</strong> → <strong>Move File</strong>:
+   <code>yaml
+   Source Path: /entrada/{{ $json.filename }}
+   Destination Path: /processats/{{ $json.filename }}</code></li>
+</ol>
+<hr />
+<h2 id="apendixs">APÈNDIXS</h2>
+<h3 id="a-referencia-rapida-de-nodes">A. Referència Ràpida de Nodes</h3>
+<h4 id="nodes-core-mes-utilitzats">Nodes Core Més Utilitzats</h4>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Funció</th>
+<th>Ús</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Manual Trigger</td>
+<td>Iniciar manualment</td>
+<td>Proves</td>
+</tr>
+<tr>
+<td>Schedule Trigger</td>
+<td>Planificar execucions</td>
+<td>Tasques periòdiques</td>
+</tr>
+<tr>
+<td>Webhook Trigger</td>
+<td>Rebre peticions HTTP</td>
+<td>APIs, integracions</td>
+</tr>
+<tr>
+<td>HTTP Request</td>
+<td>Fer peticions HTTP</td>
+<td>APIs externes</td>
+</tr>
+<tr>
+<td>Code</td>
+<td>Executar JavaScript</td>
+<td>Transformacions</td>
+</tr>
+<tr>
+<td>Set</td>
+<td>Assignar camps</td>
+<td>Modificar dades</td>
+</tr>
+<tr>
+<td>Filter</td>
+<td>Filtrar elements</td>
+<td>Condicionals</td>
+</tr>
+<tr>
+<td>IF/Switch</td>
+<td>Bifurcar flux</td>
+<td>Lògica condicional</td>
+</tr>
+<tr>
+<td>Merge</td>
+<td>Unir branques</td>
+<td>Combinar execucions</td>
+</tr>
+<tr>
+<td>Loop Over Items</td>
+<td>Iterar elements</td>
+<td>Processament en bucle</td>
+</tr>
+<tr>
+<td>Wait</td>
+<td>Pausar execució</td>
+<td>Esperar temps/condició</td>
+</tr>
+</tbody>
+</table>
+<h4 id="nodes-de-base-de-dades">Nodes de Base de Dades</h4>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Funció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MySQL</td>
+<td>Bases de dades MySQL/MariaDB</td>
+</tr>
+<tr>
+<td>PostgreSQL</td>
+<td>Bases de dades PostgreSQL</td>
+</tr>
+<tr>
+<td>MongoDB</td>
+<td>Bases de dades MongoDB</td>
+</tr>
+<tr>
+<td>Elasticsearch</td>
+<td>Cercador/search engine</td>
+</tr>
+<tr>
+<td>Redis</td>
+<td>Cache i cues</td>
+</tr>
+</tbody>
+</table>
+<h4 id="nodes-de-comunicacio">Nodes de Comunicació</h4>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Funció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gmail</td>
+<td>Enviar/rebre emails</td>
+</tr>
+<tr>
+<td>Telegram</td>
+<td>Bot de missatgeria</td>
+</tr>
+<tr>
+<td>Slack</td>
+<td>Notificacions a Slack</td>
+</tr>
+<tr>
+<td>Discord</td>
+<td>Notificacions a Discord</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="b-referencia-dexpressions">B. Referència d'Expressions</h3>
+<h4 id="variables-globals">Variables Globals</h4>
+<pre><code class="language-javascript">{{ $json.camp }}              // Camp de l'item actual
+{{ $input.all() }}            // Tots els items
+{{ $input.first() }}          // Primer item
+{{ $vars.variable }}         // Variable de workflow
+{{ $node &quot;NomNode&quot; }}         // Dades d'un node
+{{ $workflow.id }}            // ID del workflow
+{{ $execution.id }}          // ID de l'execució
+{{ $now }}                    // Data/hora actual
+{{ $today }}                  // Data d'avui
+</code></pre>
+<h4 id="funcions-de-data">Funcions de Data</h4>
+<pre><code class="language-javascript">{{ $now.toISO() }}                           // ISO 8601
+{{ $now.toFormat('dd/MM/yyyy') }}            // Format personalitzat
+{{ $now.minus({ days: 7 }).toISO() }}        // Fa 7 dies
+{{ $now.plus({ hours: 2 }).toISO() }}       // D'aquí 2 hores
+</code></pre>
+<h4 id="funcions-de-string">Funcions de String</h4>
+<pre><code class="language-javascript">{{ $json.nom.toUpperCase() }}               // Majúscules
+{{ $json.nom.toLowerCase() }}               // Minúscules
+{{ $json.cadena.trim() }}                    // Sense espais
+{{ $json.cadena.length }}                   // Longitud
+{{ $json.email.split('@')[0] }}              // Part abans de @
+</code></pre>
+<h4 id="operador-ternari">Operador Ternari</h4>
+<pre><code class="language-javascript">{{ $json.edat &gt;= 18 ? 'Adult' : 'Menor' }}
+</code></pre>
+<hr />
+<h3 id="c-recursos">C. Recursos</h3>
+<h4 id="documentacio-oficial">Documentació Oficial</h4>
+<ul>
+<li><a href="https://n8n.io">n8n.io</a> - Web oficial</li>
+<li><a href="https://docs.n8n.io">docs.n8n.io</a> - Documentació completa</li>
+<li><a href="https://community.n8n.io">community.n8n.io</a> - Fòrum de la comunitat</li>
+</ul>
+<h4 id="nodes-i-integracions">Nodes i Integracions</h4>
+<ul>
+<li><a href="https://n8n.io/integrations">n8n.io/integrations</a> - Catàleg de nodes</li>
+<li><a href="https://docs.n8n.io/integrations/">docs.n8n.io/integrations</a> - Documentació de nodes</li>
+</ul>
+<h4 id="ia-amb-n8n">IA amb n8n</h4>
+<ul>
+<li><a href="https://docs.n8n.io/advanced-ai/">docs.n8n.io/advanced-ai</a> - Integració amb IA</li>
+<li><a href="https://docs.n8n.io/advanced-ai/langchain/langchain-n8n">docs.n8n.io/advanced-ai/langchain/langchain-n8n</a> - LangChain</li>
+</ul>
+<h4 id="cursos-i-tutorials">Cursos i Tutorials</h4>
+<ul>
+<li><a href="https://n8n.io/learn">n8n.io/learn</a> - Tutorials oficials</li>
+<li><a href="https://www.youtube.com/@n8n_io">YouTube: n8n</a> - Vídeos tutorials</li>
+</ul>
+<hr />
+<p><em>Manual creat per al curs de Big Data Aplicat</em>
+<em>IES Jaume II El Just - Curs 2025-2026</em></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
